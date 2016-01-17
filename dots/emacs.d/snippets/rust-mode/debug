@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: debug
+# key: d
+# binding: direct-keybinding
+# --
+println!("{:#?}", $0);

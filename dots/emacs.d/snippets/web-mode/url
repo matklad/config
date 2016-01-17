@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: url
+# key: url
+# binding: direct-keybinding
+# --
+{{ url_for('$0') }}

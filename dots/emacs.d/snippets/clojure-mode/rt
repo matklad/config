@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: rt
+# key: rt
+# binding: direct-keybinding
+# --
+[cljs.test :as t :refer-macros [deftest is]]

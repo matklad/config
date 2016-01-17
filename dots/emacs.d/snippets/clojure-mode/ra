@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: :require-async
+# key: ra
+# binding: direct-keybinding
+# --
+[cljs.core.async :as async :refer [<! >!]]

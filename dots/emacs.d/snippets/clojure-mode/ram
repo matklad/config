@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ram
+# key: ram
+# binding: direct-keybinding
+# --
+[cljs.core.async.macros :refer [go]]

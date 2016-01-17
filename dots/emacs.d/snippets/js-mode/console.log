@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: console.log
+# key: p
+# binding: direct-keybinding
+# --
+console.log($0);

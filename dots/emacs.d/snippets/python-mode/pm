@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pm
+# key: pm
+# binding: direct-keybinding
+# --
+@property
+def $1(self):
+    return $0

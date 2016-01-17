@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: block
+# key: block
+# binding: direct-keybinding
+# --
+{% block $1 %}
+   `yas-selected-text`$0
+{% endblock %}

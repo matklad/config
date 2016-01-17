@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: import
+# key: import
+# binding: direct-keybinding
+# --
+{% import "$1.html" as $0 %}

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: f64
+# key: f
+# binding: direct-keybinding
+# --
+f64
