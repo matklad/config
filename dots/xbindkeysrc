@@ -1,0 +1,15 @@
+"~/config/scripts/win-or-app.sh jetbrains-idea-ce idea"
+  Control + F2
+
+
+"~/config/scripts/win-or-app.sh Chromium.Chromium chromium-browser"
+  Control + F3
+
+"~/config/scripts/launch-emacs.sh"
+  Mod4 + e
+
+"~/config/scripts/win-or-app.sh clementine.Clementine clementine"
+  Mod4 + c
+
+"krusader"
+  Mod4 + k

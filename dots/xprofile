@@ -1,0 +1,6 @@
+source ~/.profile
+xbindkeys
+unclutter &
+emacs --daemon &
+
+rm -rf ~/downloads/*
