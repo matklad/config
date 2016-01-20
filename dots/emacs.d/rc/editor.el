@@ -192,7 +192,7 @@
   (setq undo-tree-visualizer-timestamps t
         undo-tree-visualizer-diff t
         undo-tree-auto-save-history t
-        undo-tree-history-directory-alist (quote (("." . "~/.emacs.d/cache/undo/"))))
+        undo-tree-history-directory-alist (quote (("." . (cache-file-name "undo")))))
   (defalias 'redo 'undo-tree-redo)
 
   (defadvice undo-tree-make-history-save-file-name

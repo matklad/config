@@ -60,7 +60,7 @@ in
   cargo = build {
     name = "cargo";
     url = https://static.rust-lang.org/cargo-dist/cargo-nightly-x86_64-unknown-linux-gnu.tar.gz;
-    sha256 = "1v9f2qqa0imdgv3n8srq2l9fpynma9bzsqqk3qjnb733r95a5r6q";
+    sha256 = "1vraqyy2yg8j7hlxf91if2n7p63yg020sgnbk2b3zjlgsvw6s1qy";
     exes = [ "cargo" ];
   };
 }

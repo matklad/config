@@ -4,10 +4,10 @@ let
   custom = (pkgs.callPackage ./custom.nix {});
 in {
   environment.systemPackages =  with pkgs; [
-    atool
     aspell
     aspellDicts.en
     aspellDicts.ru
+    atool
     chromium
     clang
     clementine
@@ -22,6 +22,7 @@ in {
     fbreader
     file
     gcc
+    ghc
     gimp
     git
     gnumake
@@ -30,15 +31,14 @@ in {
     kde4.krusader
     kde4.ksnapshot
     kde5.kgpg
-    # kde5.kmix
-    kde5.plasma-pa
     kde5.krunner
-    kde5.plasma-nm
     kde5.okular
+    kde5.plasma-nm
+    kde5.plasma-pa
     mplayer
     networkmanager
     nox
-    oraclejdk8
+    openjdk8
     python3
     qbittorrent
     smplayer
