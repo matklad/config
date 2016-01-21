@@ -46,13 +46,8 @@ in
   rustc = build {
     name = "rustc";
 
-    # Version 1.5 gives "error: can't find crate for `std` [E0463]"
-    url = https://static.rust-lang.org/dist/rust-1.5.0-x86_64-unknown-linux-gnu.tar.gz;
-    sha256 = "60b83f74d882ce2ba5bc979b5b0589dca56659f215b3259e7188fed8c50aac9d";
-
-    # Version 1.4 works fine
-    # url = https://static.rust-lang.org/dist/rust-1.4.0-x86_64-unknown-linux-gnu.tar.gz;
-    # sha256 = "07f5d91zbl4a8f20ilwajai0223j7kq6lns9gjkb6anaa15l5qid";
+    url = https://static.rust-lang.org/dist/rust-1.6.0-x86_64-unknown-linux-gnu.tar.gz;
+    sha256 = "1xhk50h5kdrlrjis6mfmyg8mv3n53q3yzr7a9vb26i1b8c1cqc46";
 
     exes = ["rustc" "rustdoc"];
   };
