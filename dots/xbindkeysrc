@@ -2,7 +2,7 @@
   Control + F2
 
 
-"~/config/scripts/win-or-app.sh Chromium.Chromium chromium-browser"
+"~/config/scripts/win-or-app.sh chromium-browser.chromium-browser chromium-browser"
   Control + F3
 
 "~/config/scripts/launch-emacs.sh"
