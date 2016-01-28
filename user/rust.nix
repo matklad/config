@@ -41,7 +41,7 @@ let build = {name, url, sha256, exes} :
       '';
   };
 
-  cargoNight = "2016-01-25";
+  cargoNight = "2016-01-27";
 
 in
 {
@@ -57,7 +57,7 @@ in
   cargo = build {
     name = "cargo";
     url = "https://static.rust-lang.org/cargo-dist/${cargoNight}/cargo-nightly-x86_64-unknown-linux-gnu.tar.gz";
-    sha256 = "0arxb1gi7l5b1ziki2bjd5k0y1fl3y0vymgbp5i7idf20gbfjisp";
+    sha256 = "0sfgprkzviqf03ybq2pipzijmdcn7cvi9wpaiva09pz52r5ylww6";
     exes = [ "cargo" ];
   };
 }

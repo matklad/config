@@ -1,1 +1,2 @@
 export JAVA_HOME="/run/current-system/sw/"
+export GRADLE_OPTS="-Dorg.gradle.daemon=true"

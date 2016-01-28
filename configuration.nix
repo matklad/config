@@ -111,10 +111,8 @@ in {
       kdeAutostart =
       ''
         cd /home/${user}
-        ln -fs ${custom.yakuake}/share/applications/kde4/yakuake.desktop ./.config/autostart/yakuake.desktop
+        ln -fs ${pkgs.kde4.yakuake}/share/applications/kde4/yakuake.desktop ./.config/autostart/yakuake.desktop
       '';
-
-
   };
 
 }

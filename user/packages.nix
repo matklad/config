@@ -17,7 +17,6 @@ in {
     custom.cargo
     custom.idea
     custom.rustc
-    custom.yakuake
     emacs
     fbreader
     file
@@ -30,6 +29,7 @@ in {
     imagemagick
     kde4.krusader
     kde4.ksnapshot
+    kde4.yakuake
     kde5.kgpg
     kde5.krunner
     kde5.okular
