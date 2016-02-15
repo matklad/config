@@ -101,3 +101,15 @@ buildIdea rec {
     sha256 = "15hj4kqlpg3b4xp2v4f4iidascrc8s97mq8022nvbcs879gpajqa";
   };
 }
+
+# buildIdea rec {
+#   name = "idea-eap";
+#   version = "16.0";
+#   build = "144.3891.8";
+#   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
+#   license = stdenv.lib.licenses.asl20;
+#   src = fetchurl {
+#     url = "https://download.jetbrains.com/idea/ideaIC-${build}-custom-jdk-linux.tar.gz";
+#     sha256 = "040e524d7f36928cd600e2e7936f40804c501ffdca35ffbe666e2ab856cb82a9";
+#   };
+# }

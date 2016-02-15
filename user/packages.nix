@@ -38,15 +38,16 @@ in {
     mplayer
     networkmanager
     nox
-    openjdk8
+    oraclejdk8
     python3
     qbittorrent
     smplayer
+    texLiveFull
     unclutter
     unrar
     unrar
     unzip
-    vim
+    neovim
     wget
     wmctrl
     xbindkeys

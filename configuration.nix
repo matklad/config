@@ -10,13 +10,6 @@ in {
 
   nixpkgs.config = {
     allowUnfree = true;
-    packageOverrides = pkgs: {
-      stdenv = pkgs.stdenv // {
-        platform = pkgs.stdenv.platform // {
-          kernelExtraConfig = "CFS_BANDWIDTH y";
-        };
-      };
-    };
   };
 
   nix.extraOptions = ''
@@ -67,6 +60,7 @@ in {
       accelFactor = "0.002";
       minSpeed = "0.8";
       maxSpeed = "3.0";
+      palmDetect = true;
       additionalOptions = ''
           Option "SoftButtonAreas" "50% 0 82% 0 0 0 0 0"
       '';
