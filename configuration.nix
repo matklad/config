@@ -100,6 +100,9 @@ in {
         rm -rf .emacs.d
         ln -fs ${./dots/emacs.d} .emacs.d
         ln -fs ${./dots/user-dirs.dirs} .config/user-dirs.dirs
+        rm -rf .config/nvim
+        ln -fs ${./dots/config/nvim} .config/nvimrc
+        ln -fs ${./dots/ideavimrc} .ideavimrc
       '';
 
       kdeAutostart =
