@@ -36,18 +36,19 @@ in {
     kde5.plasma-nm
     kde5.plasma-pa
     mplayer
+    neovim
     networkmanager
     nox
     oraclejdk8
     python3
     qbittorrent
     smplayer
+    stack
     texLiveFull
     unclutter
     unrar
     unrar
     unzip
-    neovim
     wget
     wmctrl
     xbindkeys
