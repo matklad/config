@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function find_window {
     windows=$(wmctrl -lx | awk -v name="$1" '$3 ~ name' | grep -v "Hangouts")
