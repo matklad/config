@@ -97,11 +97,11 @@ in {
         ln -fs ${./dots/xprofile} .xprofile
         ln -fs ${./dots/profile} .profile
         ln -fs ${./dots/xbindkeysrc} .xbindkeysrc
-        rm -rf .emacs.d
-        ln -fs ${./dots/emacs.d} .emacs.d
+        #rm -rf .emacs.d
+        #ln -fs ${./dots/emacs.d} .emacs.d
         ln -fs ${./dots/user-dirs.dirs} .config/user-dirs.dirs
         rm -rf .config/nvim
-        ln -fs ${./dots/config/nvim} .config/nvimrc
+        ln -fs ${./dots/config/nvim} .config/nvim
         ln -fs ${./dots/ideavimrc} .ideavimrc
       '';
 

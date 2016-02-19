@@ -92,13 +92,13 @@ in
 
 buildIdea rec {
   name = "idea-eap";
-  version = "15.0.3";
-  build = "143.1821";
+  version = "15.0.4";
+  build = "143.2167.2";
   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
   license = stdenv.lib.licenses.asl20;
   src = fetchurl {
-    url = "https://download.jetbrains.com/idea/ideaIC-${version}.tar.gz";
-    sha256 = "15hj4kqlpg3b4xp2v4f4iidascrc8s97mq8022nvbcs879gpajqa";
+    url = "https://download.jetbrains.com/idea/ideaIC-${build}.tar.gz";
+    sha256 = "65fd9f9b6bc633c29bbea4c245a5c0b6855e484460a5a84946714533b9bc0be4";
   };
 }
 

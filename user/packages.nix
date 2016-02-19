@@ -39,7 +39,7 @@ in {
     neovim
     networkmanager
     nox
-    oraclejdk8
+    openjdk8
     python3
     qbittorrent
     smplayer
