@@ -97,8 +97,7 @@ in {
         ln -fs ${./dots/xprofile} .xprofile
         ln -fs ${./dots/profile} .profile
         ln -fs ${./dots/xbindkeysrc} .xbindkeysrc
-        #rm -rf .emacs.d
-        #ln -fs ${./dots/emacs.d} .emacs.d
+        ln -fs ${./dots/spacemacs} .spacemacs
         ln -fs ${./dots/user-dirs.dirs} .config/user-dirs.dirs
         rm -rf .config/nvim
         ln -fs ${./dots/config/nvim} .config/nvim
