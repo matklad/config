@@ -102,6 +102,18 @@ buildIdea rec {
   };
 }
 
+
+# buildIdea rec {
+#    name = "idea-eap";
+#    version = "15.0.3";
+#    build = "143.1821";
+#    description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
+#    license = stdenv.lib.licenses.asl20;
+#    src = fetchurl {
+#      url = "https://download.jetbrains.com/idea/ideaIC-${version}.tar.gz";
+#      sha256 = "15hj4kqlpg3b4xp2v4f4iidascrc8s97mq8022nvbcs879gpajqa";
+#    };
+#  }
 # buildIdea rec {
 #   name = "idea-eap";
 #   version = "16.0";
