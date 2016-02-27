@@ -34,7 +34,7 @@ in {
     kde5.krunner
     kde5.okular
     kde5.plasma-nm
-    kde5.plasma-pa
+    # kde5.plasma-pa
     mplayer
     neovim
     networkmanager
@@ -44,7 +44,7 @@ in {
     qbittorrent
     smplayer
     stack
-    texLiveFull
+    # texLiveFull
     unclutter
     unrar
     unrar

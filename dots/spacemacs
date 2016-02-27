@@ -31,6 +31,7 @@ values."
      git
      haskell
      rust
+     (c-c++ :variables c-c++-enable-clang-support t)
      ;; markdown
      ;; org
      ;; (shell :variables
