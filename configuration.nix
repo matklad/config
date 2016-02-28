@@ -20,11 +20,6 @@ in {
     enable = true;
     version = 2;
     device = "/dev/sda";
-    extraEntries = ''
-        menuentry 'Arch Linux' {
-          configfile (hd0,3)/boot/grub/grub.cfg
-          }
-    '';
   };
 
   boot.kernelParams = [ "acpi_backlight=vendor" "video.use_native_backlight=1"];
@@ -39,7 +34,6 @@ in {
   };
 
   time.timeZone = "Europe/Moscow";
-  virtualisation.docker.enable = true;
 
   programs.zsh.enable = true;
 
