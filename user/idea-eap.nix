@@ -90,38 +90,38 @@ let
 
 in
 
-buildIdea rec {
-  name = "idea-eap";
-  version = "15.0.4";
-  build = "143.2167.2";
-  description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
-  license = stdenv.lib.licenses.asl20;
-  src = fetchurl {
-    url = "https://download.jetbrains.com/idea/ideaIC-${build}.tar.gz";
-    sha256 = "65fd9f9b6bc633c29bbea4c245a5c0b6855e484460a5a84946714533b9bc0be4";
-  };
-}
-
-
 # buildIdea rec {
-#    name = "idea-eap";
-#    version = "15.0.3";
-#    build = "143.1821";
-#    description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
-#    license = stdenv.lib.licenses.asl20;
-#    src = fetchurl {
-#      url = "https://download.jetbrains.com/idea/ideaIC-${version}.tar.gz";
-#      sha256 = "15hj4kqlpg3b4xp2v4f4iidascrc8s97mq8022nvbcs879gpajqa";
-#    };
-#  }
-# buildIdea rec {
-#   name = "idea-eap";
-#   version = "16.0";
-#   build = "144.3891.8";
+#   name = "idea";
+#   version = "15.0.4";
+#   build = "143.2287";
 #   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
 #   license = stdenv.lib.licenses.asl20;
 #   src = fetchurl {
-#     url = "https://download.jetbrains.com/idea/ideaIC-${build}-custom-jdk-linux.tar.gz";
-#     sha256 = "040e524d7f36928cd600e2e7936f40804c501ffdca35ffbe666e2ab856cb82a9";
+#     url = "https://download.jetbrains.com/idea/ideaIC-${build}.tar.gz";
+#     sha256 = "65fd9f9b6bc633c29bbea4c245a5c0b6855e484460a5a84946714533b9bc0be4";
+#   };
+# }
+
+buildIdea rec {
+  name = "idea-eap";
+  version = "15.0.4";
+  build = "143.2287";
+  description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
+  license = stdenv.lib.licenses.asl20;
+  src = fetchurl {
+    url = "https://download.jetbrains.com/idea/ideaIC-${version}.tar.gz"; # .sha256
+    sha256 = "7653edd0687de6948b3c5b128c0683c96f89dea96bedd995a279f4d359816a16";
+  };
+}
+
+# buildIdea rec {
+#   name = "idea";
+#   version = "16.0";
+#   build = "145.184.1";
+#   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
+#   license = stdenv.lib.licenses.asl20;
+#   src = fetchurl {
+#     url = "https://download.jetbrains.com/idea/ideaIC-${build}.tar.gz";
+#     sha256 = "c638a777a1b6eb5ddb893dc080f716f628c7306567bef023bd2ead5cfeac2392";
 #   };
 # }
