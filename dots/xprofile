@@ -1,7 +1,5 @@
 source ~/.profile
 xbindkeys
 unclutter &
-emacs --daemon &
-alias o xdg-open
 
 rm -rf ~/downloads/*

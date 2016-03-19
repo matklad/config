@@ -42,14 +42,16 @@ let build = {name, url, sha256, exes} :
   };
 
   cargoNight = "2016-01-30";
-
+  version = "1.7.0";
+  # version = "nightly";
 in
 {
   rustc = build {
     name = "rustc";
 
-    url = https://static.rust-lang.org/dist/rust-1.7.0-x86_64-unknown-linux-gnu.tar.gz; # .sha256
+    url = "https://static.rust-lang.org/dist/rust-${version}-x86_64-unknown-linux-gnu.tar.gz"; # .sha256
     sha256 = "d36634bd8df3d7565487b70af03dfda1c43c635cd6f2993f47cd61fda00d890a";
+    # sha256 = "4c6e64339a14189c5ca6ccf3e2a8392255a53c7bd9a5433c83b24c00c6e8a0d6";
 
     exes = ["rustc" "rustdoc"];
   };

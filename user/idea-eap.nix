@@ -91,7 +91,7 @@ let
 in
 
 # buildIdea rec {
-#   name = "idea";
+#   name = "idea-eap";
 #   version = "15.0.4";
 #   build = "143.2287";
 #   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
@@ -103,25 +103,13 @@ in
 # }
 
 buildIdea rec {
-  name = "idea-eap";
-  version = "15.0.4";
-  build = "143.2287";
+  name = "idea";
+  version = "2016.1";
+  # build = "143.2287";
   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
   license = stdenv.lib.licenses.asl20;
   src = fetchurl {
     url = "https://download.jetbrains.com/idea/ideaIC-${version}.tar.gz"; # .sha256
-    sha256 = "7653edd0687de6948b3c5b128c0683c96f89dea96bedd995a279f4d359816a16";
+    sha256 = "d8d889c42dfde1f41030e9d3f5850d364109df73a6a35081edc72d7d95f22fbf";
   };
 }
-
-# buildIdea rec {
-#   name = "idea";
-#   version = "16.0";
-#   build = "145.184.1";
-#   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
-#   license = stdenv.lib.licenses.asl20;
-#   src = fetchurl {
-#     url = "https://download.jetbrains.com/idea/ideaIC-${build}.tar.gz";
-#     sha256 = "c638a777a1b6eb5ddb893dc080f716f628c7306567bef023bd2ead5cfeac2392";
-#   };
-# }

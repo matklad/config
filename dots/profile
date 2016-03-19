@@ -4,4 +4,5 @@ export LD_LIBRARY_PATH="/run/current-system/sw/lib/:$LD_LIBRARY_PATH"
 export PATH="$PATH:$HOME/.cargo/bin"
 alias vi=nvim
 alias vim=nvim
+alias o=xdg-open
 export EDITOR="nvim"
