@@ -2,5 +2,5 @@
 
 
 with pkgs; {
-    idea = (callPackage ./idea-eap.nix { });
+    idea = (callPackage ./intellij-idea.nix { });
 } // (callPackage ./rust.nix { })

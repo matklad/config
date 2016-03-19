@@ -5,7 +5,7 @@ with pkgs;
 let
 
   mkIdeaProduct = with stdenv.lib;
-  { name, product, version, build, src, meta }:
+  { name, product, version, src, meta }:
 
   let loName = toLower product;
       hiName = toUpper product;
@@ -13,7 +13,7 @@ let
   in
 
   with stdenv; lib.makeOverridable mkDerivation rec {
-    inherit name build src meta;
+    inherit name src meta;
     desktopItem = makeDesktopItem {
       name = execName;
       exec = execName;
@@ -71,9 +71,9 @@ let
 
   };
 
-  buildIdea = { name, version, build, src, license, description }:
+  buildIdea = { name, version, src, license, description }:
     (mkIdeaProduct rec {
-      inherit name version build src;
+      inherit name version src;
       product = "IDEA";
       meta = with stdenv.lib; {
         homepage = "https://www.jetbrains.com/idea/";
@@ -90,22 +90,9 @@ let
 
 in
 
-# buildIdea rec {
-#   name = "idea-eap";
-#   version = "15.0.4";
-#   build = "143.2287";
-#   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
-#   license = stdenv.lib.licenses.asl20;
-#   src = fetchurl {
-#     url = "https://download.jetbrains.com/idea/ideaIC-${build}.tar.gz";
-#     sha256 = "65fd9f9b6bc633c29bbea4c245a5c0b6855e484460a5a84946714533b9bc0be4";
-#   };
-# }
-
 buildIdea rec {
-  name = "idea";
+  name = "intellij-idea";
   version = "2016.1";
-  # build = "143.2287";
   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
   license = stdenv.lib.licenses.asl20;
   src = fetchurl {
