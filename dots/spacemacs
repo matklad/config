@@ -41,7 +41,7 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      spell-checking
-     syntax-checking
+     (syntax-checking :variables flycheck-clang-language-standard "c++11")
      ;; version-control
      )
    ;; List of additional packages that will be installed without being
