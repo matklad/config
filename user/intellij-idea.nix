@@ -40,15 +40,10 @@ let
         }
 
         interpreter=$(echo ${stdenv.glibc}/lib/ld-linux*.so.2)
-        if [ "${stdenv.system}" == "x86_64-linux" ]; then
-          target_size=$(get_file_size bin/fsnotifier64)
-          patchelf --set-interpreter "$interpreter" bin/fsnotifier64
-          munge_size_hack bin/fsnotifier64 $target_size
-        else
-          target_size=$(get_file_size bin/fsnotifier)
-          patchelf --set-interpreter "$interpreter" bin/fsnotifier
-          munge_size_hack bin/fsnotifier $target_size
-        fi
+        target_size=$(get_file_size bin/fsnotifier64)
+        patchelf --set-interpreter "$interpreter" bin/fsnotifier64
+        munge_size_hack bin/fsnotifier64 $target_size
+        patchelf --set-interpreter "$interpreter" jre/jre/bin/*
     '';
 
     installPhase = ''
@@ -57,14 +52,9 @@ let
       ln -s $out/$name/bin/${loName}.png $out/share/pixmaps/${execName}.png
       mv bin/fsnotifier* $out/libexec/${name}/.
 
-      jdk=${jdk.home}
       item=${desktopItem}
 
-      makeWrapper "$out/$name/bin/${loName}.sh" "$out/bin/${execName}" \
-        --prefix PATH : "$out/libexec/${name}:${jdk}/bin:${coreutils}/bin:${gnugrep}/bin:${which}/bin:${git}/bin" \
-        --set JDK_HOME "$jdk" \
-        --set ${hiName}_JDK "$jdk" \
-        --set JAVA_HOME "$jdk"
+      makeWrapper "$out/$name/bin/${loName}.sh" "$out/bin/${execName}" 
 
       ln -s "$item/share/applications" $out/share
     '';
