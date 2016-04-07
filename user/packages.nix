@@ -55,5 +55,6 @@ in {
     xbindkeys
     xorg.libX11
     zip
+    terminus_font
   ];
 }

@@ -74,7 +74,7 @@ in {
    };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "15.09";
+  system.stateVersion = "16.03";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.${user} = {

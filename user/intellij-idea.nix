@@ -92,11 +92,11 @@ in
 
 buildIdea rec {
   name = "intellij-idea";
-  version = "2016.1";
+  version = "2016.1.1";
   description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
   license = stdenv.lib.licenses.asl20;
   src = fetchurl {
     url = "https://download.jetbrains.com/idea/ideaIC-${version}.tar.gz"; # .sha256
-    sha256 = "d8d889c42dfde1f41030e9d3f5850d364109df73a6a35081edc72d7d95f22fbf";
+    sha256 = "46adaa6e19a605d2b439b0b58d18723b7947c1c56e4bbc142396a2b911de13e4";
   };
 }
