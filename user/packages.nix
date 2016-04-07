@@ -29,17 +29,18 @@ in {
     imagemagick
     kde4.krusader
     kde4.ksnapshot
+    kde4.konsole
     kde4.yakuake
     kde5.kgpg
     kde5.krunner
     kde5.okular
     kde5.plasma-nm
-    # kde5.plasma-pa
+    kde5.plasma-pa
     mplayer
     neovim
     networkmanager
     nox
-    openjdk8
+    # openjdk8
     python3
     qbittorrent
     smplayer

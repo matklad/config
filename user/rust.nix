@@ -51,8 +51,7 @@ in
 
     url = "https://static.rust-lang.org/dist/rust-${version}-x86_64-unknown-linux-gnu.tar.gz"; # .sha256
     sha256 = "d36634bd8df3d7565487b70af03dfda1c43c635cd6f2993f47cd61fda00d890a";
-    # sha256 = "4c6e64339a14189c5ca6ccf3e2a8392255a53c7bd9a5433c83b24c00c6e8a0d6";
-
+    # sha256 = "7ec0fda878ee13a7884b400f66f3d0abd77a4efc2b57bec098d8cc69c82c3b4c";
     exes = ["rustc" "rustdoc"];
   };
 

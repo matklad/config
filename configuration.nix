@@ -22,7 +22,7 @@ in {
     device = "/dev/sda";
   };
 
-  boot.kernelParams = [ "acpi_backlight=vendor" "video.use_native_backlight=1"];
+  boot.kernelParams = [ "acpi_backlight=video" ];
 
   system.autoUpgrade.enable = true;
 
@@ -38,7 +38,6 @@ in {
   programs.zsh.enable = true;
 
   hardware = {
-    opengl.driSupport32Bit = true;
     pulseaudio.enable = true;
   };
 
