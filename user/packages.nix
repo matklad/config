@@ -14,9 +14,8 @@ in {
     cloc
     cmake
     curl
-    custom.cargo
     custom.idea
-    custom.rustc
+    custom.rust
     emacs
     fbreader
     file
@@ -27,15 +26,16 @@ in {
     gnumake
     htop
     imagemagick
+    kde4.konsole
     kde4.krusader
     kde4.ksnapshot
-    kde4.konsole
     kde4.yakuake
     kde5.kgpg
     kde5.krunner
     kde5.okular
     kde5.plasma-nm
     kde5.plasma-pa
+    linuxPackages.virtualbox
     mplayer
     neovim
     networkmanager
@@ -45,16 +45,17 @@ in {
     qbittorrent
     smplayer
     stack
-    # texLiveFull
+    terminus_font
+    tree
     unclutter
     unrar
     unrar
     unzip
+    valgrind
     wget
     wmctrl
     xbindkeys
     xorg.libX11
     zip
-    terminus_font
   ];
 }

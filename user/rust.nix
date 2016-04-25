@@ -1,8 +1,8 @@
 {stdenv, pkgs, fetchurl, zlib, ...}:
 
-let build = {name, url, sha256, exes} :
+let build = {url, sha256, exes} :
   stdenv.mkDerivation rec {
-    inherit name;
+    name = "rust";
     src = fetchurl {
       inherit url sha256;
     };
@@ -10,17 +10,14 @@ let build = {name, url, sha256, exes} :
     dontStrip = true;
 
     installPhase = ''
-      mv ${name} $out
+      mv rustc $out
+      mv cargo/bin/cargo $out/bin/cargo
       rm $out/manifest.in
     '';
 
-
-    prePatch = if name == "rustc" then
-        ''
+    prePatch =''
         mv rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/ rustc/lib/rustlib/
-        ''
-    else
-        null;
+    '';
 
     preFixup = let
       rpath = stdenv.lib.concatStringsSep ":" [
@@ -41,24 +38,13 @@ let build = {name, url, sha256, exes} :
       '';
   };
 
-  cargoNight = "2016-01-30";
-  version = "1.7.0";
-  # version = "nightly";
+  version = "nightly";
 in
 {
-  rustc = build {
-    name = "rustc";
-
+  rust = build {
     url = "https://static.rust-lang.org/dist/rust-${version}-x86_64-unknown-linux-gnu.tar.gz"; # .sha256
-    sha256 = "d36634bd8df3d7565487b70af03dfda1c43c635cd6f2993f47cd61fda00d890a";
-    # sha256 = "7ec0fda878ee13a7884b400f66f3d0abd77a4efc2b57bec098d8cc69c82c3b4c";
-    exes = ["rustc" "rustdoc"];
-  };
-
-  cargo = build {
-    name = "cargo";
-    url = "https://static.rust-lang.org/cargo-dist/${cargoNight}/cargo-nightly-x86_64-unknown-linux-gnu.tar.gz";
-    sha256 = "0yy9g3fb47l9wwsxgfxmw6hcgyffjic1v44ffznwm6067d6y093z";
-    exes = [ "cargo" ];
+    # sha256 = "d36634bd8df3d7565487b70af03dfda1c43c635cd6f2993f47cd61fda00d890a";
+    sha256 = "cb3a2d0c21c51a014402ba08239f15791c8b241ad3d7a75323729998eeb72115";
+    exes = ["rustc" "rustdoc" "cargo"];
   };
 }

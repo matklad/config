@@ -32,7 +32,7 @@ in {
     enableIPv6 = false;
     firewall.enable = false;
   };
-
+  virtualisation.virtualbox.host.enable = true;
   time.timeZone = "Europe/Moscow";
 
   programs.zsh.enable = true;
