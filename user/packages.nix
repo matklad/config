@@ -15,7 +15,6 @@ in {
     cmake
     curl
     custom.idea
-    custom.rust
     emacs
     fbreader
     file
@@ -31,7 +30,6 @@ in {
     kde4.ksnapshot
     kde4.yakuake
     kde5.kgpg
-    kde5.krunner
     kde5.okular
     kde5.plasma-nm
     kde5.plasma-pa
@@ -40,11 +38,12 @@ in {
     neovim
     networkmanager
     nox
-    openjdk8
+    oraclejdk8
     python3
     qbittorrent
     smplayer
     stack
+    steam
     terminus_font
     tree
     unclutter
@@ -53,9 +52,11 @@ in {
     unzip
     valgrind
     wget
+    which
     wmctrl
     xbindkeys
     xorg.libX11
     zip
+    zlib
   ];
 }
