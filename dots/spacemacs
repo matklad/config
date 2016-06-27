@@ -34,6 +34,7 @@ values."
      racket
      ocaml
      colors
+     markdown
      (c-c++ :variables c-c++-enable-clang-support t)
      ;; markdown
      ;; org
