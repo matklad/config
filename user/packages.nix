@@ -23,6 +23,7 @@ in {
     gimp
     git
     gnumake
+    kde4.gwenview
     htop
     imagemagick
     kde4.konsole

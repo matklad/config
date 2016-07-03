@@ -1,6 +1,6 @@
 export JAVA_HOME="/run/current-system/sw/"
 export GRADLE_OPTS="-Dorg.gradle.daemon=true"
-export LD_LIBRARY_PATH="/run/current-system/sw/lib/:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$HOME/.nix-profile/lib:/run/current-system/sw/lib/:$LD_LIBRARY_PATH"
 export PATH="$PATH:$HOME/.cargo/bin"
 alias vi=nvim
 alias vim=nvim
