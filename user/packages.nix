@@ -4,6 +4,7 @@ let
   custom = (pkgs.callPackage ./custom.nix {});
 in {
   environment.systemPackages =  with pkgs; [
+  bumblebee
     aspell
     aspellDicts.en
     aspellDicts.ru
@@ -57,6 +58,7 @@ in {
     wmctrl
     xbindkeys
     xorg.libX11
+    xsel
     zip
     zlib
   ];
