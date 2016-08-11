@@ -20,7 +20,12 @@ in {
     enable = true;
     version = 2;
     device = "/dev/sda";
-  };
+    extraEntries = ''
+      menuentry "Windows 7" {
+        chainloader (hd0,1)+1
+      }
+   '';
+    };
 
   boot.kernelParams = [ "acpi_backlight=video" ];
 
@@ -39,7 +44,6 @@ in {
 
   hardware = {
     pulseaudio.enable = true;
-    opengl.driSupport32Bit = true;
   };
 
   services.xserver = {

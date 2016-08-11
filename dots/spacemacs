@@ -33,6 +33,7 @@ values."
      rust
      racket
      ocaml
+     html
      colors
      markdown
      (c-c++ :variables c-c++-enable-clang-support t)

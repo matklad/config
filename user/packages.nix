@@ -4,7 +4,6 @@ let
   custom = (pkgs.callPackage ./custom.nix {});
 in {
   environment.systemPackages =  with pkgs; [
-  bumblebee
     aspell
     aspellDicts.en
     aspellDicts.ru
@@ -39,13 +38,13 @@ in {
     mplayer
     neovim
     networkmanager
+    ntfs3g
     nox
     oraclejdk8
     python3
     qbittorrent
     smplayer
     stack
-    steam
     terminus_font
     tree
     unclutter
@@ -60,6 +59,9 @@ in {
     xorg.libX11
     xsel
     zip
+    ruby
+    bundler
+    jekyll
     zlib
   ];
 }
