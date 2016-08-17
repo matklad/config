@@ -1,15 +1,10 @@
-"~/config/scripts/win-or-app.sh jetbrains-idea-ce intellij"
-  Control + F2
+"jumpapp intellij"
+  Mod4 + 1
 
 
-"~/config/scripts/win-or-app.sh chromium-browser.chromium-browser chromium-browser"
-  Control + F3
+"jumpapp chromium-browser"
+  Mod4 + 2
 
 "~/config/scripts/launch-emacs.sh"
   Mod4 + e
 
-"~/config/scripts/win-or-app.sh clementine.Clementine clementine"
-  Mod4 + c
-
-"krusader"
-  Mod4 + k

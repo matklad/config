@@ -27,7 +27,6 @@ in {
     htop
     imagemagick
     kde4.konsole
-    kde4.krusader
     kde4.ksnapshot
     kde4.yakuake
     kde5.kgpg
