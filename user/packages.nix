@@ -61,6 +61,5 @@ in {
     ruby
     bundler
     jekyll
-    zlib
   ];
 }

@@ -1,10 +1,8 @@
 "jumpapp intellij"
-  Mod4 + 1
-
+  Mod4 + 2
 
 "jumpapp chromium-browser"
-  Mod4 + 2
+  Mod4 + 1
 
 "~/config/scripts/launch-emacs.sh"
   Mod4 + e
-
