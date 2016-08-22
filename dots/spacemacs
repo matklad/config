@@ -36,6 +36,7 @@ values."
      html
      colors
      markdown
+     html
      (c-c++ :variables c-c++-enable-clang-support t)
      ;; markdown
      ;; org
