@@ -48,7 +48,6 @@ in {
     tree
     unclutter
     unrar
-    unrar
     unzip
     valgrind
     wget
