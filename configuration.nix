@@ -49,8 +49,8 @@ in {
   services.xserver = {
     enable = true;
     videoDrivers = [ "intel" ];
-    displayManager.sddm.enable = true;
-    desktopManager.kde5.enable = true;
+    displayManager.lightdm.enable = true;
+    desktopManager.xfce.enable = true;
     synaptics = {
       enable = true;
       horizTwoFingerScroll = false;

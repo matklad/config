@@ -8,6 +8,7 @@ in {
     aspellDicts.en
     aspellDicts.ru
     atool
+    bundler
     chromium
     clang
     clementine
@@ -23,25 +24,21 @@ in {
     gimp
     git
     gnumake
-    kde4.gwenview
     htop
     imagemagick
-    kde4.konsole
-    kde4.ksnapshot
+    kde4.gwenview
     kde4.yakuake
-    kde5.kgpg
     kde5.okular
-    kde5.plasma-nm
-    kde5.plasma-pa
-    linuxPackages.virtualbox
     mplayer
     neovim
     networkmanager
-    ntfs3g
+    networkmanagerapplet
     nox
+    ntfs3g
     oraclejdk8
     python3
     qbittorrent
+    ruby
     smplayer
     stack
     terminus_font
@@ -54,11 +51,10 @@ in {
     which
     wmctrl
     xbindkeys
+    xfce.xfce4notifyd   
+    xfce.xfwm4
     xorg.libX11
     xsel
     zip
-    ruby
-    bundler
-    jekyll
   ];
 }
