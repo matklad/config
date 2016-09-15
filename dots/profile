@@ -1,4 +1,4 @@
-if [ ! -d "/run/current-system/" ]; then
+if [ -d "/run/current-system/" ]; then
     export JAVA_HOME="/run/current-system/sw/"
     export LD_LIBRARY_PATH="$HOME/.nix-profile/lib:/run/current-system/sw/lib/:$LD_LIBRARY_PATH"
 fi
