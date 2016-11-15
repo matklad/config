@@ -43,6 +43,8 @@ in {
   programs.zsh.enable = true;
 
   hardware = {
+    opengl.enable = true;
+    opengl.driSupport = true;
     pulseaudio.enable = true;
   };
 
@@ -79,7 +81,7 @@ in {
    };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "16.03";
+  system.stateVersion = "16.09";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.${user} = {

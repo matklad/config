@@ -4,31 +4,31 @@ let
   custom = (pkgs.callPackage ./custom.nix {});
 in {
   environment.systemPackages =  with pkgs; [
+    flameGraph
     aspell
     aspellDicts.en
     aspellDicts.ru
     atool
+    vivaldi
     bundler
     chromium
     clang
     clementine
+    custom.idea
     cloc
     cmake
+    qpdfview
     curl
-    custom.idea
     emacs
     fbreader
     file
-    gcc
-    ghc
     gimp
     git
     gnumake
     htop
     imagemagick
     kde4.gwenview
-    kde4.yakuake
-    kde5.okular
+    yakuake
     mplayer
     neovim
     networkmanager
@@ -36,11 +36,12 @@ in {
     nox
     ntfs3g
     oraclejdk8
+    linuxPackages.perf
     python3
+    python2
     qbittorrent
     ruby
     smplayer
-    stack
     terminus_font
     tree
     unclutter
@@ -56,5 +57,7 @@ in {
     xorg.libX11
     xsel
     zip
+    glibc
+    zlib
   ];
 }

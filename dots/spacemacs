@@ -37,6 +37,7 @@ values."
      colors
      markdown
      html
+     javascript
      (c-c++ :variables c-c++-enable-clang-support t)
      ;; markdown
      ;; org

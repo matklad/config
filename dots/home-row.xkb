@@ -1,0 +1,34 @@
+xkb_keymap {
+    xkb_keycodes { include "evdev+aliases(qwerty)" };
+    xkb_types { include "complete" };
+    xkb_compatibility {
+        include "complete"
+
+        interpret Overlay1_Enable {
+            action = SetControls(controls=overlay1);
+        };
+    };
+    xkb_symbols {
+        include "pc+us+ru:2+inet(evdev)+group(win_space_toggle)+ctrl(nocaps)"
+
+        key <CAPS> {
+            type[Group1] = "ONE_LEVEL",
+            symbols[Group1] = [ Overlay1_Enable ]
+        };
+        key <AC06> { overlay1 = <LEFT> };
+
+        key <AC07> { overlay1 = <DOWN> };
+        key <AD07> { overlay1 = <PGDN> };
+
+        key <AC08> { overlay1 = <UP>   };
+        key <AD08> { overlay1 = <PGUP>   };
+
+        key <AC09> { overlay1 = <RGHT> };
+
+        key <AC01> { overlay1 = <HOME> };
+        key <AD03> { overlay1 = <END>  };
+
+        key <AB06> { overlay1 = <BKSP>  };
+    };
+    xkb_geometry { include "pc(pc104)" };
+};
