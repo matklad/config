@@ -28,7 +28,8 @@ xkb_keymap {
         key <AC01> { overlay1 = <HOME> };
         key <AD03> { overlay1 = <END>  };
 
-        key <AB06> { overlay1 = <BKSP>  };
+        key <AB06> { overlay1 = <KPEN>  };
+        key <AC03> { overlay1 = <BKSP>  };
     };
     xkb_geometry { include "pc(pc104)" };
 };
