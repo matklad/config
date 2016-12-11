@@ -97,12 +97,10 @@ in {
         ln -fs ${./dots/xprofile} .xprofile
         ln -fs ${./dots/profile} .profile
         ln -fs ${./dots/zshrc} .zshrc
-        ln -fs ${./dots/xbindkeysrc} .xbindkeysrc
         ln -fs ${./dots/spacemacs} .spacemacs
         ln -fs ${./dots/user-dirs.dirs} .config/user-dirs.dirs
         rm -rf .config/nvim
         ln -fs ${./dots/config/nvim} .config/nvim
-        ln -fs ${./dots/ideavimrc} .ideavimrc
       '';
 
       kdeAutostart =
