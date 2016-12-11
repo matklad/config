@@ -55,6 +55,7 @@ in {
     xorg.libX11
     xsel
     yakuake
+    kde5.konsole
     zip
     zlib
   ];

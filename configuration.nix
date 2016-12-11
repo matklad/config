@@ -99,6 +99,7 @@ in {
         ln -fs ${./dots/zshrc} .zshrc
         ln -fs ${./dots/spacemacs} .spacemacs
         ln -fs ${./dots/user-dirs.dirs} .config/user-dirs.dirs
+        ln -fs ${./dots/xbindkeysrc} .xbindkeysrc
         rm -rf .config/nvim
         ln -fs ${./dots/config/nvim} .config/nvim
       '';
