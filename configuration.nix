@@ -77,6 +77,7 @@ in {
        inconsolata  # monospaced
        ubuntu_font_family  # Ubuntu fonts
        unifont # some international languages
+       hack-font
      ];
    };
 
@@ -97,7 +98,6 @@ in {
         ln -fs ${./dots/xprofile} .xprofile
         ln -fs ${./dots/profile} .profile
         ln -fs ${./dots/zshrc} .zshrc
-        ln -fs ${./dots/spacemacs} .spacemacs
         ln -fs ${./dots/user-dirs.dirs} .config/user-dirs.dirs
         ln -fs ${./dots/xbindkeysrc} .xbindkeysrc
         rm -rf .config/nvim

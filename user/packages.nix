@@ -50,7 +50,7 @@ in {
     which
     wmctrl
     xbindkeys
-    xfce.xfce4notifyd   
+    xfce.xfce4notifyd
     xfce.xfwm4
     xorg.libX11
     xsel
