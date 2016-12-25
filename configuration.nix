@@ -65,8 +65,6 @@ in {
           Option "SoftButtonAreas" "50% 0 82% 0 0 0 0 0"
       '';
     };
-    layout = "us";
-    xkbOptions = "ctrl:nocaps";
   };
 
   fonts = {

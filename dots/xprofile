@@ -1,7 +1,4 @@
 source ~/.profile
-
 xbindkeys
-xkbcomp $HOME/config/dots/home-row.xkb $DISPLAY
-unclutter &
 
 rm -rf ~/downloads/*
