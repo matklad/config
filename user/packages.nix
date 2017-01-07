@@ -15,7 +15,6 @@ in {
     cloc
     cmake
     curl
-    custom.idea
     emacs
     file
     flameGraph
@@ -26,6 +25,7 @@ in {
     htop
     imagemagick
     kde4.gwenview
+    kde5.konsole
     linuxPackages.perf
     neovim
     networkmanager
@@ -40,7 +40,6 @@ in {
     ruby
     terminus_font
     tree
-    unclutter
     unrar
     unzip
     valgrind
@@ -49,13 +48,14 @@ in {
     wget
     which
     wmctrl
+    xbanish
     xbindkeys
     xfce.xfce4notifyd
     xfce.xfwm4
     xorg.libX11
+    xorg.xkbcomp
     xsel
     yakuake
-    kde5.konsole
     zip
     zlib
   ];
