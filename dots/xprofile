@@ -1,5 +1,5 @@
 source ~/.profile
 xbindkeys
-xbanish
+xbanish&
 
 rm -rf ~/downloads/*
