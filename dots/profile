@@ -4,12 +4,7 @@ if [ -d "/run/current-system/" ]; then
 fi
 
 export PATH="$PATH:$HOME/.cargo/bin:$HOME/bin"
-export EDITOR="nvim"
-export EDITOR="emacsclient -t --alternate-editor=\"\""
-export VISUAL="emacsclient -t --alternate-editor=\"\""
 
-unsetopt extendedglob
 alias o=xdg-open
-alias e="emacsclient -t --alternate-editor=\"\""
 alias gcm="git checkout master"
 alias gs="git status"

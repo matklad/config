@@ -26,6 +26,7 @@ in {
     imagemagick
     kde4.gwenview
     kde5.konsole
+    kde5.filelight
     linuxPackages.perf
     neovim
     networkmanager
