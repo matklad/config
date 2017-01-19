@@ -45,6 +45,7 @@ in {
     unzip
     valgrind
     vivaldi
+    obconf
     vlc
     wget
     which

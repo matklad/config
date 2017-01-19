@@ -1,11 +1,12 @@
 if [ -d "/run/current-system/" ]; then
     export JAVA_HOME="/run/current-system/sw/"
-    export LD_LIBRARY_PATH="$HOME/.nix-profile/lib:/run/current-system/sw/lib/:$LD_LIBRARY_PATH"
 fi
 
 export PATH="$PATH:$HOME/.cargo/bin:$HOME/bin"
 
 alias o=xdg-open
+
+alias rm="nocorrect rm"
 
 alias g="git"
 alias gs="git status"
@@ -16,4 +17,3 @@ unsetopt extendedglob
 export EDITOR="emacsclient -c --alternate-editor=\"\""
 export VISUAL="$EDITOR"
 alias e="$EDITOR"
-

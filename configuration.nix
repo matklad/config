@@ -53,6 +53,7 @@ in {
     videoDrivers = [ "intel" ];
     displayManager.lightdm.enable = true;
     desktopManager.xfce.enable = true;
+    windowManager.openbox.enable = true;
     synaptics = {
       enable = true;
       horizTwoFingerScroll = false;
@@ -104,5 +105,9 @@ in {
         ln -fs ${pkgs.kde4.yakuake}/share/applications/kde4/yakuake.desktop ./.config/autostart/yakuake.desktop
       '';
   };
+
+  environment.shellInit = ''
+    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.nix-profile/lib:/run/current-system/sw/lib:${pkgs.stdenv.cc.cc.lib}/lib"
+  '';
 
 }

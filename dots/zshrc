@@ -1,0 +1,16 @@
+# Source Prezto, thanks to Sorin Ionescu
+# and contributors for making it!
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+source ~/.profile
+
+unalias gcf
+function gcf() {
+    local user=$1
+    local repo=$2
+    git clone https://github.com/$user/$repo.git
+    pushd $repo
+    git remote add fork https://github.com/matklad/$repo.git
+    git fetch fork
+    popd
+}
