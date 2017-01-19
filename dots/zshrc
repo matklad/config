@@ -10,7 +10,7 @@ function gcf() {
     local repo=$2
     git clone https://github.com/$user/$repo.git
     pushd $repo
-    git remote add fork https://github.com/matklad/$repo.git
+    git remote add fork git@github.com:matklad/$repo.git
     git fetch fork
     popd
 }
