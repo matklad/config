@@ -1,0 +1,18 @@
+zstyle ':prezto:*:*' color 'yes'
+
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'prompt' \
+  'autosuggestions' 'git'
+
+zstyle ':prezto:module:editor' key-bindings 'emacs'
+
+zstyle ':prezto:module:prompt' theme 'pure'
+

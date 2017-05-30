@@ -1,5 +1,5 @@
 export PURE_PROMPT_SYMBOL=λ
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+source "$HOME/.zprezto/init.zsh"
 unsetopt extendedglob
 source $HOME/config/scripts/init-user-shell.sh
 
