@@ -1,8 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: prop
-# key: prop
-# binding: direct-keybinding
-# --
-$1: (->
-
-).property('$2')

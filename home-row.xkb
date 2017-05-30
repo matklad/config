@@ -18,19 +18,20 @@ xkb_keymap {
 
         key <AC06> { overlay1 = <BKSP> };
 
-        key <AD07> { overlay1 = <PGDN> };
+        key <AD07> { overlay1 = <PGUP> };
         key <AC07> { overlay1 = <LEFT> };
 
         key <AD08> { overlay1 = <UP>   };
         key <AC08> { overlay1 = <DOWN> };
 
-        key <AD09> { overlay1 = <PGUP> };
+        key <AD09> { overlay1 = <PGDN> };
         key <AC09> { overlay1 = <RGHT> };
 
         key <AC01> { overlay1 = <HOME> };
         key <AD03> { overlay1 = <END>  };
 
-        key <AB06> { overlay1 = <KPEN>  };
+        key <AB06> { overlay1 = <KPEN> };
+	key <AD04> { overlay1 = <ESC>  };
     };
     xkb_geometry { include "pc(pc104)" };
 };

@@ -1,6 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: ^:private
-# key: p
-# binding: direct-keybinding
-# --
-^:private

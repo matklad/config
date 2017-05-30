@@ -1,6 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: u64
-# key: u
-# binding: direct-keybinding
-# --
-u64

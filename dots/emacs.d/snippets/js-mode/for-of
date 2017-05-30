@@ -1,8 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: for-of
-# key: of
-# binding: direct-keybinding
-# --
-for (const $1 of $2) {
-    $0
-}

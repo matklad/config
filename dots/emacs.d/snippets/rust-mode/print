@@ -1,6 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: print
-# key: p
-# binding: direct-keybinding
-# --
-println!("{}", $0);
