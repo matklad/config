@@ -1,0 +1,1 @@
+/home/matklad/.zprezto/runcoms/zshrc
