@@ -20,7 +20,13 @@
 	json-rpc
 	haskell-mode
 	smartparens
-	flycheck))
+	flycheck
+	clojure-mode
+	inf-clojure
+	projectile-ripgrep
+	git-gutter
+	crux
+	cider))
 
 (package-initialize)
 (package-refresh-contents)
@@ -36,6 +42,8 @@
 (global-set-key (kbd "M-x") #'helm-M-x)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (helm-mode 1)
+(require 'helm-mode)
+(setq helm-mode-fuzzy-match 't)
 
 (setq backup-directory-alist `(("." . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
@@ -66,6 +74,13 @@
 (set-face-attribute 'default nil :font "Inconsolata 16")
 ;; UI
 
+;; Non-essential keybindings
+(global-set-key (kbd "C-<f12>") 'imenu)
+(require 'crux)
+(global-set-key (kbd "C-a") 'crux-move-beginning-of-line)
+(global-set-key (kbd "<home>") 'crux-move-beginning-of-line)
+;; Non-essential keybindings
+
 ;; Modes
 (show-paren-mode 1)
 (smartparens-global-mode t)
@@ -76,6 +91,7 @@
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
 (add-hook 'text-mode-hook '(lambda () (flyspell-mode t)))
+(global-git-gutter-mode +1)
 ;; Modes
 
 
@@ -91,7 +107,7 @@
  '(custom-enabled-themes (quote (zenburn)))
  '(custom-safe-themes
    (quote
-    ("ef04dd1e33f7cbd5aa3187981b18652b8d5ac9e680997b45dc5d00443e6a46e3" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "9be1d34d961a40d94ef94d0d08a364c3d27201f3c98c9d38e36f10588469ea57" default)))
+    ("67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" "ef04dd1e33f7cbd5aa3187981b18652b8d5ac9e680997b45dc5d00443e6a46e3" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "9be1d34d961a40d94ef94d0d08a364c3d27201f3c98c9d38e36f10588469ea57" default)))
  '(fci-rule-color "#383838")
  '(nrepl-message-colors
    (quote
