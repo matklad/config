@@ -31,7 +31,7 @@ xkb_keymap {
         key <AD03> { overlay1 = <END>  };
 
         key <AB06> { overlay1 = <KPEN> };
-	key <AD04> { overlay1 = <ESC>  };
+	key <AC05> { overlay1 = <ESC>  };
     };
     xkb_geometry { include "pc(pc104)" };
 };
