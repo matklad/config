@@ -18,4 +18,6 @@ alias g="git"
 alias gs="git status"
 alias gcm="git checkout master"
 alias gup="git pull --rebase"
+alias ctrlc="xclip -selection c"
+alias l="ls -lAh"
 export VISUAL=nvim
