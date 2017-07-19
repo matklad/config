@@ -1,4 +1,5 @@
 export PURE_PROMPT_SYMBOL=λ
+fpath+=~/.zfunc
 source "$HOME/.zprezto/init.zsh"
 unsetopt extendedglob
 source $HOME/config/scripts/init-user-shell.sh
@@ -21,4 +22,5 @@ alias gup="git pull --rebase"
 alias gbda="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
 alias ctrlc="xclip -selection c"
 alias l="ls -lAh"
+alias sb="sublime"
 export VISUAL=nvim
