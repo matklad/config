@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-export PATH="$PATH:$HOME/.cargo/bin"
 alias vim=nvim
+source $HOME/config/scripts/env.sh
