@@ -1,7 +1,7 @@
 self: super:
 
 {
-  jbsdk = self.callPackage ~/config/nix/jbsdk.nix {};
+  jbsdk = super.callPackage ~/config/nix/jbsdk.nix {};
 
   idea-community = let 
     version = "2017.2.3";
