@@ -1,29 +1,24 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ /etc/nixos/hardware-configuration.nix ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.blacklistedKernelModules = [ "nouveau" ];
+  boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+    blacklistedKernelModules = [ "nouveau" ];
+  };
 
-  networking.hostName = "nixos"; 
-  networking.networkmanager.enable = true; 
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+  };
 
   time.timeZone = "Europe/Moscow";
 
-  nixpkgs.config.allowUnfree = true;
-  
-  nixpkgs.config.packageOverrides = pkgs: {
-    bluez = pkgs.bluez5;
+  nixpkgs.config = {
+    allowUnfree = true;
+    packageOverrides = pkgs: { bluez = pkgs.bluez5; };
   };
 
   environment.systemPackages = with pkgs; [
@@ -34,11 +29,13 @@
     qbittorrent
     gimp
     sublime3
-    tree
+    deadbeef-with-plugins
+    filelight
 
     konsole
     yakuake
 
+    tree
     nox
     htop
     atool
@@ -46,7 +43,6 @@
     unzip
     file
     python3
-    #oraclejdk8
     clang
     cmake
     gnumake
@@ -59,28 +55,29 @@
     pasystray
     wmctrl
     obconf
-    compton
     xclip
 
     zlib
   ];
-  
-  hardware.opengl.extraPackages = with pkgs; [ vaapiIntel libvdpau-va-gl vaapiVdpau ];
-  
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.package = pkgs.pulseaudioFull;
-  hardware.bluetooth.enable = true;
+
+  hardware = {
+    opengl.extraPackages = with pkgs; [ vaapiIntel libvdpau-va-gl vaapiVdpau ];
+    pulseaudio.enable = true;
+    pulseaudio.package = pkgs.pulseaudioFull;
+    bluetooth.enable = true;
+  };
 
   services.xserver = {
     enable = true;
     videoDrivers = [ "intel" ];
 
     displayManager.lightdm.enable = true;
-    desktopManager.xfce = { 
-      enable = true; 
-      enableXfwm = false; 
+    desktopManager.xfce = {
+      enable = true;
+      enableXfwm = false;
     };
     windowManager.openbox.enable = true;
+
     synaptics = {
       enable = true;
       horizTwoFingerScroll = false;
@@ -115,12 +112,11 @@
     item = "nofile";
     value = "65536";
   }];
-  
+
   system.stateVersion = "17.09";
 
-   environment.extraInit = let loader = "ld-linux-x86-64.so.2"; in ''
-     export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib:${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.mesa}/lib:${pkgs.xorg.libX11}/lib:${pkgs.xorg.libXcursor}/lib:${pkgs.xorg.libXxf86vm}/lib:${pkgs.xorg.libXi}/lib:${pkgs.ncurses5}/lib"
-     ln -fs ${pkgs.stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
-   '';
-
+  environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
+    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib:${stdenv.cc.cc.lib}/lib:${mesa}/lib:${xorg.libX11}/lib:${xorg.libXcursor}/lib:${xorg.libXxf86vm}/lib:${xorg.libXi}/lib:${ncurses5}/lib"
+    ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
+  '';
 }
