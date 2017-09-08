@@ -1,7 +1,9 @@
+
 { config, pkgs, ... }:
 
 {
   imports = [ /etc/nixos/hardware-configuration.nix ];
+  nix.nixPath = [ "/home/matklad/" "nixos-config=/etc/nixos/configuration.nix" ];
 
   boot = {
     loader.systemd-boot.enable = true;
@@ -31,9 +33,6 @@
     sublime3
     deadbeef-with-plugins
     filelight
-
-    konsole
-    yakuake
 
     tree
     nox
@@ -71,12 +70,8 @@
     enable = true;
     videoDrivers = [ "intel" ];
 
-    displayManager.lightdm.enable = true;
-    desktopManager.xfce = {
-      enable = true;
-      enableXfwm = false;
-    };
-    windowManager.openbox.enable = true;
+    displayManager.sddm.enable = true;
+    desktopManager.lxqt.enable = true;
 
     synaptics = {
       enable = true;
@@ -84,6 +79,8 @@
       twoFingerScroll = true;
     };
   };
+  environment.lxqt.excludePackages = with pkgs.lxqt; [ qlipper ];
+
 
   fonts = {
     enableFontDir = true;
