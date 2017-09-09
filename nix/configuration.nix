@@ -24,16 +24,34 @@
   };
 
   environment.systemPackages = with pkgs; [
-    git
+    # GUI
     emacs
     neovim
-    chromium
+    sublime3
+    firefox-bin
     qbittorrent
     gimp
-    sublime3
     deadbeef-with-plugins
     filelight
+    simplescreenrecorder
+    pasystray
+    spectacle
+    smplayer
 
+    # Langs
+    python3
+    clang
+    cmake
+    gnumake
+    gcc7
+    ant
+    maven
+    nodejs
+    python36
+    ghc
+
+    # Utils
+    git
     tree
     nox
     htop
@@ -41,23 +59,28 @@
     unrar
     unzip
     file
-    python3
-    clang
-    cmake
-    gnumake
     linuxPackages.perf
     patchelf
     aspell aspellDicts.en aspellDicts.ru
-
     xorg.xkbcomp
     xbindkeys
-    pasystray
     wmctrl
+    wget
+    curl
     obconf
     xclip
-
     zlib
   ];
+  programs = {
+    zsh = { 
+      enable = true;
+      enableAutosuggestions = true;
+      syntaxHighlighting.enable = true;
+      shellInit = "alias vim=nvim"; 
+    };
+    java.enable = true;
+  };
+
 
   hardware = {
     opengl.extraPackages = with pkgs; [ vaapiIntel libvdpau-va-gl vaapiVdpau ];
@@ -79,7 +102,9 @@
       twoFingerScroll = true;
     };
   };
-  environment.lxqt.excludePackages = with pkgs.lxqt; [ qlipper ];
+  environment.lxqt.excludePackages = with pkgs.lxqt; [ 
+    qlipper pkgs.xscreensaver
+  ];
 
 
   fonts = {
@@ -92,7 +117,6 @@
     ];
   };
 
-  programs.zsh = { enable = true; shellInit = "alias vim=nvim"; };
   users.defaultUserShell = "/run/current-system/sw/bin/zsh";
 
   users.extraUsers.matklad = {

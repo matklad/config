@@ -8,9 +8,8 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
-  'completion' \
   'prompt' \
-  'autosuggestions' 'git'
+  'git'
 
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 
