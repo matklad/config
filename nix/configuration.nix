@@ -1,9 +1,14 @@
+# Install from master:
+#  nix-env -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA hello
+# Install from local folder:
+#  nix-env -f /home/matklad/projects/nixpkgs -iA jetbrains.idea-community
+
 
 { config, pkgs, ... }:
 
 {
   imports = [ /etc/nixos/hardware-configuration.nix ];
-  nix.nixPath = [ "/home/matklad/" "nixos-config=/etc/nixos/configuration.nix" ];
+  # nix.nixPath = [ "/home/matklad/" "nixos-config=/etc/nixos/configuration.nix" ];
 
   boot = {
     loader.systemd-boot.enable = true;
@@ -36,7 +41,11 @@
     simplescreenrecorder
     pasystray
     spectacle
-    smplayer
+    smplayer mpv
+    breeze-gtk
+    breeze-qt5
+    breeze-icons
+    gnome3.gnome_themes_standard
 
     # Langs
     python3
@@ -103,8 +112,9 @@
     };
   };
   environment.lxqt.excludePackages = with pkgs.lxqt; [ 
-    qlipper pkgs.xscreensaver
+    qlipper qps pkgs.xscreensaver
   ];
+  virtualisation.docker.enable = true;
 
 
   fonts = {
@@ -121,7 +131,7 @@
 
   users.extraUsers.matklad = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
     uid = 1000;
   };
 
