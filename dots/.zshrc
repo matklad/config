@@ -4,6 +4,7 @@ source "$HOME/.zprezto/init.zsh"
 unsetopt extendedglob
 source $HOME/config/scripts/init-user-shell.sh
 
+unalias rm
 unalias gcf
 function gcf() {
     local userrepo=$1
@@ -14,13 +15,3 @@ function gcf() {
     git fetch fork
     popd
 }
-
-alias g="git"
-alias gs="git status"
-alias gcm="git checkout master"
-alias gup="git pull --rebase"
-alias gbda="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
-alias ctrlc="xclip -selection c"
-alias l="ls -lAh"
-alias sb="sublime"
-export VISUAL=nvim
