@@ -114,8 +114,10 @@
   environment.lxqt.excludePackages = with pkgs.lxqt; [ 
     qlipper qps pkgs.xscreensaver
   ];
-  virtualisation.docker.enable = true;
-
+  virtualisation = {
+    virtualbox.host.enable = true;
+    docker.enable = true;
+  };
 
   fonts = {
     enableFontDir = true;
