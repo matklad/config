@@ -49,7 +49,6 @@
 
     # Langs
     python3
-    clang
     cmake
     gnumake
     gcc7
