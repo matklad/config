@@ -110,6 +110,10 @@
       twoFingerScroll = true;
     };
   };
+
+  services.unclutter.enable = true;
+  services.compton.enable = true;
+
   environment.lxqt.excludePackages = with pkgs.lxqt; [ 
     qlipper qps pkgs.xscreensaver
   ];

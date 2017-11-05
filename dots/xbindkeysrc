@@ -1,8 +1,8 @@
 "jumpapp firefox"
-  Mod4 + 1
+  F2
 
 "jumpapp idea-community"
-  Mod4 + 2
+  F3
 
 "jumpapp -f pcmanfm-qt"
   Mod4 + e
