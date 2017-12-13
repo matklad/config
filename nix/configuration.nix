@@ -26,6 +26,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     packageOverrides = pkgs: { bluez = pkgs.bluez5; };
+    virtualbox.enableExtensionPack = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -33,7 +34,6 @@
     emacs
     neovim
     sublime3
-    firefox-bin
     qbittorrent
     gimp
     deadbeef-with-plugins
@@ -46,6 +46,7 @@
     breeze-qt5
     breeze-icons
     gnome3.gnome_themes_standard
+    firefox-bin
 
     # Langs
     python3
@@ -54,7 +55,7 @@
     gcc7
     ant
     maven
-    nodejs
+    nodejs-8_x
     python36
     ghc
 
@@ -91,7 +92,6 @@
 
 
   hardware = {
-    opengl.extraPackages = with pkgs; [ vaapiIntel libvdpau-va-gl vaapiVdpau ];
     pulseaudio.enable = true;
     pulseaudio.package = pkgs.pulseaudioFull;
     bluetooth.enable = true;
@@ -113,9 +113,10 @@
 
   services.unclutter.enable = true;
   services.compton.enable = true;
+  services.printing.enable = true;
 
   environment.lxqt.excludePackages = with pkgs.lxqt; [ 
-    qlipper qps pkgs.xscreensaver
+    qlipper qps pkgs.xscreensaver qterminal
   ];
   virtualisation = {
     virtualbox.host.enable = true;
