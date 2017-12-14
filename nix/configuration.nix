@@ -8,7 +8,6 @@
 
 {
   imports = [ /etc/nixos/hardware-configuration.nix ];
-  # nix.nixPath = [ "/home/matklad/" "nixos-config=/etc/nixos/configuration.nix" ];
 
   boot = {
     loader.systemd-boot.enable = true;
@@ -80,6 +79,11 @@
     xclip
     zlib
   ];
+
+  environment.lxqt.excludePackages = with pkgs.lxqt; [ 
+    qlipper qps pkgs.xscreensaver qterminal
+  ];
+
   programs = {
     zsh = { 
       enable = true;
@@ -90,34 +94,31 @@
     java.enable = true;
   };
 
-
   hardware = {
     pulseaudio.enable = true;
     pulseaudio.package = pkgs.pulseaudioFull;
     bluetooth.enable = true;
   };
 
-  services.xserver = {
-    enable = true;
-    videoDrivers = [ "intel" ];
-
-    displayManager.sddm.enable = true;
-    desktopManager.lxqt.enable = true;
-
-    synaptics = {
+  services = {
+    xserver = {
       enable = true;
-      horizTwoFingerScroll = false;
-      twoFingerScroll = true;
+      videoDrivers = [ "intel" ];
+
+      displayManager.sddm.enable = true;
+      desktopManager.lxqt.enable = true;
+
+      synaptics = {
+        enable = true;
+        horizTwoFingerScroll = false;
+        twoFingerScroll = true;
+      };
     };
+    unclutter.enable = true;
+    compton.enable = true;
+    printing.enable = true;
   };
 
-  services.unclutter.enable = true;
-  services.compton.enable = true;
-  services.printing.enable = true;
-
-  environment.lxqt.excludePackages = with pkgs.lxqt; [ 
-    qlipper qps pkgs.xscreensaver qterminal
-  ];
   virtualisation = {
     virtualbox.host.enable = true;
     docker.enable = true;
@@ -133,15 +134,15 @@
     ];
   };
 
-  users.defaultUserShell = "/run/current-system/sw/bin/zsh";
-
-  users.extraUsers.matklad = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
-    uid = 1000;
+  users = {
+    defaultUserShell = "/run/current-system/sw/bin/zsh";
+    extraUsers.matklad = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" "networkmanager" "docker" ];
+      uid = 1000;
+    };
+    extraUsers.man = { isNormalUser = false; };
   };
-
-  users.extraUsers.man = { isNormalUser = false; };
 
   security.pam.loginLimits = [{
     domain = "*";
