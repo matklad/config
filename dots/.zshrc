@@ -9,9 +9,9 @@ unalias gcf
 function gcf() {
     local userrepo=$1
     local repo=`basename $userrepo`
-    git clone https://github.com/$userrepo.git
+    git clone https://github.com/matklad/$repo.git
     pushd $repo
-    git remote add fork git@github.com:matklad/$repo.git
-    git fetch fork
+    git remote add upstream git@github.com:$userrepo.git
+    git fetch upstream
     popd
 }

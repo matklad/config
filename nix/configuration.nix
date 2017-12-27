@@ -25,7 +25,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     packageOverrides = pkgs: { bluez = pkgs.bluez5; };
-    virtualbox.enableExtensionPack = true;
+    # virtualbox.enableExtensionPack = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -33,6 +33,7 @@
     emacs
     neovim
     sublime3
+    vscode
     qbittorrent
     gimp
     deadbeef-with-plugins
@@ -44,8 +45,12 @@
     breeze-gtk
     breeze-qt5
     breeze-icons
+    breeze-grub
     gnome3.gnome_themes_standard
     firefox-bin
+    zoom-us
+
+    kwin
 
     # Langs
     python3
@@ -70,26 +75,27 @@
     linuxPackages.perf
     patchelf
     aspell aspellDicts.en aspellDicts.ru
+
     xorg.xkbcomp
     xbindkeys
+
     wmctrl
     wget
     curl
-    obconf
     xclip
     zlib
   ];
 
-  environment.lxqt.excludePackages = with pkgs.lxqt; [ 
-    qlipper qps pkgs.xscreensaver qterminal
+  environment.lxqt.excludePackages = with pkgs.lxqt; [
+    qlipper qps pkgs.xscreensaver qterminal pkgs.openbox obconf-qt
   ];
 
   programs = {
-    zsh = { 
+    zsh = {
       enable = true;
       enableAutosuggestions = true;
       syntaxHighlighting.enable = true;
-      shellInit = "alias vim=nvim"; 
+      shellInit = "alias vim=nvim";
     };
     java.enable = true;
   };
@@ -102,10 +108,15 @@
 
   services = {
     xserver = {
+      dpi = 192;
       enable = true;
       videoDrivers = [ "intel" ];
 
-      displayManager.sddm.enable = true;
+      displayManager.sddm = {
+        enable = true;
+	# package = pkgs.sddmPlasma5;
+        theme = "breeze";
+      };
       desktopManager.lxqt.enable = true;
 
       synaptics = {
@@ -115,7 +126,6 @@
       };
     };
     unclutter.enable = true;
-    compton.enable = true;
     printing.enable = true;
   };
 
@@ -154,6 +164,9 @@
   system.stateVersion = "17.09";
 
   environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
+    export PATH="$PATH:/home/matklad/.cargo/bin"
+    export GDK_SCALE=2
+    # export QT_AUTO_SCREEN_SCALE_FACTOR=2
     export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib:${stdenv.cc.cc.lib}/lib:${mesa}/lib:${xorg.libX11}/lib:${xorg.libXcursor}/lib:${xorg.libXxf86vm}/lib:${xorg.libXi}/lib:${ncurses5}/lib"
     ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
   '';
