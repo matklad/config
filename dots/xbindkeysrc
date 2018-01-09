@@ -4,6 +4,9 @@
 "jumpapp idea-community"
   F3
 
+"emacsclient -c --alternate-editor="
+  F4
+
 "jumpapp -f pcmanfm-qt"
   Mod4 + e
 

@@ -26,7 +26,9 @@
 	projectile-ripgrep
 	git-gutter
 	crux
-	cider))
+	cider
+	rust-mode
+	golden-ratio))
 
 (package-initialize)
 (package-refresh-contents)
@@ -36,6 +38,7 @@
 ;; Basic
 (global-set-key (kbd "C-z")     'undo)
 (global-set-key (kbd "C-S-z")   'redo)
+(global-set-key (kbd "C-x g")   'magit-status)
 (setq kill-whole-line 't)
 
 (require 'helm-config)
@@ -48,6 +51,8 @@
 (setq backup-directory-alist `(("." . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+(setq vc-follow-symlinks t)
+
 ;; Basic
 
 ;; UI
@@ -59,7 +64,7 @@
   (mapc #'disable-theme custom-enabled-themes)
   (customize-save-variable
    `custom-enabled-themes (list name)))
-
+(golden-ratio-mode 1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -85,9 +90,8 @@
 (show-paren-mode 1)
 (smartparens-global-mode t)
 (global-flycheck-mode)
-
+(setq-default flycheck-disabled-checkers '(rust rust-cargo))
 (add-hook 'emacs-lisp-mode-hook  #'enable-paredit-mode)
-
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
 (add-hook 'text-mode-hook '(lambda () (flyspell-mode t)))
