@@ -87,6 +87,8 @@
     xclip
     zlib
     libsodium
+    rocksdb
+    snappy
   ];
 
   environment.lxqt.excludePackages = with pkgs.lxqt; [
@@ -171,7 +173,11 @@
     export GDK_SCALE=2
     # export QT_AUTO_SCREEN_SCALE_FACTOR=2
     export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib:${stdenv.cc.cc.lib}/lib:${mesa}/lib:${xorg.libX11}/lib:${xorg.libXcursor}/lib:${xorg.libXxf86vm}/lib:${xorg.libXi}/lib:${ncurses5}/lib"
+
     export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:${libsodium.dev}/lib/pkgconfig"
+    export ROCKSDB_LIB_DIR="${pkgs.rocksdb}/lib"
+    export SNAPPY_LIB_DIR="${pkgs.snappy}/lib"
+
     ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
   '';
 }
