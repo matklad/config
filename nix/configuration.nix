@@ -70,6 +70,7 @@
     htop
     atool
     unrar
+    zip
     unzip
     file
     linuxPackages.perf
@@ -113,7 +114,7 @@
 
   services = {
     xserver = {
-      dpi = 192;
+      # dpi = 192;
       enable = true;
       videoDrivers = [ "intel" ];
 
@@ -170,7 +171,7 @@
 
   environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
     export PATH="$PATH:/home/matklad/.cargo/bin"
-    export GDK_SCALE=2
+    # export GDK_SCALE=2
     # export QT_AUTO_SCREEN_SCALE_FACTOR=2
     export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib:${stdenv.cc.cc.lib}/lib:${mesa}/lib:${xorg.libX11}/lib:${xorg.libXcursor}/lib:${xorg.libXxf86vm}/lib:${xorg.libXi}/lib:${ncurses5}/lib"
 
