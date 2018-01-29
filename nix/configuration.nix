@@ -1,4 +1,5 @@
 # Install from master:
+#
 #  nix-env -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA hello
 # Install from local folder:
 #  nix-env -f /home/matklad/projects/nixpkgs -iA jetbrains.idea-community
@@ -48,6 +49,7 @@
     yakuake
     okular
     networkmanagerapplet
+    zoom-us
 
     # Langs
     python3
