@@ -39,18 +39,15 @@
     deadbeef-with-plugins
     filelight
     simplescreenrecorder
-    pasystray
     spectacle
     smplayer mpv
-    breeze-gtk
-    breeze-qt5
-    breeze-icons
-    breeze-grub
+    breeze-gtk breeze-qt5 breeze-icons breeze-grub
     gnome3.gnome_themes_standard
     firefox-bin
     zoom-us
-
-    kwin
+    yakuake
+    okular
+    networkmanagerapplet
 
     # Langs
     python3
@@ -92,10 +89,6 @@
     snappy
   ];
 
-  environment.lxqt.excludePackages = with pkgs.lxqt; [
-    qlipper qps pkgs.xscreensaver qterminal pkgs.openbox obconf-qt
-  ];
-
   programs = {
     zsh = {
       enable = true;
@@ -114,16 +107,11 @@
 
   services = {
     xserver = {
-      # dpi = 192;
       enable = true;
       videoDrivers = [ "intel" ];
 
-      displayManager.sddm = {
-        enable = true;
-	# package = pkgs.sddmPlasma5;
-        theme = "breeze";
-      };
-      desktopManager.lxqt.enable = true;
+      displayManager.sddm.enable = true;
+      desktopManager.plasma5.enable = true;
 
       synaptics = {
         enable = true;
@@ -171,8 +159,6 @@
 
   environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
     export PATH="$PATH:/home/matklad/.cargo/bin"
-    # export GDK_SCALE=2
-    # export QT_AUTO_SCREEN_SCALE_FACTOR=2
     export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib:${stdenv.cc.cc.lib}/lib:${mesa}/lib:${xorg.libX11}/lib:${xorg.libXcursor}/lib:${xorg.libXxf86vm}/lib:${xorg.libXi}/lib:${ncurses5}/lib"
 
     export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:${libsodium.dev}/lib/pkgconfig"
