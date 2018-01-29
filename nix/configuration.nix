@@ -45,11 +45,11 @@
     breeze-gtk breeze-qt5 breeze-icons breeze-grub
     gnome3.gnome_themes_standard
     firefox-bin
-    zoom-us
     yakuake
     okular
     networkmanagerapplet
     zoom-us
+    jetbrains.idea-community
 
     # Langs
     python3
