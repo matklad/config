@@ -7,7 +7,7 @@
 "emacsclient -c --alternate-editor="
   F4
 
-"jumpapp -f pcmanfm-qt"
+"jumpapp -f dolphin"
   Mod4 + e
 
 "spectacle"
