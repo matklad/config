@@ -4,7 +4,7 @@
 "jumpapp idea-community"
   F3
 
-"emacsclient -c --alternate-editor="
+"jumpapp -i emacs emacsclient -c --alternate-editor="
   F4
 
 "jumpapp -f dolphin"
