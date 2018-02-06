@@ -31,6 +31,7 @@
 
   environment.systemPackages = with pkgs; [
     # GUI
+    gwenview
     emacs
     neovim
     sublime3
