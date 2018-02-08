@@ -11,7 +11,7 @@ function gcf() {
     local repo=`basename $userrepo`
     git clone git@github.com:matklad/$repo.git
     pushd $repo
-    git remote add upstream https://github.com/$userrepo.git
+    git remote add upstream git@github.com:$userrepo.git
     git fetch upstream
     popd
 }
