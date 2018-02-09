@@ -53,14 +53,15 @@
     jetbrains.idea-community
 
     # Langs
-    python3
+    python2
     cmake
     gnumake
+    ninja
     gcc7
+    gdb
     ant
     maven
     nodejs-8_x
-    python36
     ghc
 
     # Utils
