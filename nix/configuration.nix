@@ -80,6 +80,8 @@
     docker_compose
     pkgconfig
     fzf
+    ripgrep
+    exa
 
     xorg.xkbcomp
     xbindkeys
