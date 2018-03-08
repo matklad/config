@@ -13,5 +13,9 @@ function gcf() {
     pushd $repo
     git remote add upstream git@github.com:$userrepo.git
     git fetch upstream
+    git branch -u upstream/master
+    git pull --rebase
     popd
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -53,7 +53,7 @@
     jetbrains.idea-community
 
     # Langs
-    python2
+    python3
     cmake
     gnumake
     ninja
@@ -79,6 +79,7 @@
     aspell aspellDicts.en aspellDicts.ru
     docker_compose
     pkgconfig
+    fzf
 
     xorg.xkbcomp
     xbindkeys
