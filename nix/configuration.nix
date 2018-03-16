@@ -94,6 +94,7 @@
     libsodium
     rocksdb
     snappy
+    ntfs3g
   ];
 
   programs = {
@@ -117,7 +118,13 @@
       enable = true;
       videoDrivers = [ "intel" ];
 
-      displayManager.sddm.enable = true;
+      displayManager.sddm = {
+        enable = true;
+        autoLogin = {
+          enable = true;
+          user = "matklad";
+	};
+      };
       desktopManager.plasma5.enable = true;
 
       synaptics = {
