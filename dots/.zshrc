@@ -19,3 +19,4 @@ function gcf() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+RPROMPT=''

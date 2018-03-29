@@ -28,7 +28,8 @@
 	crux
 	cider
 	rust-mode
-	golden-ratio))
+	golden-ratio
+	ace-jump-mode))
 
 (package-initialize)
 (package-refresh-contents)
@@ -52,6 +53,14 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 (setq vc-follow-symlinks t)
+
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+;; you can select the key you prefer to
+(define-key global-map (kbd "M-k") 'ace-jump-mode)
 
 ;; Basic
 
@@ -110,6 +119,8 @@
    ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(ansi-term-color-vector
    [unspecified "#2d2d2d" "#f2777a" "#99cc99" "#ffcc66" "#6699cc" "#cc99cc" "#6699cc" "#d3d0c8"] t)
+ '(company-quickhelp-color-background "#4F4F4F")
+ '(company-quickhelp-color-foreground "#DCDCCC")
  '(custom-enabled-themes (quote (zenburn)))
  '(custom-safe-themes
    (quote
