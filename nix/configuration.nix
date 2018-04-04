@@ -50,7 +50,7 @@
     okular
     networkmanagerapplet
     zoom-us
-    jetbrains.idea-community
+    # jetbrains.idea-community
 
     # Langs
     python3
@@ -69,19 +69,19 @@
     tree
     nox
     htop
-    atool
-    unrar
-    zip
-    unzip
-    file
+    atool unrar zip unzip ark
     linuxPackages.perf
     patchelf
     aspell aspellDicts.en aspellDicts.ru
-    docker_compose
     pkgconfig
     fzf
+    graphviz
+    flameGraph
+
+    # Rust stuff
     ripgrep
     exa
+    fd
 
     xorg.xkbcomp
     xbindkeys
@@ -91,9 +91,6 @@
     curl
     xclip
     zlib
-    libsodium
-    rocksdb
-    snappy
     ntfs3g
   ];
 
@@ -139,7 +136,6 @@
 
   virtualisation = {
     virtualbox.host.enable = true;
-    docker.enable = true;
   };
 
   fonts = {
@@ -169,15 +165,11 @@
     value = "65536";
   }];
 
-  system.stateVersion = "17.09";
+  system.stateVersion = "18.03";
 
   environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
     export PATH="$PATH:/home/matklad/.cargo/bin"
     export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib:${stdenv.cc.cc.lib}/lib:${mesa}/lib:${xorg.libX11}/lib:${xorg.libXcursor}/lib:${xorg.libXxf86vm}/lib:${xorg.libXi}/lib:${ncurses5}/lib"
-
-    export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:${libsodium.dev}/lib/pkgconfig"
-    export ROCKSDB_LIB_DIR="${pkgs.rocksdb}/lib"
-    export SNAPPY_LIB_DIR="${pkgs.snappy}/lib"
 
     ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
   '';
