@@ -1,3 +1,6 @@
+"jumpapp -i alacritty alacritty -d 160 80 -e tmux"
+  F1
+
 "jumpapp firefox"
   F2
 

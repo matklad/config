@@ -50,6 +50,7 @@
     okular
     networkmanagerapplet
     # jetbrains.idea-community
+    alacritty tmux
 
     # Langs
     python3
@@ -168,6 +169,7 @@
 
   environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
     export PATH="$PATH:/home/matklad/.cargo/bin"
+    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib"
     ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
   '';
 }
