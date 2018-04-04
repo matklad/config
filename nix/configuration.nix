@@ -49,7 +49,6 @@
     yakuake
     okular
     networkmanagerapplet
-    zoom-us
     # jetbrains.idea-community
 
     # Langs
@@ -120,7 +119,7 @@
         autoLogin = {
           enable = true;
           user = "matklad";
-	};
+	    };
       };
       desktopManager.plasma5.enable = true;
 
@@ -152,7 +151,7 @@
     defaultUserShell = "/run/current-system/sw/bin/zsh";
     extraUsers.matklad = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "docker" ];
+      extraGroups = [ "wheel" "networkmanager" ];
       uid = 1000;
     };
     extraUsers.man = { isNormalUser = false; };
@@ -169,8 +168,6 @@
 
   environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
     export PATH="$PATH:/home/matklad/.cargo/bin"
-    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib:${stdenv.cc.cc.lib}/lib:${mesa}/lib:${xorg.libX11}/lib:${xorg.libXcursor}/lib:${xorg.libXxf86vm}/lib:${xorg.libXi}/lib:${ncurses5}/lib"
-
     ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
   '';
 }
