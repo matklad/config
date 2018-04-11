@@ -77,6 +77,7 @@
     fzf
     graphviz
     flameGraph
+    binutils-unwrapped
 
     # Rust stuff
     ripgrep
@@ -86,6 +87,7 @@
     xorg.xkbcomp
     xbindkeys
 
+    xdotool
     wmctrl
     wget
     curl

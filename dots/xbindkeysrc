@@ -1,16 +1,16 @@
-"jumpapp -i alacritty alacritty -d 160 80 -e tmux"
+"jump-app alacritty -- alacritty -d 160 80 -e tmux"
   F1
 
-"jumpapp firefox"
+"jump-app firefox -- firefox"
   F2
 
-"jumpapp idea-community"
+"jump-app idea-ce -- idea-community"
   F3
 
-"jumpapp -i emacs emacsclient -c --alternate-editor="
+"jump-app emacs -- emacsclient -c --alternate-editor="
   F4
 
-"jumpapp -f dolphin"
+"jump-app dolphin -- dolphin"
   Mod4 + e
 
 "spectacle"
