@@ -51,7 +51,6 @@
     okular
     networkmanagerapplet
     jetbrains.idea-community jetbrains.clion
-    sublimetext
     alacritty tmux
 
     # Langs
