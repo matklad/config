@@ -46,10 +46,12 @@
     breeze-gtk breeze-qt5 breeze-icons breeze-grub
     gnome3.gnome_themes_standard
     firefox-bin
+    chromium
     yakuake
     okular
     networkmanagerapplet
-    # jetbrains.idea-community
+    jetbrains.idea-community jetbrains.clion
+    sublimetext
     alacritty tmux
 
     # Langs
@@ -78,6 +80,7 @@
     graphviz
     flameGraph
     binutils-unwrapped
+    vagrant
 
     # Rust stuff
     ripgrep
