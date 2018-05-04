@@ -1,4 +1,4 @@
-"jump-app alacritty -- alacritty -d 160 80 -e tmux"
+"jump-app alacritty -- alacritty -d 160 80 -e tmux -2"
   F1
 
 "jump-app firefox -- firefox"
@@ -7,7 +7,7 @@
 "jump-app idea-ce -- idea-community"
   F3
 
-"jump-app emacs -- emacsclient -c --alternate-editor="
+"jump-app emacs -- emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
   F4
 
 "jump-app dolphin -- dolphin"

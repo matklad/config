@@ -29,7 +29,9 @@
 	cider
 	rust-mode
 	golden-ratio
-	ace-jump-mode))
+	ace-jump-mode
+	undo-tree
+	back-button))
 
 (package-initialize)
 (package-refresh-contents)
@@ -37,8 +39,12 @@
 
 
 ;; Basic
-(global-set-key (kbd "C-z")     'undo)
-(global-set-key (kbd "C-S-z")   'redo)
+(cua-mode t)
+(back-button-mode 1)
+(global-undo-tree-mode)
+(global-set-key (kbd "C-S-z")   'undo-tree-redo)
+(global-set-key (kbd "M-<left>")    'back-button-local-backward)
+(global-set-key (kbd "M-<right>")   'back-button-local-forward)
 (global-set-key (kbd "C-x g")   'magit-status)
 (setq kill-whole-line 't)
 
@@ -124,7 +130,7 @@
  '(custom-enabled-themes (quote (zenburn)))
  '(custom-safe-themes
    (quote
-    ("599f1561d84229e02807c952919cd9b0fbaa97ace123851df84806b067666332" "67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" "ef04dd1e33f7cbd5aa3187981b18652b8d5ac9e680997b45dc5d00443e6a46e3" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "9be1d34d961a40d94ef94d0d08a364c3d27201f3c98c9d38e36f10588469ea57" default)))
+    ("2a998a3b66a0a6068bcb8b53cd3b519d230dd1527b07232e54c8b9d84061d48d" "599f1561d84229e02807c952919cd9b0fbaa97ace123851df84806b067666332" "67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" "ef04dd1e33f7cbd5aa3187981b18652b8d5ac9e680997b45dc5d00443e6a46e3" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "9be1d34d961a40d94ef94d0d08a364c3d27201f3c98c9d38e36f10588469ea57" default)))
  '(fci-rule-color "#383838")
  '(nrepl-message-colors
    (quote

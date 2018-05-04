@@ -24,6 +24,7 @@ function gpr() {
     git fetch upstream pull/$pr/head:pr-$pr
     git checkout pr-$pr
 }
+alias e="emacsclient -nw --socket-name=/tmp/emacs1000/server --alternate-editor="
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 RPROMPT=''

@@ -50,7 +50,6 @@
     yakuake
     okular
     networkmanagerapplet
-    jetbrains.idea-community jetbrains.clion
     alacritty tmux
 
     # Langs
