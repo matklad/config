@@ -46,6 +46,7 @@
 (global-set-key (kbd "M-<left>")    'back-button-local-backward)
 (global-set-key (kbd "M-<right>")   'back-button-local-forward)
 (global-set-key (kbd "C-x g")   'magit-status)
+(global-set-key (kbd "C-S-j") 'crux-top-join-line)
 (setq kill-whole-line 't)
 
 (require 'helm-config)

@@ -14,8 +14,8 @@ function gcf() {
     git remote add upstream git@github.com:$userrepo.git
     git fetch upstream
     git checkout master
+    git reset --hard upstream/master
     git branch --set-upstream-to=upstream/master
-    git pull --rebase --force
     popd
 }
 
@@ -24,7 +24,7 @@ function gpr() {
     git fetch upstream pull/$pr/head:pr-$pr
     git checkout pr-$pr
 }
-alias e="emacsclient -nw --socket-name=/tmp/emacs1000/server --alternate-editor="
+export VISUAL="/home/matklad/config/scripts/e.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 RPROMPT=''
