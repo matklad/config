@@ -45,8 +45,12 @@
 (global-set-key (kbd "C-S-z")   'undo-tree-redo)
 (global-set-key (kbd "M-<left>")    'back-button-local-backward)
 (global-set-key (kbd "M-<right>")   'back-button-local-forward)
-(global-set-key (kbd "C-x g")   'magit-status)
+(global-set-key (kbd "C-k")   'magit-status)
+(define-key paredit-mode-map (kbd "C-k") 'magit-status)
+(global-set-key (kbd "C-y")   'kill-whole-line)
 (global-set-key (kbd "C-S-j") 'crux-top-join-line)
+(global-set-key (kbd "C-<prior>") 'beginning-of-buffer)
+(global-set-key (kbd "C-<next>")  'end-of-buffer)
 (setq kill-whole-line 't)
 
 (require 'helm-config)
