@@ -46,8 +46,11 @@
 (global-set-key (kbd "M-<left>")    'back-button-local-backward)
 (global-set-key (kbd "M-<right>")   'back-button-local-forward)
 (global-set-key (kbd "C-k")   'magit-status)
+(require 'paredit)
 (define-key paredit-mode-map (kbd "C-k") 'magit-status)
 (global-set-key (kbd "C-y")   'kill-whole-line)
+(require 'org)
+(define-key org-mode-map (kbd "C-y") 'org-kill-line)
 (global-set-key (kbd "C-S-j") 'crux-top-join-line)
 (global-set-key (kbd "C-<prior>") 'beginning-of-buffer)
 (global-set-key (kbd "C-<next>")  'end-of-buffer)
@@ -72,6 +75,11 @@
   t)
 ;; you can select the key you prefer to
 (define-key global-map (kbd "M-k") 'ace-jump-mode)
+
+(setq initial-buffer-choice "~/work.org")
+(setq-default indent-tabs-mode nil)
+(setq scroll-margin 4)
+
 
 ;; Basic
 

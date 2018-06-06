@@ -47,7 +47,6 @@
     gnome3.gnome_themes_standard
     firefox-bin
     chromium
-    yakuake
     okular
     networkmanagerapplet
     alacritty tmux
@@ -146,6 +145,7 @@
     enableDefaultFonts = true;
     fonts = with pkgs; [
       hack-font
+      fira-code
       ubuntu_font_family
       inconsolata
     ];
