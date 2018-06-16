@@ -57,6 +57,7 @@
     gnumake
     ninja
     gcc7
+    clang
     gdb
     ant
     maven

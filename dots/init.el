@@ -104,7 +104,7 @@
 (setq inhibit-startup-screen t)
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(set-face-attribute 'default nil :font "Inconsolata 16")
+(set-face-attribute 'default nil :font "Fira Code 13")
 ;; UI
 
 ;; Non-essential keybindings

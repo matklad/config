@@ -1,3 +1,5 @@
+# xkbcomp $DISPLAY xkb.dump
+
 xkb_keymap {
     xkb_keycodes { include "evdev+aliases(qwerty)" };
     xkb_types { include "complete" };
@@ -17,6 +19,7 @@ xkb_keymap {
         };
 
         key <AC06> { overlay1 = <BKSP> };
+        key <AC10> { overlay1 = <DELE> };
 
         key <AD07> { overlay1 = <PGUP> };
         key <AC07> { overlay1 = <LEFT> };
