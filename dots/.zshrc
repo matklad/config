@@ -24,7 +24,26 @@ function gpr() {
     git fetch upstream pull/$pr/head:pr-$pr
     git checkout pr-$pr
 }
+
+# put this either in bashrc or zshrc
+function nixify() {
+  if [ ! -e ./.envrc ]; then
+    echo "use nix" > .envrc
+    direnv allow
+  fi
+  if [ ! -e default.nix ]; then
+    cat > shell.nix <<'EOF'
+with import <nixpkgs> {};
+pkgs.mkShell {
+  buildInputs = [ 
+  ];
+}
+EOF
+    e shell.nix
+  fi
+}
 export VISUAL="/home/matklad/config/scripts/e.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 RPROMPT=''
+eval "$(direnv hook zsh)"

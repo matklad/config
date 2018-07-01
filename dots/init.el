@@ -31,7 +31,9 @@
 	golden-ratio
 	ace-jump-mode
 	undo-tree
-	back-button))
+	back-button
+        yaml-mode
+        typescript-mode))
 
 (package-initialize)
 (package-refresh-contents)

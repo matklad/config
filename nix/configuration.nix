@@ -56,13 +56,13 @@
     cmake
     gnumake
     ninja
-    gcc7
-    clang
+    gcc
     gdb
     ant
     maven
     nodejs-8_x
     ghc
+    jekyll
 
     # Utils
     git

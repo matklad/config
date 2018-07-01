@@ -12,5 +12,6 @@ alias gup="git pull --rebase"
 alias gbda="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
 alias ctrlc="xclip -selection c"
 alias sb="sublime"
+alias mg="e --eval \"(progn (call-interactively #'magit-status) (call-interactively #'delete-other-windows))\""
 export VISUAL=nvim
 

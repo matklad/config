@@ -4,7 +4,7 @@
 "jump-app firefox -- firefox"
   F2
 
-"jump-app idea-ce -- idea-community"
+"jump-app code -- code"
   F3
 
 "jump-app emacs -- emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
