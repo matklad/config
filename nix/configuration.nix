@@ -35,7 +35,6 @@
     emacs
     neovim
     sublime3
-    vscode
     qbittorrent
     gimp
     deadbeef-with-plugins
@@ -56,13 +55,13 @@
     cmake
     gnumake
     ninja
-    gcc
     gdb
     ant
     maven
     nodejs-8_x
     ghc
     jekyll
+    gcc
 
     # Utils
     git

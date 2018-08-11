@@ -33,7 +33,9 @@
 	undo-tree
 	back-button
         yaml-mode
-        typescript-mode))
+        typescript-mode
+        flycheck-rust
+        emmet-mode))
 
 (package-initialize)
 (package-refresh-contents)
@@ -57,6 +59,7 @@
 (global-set-key (kbd "C-<prior>") 'beginning-of-buffer)
 (global-set-key (kbd "C-<next>")  'end-of-buffer)
 (setq kill-whole-line 't)
+(setq sentence-end-double-space nil)
 
 (require 'helm-config)
 (global-set-key (kbd "M-x") #'helm-M-x)
@@ -120,7 +123,8 @@
 (show-paren-mode 1)
 (smartparens-global-mode t)
 (global-flycheck-mode)
-(setq-default flycheck-disabled-checkers '(rust rust-cargo))
+
+;; (setq-default flycheck-disabled-checkers '(rust rust-cargo))
 (add-hook 'emacs-lisp-mode-hook  #'enable-paredit-mode)
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
@@ -152,6 +156,43 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages (quote (zenburn-theme base16-theme)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
+ '(safe-local-variable-values
+   (quote
+    ((eval add-hook
+           (quote prog-mode-hook)
+           (lambda nil
+             (whitespace-mode 1))
+           (not :APPEND)
+           :BUFFER-LOCAL)
+     (whitespace-style face lines indentation:space)
+     (eval let*
+           ((x
+             (dir-locals-find-file default-directory))
+            (this-directory
+             (if
+                 (listp x)
+                 (car x)
+               (file-name-directory x))))
+           (unless
+               (or
+                (featurep
+                 (quote swift-project-settings))
+                (and
+                 (fboundp
+                  (quote tramp-tramp-file-p))
+                 (tramp-tramp-file-p this-directory)))
+             (add-to-list
+              (quote load-path)
+              (concat this-directory "utils")
+              :append)
+             (let
+                 ((swift-project-directory this-directory))
+               (require
+                (quote swift-project-settings))))
+           (set
+            (make-local-variable
+             (quote swift-project-directory))
+            this-directory)))))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote

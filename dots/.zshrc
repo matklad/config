@@ -47,3 +47,6 @@ export VISUAL="/home/matklad/config/scripts/e.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 RPROMPT=''
 eval "$(direnv hook zsh)"
+
+# OPAM configuration
+. /home/matklad/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
