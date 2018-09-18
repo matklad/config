@@ -1,4 +1,4 @@
-"jump-app alacritty -- alacritty -d 160 80 -e tmux -2"
+"jump-app kitty -- kitty"
   F1
 
 "jump-app firefox -- firefox"

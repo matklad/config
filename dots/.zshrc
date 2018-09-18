@@ -24,6 +24,9 @@ function gpr() {
     git fetch upstream pull/$pr/head:pr-$pr
     git checkout pr-$pr
 }
+function ee() {
+    e "$@" &|
+}
 
 # put this either in bashrc or zshrc
 function nixify() {

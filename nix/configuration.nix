@@ -32,7 +32,7 @@
   environment.systemPackages = with pkgs; [
     # GUI
     gwenview
-    emacs
+    # emacs
     neovim
     sublime3
     qbittorrent

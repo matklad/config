@@ -35,7 +35,8 @@
         yaml-mode
         typescript-mode
         flycheck-rust
-        emmet-mode))
+        emmet-mode
+        multiple-cursors))
 
 (package-initialize)
 (package-refresh-contents)
@@ -81,10 +82,10 @@
 ;; you can select the key you prefer to
 (define-key global-map (kbd "M-k") 'ace-jump-mode)
 
-(setq initial-buffer-choice "~/work.org")
+(setq initial-buffer-choice "~/work/work.md")
 (setq-default indent-tabs-mode nil)
 (setq scroll-margin 4)
-
+(auto-save-visited-mode t)
 
 ;; Basic
 
@@ -113,10 +114,12 @@
 ;; UI
 
 ;; Non-essential keybindings
-(global-set-key (kbd "C-<f12>") 'imenu)
 (require 'crux)
+(require 'multiple-cursors)
+(global-set-key (kbd "C-<f12>") 'helm-imenu)
 (global-set-key (kbd "C-a") 'crux-move-beginning-of-line)
 (global-set-key (kbd "<home>") 'crux-move-beginning-of-line)
+(global-set-key (kbd "M-j") 'mc/mark-next-like-this)
 ;; Non-essential keybindings
 
 ;; Modes
@@ -158,7 +161,8 @@
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(safe-local-variable-values
    (quote
-    ((eval add-hook
+    ((bug-reference-bug-regexp . "\\(\\(?:[Ii]ssue \\|[Ff]ixe[ds] \\|[Rr]esolve[ds]? \\|[Cc]lose[ds]? \\|[Pp]\\(?:ull [Rr]equest\\|[Rr]\\) \\|(\\)#\\([0-9]+\\))?\\)")
+     (eval add-hook
            (quote prog-mode-hook)
            (lambda nil
              (whitespace-mode 1))
