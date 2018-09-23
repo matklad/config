@@ -36,7 +36,8 @@
         typescript-mode
         flycheck-rust
         emmet-mode
-        multiple-cursors))
+        multiple-cursors
+        command-log-mode))
 
 (package-initialize)
 (package-refresh-contents)
@@ -54,6 +55,7 @@
 (require 'paredit)
 (define-key paredit-mode-map (kbd "C-k") 'magit-status)
 (global-set-key (kbd "C-y")   'kill-whole-line)
+(define-key paredit-mode-map (kbd "C-y") 'paredit-kill)
 (require 'org)
 (define-key org-mode-map (kbd "C-y") 'org-kill-line)
 (global-set-key (kbd "C-S-j") 'crux-top-join-line)

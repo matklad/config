@@ -78,6 +78,7 @@
     flameGraph
     binutils-unwrapped
     vagrant
+    exfat
 
     # Rust stuff
     ripgrep
