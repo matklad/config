@@ -79,6 +79,7 @@
     binutils-unwrapped
     vagrant
     exfat
+    microcodeIntel
 
     # Rust stuff
     ripgrep
@@ -128,6 +129,7 @@
       desktopManager.plasma5.enable = true;
 
       synaptics = {
+        palmDetect = true;
         enable = true;
         horizTwoFingerScroll = false;
         twoFingerScroll = true;
