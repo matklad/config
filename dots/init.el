@@ -129,12 +129,15 @@
 (smartparens-global-mode t)
 (global-flycheck-mode)
 
+
 ;; (setq-default flycheck-disabled-checkers '(rust rust-cargo))
 (add-hook 'emacs-lisp-mode-hook  #'enable-paredit-mode)
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
 (add-hook 'text-mode-hook '(lambda () (flyspell-mode t)))
 (global-git-gutter-mode +1)
+(setq python-shell-interpreter "python3")
+
 ;; Modes
 
 

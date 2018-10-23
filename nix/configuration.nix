@@ -101,7 +101,7 @@
   programs = {
     zsh = {
       enable = true;
-      enableAutosuggestions = true;
+      autosuggestions.enable = true;
       syntaxHighlighting.enable = true;
       shellInit = "alias vim=nvim";
     };
@@ -138,6 +138,10 @@
     unclutter.enable = true;
     printing.enable = true;
   };
+
+  systemd.extraConfig = ''
+    DefaultTimeoutStopSec=10s
+  '';
 
   virtualisation = {
     virtualbox.host.enable = true;
