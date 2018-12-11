@@ -34,7 +34,6 @@
     gwenview
     # emacs
     neovim
-    sublime3
     qbittorrent
     gimp
     deadbeef-with-plugins

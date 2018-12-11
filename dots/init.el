@@ -37,11 +37,22 @@
         flycheck-rust
         emmet-mode
         multiple-cursors
-        command-log-mode))
+        command-log-mode
+        eglot
+        ivy
+        ivy-xref
+        counsel
+        adoc-mode))
 
 (package-initialize)
 (package-refresh-contents)
 (package-install-selected-packages)
+
+(require 'eglot)
+(add-to-list 'eglot-server-programs '(rust-mode . ("ra_lsp_server")))
+(require 'ivy-xref)
+(setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
+
 
 
 ;; Basic
@@ -54,6 +65,13 @@
 (global-set-key (kbd "C-k")   'magit-status)
 (require 'paredit)
 (define-key paredit-mode-map (kbd "C-k") 'magit-status)
+
+(defun finish-and-exit ()
+  (interactive)
+  (with-editor-finish 't)
+  (save-buffers-kill-terminal))
+(require 'magit)
+(define-key git-commit-mode-map (kbd "C-x C-c") 'finish-and-exit)
 (global-set-key (kbd "C-y")   'kill-whole-line)
 (define-key paredit-mode-map (kbd "C-y") 'paredit-kill)
 (require 'org)
@@ -84,7 +102,7 @@
 ;; you can select the key you prefer to
 (define-key global-map (kbd "M-k") 'ace-jump-mode)
 
-(setq initial-buffer-choice "~/work/work.md")
+(setq initial-buffer-choice "~/work/work.adoc")
 (setq-default indent-tabs-mode nil)
 (setq scroll-margin 4)
 (auto-save-visited-mode t)
