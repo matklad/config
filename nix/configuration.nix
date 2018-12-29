@@ -169,7 +169,7 @@
     value = "65536";
   }];
 
-  system.stateVersion = "18.03";
+  system.stateVersion = "18.09";
 
   environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
     export PATH="$PATH:/home/matklad/.cargo/bin"
