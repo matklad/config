@@ -98,12 +98,7 @@
   ];
 
   programs = {
-    zsh = {
-      enable = true;
-      autosuggestions.enable = true;
-      syntaxHighlighting.enable = true;
-      shellInit = "alias vim=nvim";
-    };
+    fish.enable = true;
     java.enable = true;
   };
 
@@ -158,7 +153,7 @@
   };
 
   users = {
-    defaultUserShell = "/run/current-system/sw/bin/zsh";
+    defaultUserShell = "/run/current-system/sw/bin/fish";
     extraUsers.matklad = {
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" ];
