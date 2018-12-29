@@ -42,7 +42,8 @@
         ivy
         ivy-xref
         counsel
-        adoc-mode))
+        adoc-mode
+        fish-mode))
 
 (package-initialize)
 (package-refresh-contents)

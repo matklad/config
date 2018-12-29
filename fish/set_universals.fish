@@ -9,3 +9,5 @@ abbr --add gcm git checkout master
 
 abbr --add ls exa -l
 abbr --add l exa -l
+
+abbr --add c code
