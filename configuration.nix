@@ -72,7 +72,6 @@
     patchelf
     aspell aspellDicts.en aspellDicts.ru
     pkgconfig
-    fzf
     graphviz
     flameGraph
     binutils-unwrapped
