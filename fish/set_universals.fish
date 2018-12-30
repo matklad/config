@@ -2,6 +2,7 @@ set -U fish_prompt_pwd_dir_length 0
 set -U fish_greeting ""
 
 abbr --add g git
+abbr --add gl git log
 abbr --add gs git status --short --branch
 abbr --add gp git push
 abbr --add gup git pull --rebase
