@@ -7,6 +7,7 @@ abbr --add gs git status --short --branch
 abbr --add gp git push
 abbr --add gup git pull --rebase
 abbr --add gco git checkout
+abbr --add gcb git checkout -b
 abbr --add gcm git checkout master
 
 abbr --add ls exa -l
