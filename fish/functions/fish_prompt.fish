@@ -1,5 +1,6 @@
 function fish_prompt --description 'Write out the prompt'
-	set -l last_status $status
+    set -l last_status $status
+    echo
 
     set_color normal
     echo -n (date '+%X|')
