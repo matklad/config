@@ -11,6 +11,7 @@
   imports = [ /etc/nixos/hardware-configuration.nix ];
 
   boot = {
+    tmpOnTmpfs = true;
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     blacklistedKernelModules = [ "nouveau" ];

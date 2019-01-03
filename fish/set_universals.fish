@@ -1,5 +1,6 @@
 set -U fish_prompt_pwd_dir_length 0
 set -U fish_greeting ""
+set -U -x VISUAL e
 
 abbr --add g git
 abbr --add gl git log
