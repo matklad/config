@@ -58,14 +58,16 @@
 
 ;; Basic
 (cua-mode t)
+(global-set-key (kbd "C-k") ctl-x-map)
 (back-button-mode 1)
 (global-undo-tree-mode)
 (global-set-key (kbd "C-S-z")   'undo-tree-redo)
 (global-set-key (kbd "M-<left>")    'back-button-local-backward)
 (global-set-key (kbd "M-<right>")   'back-button-local-forward)
-(global-set-key (kbd "C-k")   'magit-status)
+;; (global-set-key (kbd "C-k")   'magit-status)
 (require 'paredit)
-(define-key paredit-mode-map (kbd "C-k") 'magit-status)
+(define-key paredit-mode-map (kbd "C-k") nil)
+;; (define-key paredit-mode-map (kbd "C-k") 'magit-status)
 
 (defun finish-and-exit ()
   (interactive)
@@ -132,6 +134,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (set-face-attribute 'default nil :font "Fira Code 13")
+(setq default-frame-alist '((font . "Fira Code-13") (vertical-scroll-bars . nil)))
 ;; UI
 
 ;; Non-essential keybindings
@@ -149,7 +152,6 @@
 (global-flycheck-mode)
 
 
-;; (setq-default flycheck-disabled-checkers '(rust rust-cargo))
 (add-hook 'emacs-lisp-mode-hook  #'enable-paredit-mode)
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))

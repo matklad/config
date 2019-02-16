@@ -16,3 +16,5 @@ abbr --add la exa -la
 abbr --add l  exa -l
 
 abbr --add c code
+
+abbr ctrlc xclip -selection c

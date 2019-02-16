@@ -33,8 +33,6 @@
   environment.systemPackages = with pkgs; [
     # GUI
     gwenview
-    # emacs
-    neovim
     qbittorrent
     gimp
     deadbeef-with-plugins
@@ -131,6 +129,7 @@
     };
     unclutter.enable = true;
     printing.enable = true;
+    emacs.enable = true;
   };
 
   systemd.extraConfig = ''
