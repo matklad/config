@@ -1,9 +1,6 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "alt+x",
-        "command": "workbench.action.showCommands"
-    },
+    // negative keys
     {
         "key": "ctrl+shift+p",
         "command": "-workbench.action.showCommands"
@@ -11,5 +8,62 @@
     {
         "key": "f1",
         "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups",
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeGroup",
+    },
+    // positive keys
+    {
+        "key": "alt+x",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+k k",
+        "command": "workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+k k",
+        "command": "workbench.action.closeGroup",
+        "when": "editorFocus && activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+k k",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+k k",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!sideBarFocus"
+    },
+    {
+        "key": "ctrl+k 1",
+        "command": "workbench.action.closeEditorsInOtherGroups",
+        "when": "multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+k 1",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sidebarVisible && editorFocus"
+    },
+    {
+        "key": "ctrl+k 1",
+        "command": "workbench.action.closePanel",
+        "when": "panelVisible && editorFocus"
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.files.action.focusFilesExplorer",
     }
 ]

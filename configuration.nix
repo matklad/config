@@ -6,7 +6,11 @@
 
 
 { config, pkgs, ... }:
-
+let
+  unstable = import <nixos-unstable> {
+    config = config.nixpkgs.config;
+  };
+in
 {
   imports = [ /etc/nixos/hardware-configuration.nix ];
 
@@ -41,6 +45,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    unstable.rustup
+
     # GUI
     gwenview
     qbittorrent
@@ -50,20 +56,17 @@
     simplescreenrecorder
     spectacle
     smplayer mpv
-    # breeze-gtk breeze-qt5 breeze-icons breeze-grub
-    # gnome3.gnome_themes_standard
     firefox-bin
     chromium
     okular
     networkmanagerapplet
     tdesktop
-    # zoom-us
+    zoom-us
     kitty
-    vscode
     obs-studio
+    vscode
 
     # Langs
-    rustup
     python3
     cmake
     gnumake
@@ -97,6 +100,7 @@
     ripgrep
     exa
     fd
+    tokei
 
     xorg.xkbcomp
     xbindkeys

@@ -1,0 +1,22 @@
+{
+	"source,rust": {
+		"prefix": "rs",
+		"body": [
+			"[source,rust]",
+			"----",
+			"$0",
+			"----"
+		],
+		"description": "source,rust"
+	},
+	"sourcerust": {
+		"prefix": "src",
+		"body": [
+			"[source]",
+			"----",
+			"$0",
+			"----"
+		],
+		"description": "source"
+	}
+}
