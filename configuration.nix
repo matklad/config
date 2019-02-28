@@ -20,13 +20,23 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+    extraHosts = ''
+        127.0.0.1 news.ycombinator.com
+        127.0.0.1 meduza.io
+        127.0.0.1 users.rust-lang.org
+        # 127.0.0.1 internals.rust-lang.org
+	127.0.0.1 avva.livejournal.com
+	127.0.0.1 reddit.com
+	127.0.0.1 www.reddit.com
+	127.0.0.1 d3.ru
+    '';
   };
 
   time.timeZone = "Europe/Moscow";
 
   nixpkgs.config = {
     allowUnfree = true;
-    packageOverrides = pkgs: { bluez = pkgs.bluez5; };
+    # packageOverrides = pkgs: { bluez = pkgs.bluez5; };
     # virtualbox.enableExtensionPack = true;
   };
 
@@ -40,15 +50,20 @@
     simplescreenrecorder
     spectacle
     smplayer mpv
-    breeze-gtk breeze-qt5 breeze-icons breeze-grub
-    gnome3.gnome_themes_standard
+    # breeze-gtk breeze-qt5 breeze-icons breeze-grub
+    # gnome3.gnome_themes_standard
     firefox-bin
     chromium
     okular
     networkmanagerapplet
-    alacritty tmux
+    tdesktop
+    # zoom-us
+    kitty
+    vscode
+    obs-studio
 
     # Langs
+    rustup
     python3
     cmake
     gnumake
@@ -56,12 +71,12 @@
     gdb
     ant
     maven
-    nodejs-8_x
-    ghc
+    nodejs-10_x
     jekyll
     gcc
 
     # Utils
+    direnv
     git
     tree
     nox
@@ -96,7 +111,7 @@
   ];
 
   programs = {
-    fish.enable = true;
+    fish.enable = true;		
     java.enable = true;
   };
 
@@ -116,7 +131,7 @@
         autoLogin = {
           enable = true;
           user = "matklad";
-	    };
+	};
       };
       desktopManager.plasma5.enable = true;
 
@@ -136,9 +151,9 @@
     DefaultTimeoutStopSec=10s
   '';
 
-  virtualisation = {
-    virtualbox.host.enable = true;
-  };
+#  virtualisation = {
+#    virtualbox.host.enable = true;
+#  };
 
   fonts = {
     enableFontDir = true;
@@ -161,18 +176,11 @@
     extraUsers.man = { isNormalUser = false; };
   };
 
-  security.pam.loginLimits = [{
-    domain = "*";
-    type = "soft";
-    item = "nofile";
-    value = "65536";
-  }];
-
   system.stateVersion = "18.09";
 
-  environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
-    export PATH="$PATH:/home/matklad/.cargo/bin"
-    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib"
-    ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
-  '';
+  # environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
+  #   export PATH="$PATH:/home/matklad/.cargo/bin"
+  #   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib"
+  #   ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
+  # '';
 }

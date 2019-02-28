@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=init-x
+Comment=
+Exec=/home/matklad/config/scripts/init-x.sh
+Icon=
+Terminal=false
+Type=Application

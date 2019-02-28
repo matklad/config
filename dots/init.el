@@ -23,6 +23,7 @@
 (global-hl-line-mode t)
 (show-paren-mode 1)
 (auto-save-visited-mode t)
+(add-hook 'text-mode-hook '(lambda () (flyspell-mode t)))
 
 (global-set-key (kbd "C-k") ctl-x-map)
 (global-set-key (kbd "C-x") nil)
@@ -43,6 +44,7 @@
 	helm
 	golden-ratio
 	magit
+	forge
 	rust-mode
 	ace-jump-mode))
 
