@@ -1,26 +1,56 @@
 {
-    "explorer.openEditors.visible": 0,
-
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "hidden",
     "window.titleBarStyle": "native",
+    "window.zoomLevel": 0,
 
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
     "workbench.colorTheme": "Zenburn",
 
+    "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.formatOnType": true,
     "editor.minimap.enabled": false,
     "editor.roundedSelection": false,
     "editor.stablePeek": true,
     "editor.tabCompletion": "onlySnippets",
-    "editor.fontFamily": "'Fira Code'",
-    "editor.fontLigatures": true,
-    
+    "editor.wordBasedSuggestions": false,
+
+    "explorer.openEditors.visible": 0,
+
+    "extensions.ignoreRecommendations": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 300,
+
+    "liveServer.settings.donotShowInfoMsg": true,
+
+    "rust-analyzer.highlightingOn": true,
+
+    "aceJump.finder.pattern": "[ ,-.{_(\"'<\\[:]",
+    "aceJump.placeholder.backgroundColor": "2B2B2B",
+    "aceJump.placeholder.color": "#8FB28F",
+    "aceJump.placeholder.fontFamily": "Ubuntu Mono",
+    "aceJump.placeholder.fontWeight": "bold",
+    "aceJump.placeholder.upperCase": true,
+
+    "macros": {
+        "closePanelCloseEditorsToggleSidebar": [
+            "workbench.action.closePanel",
+            "workbench.action.closeEditorsInOtherGroups",
+            "workbench.action.toggleSidebarVisibility",
+        ],
+        "closePanelCloseEditors": [
+            "workbench.action.closePanel",
+            "workbench.action.closeEditorsInOtherGroups"
+        ]
+    },
 
     /*
     colors https://github.com/bbatsov/zenburn-emacs/blob/master/zenburn-theme.el
@@ -81,5 +111,59 @@
         "widget.shadow": "#00000000",
         "statusBar.foreground": "#8FB28F",
         "statusBar.background": "#2B2B2B"
-    }
+    },
+
+    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.language": "en,ru",
+    "cSpell.userWords": [
+        "Cargо",
+        "Deref",
+        "Hasher",
+        "LLVM",
+        "PYTHONPATH",
+        "aleksey",
+        "constructible",
+        "cquisition",
+        "dlopen",
+        "dropck",
+        "esource",
+        "façade",
+        "gmail",
+        "implа",
+        "inary",
+        "kladov",
+        "libc",
+        "libfoo",
+        "nitialization",
+        "nterface",
+        "pplication",
+        "println",
+        "rebalancing",
+        "rlib",
+        "rustc",
+        "struct",
+        "toml",
+        "usize",
+        "Дженерики",
+        "Крейта",
+        "Крейты",
+        "Линковка",
+        "Милнер",
+        "Мономорфизация",
+        "Трейты",
+        "Хиндли",
+        "инстанциирования",
+        "крейтами",
+        "крейтах",
+        "крейте",
+        "крейтов",
+        "линковки",
+        "линкуется",
+        "парсит",
+        "паттерна",
+        "трейт",
+        "трейта",
+        "трейтов",
+        "энумов"
+    ],
 }

@@ -31,7 +31,7 @@
 (global-set-key (kbd "C-s") nil)
 (define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
 
-(global-set-key (kbd "C-y") 'kill-whole-line)
+(global-set-key (kbd "C-S-k") 'kill-whole-line)
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
 
 (require 'package)
@@ -58,7 +58,7 @@
 (require 'helm-config)
 (helm-mode 1)
 (global-set-key (kbd "M-x") #'helm-M-x)
-(global-set-key (kbd "C-k C-f") #'helm-find-files)
+(global-set-key (kbd "C-p") #'helm-find-files)
 
 
 (autoload

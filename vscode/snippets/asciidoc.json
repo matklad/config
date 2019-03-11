@@ -1,5 +1,5 @@
 {
-	"source,rust": {
+	"rs": {
 		"prefix": "rs",
 		"body": [
 			"[source,rust]",
@@ -9,7 +9,7 @@
 		],
 		"description": "source,rust"
 	},
-	"sourcerust": {
+	"src": {
 		"prefix": "src",
 		"body": [
 			"[source]",
@@ -18,5 +18,13 @@
 			"----"
 		],
 		"description": "source"
+	},
+	".rust": {
+		"prefix": ".rust",
+		"body": "[.language-rust]`$0`"
+	},
+	".err": {
+		"prefix": ".err",
+		"body": "[.hl-error]##$0##"
 	}
 }

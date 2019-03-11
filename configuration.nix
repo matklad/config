@@ -4,8 +4,8 @@
 # Install from local folder:
 #  nix-env -f /home/matklad/projects/nixpkgs -iA jetbrains.idea-community
 
-
 { config, pkgs, ... }:
+# sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 let
   unstable = import <nixos-unstable> {
     config = config.nixpkgs.config;
@@ -24,29 +24,16 @@ in
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
-    extraHosts = ''
-        127.0.0.1 news.ycombinator.com
-        127.0.0.1 meduza.io
-        127.0.0.1 users.rust-lang.org
-        # 127.0.0.1 internals.rust-lang.org
-	127.0.0.1 avva.livejournal.com
-	127.0.0.1 reddit.com
-	127.0.0.1 www.reddit.com
-	127.0.0.1 d3.ru
-    '';
+    extraHosts = import ./hosts.nix;
   };
 
   time.timeZone = "Europe/Moscow";
 
   nixpkgs.config = {
     allowUnfree = true;
-    # packageOverrides = pkgs: { bluez = pkgs.bluez5; };
-    # virtualbox.enableExtensionPack = true;
   };
 
   environment.systemPackages = with pkgs; [
-    unstable.rustup
-
     # GUI
     gwenview
     qbittorrent
@@ -59,7 +46,6 @@ in
     firefox-bin
     chromium
     okular
-    networkmanagerapplet
     tdesktop
     zoom-us
     kitty
@@ -77,6 +63,7 @@ in
     nodejs-10_x
     jekyll
     gcc
+    unstable.rustup
 
     # Utils
     direnv
@@ -91,10 +78,11 @@ in
     pkgconfig
     graphviz
     flameGraph
-    binutils-unwrapped
+    binutils
     vagrant
     exfat
     microcodeIntel
+    asciidoctor
 
     # Rust stuff
     ripgrep
@@ -135,15 +123,13 @@ in
         autoLogin = {
           enable = true;
           user = "matklad";
-	};
+        };
       };
       desktopManager.plasma5.enable = true;
 
-      synaptics = {
-        palmDetect = true;
+      libinput = {
         enable = true;
-        horizTwoFingerScroll = false;
-        twoFingerScroll = true;
+        disableWhileTyping = true;
       };
     };
     unclutter.enable = true;
@@ -154,10 +140,6 @@ in
   systemd.extraConfig = ''
     DefaultTimeoutStopSec=10s
   '';
-
-#  virtualisation = {
-#    virtualbox.host.enable = true;
-#  };
 
   fonts = {
     enableFontDir = true;
@@ -181,10 +163,4 @@ in
   };
 
   system.stateVersion = "18.09";
-
-  # environment.extraInit = with pkgs; let loader = "ld-linux-x86-64.so.2"; in ''
-  #   export PATH="$PATH:/home/matklad/.cargo/bin"
-  #   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/current-system/sw/lib"
-  #   ln -fs ${stdenv.cc.libc.out}/lib/${loader} /lib64/${loader}
-  # '';
 }
