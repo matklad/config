@@ -1,16 +1,16 @@
-"jump-app kitty -- kitty"
+"jumpapp -m kitty"
   F1
 
-"jump-app firefox -- firefox"
+"jumpapp -m firefox"
   F2
 
-"jump-app code -- code"
+"jumpapp -m code"
   F3
 
-"jump-app emacs -- emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
+"jumpapp -m emacs emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
   F4
 
-"jump-app dolphin -- dolphin"
+"jumpapp -m dolphin"
   Mod4 + e
 
 "spectacle"

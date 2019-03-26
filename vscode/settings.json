@@ -1,39 +1,58 @@
 {
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "hidden",
+    "window.restoreWindows": "none",
+    "window.title": "${rootName}",
     "window.titleBarStyle": "native",
     "window.zoomLevel": 0,
 
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Zenburn",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
-    "workbench.colorTheme": "Zenburn",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.feedback.visible": false,
 
     "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
     "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 16,
     "editor.fontLigatures": true,
     "editor.formatOnType": true,
     "editor.minimap.enabled": false,
     "editor.roundedSelection": false,
-    "editor.stablePeek": true,
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
+    "editor.scrollbar.vertical": "hidden",
+    // small gutter
+    "editor.folding": false,
+    "editor.glyphMargin": false,
+    "editor.lineDecorationsWidth": 10, // undocumented
+    "editor.lineNumbers": "off",
+    "editor.lineNumbersMinChars": 0,  // undocumented
+    "editor.renderIndentGuides": false,
 
+    "breadcrumbs.enabled": true,
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
-
-    "extensions.ignoreRecommendations": true,
-    "extensions.showRecommendationsOnlyOnDemand": true,
 
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 300,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+
+    "extensions.ignoreRecommendations": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
 
     "liveServer.settings.donotShowInfoMsg": true,
 
     "rust-analyzer.highlightingOn": true,
 
-    "aceJump.finder.pattern": "[ ,-.{_(\"'<\\[:]",
+    "aceJump.finder.pattern": "[ ,-.{_(\"'<\\/[:]",
     "aceJump.placeholder.backgroundColor": "2B2B2B",
     "aceJump.placeholder.color": "#8FB28F",
     "aceJump.placeholder.fontFamily": "Ubuntu Mono",
@@ -51,6 +70,10 @@
             "workbench.action.closeEditorsInOtherGroups"
         ]
     },
+
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
 
     /*
     colors https://github.com/bbatsov/zenburn-emacs/blob/master/zenburn-theme.el
@@ -92,7 +115,7 @@
     zenburn-blue+3   #BDE0F3
     zenburn-blue+2   #ACE0E3
     zenburn-blue+1   #94BFF3
-    zenburn-blue     #8CD0D3
+    zenburn-blue     ##2B2B2B
     zenburn-blue-1   #7CB8BB
     zenburn-blue-2   #6CA0A3
     zenburn-blue-3   #5C888B
@@ -101,16 +124,27 @@
     zenburn-magenta  #DC8CC3
     */
     "workbench.colorCustomizations": {
-        "panel.background": "#3F3F3F",
-        "sideBar.background": "#2B2B2B",
         "editor.background": "#3F3F3F",
         "editor.lineHighlightBackground": "#383838",
+
         "editorCursor.foreground": "#DCDCCC",
+        "editorGutter.background": "#4F4F4F",
+
+        "panel.background": "#3F3F3F",
+        "list.activeSelectionBackground": "#00000000",
 
         "scrollbar.shadow": "#00000000",
+
+        "sideBar.background": "#2B2B2B",
+
+        "statusBar.background": "#2B2B2B",
+        "statusBar.foreground": "#7F9F7F",
+        "statusBar.noFolderBackground" : "#2B2B2B",
+        "statusBar.noFolderBorder": "#7F9F7F",
+        "statusBar.debuggingBackground" : "#2B2B2B",
+        "statusBar.debuggingBorder": "#DC8CC3",
+
         "widget.shadow": "#00000000",
-        "statusBar.foreground": "#8FB28F",
-        "statusBar.background": "#2B2B2B"
     },
 
     "cSpell.diagnosticLevel": "Hint",
@@ -121,6 +155,7 @@
         "Hasher",
         "LLVM",
         "PYTHONPATH",
+        "Smol",
         "aleksey",
         "constructible",
         "cquisition",
@@ -143,6 +178,7 @@
         "rustc",
         "struct",
         "toml",
+        "unexpanded",
         "usize",
         "Дженерики",
         "Крейта",
@@ -152,6 +188,8 @@
         "Мономорфизация",
         "Трейты",
         "Хиндли",
+        "деструкторе",
+        "деструкторы",
         "инстанциирования",
         "крейтами",
         "крейтах",
@@ -161,6 +199,7 @@
         "линкуется",
         "парсит",
         "паттерна",
+        "стэка",
         "трейт",
         "трейта",
         "трейтов",
