@@ -58,16 +58,17 @@
     "aceJump.placeholder.fontFamily": "Ubuntu Mono",
     "aceJump.placeholder.fontWeight": "bold",
     "aceJump.placeholder.upperCase": true,
-
     "macros": {
         "closePanelCloseEditorsToggleSidebar": [
             "workbench.action.closePanel",
             "workbench.action.closeEditorsInOtherGroups",
+            "workbench.action.closeOtherEditors",
             "workbench.action.toggleSidebarVisibility",
         ],
         "closePanelCloseEditors": [
             "workbench.action.closePanel",
-            "workbench.action.closeEditorsInOtherGroups"
+            "workbench.action.closeEditorsInOtherGroups",
+            "workbench.action.closeOtherEditors",
         ]
     },
 
@@ -131,7 +132,7 @@
         "editorGutter.background": "#4F4F4F",
 
         "panel.background": "#3F3F3F",
-        "list.activeSelectionBackground": "#00000000",
+        // "list.activeSelectionBackground": "#00000000",
 
         "scrollbar.shadow": "#00000000",
 
@@ -205,4 +206,8 @@
         "трейтов",
         "энумов"
     ],
+    "editor.accessibilitySupport": "off",
+    "editor.codeInsets": true,
+    "editor.dragAndDrop": false,
+    "terminal.integrated.fontSize": 12,
 }

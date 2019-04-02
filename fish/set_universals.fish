@@ -18,3 +18,5 @@ abbr --add l  exa -l
 abbr --add c code
 
 abbr ctrlc xclip -selection c
+
+alias time="time --format 'real %e\nuser %U\nsys  %S\nrss  %M'"

@@ -35,6 +35,17 @@ let
         sed -i "2 i export PATH=${runtimePath}:\$PATH" $out/bin/jumpappify-desktop-entry
       '';
     };
+  vscodeInsiders = (unstable.vscode.override { isInsiders = true; })
+    .overrideAttrs(oldAttrs: rec {
+      name = "vscode-insiders-${version}";
+      version = "1553667544";
+
+      src = pkgs.fetchurl {
+        name = "VSCode_latest_linux-x64.tar.gz";
+        url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
+        sha256 = "12ldbr3b9pk4ldr2bn6gfrxk4k5qi76lqfmkiskmgg0w69f5g6j8";
+      };
+    });
 in
 {
   imports = [ /etc/nixos/hardware-configuration.nix ];
@@ -76,7 +87,9 @@ in
     kitty
     obs-studio
     vscode
+    # vscodeInsiders
     jetbrains.idea-community
+    libreoffice
 
     # Langs
     python3
@@ -164,6 +177,8 @@ in
     printing.enable = true;
     emacs.enable = true;
   };
+
+  virtualisation.virtualbox.host.enable = true;
 
   systemd.extraConfig = ''
     DefaultTimeoutStopSec=10s
