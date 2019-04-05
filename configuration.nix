@@ -176,6 +176,7 @@ in
     unclutter.enable = true;
     printing.enable = true;
     emacs.enable = true;
+    earlyoom.enable = true;
   };
 
   virtualisation.virtualbox.host.enable = true;

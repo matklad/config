@@ -347,6 +347,14 @@
     {
         "key": "ctrl+numpad_subtract",
         "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+k o",
+        "command": "-workbench.action.files.showOpenedFileInNewWindow"
+    },
+    {
+        "key": "ctrl+k o",
+        "command": "workbench.action.focusNextGroup"
     }
 
 ]

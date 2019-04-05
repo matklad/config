@@ -17,6 +17,8 @@ abbr --add l  exa -l
 
 abbr --add c code
 
-abbr ctrlc xclip -selection c
+abbr --add ctrlc xclip -selection c
+
+abbr --add xp ./x.py -i --stage 1 --keep-stage 1
 
 alias time="time --format 'real %e\nuser %U\nsys  %S\nrss  %M'"
