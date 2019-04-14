@@ -20,5 +20,3 @@ abbr --add c code
 abbr --add ctrlc xclip -selection c
 
 abbr --add xp ./x.py -i --stage 1 --keep-stage 1
-
-alias time="time --format 'real %e\nuser %U\nsys  %S\nrss  %M'"

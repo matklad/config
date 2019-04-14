@@ -102,7 +102,7 @@ in
     nodejs-10_x
     jekyll
     gcc
-    unstable.rustup
+    rustup
 
     # Utils
     direnv
@@ -173,7 +173,7 @@ in
         naturalScrolling = true;
       };
     };
-    unclutter.enable = true;
+    unclutter-xfixes.enable = true;
     printing.enable = true;
     emacs.enable = true;
     earlyoom.enable = true;

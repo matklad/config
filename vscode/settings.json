@@ -18,14 +18,15 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
     "editor.fontFamily": "'Fira Code'",
-    "editor.fontSize": 16,
     "editor.fontLigatures": true,
+    "editor.fontSize": 16,
     "editor.formatOnType": true,
+    "editor.hover.enabled": false,
     "editor.minimap.enabled": false,
     "editor.roundedSelection": false,
+    "editor.scrollbar.vertical": "hidden",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
-    "editor.scrollbar.vertical": "hidden",
     // small gutter
     "editor.folding": false,
     "editor.glyphMargin": false,
@@ -44,6 +45,7 @@
     "files.autoSaveDelay": 300,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "files.hotExit": "off",
 
     "extensions.ignoreRecommendations": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
@@ -52,12 +54,13 @@
 
     "rust-analyzer.highlightingOn": true,
 
-    "aceJump.finder.pattern": "[ ,-.{_(\"'<\\/[:]",
+    "aceJump.finder.pattern": "[ ,-.*{}_()\"'<\\/[:]",
     "aceJump.placeholder.backgroundColor": "2B2B2B",
     "aceJump.placeholder.color": "#8FB28F",
     "aceJump.placeholder.fontFamily": "Ubuntu Mono",
     "aceJump.placeholder.fontWeight": "bold",
     "aceJump.placeholder.upperCase": true,
+    "aceJump.finder.skipSelection": true,
     "macros": {
         "closePanelCloseEditorsToggleSidebar": [
             "workbench.action.closePanel",
