@@ -179,8 +179,6 @@ in
     earlyoom.enable = true;
   };
 
-  virtualisation.virtualbox.host.enable = true;
-
   systemd.extraConfig = ''
     DefaultTimeoutStopSec=10s
   '';

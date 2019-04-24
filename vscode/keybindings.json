@@ -64,7 +64,7 @@
     },
     {
         "key": "alt+1",
-        "command": "workbench.files.action.focusFilesExplorer",
+        "command": "macros.closePanelFocusFilesExplorer",
         "when": "!filesExplorerFocus"
     },
     {
@@ -74,8 +74,13 @@
     },
     {
         "key": "alt+2",
+        "command": "macros.focusPanelToggleSidebar",
+        "when": "!panelFocus && sidebarVisible",
+    },
+    {
+        "key": "alt+2",
         "command": "workbench.action.focusPanel",
-        "when": "!panelFocus",
+        "when": "!panelFocus && !sidebarVisible",
     },
     {
         "key": "alt+2",
@@ -246,14 +251,9 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+w",
-        "command": "rust-analyzer.extendSelection",
-        "when": "editorTextFocus && editorLangId == 'rust'"
-    },
-    {
-        "key": "shift+alt+right",
-        "command": "-rust-analyzer.extendSelection",
-        "when": "editorTextFocus && editorLangId == 'rust'"
+        "key": "ctrl+shift+w",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
     },
     {
         "key": "alt+k",

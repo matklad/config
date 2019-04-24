@@ -13,6 +13,7 @@
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none",
     "workbench.statusBar.feedback.visible": false,
+    "workbench.useExperimentalGridLayout": true,
 
     "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
@@ -28,9 +29,9 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
     // small gutter
-    "editor.folding": false,
+    // "editor.folding": false,
     "editor.glyphMargin": false,
-    "editor.lineDecorationsWidth": 10, // undocumented
+    "editor.lineDecorationsWidth": 0, // undocumented
     "editor.lineNumbers": "off",
     "editor.lineNumbersMinChars": 0,  // undocumented
     "editor.renderIndentGuides": false,
@@ -72,6 +73,14 @@
             "workbench.action.closePanel",
             "workbench.action.closeEditorsInOtherGroups",
             "workbench.action.closeOtherEditors",
+        ],
+        "focusPanelToggleSidebar": [
+            "workbench.action.toggleSidebarVisibility",
+            "workbench.action.focusPanel",
+        ],
+        "closePanelFocusFilesExplorer": [
+            "workbench.action.closePanel",
+            "workbench.files.action.focusFilesExplorer",
         ]
     },
 
@@ -213,4 +222,5 @@
     "editor.codeInsets": true,
     "editor.dragAndDrop": false,
     "terminal.integrated.fontSize": 12,
+    "editor.renderWhitespace": "none",
 }
