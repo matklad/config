@@ -191,6 +191,8 @@ in
       fira-code
       ubuntu_font_family
       inconsolata
+      noto-fonts
+      noto-fonts-emoji
     ];
   };
 

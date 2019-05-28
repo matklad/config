@@ -7,7 +7,7 @@
 "jumpapp -m code"
   F3
 
-"jumpapp -m emacs emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
+"jumpapp -mf -i emacs -c emacs emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
   F4
 
 "jumpapp -m dolphin"

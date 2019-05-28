@@ -319,13 +319,21 @@
     {
         "key": "pageup",
         "command": "cursorMove",
-        "args": {"by": "wrappedLine", "value": 36, "to": "up"},
+        "args": {
+            "by": "wrappedLine",
+            "value": 36,
+            "to": "up"
+        },
         "when": "editorTextFocus"
     },
     {
         "key": "pagedown",
         "command": "cursorMove",
-        "args": {"by": "wrappedLine", "value": 36, "to": "down"},
+        "args": {
+            "by": "wrappedLine",
+            "value": 36,
+            "to": "down"
+        },
         "when": "editorTextFocus"
     },
     {
@@ -383,6 +391,10 @@
     {
         "key": "shift+alt+k",
         "command": "extension.aceJump.selection"
-    }
-
+    },
+    {
+        "key": "alt+d",
+        "command": "deleteWordRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
 ]

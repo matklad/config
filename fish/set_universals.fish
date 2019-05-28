@@ -19,4 +19,5 @@ abbr --add c code
 
 abbr --add ctrlc xclip -selection c
 
-abbr --add xp ./x.py -i --stage 1 --keep-stage 1
+abbr --add xp  ./x.py --stage 1 --keep-stage 1
+abbr --add xpt ./x.py --stage 1 --keep-stage 1 test
