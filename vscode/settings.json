@@ -15,25 +15,29 @@
     "workbench.statusBar.feedback.visible": false,
     "workbench.useExperimentalGridLayout": true,
 
+    "editor.accessibilitySupport": "off",
     "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
+    "editor.dragAndDrop": false,
     "editor.fontFamily": "'Fira Code'",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.formatOnType": true,
     "editor.hover.enabled": false,
     "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
     "editor.roundedSelection": false,
     "editor.scrollbar.vertical": "hidden",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
+
     // small gutter
     // "editor.folding": false,
     "editor.glyphMargin": false,
     "editor.lineDecorationsWidth": 0, // undocumented
     "editor.lineNumbers": "off",
-    "editor.lineNumbersMinChars": 0,  // undocumented
+    "editor.lineNumbersMinChars": 0, // undocumented
     "editor.renderIndentGuides": false,
 
     "breadcrumbs.enabled": true,
@@ -51,9 +55,7 @@
     "extensions.ignoreRecommendations": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
 
-    "liveServer.settings.donotShowInfoMsg": true,
 
-    "rust-analyzer.highlightingOn": true,
     "aceJump.finder.pattern": "[ ,-.*{}_()\"'<\\/[:&]",
     "aceJump.placeholder.backgroundColor": "2B2B2B",
     "aceJump.placeholder.color": "#8FB28F",
@@ -61,6 +63,7 @@
     "aceJump.placeholder.fontWeight": "bold",
     "aceJump.placeholder.upperCase": true,
     "aceJump.finder.skipSelection": true,
+
     "macros": {
         "closePanelCloseEditorsToggleSidebar": [
             "workbench.action.closePanel",
@@ -86,6 +89,10 @@
     "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "none",
     "update.showReleaseNotes": false,
+
+    "liveServer.settings.donotShowInfoMsg": true,
+    "rust-analyzer.highlightingOn": true,
+    "terminal.integrated.fontSize": 12,
 
     /*
     colors https://github.com/bbatsov/zenburn-emacs/blob/master/zenburn-theme.el
@@ -151,32 +158,25 @@
             "ralsp.attribute": "#94BFF3",
             "ralsp.module": "#AFD8AF",
             "ralsp.field": "#94BFF3"
-
         },
         "editor.background": "#3F3F3F",
         "editor.lineHighlightBackground": "#383838",
-
-        "editorCursor.foreground": "#DCDCCC",
+        "editorCursor.foreground": "#FFFFEF",
         "editorGutter.background": "#4F4F4F",
-
         "panel.background": "#3F3F3F",
         // "list.activeSelectionBackground": "#00000000",
-
         "scrollbar.shadow": "#00000000",
-
         "sideBar.background": "#2B2B2B",
-
         "statusBar.background": "#2B2B2B",
-        "statusBar.foreground": "#7F9F7F",
-        "statusBar.noFolderBackground" : "#2B2B2B",
+        "statusBar.foreground": "#8FB28F",
+        "statusBar.noFolderBackground": "#2B2B2B",
         "statusBar.noFolderBorder": "#7F9F7F",
-        "statusBar.debuggingBackground" : "#2B2B2B",
+        "statusBar.debuggingBackground": "#2B2B2B",
         "statusBar.debuggingBorder": "#DC8CC3",
-
         "widget.shadow": "#00000000",
     },
-
     "cSpell.diagnosticLevel": "Hint",
+    "cSpell.numSuggestions": 3,
     "cSpell.language": "en,ru",
     "cSpell.userWords": [
         "Cargо",
@@ -234,9 +234,4 @@
         "трейтов",
         "энумов"
     ],
-    "editor.accessibilitySupport": "off",
-    "editor.codeInsets": true,
-    "editor.dragAndDrop": false,
-    "terminal.integrated.fontSize": 12,
-    "editor.renderWhitespace": "none",
 }

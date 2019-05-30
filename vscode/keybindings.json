@@ -397,4 +397,8 @@
         "command": "deleteWordRight",
         "when": "textInputFocus && !editorReadonly"
     },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
 ]
