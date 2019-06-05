@@ -196,6 +196,7 @@
         "implа",
         "inary",
         "kladov",
+        "krate",
         "libc",
         "libfoo",
         "nitialization",
@@ -234,4 +235,5 @@
         "трейтов",
         "энумов"
     ],
+    "git.alwaysShowStagedChangesResourceGroup": true,
 }

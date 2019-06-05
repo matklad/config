@@ -16,8 +16,10 @@ abbr --add la exa -la
 abbr --add l  exa -l
 
 abbr --add c code
+abbr --add w code ~/work/
 
 abbr --add ctrlc xclip -selection c
 
 abbr --add xp  ./x.py --stage 1 --keep-stage 1
 abbr --add xpt ./x.py --stage 1 --keep-stage 1 test
+

@@ -68,4 +68,4 @@
   t)
 (define-key global-map (kbd "M-k") 'ace-jump-mode)
 
-(setq initial-buffer-choice "~/work.adoc")
+(setq initial-buffer-choice "~/work/work.adoc")
