@@ -28,7 +28,7 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
     "editor.roundedSelection": false,
-    "editor.scrollbar.vertical": "hidden",
+    // "editor.scrollbar.vertical": "hidden",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
 
@@ -49,7 +49,6 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 300,
     "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
     "files.hotExit": "off",
 
     "extensions.ignoreRecommendations": true,
@@ -236,4 +235,6 @@
         "энумов"
     ],
     "git.alwaysShowStagedChangesResourceGroup": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
 }

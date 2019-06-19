@@ -10,6 +10,9 @@
 "jumpapp -mf -i emacs -c emacs emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
   F4
 
+"code --new-window ~/work/work.adoc"
+  F5
+
 "jumpapp -m dolphin"
   Mod4 + e
 

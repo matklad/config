@@ -401,4 +401,29 @@
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
     },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-insertDateString.insertDateTime",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+i",
+        "command": "-insertDateString.insertOwnFormatDateTime",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k 3",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+k 2",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+i",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "cargo run --manifest-path ~/projects/nix-fmt/Cargo.toml -- --in-place ${file}\n"
+        }
+    }
 ]

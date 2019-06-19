@@ -3,6 +3,7 @@ set -U fish_greeting ""
 set -U -x VISUAL e
 
 abbr --add g git
+abbr --add gc git commit
 abbr --add gl git log
 abbr --add gs git status --short --branch
 abbr --add gp git push
