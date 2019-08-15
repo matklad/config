@@ -56,8 +56,8 @@
 
 
     "aceJump.finder.pattern": "[ ,-.*{}_()\"'<\\/[:&]",
-    "aceJump.placeholder.backgroundColor": "2B2B2B",
-    "aceJump.placeholder.color": "#8FB28F",
+    "aceJump.placeholder.backgroundColor": "rgb(237, 66, 124)",
+    "aceJump.placeholder.color": "rgb(232, 232, 225)",
     "aceJump.placeholder.fontFamily": "Ubuntu Mono",
     "aceJump.placeholder.fontWeight": "bold",
     "aceJump.placeholder.upperCase": true,
@@ -145,11 +145,12 @@
         "[Zenburn]": {
             "ralsp.keyword": "#F0DFAF",
             "ralsp.keyword.control": "#F0DFAF",
-            "ralsp.keyword.unsafe": "#DFAF8F",
+            "ralsp.keyword.unsafe": "#BC8383",
             "ralsp.function": "#93E0E3",
             "ralsp.type": "#7CB8BB",
             "ralsp.constant": "#6CA0A3",
             "ralsp.variable": "#DCDCCC",
+            "ralsp.variable.mut": "#DCDCCC",
             "ralsp.comment": "#7F9F7F",
             "ralsp.literal": "#BFEBBF",
             "ralsp.string": "#CC9393",

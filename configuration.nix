@@ -51,8 +51,11 @@ in
 
   boot = {
     tmpOnTmpfs = true;
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    loader = {
+      timeout = 1;
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
     blacklistedKernelModules = [ "nouveau" ];
   };
 
@@ -78,7 +81,8 @@ in
     filelight
     simplescreenrecorder
     spectacle
-    smplayer mpv
+    smplayer
+    mpv
     firefox-bin
     chromium
     okular
@@ -110,17 +114,21 @@ in
     tree
     nox
     htop
-    atool unrar zip unzip ark
+    atool
+    unrar
+    zip
+    unzip
+    ark
     linuxPackages.perf
     patchelf
-    aspell aspellDicts.en aspellDicts.ru
+    aspell
+    aspellDicts.en
+    aspellDicts.ru
     pkgconfig
     graphviz
     flameGraph
     binutils
-    vagrant
     exfat
-    microcodeIntel
     asciidoctor
     jumpapp
 
@@ -129,6 +137,7 @@ in
     exa
     fd
     tokei
+    bat
 
     xorg.xkbcomp
     xbindkeys
@@ -143,7 +152,10 @@ in
 
   programs = {
     fish.enable = true;
-    java.enable = true;
+    java = {
+      enable = true;
+      # package = pkgs.jetbrains.jdk;
+    };
   };
 
   hardware = {

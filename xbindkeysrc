@@ -13,6 +13,9 @@
 "code --new-window ~/work/work.adoc"
   F5
 
+"telegram-desktop"
+  F7
+
 "jumpapp -m dolphin"
   Mod4 + e
 
