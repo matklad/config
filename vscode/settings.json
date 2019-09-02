@@ -26,11 +26,12 @@
     "editor.formatOnType": true,
     "editor.hover.enabled": false,
     "editor.minimap.enabled": false,
+    "editor.renderIndentGuides": false,
     "editor.renderWhitespace": "none",
     "editor.roundedSelection": false,
-    // "editor.scrollbar.vertical": "hidden",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
+    // "editor.scrollbar.vertical": "hidden",
 
     // small gutter
     // "editor.folding": false,
@@ -38,7 +39,6 @@
     "editor.lineDecorationsWidth": 0, // undocumented
     "editor.lineNumbers": "off",
     "editor.lineNumbersMinChars": 0, // undocumented
-    "editor.renderIndentGuides": false,
 
     "breadcrumbs.enabled": true,
 
@@ -238,4 +238,5 @@
     "git.alwaysShowStagedChangesResourceGroup": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "workbench.tree.indent": 16,
 }

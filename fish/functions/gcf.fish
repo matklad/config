@@ -9,6 +9,11 @@ function gcf
         and git checkout master
         and git reset --hard upstream/master
         and git branch --set-upstream-to=upstream/master
+	and printf "[hub]
+\tupstream = \"$userrepo\"
+\tforkrepo = \"matklad/$repo\"
+\tforkremote = \"origin\"
+" >> .git/config
         popd
     end
 end

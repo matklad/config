@@ -10,7 +10,7 @@
 "jumpapp -mf -i emacs -c emacs emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
   F4
 
-"code --new-window ~/work/work.adoc"
+"code --new-window ~/work/"
   F5
 
 "telegram-desktop"

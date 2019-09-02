@@ -423,7 +423,7 @@
         "key": "ctrl+k ctrl+shift+i",
         "command": "workbench.action.terminal.sendSequence",
         "args": {
-            "text": "cargo run --manifest-path ~/projects/nix-fmt/Cargo.toml -- --in-place ${file}\n"
+            "text": "cargo run --manifest-path ~/projects/nixpkgs-fmt/Cargo.toml -- --in-place ${file}\n"
         }
     }
 ]
