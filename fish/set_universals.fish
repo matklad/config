@@ -5,9 +5,6 @@ set -U -x VISUAL e
 abbr --add g   git
 abbr --add gb  git branch
 abbr --add gc  git commit
-abbr --add gcb git checkout -b
-abbr --add gcm git checkout master
-abbr --add gco git checkout
 abbr --add gl  git log
 abbr --add gp  git push
 abbr --add gpf git push --force-with-lease
@@ -26,3 +23,4 @@ abbr --add ctrlv xclip -selection c -o
 
 abbr --add xp  ./x.py --stage 1 --keep-stage 1
 abbr --add xpt ./x.py --stage 1 --keep-stage 1 test
+abbr --add xpc ./x.py check

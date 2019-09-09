@@ -107,10 +107,12 @@ in
     jekyll
     gcc
     unstable.rustup
+    llvm
+    lld
 
     # Utils
     direnv
-    git
+    unstable.git
     tree
     nox
     htop
@@ -205,6 +207,8 @@ in
       inconsolata
       noto-fonts
       noto-fonts-emoji
+      iosevka
+      (iosevka.override { set  = "salb"; design = ["slab"]; })
     ];
   };
 
