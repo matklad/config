@@ -75,7 +75,7 @@ in
   environment.systemPackages = with pkgs; [
     # GUI
     gwenview
-    qbittorrent
+    ktorrent
     gimp
     deadbeef-with-plugins
     filelight
@@ -90,7 +90,7 @@ in
     zoom-us
     kitty
     obs-studio
-    vscode
+    unstable.vscode
     # vscodeInsiders
     jetbrains.idea-community
     libreoffice

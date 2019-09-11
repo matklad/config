@@ -10,6 +10,9 @@ abbr --add gp  git push
 abbr --add gpf git push --force-with-lease
 abbr --add gs  git status --short --branch
 abbr --add gup git pull --rebase
+abbr --add sv  git switch
+abbr --add svm git switch master
+abbr --add svc git switch -c
 
 abbr --add ls exa -l
 abbr --add la exa -la
