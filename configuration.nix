@@ -72,10 +72,12 @@ in
     allowUnfree = true;
   };
 
+  virtualisation.virtualbox.host.enable = true;
+
   environment.systemPackages = with pkgs; [
     # GUI
     gwenview
-    ktorrent
+    qbittorrent
     gimp
     deadbeef-with-plugins
     filelight
@@ -90,7 +92,7 @@ in
     zoom-us
     kitty
     obs-studio
-    unstable.vscode
+    vscode
     # vscodeInsiders
     jetbrains.idea-community
     libreoffice
@@ -106,13 +108,13 @@ in
     nodejs-10_x
     jekyll
     gcc
-    unstable.rustup
+    rustup
     llvm
     lld
 
     # Utils
     direnv
-    unstable.git
+    git
     tree
     nox
     htop

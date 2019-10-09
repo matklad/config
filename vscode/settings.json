@@ -20,7 +20,7 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "'Iosevka'",
+    "editor.fontFamily": "'Iosevka Slab'",
     "editor.fontSize": 16,
     "editor.formatOnType": true,
     "editor.hover.enabled": false,
@@ -239,4 +239,5 @@
     "files.trimTrailingWhitespace": true,
     "workbench.tree.indent": 16,
     "editor.cursorSurroundingLines": 3,
+    "editor.fontLigatures": true,
 }
