@@ -42,7 +42,7 @@
 (setq package-selected-packages
       '(zenburn-theme
 	helm
-	golden-ratio
+	zoom
 	magit
 	forge
 	rust-mode
@@ -53,7 +53,9 @@
 (package-install-selected-packages)
 
 (load-theme 'zenburn t)
-(golden-ratio-mode 1)
+(custom-set-variables
+ '(zoom-mode t)
+ '(zoom-size '(0.618 . 0.618)))
 
 (require 'helm-config)
 (helm-mode 1)
@@ -67,5 +69,3 @@
   "Emacs quick move minor mode"
   t)
 (define-key global-map (kbd "M-k") 'ace-jump-mode)
-
-(setq initial-buffer-choice "~/work/work.adoc")
