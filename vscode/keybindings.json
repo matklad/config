@@ -41,6 +41,10 @@
         "key": "ctrl+k k",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "sideBarFocus"
+    },{
+        "key": "ctrl+k u",
+        "command": "references-view.find",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+k k",
@@ -430,5 +434,14 @@
         "args": {
             "text": "cargo run --manifest-path ~/projects/nixpkgs-fmt/Cargo.toml -- --in-place ${file}\n"
         }
+    },
+    {
+        "key": "ctrl+k u",
+        "command": "-workbench.action.closeUnmodifiedEditors"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.find",
+        "when": "editorHasReferenceProvider"
     }
 ]

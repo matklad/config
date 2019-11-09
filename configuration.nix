@@ -111,6 +111,7 @@ in
     rustup
     llvm
     lld
+    lldb
 
     # Utils
     direnv

@@ -12,7 +12,7 @@ abbr --add gs  git status --short --branch
 abbr --add gup git pull --rebase
 abbr --add sw  git switch
 abbr --add swm git switch master
-abbr --add swn git switch -c
+abbr --add swc git switch -c
 
 abbr --add ls exa -l
 abbr --add la exa -la
