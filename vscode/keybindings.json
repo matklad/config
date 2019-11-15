@@ -92,6 +92,10 @@
         "when": "panelFocus",
     },
     {
+        "key": "alt+3",
+        "command": "workbench.view.extension.references-view",
+    },
+    {
         "key": "alt+shift+2",
         "command": "workbench.action.toggleMaximizedPanel",
     },
