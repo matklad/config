@@ -66,7 +66,7 @@ in
     # firewall = { allowedTCPPorts = [ 4000 ]; };
   };
 
-  time.timeZone = "Europe/Moscow";
+  time.timeZone = "Europe/Berlin";
 
   nixpkgs.config = {
     allowUnfree = true;
