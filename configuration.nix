@@ -61,7 +61,10 @@ in
 
   networking = {
     hostName = "nixos";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      enableStrongSwan = true;
+    };
     extraHosts = import ./hosts.nix;
     # firewall = { allowedTCPPorts = [ 4000 ]; };
   };
@@ -114,6 +117,8 @@ in
     lldb
 
     # Utils
+    gnupg
+    gopass
     direnv
     git
     tree
@@ -189,11 +194,19 @@ in
         horizontalScrolling = false;
         naturalScrolling = true;
       };
+      xkbOptions = "compose:ralt";
     };
     unclutter-xfixes.enable = true;
     printing.enable = true;
     emacs.enable = true;
     earlyoom.enable = true;
+    # strongswan = {
+    #   enable = true;
+    #   secrets = [
+    #     "ipsec.d/ipsec.nm-l2tp.secrets"
+    #   ];
+    # };
+
   };
 
   systemd.extraConfig = ''
