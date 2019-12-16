@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Smart Close Window
+Comment=
+Icon=preferences-system-windows-script-test
+
+Type=Service
+
+X-Plasma-API=javascript
+X-Plasma-MainScript=code/main.js
+X-KDE-ServiceTypes=KWin/Script
+
+X-KDE-PluginInfo-Author=matklad
+X-KDE-PluginInfo-Email=xxx@xxx.xx
+X-KDE-PluginInfo-Name=SmartCloseWindow
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Version=3
