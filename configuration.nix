@@ -75,8 +75,6 @@ in
     allowUnfree = true;
   };
 
-  virtualisation.virtualbox.host.enable = true;
-
   environment.systemPackages = with pkgs; [
     # GUI
     gwenview
@@ -85,6 +83,7 @@ in
     deadbeef-with-plugins
     filelight
     simplescreenrecorder
+    peek
     spectacle
     smplayer
     mpv
@@ -95,7 +94,7 @@ in
     zoom-us
     kitty
     obs-studio
-    unstable.vscode 
+    unstable.vscode
     # vscodeInsiders
     jetbrains.idea-community
     libreoffice
@@ -144,8 +143,7 @@ in
     jumpapp
     yubioath-desktop
     tightvnc
-    
-    
+
     # Rust stuff
     ripgrep
     exa
