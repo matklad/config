@@ -95,13 +95,13 @@ in
     zoom-us
     kitty
     obs-studio
-    vscode
+    unstable.vscode 
     # vscodeInsiders
     jetbrains.idea-community
     libreoffice
 
     # Langs
-    python3
+    (python3.withPackages (py: [ py.requests ]))
     cmake
     gnumake
     ninja
@@ -141,7 +141,9 @@ in
     exfat
     asciidoctor
     jumpapp
-
+    yubioath-desktop
+    tightvnc
+    
     # Rust stuff
     ripgrep
     exa
@@ -200,13 +202,13 @@ in
     printing.enable = true;
     emacs.enable = true;
     earlyoom.enable = true;
-    # strongswan = {
-    #   enable = true;
-    #   secrets = [
-    #     "ipsec.d/ipsec.nm-l2tp.secrets"
-    #   ];
-    # };
-
+    pcscd.enable = true;
+    strongswan = {
+      enable = true;
+      secrets = [
+        "ipsec.d/ipsec.nm-l2tp.secrets"
+      ];
+    };
   };
 
   systemd.extraConfig = ''
@@ -224,7 +226,6 @@ in
       noto-fonts
       noto-fonts-emoji
       iosevka
-      (iosevka.override { set  = "salb"; design = ["slab"]; })
     ];
   };
 

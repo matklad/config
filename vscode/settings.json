@@ -159,7 +159,8 @@
             "ralsp.macro": "#94BFF3",
             "ralsp.attribute": "#94BFF3",
             "ralsp.module": "#AFD8AF",
-            "ralsp.field": "#94BFF3"
+            "ralsp.field": "#94BFF3",
+            "ralsp.inlayHint": "#8FB28F"
         },
         "editor.background": "#3F3F3F",
         "editor.lineHighlightBackground": "#383838",
@@ -210,6 +211,7 @@
         "rebalancing",
         "rlib",
         "rustc",
+        "statik",
         "struct",
         "toml",
         "unexpanded",
@@ -245,4 +247,5 @@
     "workbench.tree.indent": 16,
     "editor.cursorSurroundingLines": 3,
     "editor.fontLigatures": true,
+    "editor.parameterHints.enabled": false,
 }

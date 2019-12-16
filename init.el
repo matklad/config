@@ -46,7 +46,8 @@
 	magit
 	forge
 	rust-mode
-	ace-jump-mode))
+	ace-jump-mode
+	lsp-mode))
 
 ;; (package-refresh-contents)
 (package-initialize)
@@ -69,3 +70,6 @@
   "Emacs quick move minor mode"
   t)
 (define-key global-map (kbd "M-k") 'ace-jump-mode)
+
+(require 'lsp)
+(load-file "/home/matklad/projects/rust-analyzer/editors/emacs/ra-emacs-lsp.el")
