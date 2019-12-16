@@ -121,6 +121,7 @@ in
     gopass
     direnv
     git
+    git-hub
     tree
     nox
     htop
@@ -143,6 +144,7 @@ in
     jumpapp
     yubioath-desktop
     tightvnc
+    
     
     # Rust stuff
     ripgrep
