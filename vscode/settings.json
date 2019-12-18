@@ -93,6 +93,7 @@
 
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.highlightingOn": true,
+    "rust-analyzer.enableCargoWatchOnStartup": "disabled",
     "terminal.integrated.fontSize": 12,
 
     /*

@@ -109,7 +109,7 @@ in
     maven
     nodejs-10_x
     jekyll
-    gcc
+    clang
     rustup
     llvm
     lld
