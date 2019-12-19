@@ -150,6 +150,7 @@ in
     fd
     tokei
     bat
+    hyperfine
 
     xorg.xkbcomp
     xbindkeys
