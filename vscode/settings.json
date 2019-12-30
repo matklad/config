@@ -251,4 +251,5 @@
     "editor.cursorSurroundingLines": 3,
     "editor.fontLigatures": true,
     "editor.parameterHints.enabled": false,
+    "debug.onTaskErrors": "debugAnyway",
 }
