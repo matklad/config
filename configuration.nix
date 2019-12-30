@@ -143,6 +143,7 @@ in
     jumpapp
     yubioath-desktop
     tightvnc
+    file
 
     # Rust stuff
     ripgrep
