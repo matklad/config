@@ -29,6 +29,7 @@
 (global-set-key (kbd "C-x") nil)
 (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-s") nil)
+(global-set-key (kbd "C-k k") 'kill-this-buffer)
 (define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
 
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
@@ -73,3 +74,5 @@
 
 (require 'lsp)
 (load-file "/home/matklad/projects/rust-analyzer/editors/emacs/ra-emacs-lsp.el")
+(setq lsp-rust-server 'rust-analyzer)
+(setq lsp-log-io 't)
