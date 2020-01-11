@@ -240,6 +240,9 @@ in
     };
     extraUsers.man = { isNormalUser = false; };
   };
+  environment.variables = {
+    PATH = "$HOME/.cargo/bin";
+  };
 
   system.stateVersion = "18.09";
 }
