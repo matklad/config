@@ -20,7 +20,7 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "'Fira Code'",
+    "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontSize": 16,
     "editor.formatOnType": true,
     "editor.hover.enabled": false,
