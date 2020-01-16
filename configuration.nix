@@ -101,6 +101,7 @@ in
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
+    ruby
     cmake
     gnumake
     ninja
