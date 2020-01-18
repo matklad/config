@@ -33,8 +33,8 @@ xkb_keymap {
         key <AC01> { overlay1 = <HOME> };
         key <AD03> { overlay1 = <END>  };
 
-        key <AB06> { overlay1 = <KPEN> };
-	    key <AC05> { overlay1 = <ESC>  };
+        key <AB06> { overlay1 = <RTRN> };
+        key <AC05> { overlay1 = <ESC>  };
     };
     xkb_geometry { include "pc(pc104)" };
 };
