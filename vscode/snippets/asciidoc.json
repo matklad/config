@@ -9,6 +9,16 @@
 		],
 		"description": "source,rust"
 	},
+	"incl": {
+		"prefix": "incl",
+		"body": [
+			"[source,rust]",
+			"----",
+			"include::./$0[]",
+			"----"
+		],
+		"description": "include"
+	},
 	"src": {
 		"prefix": "src",
 		"body": [
