@@ -59,6 +59,9 @@ in
     blacklistedKernelModules = [ "nouveau" ];
   };
 
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+
   networking = {
     hostName = "nixos";
     networkmanager = {
