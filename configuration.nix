@@ -59,8 +59,8 @@ in
     blacklistedKernelModules = [ "nouveau" ];
   };
 
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+  # virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enableExtensionPack = true;
 
   networking = {
     hostName = "nixos";
@@ -114,6 +114,7 @@ in
     nodejs-10_x
     jekyll
     clang
+    clang-tools
     rustup
     llvm
     lld
