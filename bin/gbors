@@ -1,4 +1,4 @@
-#!/home/matklad/config/not-bash.py
+#!/usr/bin/env not-bash
 
 if len(argv) > 1:
     message = argv[1]
