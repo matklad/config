@@ -246,7 +246,7 @@ in
     extraUsers.man = { isNormalUser = false; };
   };
   environment.variables = {
-    PATH = "$HOME/.cargo/bin";
+    PATH = "$HOME/.cargo/bin:$HOME/config/bin";
   };
 
   system.stateVersion = "18.09";
