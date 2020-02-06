@@ -2,19 +2,20 @@
 import sys
 import re
 import shlex
-
-from subprocess import check_output, check_call
+import subprocess
 
 def p(cmd):
-    args = shelx.split(cmd)
-    check_call
+    args = shlex.split(cmd)
+    res = subprocess.check_output(args)
+    print(res)
+    return res
 
 if len(sys.argv) > 1:
     message = sys.argv[1]
 else:
     message = p('git show -s --format=%B HEAD')
 
-res = p(f'git-hub pull new -m "{message}"')
-print(res)
-pr = re.search(r'\[(\d+)\]', res)[1]
+pr = p(f'git-hub pull new -m "{message}"')
+pr = re.search(r'\[(\d+)\]', pr)[1]
+
 p(f'git-hub pull comment -m "bors r+\n🤖" {pr}')
