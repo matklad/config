@@ -1,0 +1,13 @@
+#!/home/matklad/config/not-bash.py
+
+branches = [
+    banch
+    for line in p('git brach --merged').splitlines()
+    if branch := line.trim() != 'master' and not branch.startswith('*')
+]
+
+if not branches:
+    eprint("no merged branches")
+    exit(0)
+
+p(f'git branch -d {" ".join(branches)}')
