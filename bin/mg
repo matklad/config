@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 e --eval "(progn (call-interactively #'magit-status) (call-interactively #'delete-other-windows))"

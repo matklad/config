@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 emacsclient --create-frame --alternate-editor='' "$@"
