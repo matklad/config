@@ -1,7 +1,7 @@
 #!/usr/bin/env not-bash
 
-if len(argv) > 1:
-    message = argv[1]
+if args:
+    message = args[0]
 else:
     message = p('git show -s --format=%B HEAD', echo=False)
 

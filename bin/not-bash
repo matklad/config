@@ -21,7 +21,7 @@ def p(cmd, echo=True):
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
-_, *argv = sys.argv
+_, script, *args = sys.argv
 exit = sys.exit
 
-exec(open(argv[0]).read())
+exec(open(script).read())
