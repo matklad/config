@@ -99,10 +99,12 @@
 
     "rust-analyzer.highlightingOn": true,
     "rust-analyzer.enableCargoWatchOnStartup": "disabled",
+    "rust-analyzer.raLspServerPath": "ra_lsp_server",
 
     "breadcrumbs.enabled": true,
 
     "asciidoc.preview.useEditorStyle": false,
+    "terminal.integrated.fontSize": 12,
 
     "workbench.colorCustomizations": {
         "editor.background": "#3F3F3F",
