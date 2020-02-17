@@ -13,6 +13,7 @@
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none",
     "workbench.statusBar.feedback.visible": false,
+    "workbench.tree.indent": 16,
     "workbench.useExperimentalGridLayout": true,
 
     "editor.accessibilitySupport": "off",
@@ -57,7 +58,7 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
 
-    "aceJump.finder.pattern": "[ ,-.*{}_()\"'<>\\/[:&]",
+    "aceJump.finder.pattern": "[ ,-.*{}_()\"'`<>\\/[:&]",
     "aceJump.placeholder.backgroundColor": "rgb(237, 66, 124)",
     "aceJump.placeholder.color": "rgb(232, 232, 225)",
     "aceJump.placeholder.fontFamily": "Ubuntu Mono",
@@ -95,9 +96,13 @@
     "update.showReleaseNotes": false,
 
     "liveServer.settings.donotShowInfoMsg": true,
+
     "rust-analyzer.highlightingOn": true,
     "rust-analyzer.enableCargoWatchOnStartup": "disabled",
-    "terminal.integrated.fontSize": 12,
+
+    "breadcrumbs.enabled": true,
+
+    "asciidoc.preview.useEditorStyle": false,
 
     "workbench.colorCustomizations": {
         "editor.background": "#3F3F3F",
@@ -137,11 +142,14 @@
         "gmail",
         "implа",
         "inary",
+        "intrinsics",
+        "isize",
         "kladov",
         "krate",
         "libc",
         "libfoo",
         "magit",
+        "multithreaded",
         "nitialization",
         "nterface",
         "pplication",
@@ -180,6 +188,5 @@
         "энумов"
     ],
     "git.alwaysShowStagedChangesResourceGroup": true,
-    "workbench.tree.indent": 16,
     "debug.onTaskErrors": "debugAnyway",
 }
