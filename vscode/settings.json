@@ -191,4 +191,5 @@
     ],
     "git.alwaysShowStagedChangesResourceGroup": true,
     "debug.onTaskErrors": "debugAnyway",
+    "extensions.autoUpdate": true
 }
