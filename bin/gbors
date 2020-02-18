@@ -5,7 +5,4 @@ if args:
 else:
     message = p('git show -s --format=%B HEAD', echo=False)
 
-pr = p(f'git-hub pull new -m "{message}"')
-pr = re.search(r'\[(\d+)\]', pr)[1]
-
-p(f'git-hub pull comment -m "bors r+\n🤖" {pr}')
+p(f'git-hub pull new -m "{message}\n\nbors r+\n🤖"')

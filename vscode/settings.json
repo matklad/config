@@ -99,7 +99,7 @@
 
     "rust-analyzer.highlightingOn": true,
     "rust-analyzer.enableCargoWatchOnStartup": "disabled",
-    "rust-analyzer.raLspServerPath": "ra_lsp_server",
+    "rust-analyzer.serverPath": "rust-analyzer",
 
     "breadcrumbs.enabled": true,
 
