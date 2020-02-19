@@ -497,5 +497,10 @@
         "key": "shift+alt+f5",
         "command": "-workbench.action.editor.previousChange",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "-editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
     }
 ]
