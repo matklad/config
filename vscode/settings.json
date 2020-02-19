@@ -98,7 +98,6 @@
     "liveServer.settings.donotShowInfoMsg": true,
 
     "rust-analyzer.highlightingOn": true,
-    "rust-analyzer.enableCargoWatchOnStartup": "disabled",
     "rust-analyzer.serverPath": "rust-analyzer",
 
     "breadcrumbs.enabled": true,
@@ -159,6 +158,7 @@
         "rebalancing",
         "rlib",
         "rustc",
+        "sema",
         "statik",
         "struct",
         "toml",
