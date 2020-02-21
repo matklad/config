@@ -73,6 +73,5 @@
 (define-key global-map (kbd "M-k") 'ace-jump-mode)
 
 (require 'lsp)
-(load-file "/home/matklad/projects/rust-analyzer/editors/emacs/rust-analyzer.el")
 (setq lsp-rust-server 'rust-analyzer)
 (setq lsp-log-io 't)
