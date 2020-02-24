@@ -100,8 +100,6 @@
     "rust-analyzer.highlightingOn": true,
     "rust-analyzer.serverPath": "rust-analyzer",
 
-    "breadcrumbs.enabled": true,
-
     "asciidoc.preview.useEditorStyle": false,
     "terminal.integrated.fontSize": 12,
 
