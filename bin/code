@@ -1,0 +1,2 @@
+#!/bin/sh
+code-insiders --enable-proposed-api matklad.rust-analyzer "$@"

@@ -1,4 +1,4 @@
 #!/bin/sh
 e \
     --eval "(progn (call-interactively #'magit-status) (call-interactively #'delete-other-windows))" \
-    --frame-parameters="((width . 120) (height . 1.0) (left . 0.5) (top . 0.5))"
+    --frame-parameters="((width . 0.5) (height . 1.0) (left . 0.0))"

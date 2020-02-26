@@ -119,6 +119,12 @@
         "statusBar.debuggingBorder": "#DC8CC3",
         "widget.shadow": "#00000000",
     },
+    "editor.semanticHighlighting.enabled": true,
+    "editor.tokenColorCustomizationsExperimental": {
+        "attribute": {
+            "foreground": "#94BFF3"
+        }
+    },
     "cSpell.diagnosticLevel": "Hint",
     "cSpell.numSuggestions": 3,
     "cSpell.language": "en,ru",
