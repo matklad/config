@@ -42,7 +42,7 @@ let
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
-      sha256 = "12ldbr3b9pk4ldr2bn6gfrxk4k5qi76lqfmkiskmgg0w69f5g6j8";
+      sha256 = "1l19zf4551spwqj8a3sidgq64slsra2dn6xhvgvr2cbglrqj70wi";
     };
   });
 in
@@ -98,7 +98,7 @@ in
     kitty
     obs-studio
     unstable.vscode
-    # vscodeInsiders
+    vscodeInsiders
     jetbrains.idea-community
     libreoffice
 
