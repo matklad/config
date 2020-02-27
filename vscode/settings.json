@@ -124,7 +124,8 @@
     "editor.tokenColorCustomizationsExperimental": {
         "attribute": {
             "foreground": "#94BFF3"
-        }
+        },
+        "macro": "#94BFF3"
     },
     "cSpell.diagnosticLevel": "Hint",
     "cSpell.numSuggestions": 3,
