@@ -97,7 +97,8 @@
 
     "liveServer.settings.donotShowInfoMsg": true,
 
-    "rust-analyzer.highlightingOn": true,
+    "rust-analyzer.highlighting.semanticTokens": true,
+    "rust-analyzer.highlightingOn": false,
     "rust-analyzer.serverPath": "rust-analyzer",
 
     "asciidoc.preview.useEditorStyle": false,
