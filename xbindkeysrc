@@ -13,7 +13,7 @@
 "code --new-window ~/work/"
   F5
 
-"telegram-desktop"
+"jumpapp -mf telegram-desktop"
   F7
 
 "jumpapp -m dolphin"
