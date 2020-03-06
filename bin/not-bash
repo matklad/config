@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+from pathlib import Path
+import os
+import shutil
 import sys
 import re
 import shlex
@@ -17,6 +20,15 @@ def p(cmd, echo=True):
         print(res)
 
     return res
+
+def rm(path):
+    shutil.rmtree(path, ignore_errors=True)
+
+def mkdir(path):
+    Path(path).mkdir(parents=True, exist_ok=True)
+
+def cd(path):
+    os.chdir(path)
 
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
