@@ -58,6 +58,8 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
 
+    "typescript.suggest.completeFunctionCalls": true,
+
     "aceJump.finder.pattern": "[ ,-.*{}_()\"'`<>\\/[:&]",
     // "aceJump.placeholder.backgroundColor": "rgb(237, 66, 124)",
     // "aceJump.placeholder.color": "rgb(232, 232, 225)",
@@ -101,6 +103,10 @@
     "rust-analyzer.highlighting.semanticTokens": true,
     "rust-analyzer.highlightingOn": false,
     "rust-analyzer.serverPath": "rust-analyzer",
+    "rust-analyzer.featureFlags": {
+        "completion.insertion.add-argument-snippets": false,
+        "call-info.full": false,
+    },
 
     "asciidoc.preview.useEditorStyle": false,
     "terminal.integrated.fontSize": 12,
