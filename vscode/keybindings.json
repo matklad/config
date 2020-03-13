@@ -41,7 +41,8 @@
         "key": "ctrl+k k",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "sideBarFocus"
-    },{
+    },
+    {
         "key": "ctrl+k u",
         "command": "references-view.find",
         "when": "editorTextFocus"
@@ -117,6 +118,11 @@
         "key": "ctrl+shift+b",
         "command": "editor.action.goToTypeDefinition",
         "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+k ctrl+b",
+        "command": "editor.action.revealDefinitionAside",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
         "key": "f12",
@@ -505,29 +511,8 @@
     },
     {
         "key": "ctrl+r",
-        "command": "-workbench.action.openRecent"
-    },
-    {
-        "key": "ctrl+r",
         "command": "-workbench.action.reloadWindow",
         "when": "isDevelopment"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.reloadWindow",
-        "when": "isDevelopment"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.openRecent"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.openRecent"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.openRecent"
     },
     {
         "key": "ctrl+r",
@@ -545,19 +530,22 @@
     },
     {
         "key": "ctrl+r",
-        "command": "-workbench.action.reloadWindow",
-        "when": "isDevelopment"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.openRecent"
-    },
-    {
-        "key": "ctrl+r",
         "command": "-workbench.action.openRecent"
     },
     {
         "key": "ctrl+r",
         "command": "rust-analyzer.run"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "workbench.view.search",
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "search.action.openNewEditorToSide"
     }
 ]
