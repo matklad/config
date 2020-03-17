@@ -101,12 +101,13 @@
     "liveServer.settings.donotShowInfoMsg": true,
 
     "rust-analyzer.highlighting.semanticTokens": true,
-    "rust-analyzer.highlightingOn": false,
     "rust-analyzer.serverPath": "rust-analyzer",
     "rust-analyzer.featureFlags": {
         "completion.insertion.add-argument-snippets": false,
         "call-info.full": false,
     },
+
+    "lldb.library": "/nix/store/08shkgpj6hdg62xjlndjrk863qcfb1zi-lldb-7.1.0/lib/liblldb.so",
 
     "asciidoc.preview.useEditorStyle": false,
     "terminal.integrated.fontSize": 12,
@@ -198,5 +199,6 @@
     ],
     "git.alwaysShowStagedChangesResourceGroup": true,
     "debug.onTaskErrors": "debugAnyway",
-    "extensions.autoUpdate": true
+    "extensions.autoUpdate": true,
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }
