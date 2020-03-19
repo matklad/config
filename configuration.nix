@@ -85,7 +85,6 @@ in
     gimp
     deadbeef-with-plugins
     filelight
-    simplescreenrecorder
     peek
     spectacle
     smplayer
@@ -96,11 +95,8 @@ in
     tdesktop
     zoom-us
     kitty
-    obs-studio
-    unstable.vscode
     vscodeInsiders
     jetbrains.idea-community
-    libreoffice
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
