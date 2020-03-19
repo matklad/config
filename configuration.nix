@@ -7,9 +7,9 @@
 { config, pkgs, ... }:
 # sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 let
-  unstable = import <nixos-unstable> {
-    config = config.nixpkgs.config;
-  };
+  # unstable = import <nixos-unstable> {
+  #   config = config.nixpkgs.config;
+  # };
   jumpapp = let
     runtimePath = pkgs.lib.makeSearchPath "bin" (with pkgs; [
       xdotool
@@ -35,14 +35,14 @@ let
         sed -i "2 i export PATH=${runtimePath}:\$PATH" $out/bin/jumpappify-desktop-entry
       '';
   };
-  vscodeInsiders = (unstable.vscode.override { isInsiders = true; }).overrideAttrs(oldAttrs: rec {
+  vscodeInsiders = (pkgs.vscode.override { isInsiders = true; }).overrideAttrs(oldAttrs: rec {
     name = "vscode-insiders-${version}";
     version = "1553667544";
 
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
-      sha256 = "0xclcz6x0290wsid99hrfgqym2wsw5nbxv81wg1db1c27m4f4pv2";
+      sha256 = "118gbi8k31y11rkgjabj7ihb9z1lfkckhvr9ww2vybk411irghj3";
     };
   });
 in
@@ -95,6 +95,8 @@ in
     tdesktop
     zoom-us
     kitty
+
+    vscode
     vscodeInsiders
     jetbrains.idea-community
 

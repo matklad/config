@@ -110,6 +110,7 @@
     "liveServer.settings.donotShowInfoMsg": true,
 
     "rust-analyzer.highlighting.semanticTokens": true,
+    "rust-analyzer.updates.channel": "nightly",
     "rust-analyzer.serverPath": "rust-analyzer",
     "rust-analyzer.featureFlags": {
         "completion.insertion.add-argument-snippets": false,
