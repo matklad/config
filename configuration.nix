@@ -188,13 +188,7 @@ in
       enable = true;
       videoDrivers = [ "intel" ];
 
-      displayManager.sddm = {
-        enable = true;
-        autoLogin = {
-          enable = true;
-          user = "matklad";
-        };
-      };
+      displayManager.sddm.enable = true;
       desktopManager.plasma5.enable = true;
 
       libinput = {
