@@ -42,7 +42,7 @@ let
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
-      sha256 = "1fz79giadmhf0y7bpzcxjp55zazj8zcp6vn7azz7xp5x3x67579h";
+      sha256 = "1v9l3wsx3mib3b25jxfn7rax058dvyx0f1hrbxzyh830bixr78lh";
     };
   });
 in
@@ -187,7 +187,13 @@ in
       enable = true;
       videoDrivers = [ "intel" ];
 
-      displayManager.sddm.enable = true;
+      displayManager.sddm = {
+        enable = true;
+	autoLogin = {
+	  enable = true;
+	  user = "matklad";
+	};
+      };
       desktopManager.plasma5.enable = true;
 
       libinput = {
