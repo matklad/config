@@ -5,40 +5,31 @@
 #  nix-env -f /home/matklad/projects/nixpkgs -iA jetbrains.idea-community
 
 { config, pkgs, ... }:
-# sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 let
-  # unstable = import <nixos-unstable> {
-  #   config = config.nixpkgs.config;
-  # };
+  # sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
+  # unstable = import <nixos-unstable> { config = config.nixpkgs.config; };
   jumpapp = let
-    runtimePath = pkgs.lib.makeSearchPath "bin" (with pkgs; [
-      xdotool
-      wmctrl
-      xorg.xprop
-      nettools
-      perl
-    ]);
+    runtimePath = pkgs.lib.makeSearchPath "bin" (with pkgs; [ xdotool wmctrl xorg.xprop nettools perl ]);
   in
-  pkgs.stdenv.mkDerivation rec {
-    version = "1.0";
-    name = "jumpapp-${version}";
-    src = pkgs.fetchFromGitHub {
-      owner = "matklad";
-      repo = "jumpapp";
-      rev = "d04e55af8e66087f68b9cf7817649236bf8be49b";
-      sha256 = "118gbi8k31y11rkgjabj7ihb9z1lfkckhvr9ww2vybk411irghj3";
-    };
-    makeFlags = [ "PREFIX=$(out)" ];
-    buildInputs = [ pkgs.perl pkgs.pandoc ];
-    postFixup = ''
+    pkgs.stdenv.mkDerivation rec {
+      version = "1.0";
+      name = "jumpapp-${version}";
+      src = pkgs.fetchFromGitHub {
+        owner = "matklad";
+        repo = "jumpapp";
+        rev = "d04e55af8e66087f68b9cf7817649236bf8be49b";
+        sha256 = "118gbi8k31y11rkgjabj7ihb9z1lfkckhvr9ww2vybk411irghj3";
+      };
+      makeFlags = [ "PREFIX=$(out)" ];
+      buildInputs = [ pkgs.perl pkgs.pandoc ];
+      postFixup = ''
         sed -i "2 i export PATH=${runtimePath}:\$PATH" $out/bin/jumpapp
         sed -i "2 i export PATH=${runtimePath}:\$PATH" $out/bin/jumpappify-desktop-entry
       '';
-  };
-  vscodeInsiders = (pkgs.vscode.override { isInsiders = true; }).overrideAttrs(oldAttrs: rec {
-    name = "vscode-insiders-${version}";
-    version = "1553667544";
+    };
 
+  vscodeInsiders = (pkgs.vscode.override { isInsiders = true; }).overrideAttrs(oldAttrs: rec {
+    name = "vscode-insiders";
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
@@ -49,138 +40,99 @@ in
 {
   imports = [ /etc/nixos/hardware-configuration.nix ];
 
-  boot = {
-    tmpOnTmpfs = true;
-    loader = {
-      timeout = 1;
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-    blacklistedKernelModules = [ "nouveau" ];
-    supportedFilesystems = [ "ntfs" ];
-  };
-
-  # virtualisation.virtualbox.host.enable = true;
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
-
-  networking = {
-    hostName = "nixos";
-    networkmanager = {
-      enable = true;
-      enableStrongSwan = true;
-    };
-    extraHosts = import ./hosts.nix;
-    # firewall = { allowedTCPPorts = [ 4000 ]; };
-  };
-
-  time.timeZone = "Europe/Berlin";
-
-  nixpkgs.config = {
-    allowUnfree = true;
+  programs = {
+    fish.enable = true;
+    java.enable = true;
+    # java.package = pkgs.jetbrains.jdk;
   };
 
   environment.systemPackages = with pkgs; [
     # GUI
-    gwenview
-    qbittorrent
-    gimp
+    chromium
     deadbeef-with-plugins
     filelight
-    peek
-    spectacle
-    smplayer
-    mpv
     firefox-bin
-    chromium
+    gimp
+    gwenview
+    kitty
+    mpv
     okular
+    peek
+    qbittorrent
+    smplayer
+    spectacle
     tdesktop
     zoom-us
-    kitty
 
-    vscode
-    vscodeInsiders
     jetbrains.idea-community
+    vscodeInsiders
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
-    ruby
-    cmake
-    gnumake
-    ninja
-    gdb
     ant
-    maven
-    nodejs-10_x
-    jekyll
     clang
     clang-tools
-    rustup
-    llvm
+    cmake
+    gdb
+    gnumake
+    jekyll
     lld
     lldb
+    llvm
+    maven
+    ninja
+    nodejs-10_x
+    ruby
+    rustup
 
     # Utils
-    gnupg
-    gopass
-    direnv
-    git
-    git-hub
-    tree
-    nox
-    htop
-    atool
-    unrar
-    zip
-    unzip
     ark
-    linuxPackages.perf
-    patchelf
+    asciidoctor
     aspell
     aspellDicts.en
     aspellDicts.ru
-    pkgconfig
-    graphviz
-    flameGraph
+    atool
     binutils
+    curl
+    direnv
     exfat
-    asciidoctor
-    jumpapp
-    yubioath-desktop
-    tightvnc
     file
+    flameGraph
+    git
+    git-hub
+    gnupg
+    gopass
+    graphviz
+    htop
+    jumpapp
+    linuxPackages.perf
+    nox
+    patchelf
+    pkgconfig
+    tightvnc
+    tree
+    unrar
+    unzip
+    wget
+    xclip
+    yubioath-desktop
+    zip
+    zlib
+
 
     # Rust stuff
-    ripgrep
+    bat
     exa
     fd
-    tokei
-    bat
     hyperfine
+    ripgrep
+    tokei
 
-    xorg.xkbcomp
-    xbindkeys
-
-    xorg.xwininfo
-    wget
-    curl
-    xclip
-    zlib
     ntfs3g
+    xbindkeys
+    xorg.xkbcomp
+    xorg.xwininfo
   ];
-
-  programs = {
-    fish.enable = true;
-    java = {
-      enable = true;
-      # package = pkgs.jetbrains.jdk;
-    };
-  };
-
-  hardware = {
-    pulseaudio.enable = true;
-    pulseaudio.package = pkgs.pulseaudioFull;
-    bluetooth.enable = true;
-  };
 
   services = {
     xserver = {
@@ -189,10 +141,7 @@ in
 
       displayManager.sddm = {
         enable = true;
-	autoLogin = {
-	  enable = true;
-	  user = "matklad";
-	};
+        autoLogin = { enable = true; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
 
@@ -211,15 +160,42 @@ in
     pcscd.enable = true;
     strongswan = {
       enable = true;
-      secrets = [
-        "ipsec.d/ipsec.nm-l2tp.secrets"
-      ];
+      secrets = [ "ipsec.d/ipsec.nm-l2tp.secrets" ];
     };
   };
 
-  systemd.extraConfig = ''
-    DefaultTimeoutStopSec=10s
-  '';
+  boot = {
+    tmpOnTmpfs = true;
+    loader = {
+      timeout = 1;
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    blacklistedKernelModules = [ "nouveau" ];
+    supportedFilesystems = [ "ntfs" ];
+  };
+
+  hardware = {
+    pulseaudio = { enable = true; package = pkgs.pulseaudioFull; };
+    bluetooth.enable = true;
+  };
+
+  # virtualisation.virtualbox.host = { enable = true; enableExtensionPack = true; };
+
+  networking = {
+    hostName = "nixos";
+    networkmanager = { enable = true; enableStrongSwan = true; };
+    extraHosts = import ./hosts.nix;
+    # firewall = { allowedTCPPorts = [ 4000 ]; };
+  };
+
+  time.timeZone = "Europe/Berlin";
+
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
+  systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 
   fonts = {
     enableFontDir = true;
@@ -242,8 +218,9 @@ in
       extraGroups = [ "wheel" "networkmanager" ];
       uid = 1000;
     };
-    extraUsers.man = { isNormalUser = false; };
+    extraUsers.man.isNormalUser = false;
   };
+
   environment.variables = {
     PATH = "$HOME/.cargo/bin:$HOME/config/bin";
   };
