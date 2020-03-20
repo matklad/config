@@ -42,7 +42,7 @@ let
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
-      sha256 = "118gbi8k31y11rkgjabj7ihb9z1lfkckhvr9ww2vybk411irghj3";
+      sha256 = "1fz79giadmhf0y7bpzcxjp55zazj8zcp6vn7azz7xp5x3x67579h";
     };
   });
 in
@@ -57,6 +57,7 @@ in
       efi.canTouchEfiVariables = true;
     };
     blacklistedKernelModules = [ "nouveau" ];
+    supportedFilesystems = [ "ntfs" ];
   };
 
   # virtualisation.virtualbox.host.enable = true;

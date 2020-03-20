@@ -7,7 +7,6 @@
     "window.zoomLevel": 0,
 
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Pale Fire",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
@@ -110,7 +109,6 @@
     "liveServer.settings.donotShowInfoMsg": true,
 
     "rust-analyzer.highlighting.semanticTokens": true,
-    "rust-analyzer.updates.channel": "nightly",
     "rust-analyzer.serverPath": "rust-analyzer",
     "rust-analyzer.featureFlags": {
         "completion.insertion.add-argument-snippets": false,
@@ -121,6 +119,9 @@
 
     "asciidoc.preview.useEditorStyle": false,
 
+	"editor.tokenColorCustomizations": {
+		"semanticHighlighting": true
+    },
     "workbench.colorCustomizations": {
         "editor.background": "#3F3F3F",
         "editor.lineHighlightBackground": "#383838",
@@ -204,5 +205,6 @@
         "трейта",
         "трейтов",
         "энумов"
-    ]
+    ],
+    "workbench.colorTheme": "Pale Fire"
 }
