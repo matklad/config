@@ -70,6 +70,8 @@ in
     # Langs
     (python3.withPackages (py: [ py.requests ]))
     ant
+    gcc9Stdenv
+    gcc9
     clang
     clang-tools
     cmake

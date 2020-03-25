@@ -35,6 +35,8 @@
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
 
+(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
+
 (require 'package)
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
@@ -48,7 +50,8 @@
 	forge
 	rust-mode
 	ace-jump-mode
-	lsp-mode))
+	lsp-mode
+	multiple-cursors))
 
 ;; (package-refresh-contents)
 (package-initialize)
@@ -75,3 +78,6 @@
 (require 'lsp)
 (setq lsp-rust-server 'rust-analyzer)
 (setq lsp-log-io 't)
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-d") 'mc/mark-next-like-this-word)
