@@ -6,3 +6,12 @@ https://robert.ocallahan.org/2016/08/random-thoughts-on-rust-cratesio-and.html
 
 Goals and priorities for C++::
 http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p2137r0.html
+
+Boundaries::
+https://www.destroyallsoftware.com/talks/boundaries
+
+Plugin diagram::
+https://www.tedinski.com/2018/01/30/the-one-ring-problem-abstraction-and-power.html
+
+John Carmack on inlined code::
+http://number-none.com/blow/john_carmack_on_inlined_code.html
