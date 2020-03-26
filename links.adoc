@@ -1,3 +1,8 @@
-* Two meanings of systems programming:
-+
+Two meanings of systems programming::
 http://willcrichton.net/notes/systems-programming/
+
+Systems programmers can have nice things::
+https://robert.ocallahan.org/2016/08/random-thoughts-on-rust-cratesio-and.html
+
+Goals and priorities for C++::
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p2137r0.html
