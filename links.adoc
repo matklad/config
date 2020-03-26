@@ -1,0 +1,3 @@
+* Two meanings of systems programming:
++
+http://willcrichton.net/notes/systems-programming/
