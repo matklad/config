@@ -24,3 +24,6 @@ https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-yuan.pdf
 
 Talks that changed the way I think about programming::
 http://www.opowell.com/post/talks-that-changed-the-way-i-think-about-programming/
+
+Why rewriting hotspots in a faster language doesn't work::
+https://code.visualstudio.com/blogs/2018/03/23/text-buffer-reimplementation
