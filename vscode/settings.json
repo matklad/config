@@ -5,6 +5,7 @@
     "window.title": "${rootName}",
     "window.titleBarStyle": "native",
     "window.zoomLevel": 0,
+    "window.newWindowDimensions": "maximized",
 
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Pale Fire",
