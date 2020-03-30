@@ -2,7 +2,7 @@
 (setq inhibit-x-resources 't)
 (setq inhibit-startup-screen t)
 (setq frame-resize-pixelwise 't)
-(setq default-frame-alist '((font . "Fira Code-13") (vertical-scroll-bars . nil)))
+(setq default-frame-alist '((font . "JetBrains Mono-13") (vertical-scroll-bars . nil)))
 (setq kill-whole-line 't)
 (setq sentence-end-double-space nil)
 (setq vc-follow-symlinks t)
@@ -12,7 +12,7 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (set-frame-parameter nil 'fullscreen 'fullboth)
-(set-face-attribute 'default nil :font "Fira Code 13")
+(set-face-attribute 'default nil :font "JetBrains Mono-13")
 
 (cua-mode t)
 (tool-bar-mode -1)
