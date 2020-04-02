@@ -33,7 +33,7 @@ let
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
-      hash = "sha256:0d83hhl69pp31bz7v1s0ihkgrq7v5cqd175398zy6kcbxpf6p7i7";
+      hash = "sha256:1yvgp2f7qnd7mbvzfr3lw7h3h7wrkpfr762m0pnrdz2rqw17qhac";
     };
   });
 in

@@ -19,5 +19,8 @@
 "jumpapp -m dolphin"
   Mod4 + e
 
-"spectacle"
-  c:107
+"spectacle --region"
+  Print
+
+"spectacle --region --delay 5000"
+  Shift + Print
