@@ -18,7 +18,7 @@ let
         owner = "matklad";
         repo = "jumpapp";
         rev = "d04e55af8e66087f68b9cf7817649236bf8be49b";
-        sha256 = "118gbi8k31y11rkgjabj7ihb9z1lfkckhvr9ww2vybk411irghj3";
+        hash = "sha256:118gbi8k31y11rkgjabj7ihb9z1lfkckhvr9ww2vybk411irghj3";
       };
       makeFlags = [ "PREFIX=$(out)" ];
       buildInputs = [ pkgs.perl pkgs.pandoc ];
@@ -33,7 +33,7 @@ let
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
-      hash = "sha256:1jfpjdpy2h5fl123691igbjcnhgh5rry3s9nr1yrllgj8jffhbab";
+      hash = "sha256:0d83hhl69pp31bz7v1s0ihkgrq7v5cqd175398zy6kcbxpf6p7i7";
     };
   });
 in
@@ -68,7 +68,7 @@ in
     vscodeInsiders
 
     # Langs
-    (python3.withPackages (py: [ py.requests ]))
+    (python3.withPackages (py: [ py.requests py.pyside2 py.shiboken2]))
     ant
     gcc9Stdenv
     gcc9
