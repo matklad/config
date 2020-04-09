@@ -63,6 +63,7 @@ in
     spectacle
     tdesktop
     zoom-us
+    signal-desktop
 
     jetbrains.idea-community
     vscodeInsiders

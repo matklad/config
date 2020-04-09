@@ -483,7 +483,7 @@
     {
         "key": "ctrl+down",
         "command": "workbench.action.editor.nextChange",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus && !suggestWidgetVisible"
     },
     {
         "key": "alt+f5",
@@ -497,7 +497,7 @@
     {
         "key": "ctrl+up",
         "command": "workbench.action.editor.previousChange",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus && !suggestWidgetVisible"
     },
     {
         "key": "shift+alt+f5",
