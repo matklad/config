@@ -481,7 +481,7 @@
         "command": "workbench.view.debug"
     },
     {
-        "key": "ctrl+k n",
+        "key": "ctrl+down",
         "command": "workbench.action.editor.nextChange",
         "when": "editorTextFocus"
     },
@@ -495,7 +495,7 @@
         "command": "-workbench.action.files.copyPathOfActiveFile"
     },
     {
-        "key": "ctrl+k p",
+        "key": "ctrl+up",
         "command": "workbench.action.editor.previousChange",
         "when": "editorTextFocus"
     },
