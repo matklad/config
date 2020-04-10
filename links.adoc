@@ -30,3 +30,6 @@ https://code.visualstudio.com/blogs/2018/03/23/text-buffer-reimplementation, als
 +
 "The right tool for the job is often the tool you are already using —adding new tools has a higher cost than many people appreciate."
 -- https://twitter.com/id_aa_carmack/status/989951283900514304[John Carmack]
+
+Programming people::
+https://leftoversalad.com/c/015_programmingpeople/
