@@ -117,9 +117,6 @@
 
     "asciidoc.preview.useEditorStyle": false,
 
-	"editor.tokenColorCustomizations": {
-		"semanticHighlighting": true
-    },
     "workbench.colorCustomizations": {
         "editor.background": "#3F3F3F",
         "editor.lineHighlightBackground": "#383838",
