@@ -11,10 +11,11 @@ for dir, _dirs, files in os.walk(home_cfg):
         rel_path = abs_path.relative_to(home_cfg)
         dest = home / rel_path
 
+        print(abs_path, '->', dest)
+
         try:
             dest.unlink()
         except:
             pass
-
-        print(abs_path, '->', dest)
+        mkdir(dest.parent)
         os.symlink(abs_path, dest)
