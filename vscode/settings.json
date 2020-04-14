@@ -110,8 +110,6 @@
 
     "liveServer.settings.donotShowInfoMsg": true,
 
-    "rust-analyzer.highlighting.semanticTokens": true,
-    "rust-analyzer.serverPath": "rust-analyzer",
     "rust-analyzer.completion.addCallArgumentSnippets": false,
     "rust-analyzer.callInfo.full": false,
 

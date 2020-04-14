@@ -1,6 +1,6 @@
 # Install from master:
-#
 #  nix-env -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA hello
+#
 # Install from local folder:
 #  nix-env -f /home/matklad/projects/nixpkgs -iA jetbrains.idea-community
 
@@ -47,7 +47,7 @@ in
     signal-desktop
 
     jetbrains.idea-community
-    vscodeInsiders
+    vscode
 
     # Langs
     (python3.withPackages (py: [ py.requests py.pyside2 py.shiboken2]))
