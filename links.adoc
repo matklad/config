@@ -33,3 +33,6 @@ https://code.visualstudio.com/blogs/2018/03/23/text-buffer-reimplementation, als
 
 Programming people::
 https://leftoversalad.com/c/015_programmingpeople/
+
+Python spends almost all of its time in the C runtime::
+http://blog.kevmod.com/2016/07/why-is-python-slow/
