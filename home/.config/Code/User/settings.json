@@ -117,6 +117,10 @@
 
     "asciidoc.preview.useEditorStyle": false,
 
+    "editor.tokenColorCustomizationsExperimental": {
+        "unresolvedReference": "#9C6363"
+    },
+
     "workbench.colorCustomizations": {
         "editor.background": "#3F3F3F",
         "editor.lineHighlightBackground": "#383838",
@@ -142,6 +146,7 @@
         "Hasher",
         "LLVM",
         "PYTHONPATH",
+        "Punct",
         "Smol",
         "aleksey",
         "bufs",
@@ -178,6 +183,7 @@
         "sema",
         "statik",
         "struct",
+        "syscall",
         "toml",
         "unexpanded",
         "usize",

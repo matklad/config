@@ -24,6 +24,11 @@
     },
     // positive keys
     {
+        "key": "ctrl+u",
+        "command": "rust-analyzer.parentModule",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "alt+x",
         "command": "workbench.action.showCommands"
     },
