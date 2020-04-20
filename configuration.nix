@@ -50,7 +50,7 @@ in
     vscode
 
     # Langs
-    (python3.withPackages (py: [ py.requests py.pyside2 py.shiboken2]))
+    (python3.withPackages (py: [ py.requests ]))
     ant
     gcc9Stdenv
     gcc9
