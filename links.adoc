@@ -36,3 +36,6 @@ https://leftoversalad.com/c/015_programmingpeople/
 
 Python spends almost all of its time in the C runtime::
 http://blog.kevmod.com/2016/07/why-is-python-slow/
+
+Rider architecture::
+https://www.codemag.com/Article/1811091/Building-a-.NET-IDE-with-JetBrains-Rider
