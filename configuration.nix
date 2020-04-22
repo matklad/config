@@ -17,11 +17,21 @@ let
       hash = "sha256:0f5cy62c38yqhrhpngayvaa0qpnqlxzm7wnss3i68yv40lc8gj36";
     };
   });
+
+  neovimNightly = (pkgs.neovim-unwrapped.overrideAttrs(oldAttrs: rec {
+    src = pkgs.fetchFromGitHub {
+      owner = "neovim";
+      repo = "neovim";
+      rev = "68546805790b5fd50e5e520a42dcf2e68c8fa4de";
+      hash = "sha256:13l4k1r8f5wx8iaqf8yclcqwj2kd7d196x1p0ck45rfr3xnbgnr9";
+    };
+  }));
 in
 {
   imports = [ /etc/nixos/hardware-configuration.nix ];
 
   programs = {
+    dconf.enable = true;
     fish.enable = true;
     java.enable = true;
     # java.package = pkgs.jetbrains.jdk;
@@ -48,6 +58,7 @@ in
 
     jetbrains.idea-community
     vscode
+    neovimNightly
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
@@ -102,7 +113,6 @@ in
     yubioath-desktop
     zip
     zlib
-
 
     # Rust stuff
     bat
