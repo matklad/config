@@ -1,11 +1,11 @@
 {
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "hidden",
+    "window.newWindowDimensions": "maximized",
     "window.restoreWindows": "none",
     "window.title": "${rootName}",
     "window.titleBarStyle": "native",
     "window.zoomLevel": 0,
-    "window.newWindowDimensions": "maximized",
 
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Pale Fire",
@@ -145,6 +145,7 @@
         "Cargо",
         "Deref",
         "Hasher",
+        "Intelli",
         "LLVM",
         "PYTHONPATH",
         "Punct",
