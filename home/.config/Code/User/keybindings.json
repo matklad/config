@@ -542,6 +542,11 @@
         "command": "rust-analyzer.run"
     },
     {
+        "key": "Enter",
+        "command": "rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust"
+    },
+    {
         "key": "ctrl+shift+f",
         "command": "-workbench.action.findInFiles"
     },
