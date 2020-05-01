@@ -55,6 +55,7 @@ in
     tdesktop
     zoom-us
     signal-desktop
+    obs-studio
 
     jetbrains.idea-community
     vscode
@@ -131,7 +132,7 @@ in
   services = {
     xserver = {
       enable = true;
-      videoDrivers = [ "intel" ];
+      videoDrivers = [ "modesetting" ];
 
       displayManager.sddm = {
         enable = true;
@@ -202,6 +203,7 @@ in
       noto-fonts
       noto-fonts-emoji
       iosevka
+      jetbrains-mono
     ];
   };
 

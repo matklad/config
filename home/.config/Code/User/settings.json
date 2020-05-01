@@ -77,8 +77,6 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
 
     "aceJump.finder.pattern": "[ ,-.*{}_()\"'`<>\\/[:&=|]",
-    // "aceJump.placeholder.backgroundColor": "rgb(237, 66, 124)",
-    // "aceJump.placeholder.color": "rgb(232, 232, 225)",
     "aceJump.placeholder.backgroundColor": "#3F3F3F",
     "aceJump.placeholder.color": "#BFEBBF",
     "aceJump.placeholder.upperCase": true,
