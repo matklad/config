@@ -28,7 +28,10 @@ let
   }));
 in
 {
-  imports = [ /etc/nixos/hardware-configuration.nix ];
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+    ./host.nix
+  ];
 
   programs = {
     dconf.enable = true;
@@ -179,9 +182,7 @@ in
 
   networking = {
     hostName = "nixos";
-    networkmanager = { enable = true; enableStrongSwan = true; };
-    extraHosts = import ./hosts.nix;
-    # firewall = { allowedTCPPorts = [ 4000 ]; };
+    networkmanager.enable = true;
   };
 
   time.timeZone = "Europe/Berlin";

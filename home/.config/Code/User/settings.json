@@ -27,7 +27,7 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "editor.formatOnType": true,
-    "editor.hover.enabled": false,
+    "editor.hover.enabled": true,
     "editor.minimap.enabled": false,
     "editor.parameterHints.enabled": false,
     "editor.renderIndentGuides": false,
@@ -117,7 +117,7 @@
     "asciidoc.preview.useEditorStyle": false,
 
     "editor.tokenColorCustomizationsExperimental": {
-        "unresolvedReference": "#9C6363"
+        // "unresolvedReference": "#9C6363"
     },
 
     "workbench.colorCustomizations": {
