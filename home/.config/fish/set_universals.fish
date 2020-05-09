@@ -14,10 +14,6 @@ abbr --add sw  git switch
 abbr --add swm git switch master
 abbr --add swc git switch -c
 
-abbr --add ls exa -l
-abbr --add la exa -la
-abbr --add l  exa -l
-
 abbr --add c code
 abbr --add w code ~/work/
 

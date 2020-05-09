@@ -206,6 +206,7 @@ in
       noto-fonts-emoji
       iosevka
       jetbrains-mono
+      (nerdfonts.override { withFont = "JetBrainsMono"; })
     ];
   };
 
