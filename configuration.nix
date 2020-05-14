@@ -18,6 +18,16 @@ let
     };
   });
 
+  vscodeStable = pkgs.vscode.overrideAttrs(oldAttrs: rec {
+    name = "vscode";
+    version = "1.45.0";
+    src = pkgs.fetchurl {
+      name = "VSCode_latest_linux-x64.tar.gz";
+      url = "https://vscode-update.azurewebsites.net/${version}/linux-x64/stable";
+      hash = "sha256:16zchjp72m6n6za4ak5kn2ax1s5pjfn7l082d6gfbb2y62isvs7q";
+    };
+  });
+
   neovimNightly = (pkgs.neovim-unwrapped.overrideAttrs(oldAttrs: rec {
     src = pkgs.fetchFromGitHub {
       owner = "neovim";
@@ -61,7 +71,7 @@ in
     obs-studio
 
     jetbrains.idea-community
-    vscode
+    vscodeStable
     neovimNightly
 
     # Langs
