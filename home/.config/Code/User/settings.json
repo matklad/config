@@ -21,7 +21,7 @@
     "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
-    "editor.cursorSurroundingLines": 3,
+    "editor.cursorSurroundingLines": 5,
     "editor.dragAndDrop": false,
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontLigatures": true,
