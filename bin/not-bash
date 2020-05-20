@@ -7,19 +7,29 @@ import re
 import shlex
 import subprocess
 
-def p(cmd, echo=True):
-    args = shlex.split(cmd)
+class P:
+    def __init__(self, *, echo=True):
+        self._echo = echo
 
-    try:
-        res = subprocess.check_output(args, text=True)
-    except subprocess.CalledProcessError as e:
-        eprint(f"\nFAILED:\n\n  {cmd}")
-        exit(-1)
+    @property
+    def silent(self):
+        return P(echo = False)
 
-    if echo:
-        print(res)
+    def __gt__(self, cmd):
+        args = shlex.split(cmd)
 
-    return res
+        try:
+            res = subprocess.check_output(args, text=True)
+        except subprocess.CalledProcessError as e:
+            eprint(f"\nFAILED:\n\n  {cmd}")
+            exit(-1)
+
+        if self._echo:
+            print(res)
+
+        return res
+
+p = P()
 
 def rm(path):
     shutil.rmtree(path, ignore_errors=True)

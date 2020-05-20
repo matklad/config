@@ -1,6 +1,6 @@
 #!/usr/bin/env not-bash
 
-branches = [line.strip() for line in p('git branch --merged').splitlines()]
+branches = [line.strip() for line in (p> 'git branch --merged').splitlines()]
 branches = [
     branch for branch in branches
     if branch != 'master' and not branch.startswith('*')
@@ -10,4 +10,4 @@ if not branches:
     eprint("no merged branches")
     exit(0)
 
-p(f'git branch -d {" ".join(branches)}')
+p> f'git branch -d {" ".join(branches)}'

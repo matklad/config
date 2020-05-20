@@ -2,6 +2,7 @@
 rm("/tmp/playground")
 mkdir("/tmp/playground")
 cd("/tmp/playground")
-p(f'cargo init --bin .')
-p(f'code -n .')
-p(f'code src/main.rs')
+
+p> 'cargo init --bin .'
+p> 'code -n .'
+p> 'code src/main.rs'

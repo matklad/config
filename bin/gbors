@@ -3,6 +3,6 @@
 if args:
     message = args[0]
 else:
-    message = p('git show -s --format=%B HEAD', echo=False)
+    message = p.silent> 'git show -s --format=%B HEAD'
 
-p(f'git-hub pull new -m "{message}\n\nbors r+\n🤖"')
+p> f'git-hub pull new -m "{message}\n\nbors r+\n🤖"'
