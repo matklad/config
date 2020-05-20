@@ -43,6 +43,13 @@ def cd(path):
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
+def confirm(prompt):
+    try:
+        reply = input(f'  {prompt} ')
+    except KeyboardInterrupt:
+        return False
+    return 'n' not in reply.lower()
+
 _, script, *args = sys.argv
 exit = sys.exit
 

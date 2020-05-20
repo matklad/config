@@ -3,6 +3,6 @@
 p.silent> 'git add .'
 p> 'git diff --cached --color=always'
 p> 'git show -s --oneline --abbrev-commit --color=always HEAD'
-commit = input('  Continue? ')
-if 'n' not in commit.lower():
+
+if confirm("Continue?"):
     p> 'git commit --amend --no-edit'
