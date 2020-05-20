@@ -24,6 +24,26 @@
     },
     // positive keys
     {
+        "key": "home",
+        "command": "cursorHome",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+home",
+        "command": "cursorHomeSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "home",
+        "command": "cursorLineStart",
+        "when": "editorTextFocus && editorHasSelection"
+    },
+    {
+        "key": "shift+home",
+        "command": "cursorLineStartSelect",
+        "when": "editorTextFocus&& editorHasSelection"
+    },
+    {
         "key": "ctrl+u",
         "command": "rust-analyzer.parentModule",
         "when": "editorTextFocus"
@@ -540,6 +560,10 @@
     {
         "key": "ctrl+r",
         "command": "rust-analyzer.run"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.debug.start"
     },
     {
         "key": "Enter",

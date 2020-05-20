@@ -1,0 +1,8 @@
+#!/usr/bin/env not-bash
+
+p(f'git add .', echo=False)
+p(f'git diff --cached --color=always')
+p(f'git show -s --oneline --abbrev-commit --color=always HEAD')
+commit = input('  Continue? ')
+if 'n' not in commit.lower():
+    p(f'git commit --amend --no-edit')

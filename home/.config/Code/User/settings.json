@@ -117,7 +117,7 @@
     "asciidoc.preview.useEditorStyle": false,
 
     "editor.tokenColorCustomizationsExperimental": {
-        // "unresolvedReference": "#9C6363"
+        "unresolvedReference": "#9C6363"
     },
 
     "workbench.colorCustomizations": {

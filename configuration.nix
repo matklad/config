@@ -186,7 +186,6 @@ in
   hardware = {
     pulseaudio = { enable = true; package = pkgs.pulseaudioFull; };
     bluetooth.enable = true;
-    enableAllFirmware = true;
   };
 
   # virtualisation.virtualbox.host = { enable = true; enableExtensionPack = true; };
