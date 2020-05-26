@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+ <head>
+  <text/>
+ </head>
+ <body>
+  <outline description="Yet another programming blog by Aleksey Kladov aka matklad." comment="" type="rss" useCustomFetchInterval="false" maxArticleAge="60" id="1909970196" fetchInterval="30" archiveMode="globalDefault" title="matklad" version="RSS" maxArticleNumber="1000" xmlUrl="https://matklad.github.io//feed.xml" htmlUrl="https://matklad.github.io//" text="matklad" faviconUrl="/home/matklad/.cache/favicons/matklad.github.io.png"/>
+  <outline description="" comment="" type="rss" useCustomFetchInterval="false" maxArticleAge="60" id="1355765497" fetchInterval="30" archiveMode="globalDefault" title="250bpm" version="RSS" maxArticleNumber="1000" xmlUrl="http://250bpm.com/feed/pages/pagename/start/category/blog/t/250bpm-blogs/h/http://www.250bpm.com/blog" htmlUrl="http:" text="250bpm"/>
+ </body>
+</opml>
+
