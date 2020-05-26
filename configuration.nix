@@ -69,6 +69,7 @@ in
     zoom-us
     signal-desktop
     obs-studio
+    bluejeans
 
     jetbrains.idea-community
     vscodeStable
@@ -96,6 +97,7 @@ in
 
     # Utils
     ark
+    asciinema
     asciidoctor
     aspell
     aspellDicts.en

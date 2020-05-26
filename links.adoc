@@ -42,3 +42,6 @@ https://www.codemag.com/Article/1811091/Building-a-.NET-IDE-with-JetBrains-Rider
 
 System programming values::
 https://www.youtube.com/watch?v=2wZ1pCpJUIM
+
+Midlayer mistake::
+https://lwn.net/Articles/336262/
