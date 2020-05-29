@@ -93,7 +93,8 @@ in
     maven
     ninja
     nodejs-10_x
-    ruby
+    ruby_2_7
+    bundler
     rustup
 
     # Utils
