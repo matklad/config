@@ -52,6 +52,7 @@ in
 
   environment.systemPackages = with pkgs; [
     # GUI
+    akregator
     chromium
     deadbeef-with-plugins
     filelight
