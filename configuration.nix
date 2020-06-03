@@ -196,7 +196,10 @@ in
 
   networking = {
     hostName = "nixos";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      enableStrongSwan = true;
+    };
   };
 
   time.timeZone = "Europe/Berlin";
@@ -219,7 +222,7 @@ in
       noto-fonts-emoji
       iosevka
       jetbrains-mono
-      (nerdfonts.override { withFont = "JetBrainsMono"; })
+      nerdfonts
     ];
   };
 
