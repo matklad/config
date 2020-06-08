@@ -5,5 +5,6 @@ pkgs.mkShell {
     python cmake
     openssl zlib libgit2 libxml2
     ncurses
+    gtk3 glib
   ];
 }
