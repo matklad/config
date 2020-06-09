@@ -84,7 +84,6 @@ in
     ninja
     nodejs-10_x
     ruby_2_7
-    bundler
     rustup
 
     # Utils

@@ -13,6 +13,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (set-frame-parameter nil 'fullscreen 'fullboth)
 (set-face-attribute 'default nil :font "JetBrains Mono-13")
+(set-fontset-font "fontset-default" nil
+                  (font-spec :size 20 :name "Noto Emoji"))
 
 (cua-mode t)
 (tool-bar-mode -1)
@@ -78,6 +80,9 @@
 (require 'lsp)
 (setq lsp-rust-server 'rust-analyzer)
 (setq lsp-log-io 't)
+(global-set-key (kbd "C-w") 'lsp-extend-selection)
+(global-set-key (kbd "<M-return>") 'lsp-execute-code-action)
+(global-set-key (kbd "C-k r") 'lsp-rename)
 
 (require 'multiple-cursors)
 (global-set-key (kbd "C-d") 'mc/mark-next-like-this-word)
