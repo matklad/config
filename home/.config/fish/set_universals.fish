@@ -15,6 +15,7 @@ abbr --add swm git switch master
 abbr --add swc git switch -c
 
 abbr --add c code
+abbr --add ca cargo
 abbr --add w code ~/work/
 
 abbr --add ctrlc xclip -selection c

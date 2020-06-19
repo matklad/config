@@ -45,7 +45,7 @@
     "editor.lineNumbersMinChars": 0, // undocumented
 
     "breadcrumbs.enabled": true,
-    "breadcrumbs.filePath": "off",
+    "breadcrumbs.filePath": "on",
 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -150,8 +150,10 @@
         "PYTHONPATH",
         "Punct",
         "Smol",
+        "Walkdir",
         "aleksey",
         "bufs",
+        "canonicalize",
         "constructible",
         "cquisition",
         "dlopen",
