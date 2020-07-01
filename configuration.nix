@@ -211,7 +211,7 @@ in
       noto-fonts-emoji
       iosevka
       jetbrains-mono
-      nerdfonts
+      # nerdfonts
     ];
   };
 
