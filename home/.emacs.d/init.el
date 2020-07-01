@@ -97,3 +97,6 @@
 
 (require 'multiple-cursors)
 (global-set-key (kbd "C-d") 'mc/mark-next-like-this-word)
+
+(require 'git-commit)
+(server-mode)
