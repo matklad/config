@@ -50,7 +50,13 @@ def confirm(prompt):
         return False
     return 'n' not in reply.lower()
 
-_, script, *args = sys.argv
-exit = sys.exit
+def export(var, val):
+    os.environ[var] = val
 
-exec(open(script).read())
+if len(sys.argv) > 1:
+    _, script, *args = sys.argv
+    exit = sys.exit
+    exec(open(script).read())
+else:
+    import code
+    code.interact(local=locals())
