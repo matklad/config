@@ -79,7 +79,7 @@ in
     jekyll
     lld
     lldb
-    llvm_8
+    llvm_9
     maven
     ninja
     nodejs-10_x
