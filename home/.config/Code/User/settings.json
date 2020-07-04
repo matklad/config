@@ -1,4 +1,8 @@
 {
+    "[html]": {
+        "editor.tabSize": 2
+    },
+
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "hidden",
     "window.newWindowDimensions": "maximized",
@@ -121,7 +125,6 @@
         "[Pale Fire]": {
             "rules": {
                 "unresolvedReference": "#9C6363",
-                "property": "#DFAF8F"
             }
         }
     },
