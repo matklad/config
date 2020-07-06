@@ -229,5 +229,6 @@
         "трейта",
         "трейтов",
         "энумов"
-    ]
+    ],
+    "python.languageServer": "Pylance"
 }
