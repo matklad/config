@@ -179,6 +179,11 @@ in
   hardware = {
     pulseaudio = { enable = true; package = pkgs.pulseaudioFull; };
     bluetooth.enable = true;
+    opengl = {
+      enable = true;
+      extraPackages = [ pkgs.libGL ];
+      setLdLibraryPath = true;
+    };
   };
 
   # virtualisation.virtualbox.host = { enable = true; enableExtensionPack = true; };
