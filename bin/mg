@@ -1,4 +1,3 @@
 #!/bin/sh
-e \
-    --eval "(progn (call-interactively #'magit-status) (call-interactively #'delete-other-windows))" \
-    --frame-parameters="'(fullscreen . maximized)"
+e --frame-parameters="'(fullscreen . maximized)" \
+    --eval "(progn (call-interactively #'magit-status) (call-interactively #'delete-other-windows))"

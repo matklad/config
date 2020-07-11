@@ -1,0 +1,3 @@
+#!/bin/sh
+e --frame-parameters="'(fullscreen . maximized)" \
+    --eval '(progn (dired ".") (wdired-change-to-wdired-mode))'
