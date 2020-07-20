@@ -1,0 +1,18 @@
+#!/usr/bin/env not-bash
+userrepo, = args
+user, repo = userrepo.split('/')
+p> f'git clone git@github.com:matklad/{repo}.git'
+
+cd(repo)
+p> f'git remote add upstream git@github.com:{user}/{repo}.git'
+p> f'git fetch upstream'
+p> f'git switch master'
+p> f'git reset --hard upstream/master'
+p> f'git branch --set-upstream-to=upstream/master'
+with open('.git/config', 'a') as f:
+    print(f"""
+[hub]
+\tupstream = "{user}/{repo}"
+\tforkrepo = "matklad/{repo}"
+\tforkremote = "origin"
+""", file=f)
