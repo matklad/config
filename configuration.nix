@@ -236,4 +236,5 @@ in
   };
 
   system.stateVersion = "18.09";
+  system.autoUpgrade.enable = "true";
 }
