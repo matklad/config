@@ -104,6 +104,7 @@ in
     git-hub
     gnupg
     gopass
+    gperftools
     graphviz
     htop
     jumpapp
