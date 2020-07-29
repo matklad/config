@@ -22,7 +22,26 @@
         "key": "ctrl+w",
         "command": "-workbench.action.closeGroup",
     },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-rerunSearchEditorSearch",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
     // positive keys
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.tasks.build"
+    },
     {
         "key": "ctrl+alt+right",
         "command": "cursorWordPartRight",
@@ -590,10 +609,6 @@
     {
         "key": "ctrl+r",
         "command": "rust-analyzer.run"
-    },
-    {
-        "key": "ctrl+shift+r",
-        "command": "workbench.action.debug.start"
     },
     {
         "key": "Enter",

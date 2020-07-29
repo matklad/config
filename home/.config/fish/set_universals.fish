@@ -22,7 +22,7 @@ abbr --add ctrlc xclip -selection c
 abbr --add ctrlv xclip -selection c -o
 
 abbr --add xp  ./x.py --stage 1 --keep-stage 1
-abbr --add xpt ./x.py --stage 1 --keep-stage 1 test
+abbr --add xpt ./x.py -i --stage 1 --keep-stage 1 test --pass check
 abbr --add xpc ./x.py check
 
 abbr --add cat bat -p
