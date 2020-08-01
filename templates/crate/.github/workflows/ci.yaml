@@ -35,4 +35,4 @@ jobs:
       run: cargo test --workspace --no-run
 
     - name: Test
-      run: cargo --workspace test
+      run: cargo test --workspace
