@@ -41,6 +41,13 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
+    "editor.semanticTokenColorCustomizations": {
+        "[Pale Fire]": {
+            "rules": {
+                "unresolvedReference": "#9C6363",
+            }
+        }
+    },
 
     // small gutter
     // "editor.folding": false,
@@ -122,13 +129,9 @@
 
     "asciidoc.preview.useEditorStyle": false,
 
-    "editor.semanticTokenColorCustomizations": {
-        "[Pale Fire]": {
-            "rules": {
-                "unresolvedReference": "#9C6363",
-            }
-        }
-    },
+    "selectline.alignment": "right",
+    "selectline.displayFormat": "(%d Lines)",
+    "selectline.statusbarPriority": 101,
 
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#00000000",
