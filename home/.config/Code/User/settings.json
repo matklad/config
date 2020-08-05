@@ -222,5 +222,6 @@
         "трейтов",
         "энумов"
     ],
-    "python.languageServer": "Pylance"
+    "python.languageServer": "Pylance",
+    "python.showStartPage": false
 }
