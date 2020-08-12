@@ -54,7 +54,7 @@ in
     mpv
     okular
     peek
-    qbittorrent
+    ktorrent
     smplayer
     spectacle
     tdesktop
