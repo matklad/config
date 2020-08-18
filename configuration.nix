@@ -112,7 +112,6 @@ in
     patchelf
     pkgconfig
     tightvnc
-    tree
     unrar
     unzip
     wget
@@ -128,6 +127,7 @@ in
     hyperfine
     ripgrep
     tokei
+    du-dust
 
     ntfs3g
     xbindkeys
