@@ -1,4 +1,0 @@
-#!/usr/bin/env not-bash
-pr, = args
-p>f'git fetch upstream pull/{pr}/head'
-p> 'git switch --detach FETCH_HEAD'
