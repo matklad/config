@@ -1,0 +1,4 @@
+#!/usr/bin/env not-bash
+(bin, ) = args
+linker =  cat(f"{env['NIX_CC']}/nix-support/dynamic-linker")
+p> f"patchelf --set-interpreter {linker} {bin}"

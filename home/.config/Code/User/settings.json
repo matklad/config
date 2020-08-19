@@ -136,6 +136,7 @@
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#00000000",
         "widget.shadow": "#00000000",
+        "editor.foldBackground": "#3F3F3F",
     },
     "cSpell.diagnosticLevel": "Hint",
     "cSpell.numSuggestions": 3,

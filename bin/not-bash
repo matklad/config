@@ -7,6 +7,8 @@ import re
 import shlex
 import subprocess
 
+env = os.environ
+
 class P:
     def __init__(self, *, echo=True):
         self._echo = echo
@@ -51,7 +53,11 @@ def confirm(prompt):
     return 'n' not in reply.lower()
 
 def export(var, val):
-    os.environ[var] = val
+    env[var] = val
+
+def cat(path):
+    with open(path) as f:
+        return f.read().strip()
 
 if len(sys.argv) > 1:
     _, script, *args = sys.argv
