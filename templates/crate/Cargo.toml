@@ -6,3 +6,5 @@ license = "MIT OR Apache-2.0"
 repository = ""
 authors = ["Aleksey Kladov <aleksey.kladov@gmail.com>"]
 edition = "2018"
+
+excude = [".github/", "bors.toml"]
