@@ -9,10 +9,3 @@ p> f'git fetch upstream'
 p> f'git switch master'
 p> f'git reset --hard upstream/master'
 p> f'git branch --set-upstream-to=upstream/master'
-with open('.git/config', 'a') as f:
-    print(f"""
-[hub]
-\tupstream = "{user}/{repo}"
-\tforkrepo = "matklad/{repo}"
-\tforkremote = "origin"
-""", file=f)
