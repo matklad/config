@@ -20,11 +20,11 @@ let
 
   vscodeStable = pkgs.vscode.overrideAttrs(oldAttrs: rec {
     name = "vscode";
-    version = "1.47.3";
+    version = "1.48.0";
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/${version}/linux-x64/stable";
-      hash = "sha256:162qwjmm439zplcyjhbb961ircqpdfw13h9ybnik1q128f4650ky";
+      hash = "sha256:0rrs2v97xhlxyjvipss5dmk88j7b03kyszwyhy46755954nzm85j";
     };
   });
 in
