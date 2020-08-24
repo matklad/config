@@ -54,7 +54,7 @@ in
     mpv
     okular
     peek
-    ktorrent
+    qbittorrent
     smplayer
     spectacle
     tdesktop
@@ -181,8 +181,14 @@ in
     bluetooth.enable = true;
     opengl = {
       enable = true;
-      extraPackages = [ pkgs.libGL ];
       setLdLibraryPath = true;
+      extraPackages = [
+        pkgs.libGL
+        pkgs.vaapiIntel
+        pkgs.vaapiVdpau
+        pkgs.libvdpau-va-gl
+        pkgs.intel-media-driver
+      ];
     };
   };
 
