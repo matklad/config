@@ -10,4 +10,4 @@ if not branches:
     eprint("no merged branches")
     exit(0)
 
-p> f'git branch -d {" ".join(branches)}'
+p> f'git branch -D {" ".join(branches)}'
