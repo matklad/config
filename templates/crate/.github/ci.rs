@@ -74,7 +74,9 @@ fn shell_output(cmd: &str) -> Result<String> {
     let output = command(cmd).stderr(Stdio::inherit()).output()?;
     check_status(output.status)?;
     let res = String::from_utf8(output.stdout)?;
-    Ok(res.trim().to_string())
+    let res = res.trim().to_string();
+    println!("{}", res);
+    Ok(res)
 }
 
 fn command(cmd: &str) -> Command {
