@@ -626,5 +626,9 @@
     {
         "key": "ctrl+shift+f",
         "command": "search.action.openNewEditorToSide"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "-workbench.action.newWindow"
     }
 ]
