@@ -87,8 +87,8 @@ in
 
     # Utils
     ark
-    asciinema
     asciidoctor
+    asciinema
     aspell
     aspellDicts.en
     aspellDicts.ru
@@ -111,6 +111,7 @@ in
     nox
     patchelf
     pkgconfig
+    s-tui
     tightvnc
     unrar
     unzip
