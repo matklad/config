@@ -7,5 +7,9 @@ pkgs.mkShell {
     xorg.libX11
     ncurses
     gtk3 glib
+    vulkan-loader
   ];
+  shellHook = ''
+    export LD_LIBRARY_PATH="${vulkan-loader}/lib"
+  '';
 }
