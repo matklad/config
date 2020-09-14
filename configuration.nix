@@ -100,7 +100,7 @@ in
     file
     flameGraph
     git
-    git-hub
+    gitAndTools.gh
     gnupg
     gopass
     gperftools
