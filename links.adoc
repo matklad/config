@@ -49,3 +49,11 @@ https://lwn.net/Articles/336262/
 Technology from the past come to save the future from itself::
 http://venge.net/graydon/talks/
 
+Why {cpp} Sails When the Vasa Sank::
+https://www.youtube.com/watch?v=ltCgzYcpFUI
+
+Composition of Unsafe::
+https://smallcultfollowing.com/babysteps/blog/2016/10/02/observational-equivalence-and-unsafe-code/
+
+Generics Dilemma::
+https://research.swtch.com/generic

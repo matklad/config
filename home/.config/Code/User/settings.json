@@ -224,5 +224,7 @@
         "энумов"
     ],
     "python.languageServer": "Pylance",
-    "python.showStartPage": false
+    "python.showStartPage": false,
+    "julia.enableTelemetry": true,
+    "julia.lint.run": false
 }
