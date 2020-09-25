@@ -1,4 +1,5 @@
-#!/usr/bin/env not-bash
-(bin, ) = args
-linker =  cat(f"{env['NIX_CC']}/nix-support/dynamic-linker")
-p> f"patchelf --set-interpreter {linker} {bin}"
+#!/usr/bin/env julia
+bin, = ARGS
+NIX_CC = chomp(read(`nix-shell -p hello --run "echo \$NIX_CC"`, String))
+linker = read("$NIX_CC/nix-support/dynamic-linker", String)
+run(`patchelf --set-interpreter $linker $bin`)
