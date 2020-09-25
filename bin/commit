@@ -1,8 +1,10 @@
-#!/usr/bin/env not-bash
-if args:
-    message, = args
-    p> f'git add .'
-    p> f'git diff --cached --color=always'
-    p> f'git commit -m "{message}"'
-else:
-    p> f'git commit -a'
+#!/usr/bin/env julia
+
+if isempty(ARGS)
+    run(`git commit -a`)
+else
+    message, = ARGS
+    run(`git add .`)
+    run(`git diff --cached --color=always`)
+    run(`git commit -m $message`)
+end

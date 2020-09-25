@@ -10,6 +10,6 @@ pkgs.mkShell {
     vulkan-loader
   ];
   shellHook = ''
-    export LD_LIBRARY_PATH="${vulkan-loader}/lib"
+    export LD_LIBRARY_PATH="${vulkan-loader}/lib:${xlibs.libX11.out}/lib"
   '';
 }

@@ -107,6 +107,7 @@ in
     graphviz
     htop
     jumpapp
+    julia
     linuxPackages.perf
     nox
     patchelf
