@@ -1,9 +1,11 @@
 #!/usr/bin/env julia
 
 if isempty(ARGS)
-    message = readchomp(`git show -s --format=%s HEAD`)
+    title = readchomp(`git show -s --format=%s HEAD`)
 else
-    message, = ARGS
+    title, = ARGS
 end
 
-run(`gh pr create --title $message --body "bors r+\n🤖"`)
+body = "bors r+\n🤖"
+
+run(`gh pr create --title $title --body $body`)
