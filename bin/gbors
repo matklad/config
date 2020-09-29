@@ -6,6 +6,4 @@ else
     title, = ARGS
 end
 
-body = "bors r+\n🤖"
-
-run(`gh pr create --title $title --body $body`)
+run(`gh pr create --title $title --body $"bors r+\n🤖"`)

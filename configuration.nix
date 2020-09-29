@@ -194,7 +194,10 @@ in
     };
   };
 
-  # virtualisation.virtualbox.host = { enable = true; enableExtensionPack = true; };
+  virtualisation = {
+    # virtualbox.host = { enable = true; enableExtensionPack = true; };  
+    docker.enable = true;
+  };
 
   networking = {
     hostName = "nixos";
@@ -232,7 +235,7 @@ in
     defaultUserShell = "/run/current-system/sw/bin/fish";
     extraUsers.matklad = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = [ "wheel" "networkmanager" "docker" ];
       uid = 1000;
     };
     extraUsers.man.isNormalUser = false;

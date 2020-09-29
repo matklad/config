@@ -1,8 +1,10 @@
-#!/usr/bin/env not-bash
+#!/usr/bin/env julia
 
-p.silent> 'git add .'
-p> 'git diff --cached --color=always'
-p> 'git show -s --oneline --abbrev-commit --color=always HEAD'
+run(`git add .`)
+run(`git --no-pager diff --cached --color=always`)
+run(`git show -s --oneline --abbrev-commit --color=always HEAD`)
 
-if confirm("Continue?"):
-    p> 'git commit --amend --no-edit'
+println("Continue?")
+if readline() == ""
+    run(`git commit --amend --no-edit`)
+end
