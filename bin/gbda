@@ -1,13 +1,11 @@
-#!/usr/bin/env not-bash
+#!/usr/bin/env julia
 
-branches = [line.strip() for line in (p> 'git branch --merged').splitlines()]
-branches = [
-    branch for branch in branches
-    if branch != 'master' and not branch.startswith('*')
-]
+branches = filter(strip.(readlines(`git branch --merged`))) do branch
+    branch != "master" && !startswith(branch, '*')
+end
 
-if not branches:
-    eprint("no merged branches")
-    exit(0)
-
-p> f'git branch -D {" ".join(branches)}'
+if isempty(branches)
+    println("no merged branches")
+else
+    run(`git branch -D $branches`)
+end
