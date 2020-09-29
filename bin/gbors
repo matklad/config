@@ -1,8 +1,9 @@
-#!/usr/bin/env not-bash
+#!/usr/bin/env julia
 
-if args:
-    message = args[0]
-else:
-    message = p.silent> 'git show -s --format=%s HEAD'
+if isempty(ARGS)
+    message = chomp(read(`git show -s --format=%s HEAD`, String))
+else
+    message, = ARGS
+end
 
-p> f'gh pr create --title "{message}" --body "bors r+\n🤖"'
+run(`gh pr create --title $message --body "bors r+\n🤖"`)

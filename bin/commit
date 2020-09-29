@@ -5,6 +5,6 @@ if isempty(ARGS)
 else
     message, = ARGS
     run(`git add .`)
-    run(`git diff --cached --color=always`)
+    run(`git --no-pager diff --cached --color=always`)
     run(`git commit -m $message`)
 end
