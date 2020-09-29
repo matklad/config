@@ -1,7 +1,7 @@
 #!/usr/bin/env julia
 
 if isempty(ARGS)
-    message = chomp(read(`git show -s --format=%s HEAD`, String))
+    message = readchomp(`git show -s --format=%s HEAD`)
 else
     message, = ARGS
 end

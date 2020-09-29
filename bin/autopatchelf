@@ -1,5 +1,5 @@
 #!/usr/bin/env julia
 bin, = ARGS
-NIX_CC = chomp(read(`nix-shell -p hello --run "echo \$NIX_CC"`, String))
-linker = read("$NIX_CC/nix-support/dynamic-linker", String)
+NIX_CC = readchomp(`nix-shell -p hello --run "echo \$NIX_CC"`)
+linker = readchomp("$NIX_CC/nix-support/dynamic-linker")
 run(`patchelf --set-interpreter $linker $bin`)
