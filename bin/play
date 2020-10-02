@@ -1,8 +1,8 @@
-#!/usr/bin/env not-bash
-rm("/tmp/playground")
+#!/usr/bin/env julia
+rm("/tmp/playground", force=true, recursive=true)
 mkdir("/tmp/playground")
 cd("/tmp/playground")
 
-p> 'cargo init --bin .'
-p> 'code -n .'
-p> 'code src/main.rs'
+run(`cargo init --bin .`)
+run(`code -n .`)
+run(`code src/main.rs`)
