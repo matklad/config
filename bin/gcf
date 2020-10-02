@@ -1,11 +1,12 @@
-#!/usr/bin/env not-bash
-userrepo, = args
-user, repo = userrepo.split('/')
-p> f'git clone git@github.com:matklad/{repo}.git'
+#!/usr/bin/env julia
+userrepo, = ARGS
+user, repo = split(userrepo, '/')
+
+run(`git clone git@github.com:matklad/$repo.git`)
 
 cd(repo)
-p> f'git remote add upstream git@github.com:{user}/{repo}.git'
-p> f'git fetch upstream'
-p> f'git switch master'
-p> f'git reset --hard upstream/master'
-p> f'git branch --set-upstream-to=upstream/master'
+run(`git remote add upstream git@github.com:$user/$repo.git`)
+run(`git fetch upstream`)
+run(`git switch master`)
+run(`git reset --hard upstream/master`)
+run(`git branch --set-upstream-to=upstream/master`)
