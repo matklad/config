@@ -195,7 +195,7 @@ in
   };
 
   virtualisation = {
-    # virtualbox.host = { enable = true; enableExtensionPack = true; };  
+    # virtualbox.host = { enable = true; enableExtensionPack = true; };
     docker.enable = true;
   };
 
@@ -244,6 +244,11 @@ in
   environment.variables = {
     PATH = "$HOME/.cargo/bin:$HOME/config/bin";
   };
+
+  security.pam.loginLimits = [
+    { domain = "*"; type = "soft"; item = "memlock"; value = "524288"; }
+    { domain = "*"; type = "hard"; item = "memlock"; value = "524288"; }
+  ];
 
   system.stateVersion = "18.09";
   system.autoUpgrade.enable = true;
