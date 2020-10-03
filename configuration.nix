@@ -176,6 +176,7 @@ in
     };
     blacklistedKernelModules = [ "nouveau" ];
     supportedFilesystems = [ "ntfs" ];
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   hardware = {
