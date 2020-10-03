@@ -13,6 +13,9 @@
 "code --new-window ~/work/"
   F5
 
+"jumpapp -m deadbeef"
+  F6
+
 "jumpapp -mf telegram-desktop"
   F7
 
