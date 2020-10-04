@@ -71,13 +71,13 @@ in
     ant
     gcc9Stdenv
     gcc9
-    clang
+    lld_10
+    clang_10
     clang-tools
     cmake
     gdb
     gnumake
     jekyll
-    lld
     lldb
     maven
     ninja
