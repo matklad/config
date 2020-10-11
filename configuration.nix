@@ -20,11 +20,11 @@ let
 
   vscodeStable = pkgs.vscode.overrideAttrs(oldAttrs: rec {
     name = "vscode";
-    version = "1.48.0";
+    version = "1.50.0";
     src = pkgs.fetchurl {
       name = "VSCode_latest_linux-x64.tar.gz";
       url = "https://vscode-update.azurewebsites.net/${version}/linux-x64/stable";
-      hash = "sha256:0rrs2v97xhlxyjvipss5dmk88j7b03kyszwyhy46755954nzm85j";
+      hash = "sha256:12nrv037an4f6h8hrbmysc0lk5wm492hywa7lp64n4d308zg5567";
     };
   });
 in
@@ -197,7 +197,10 @@ in
 
   virtualisation = {
     # virtualbox.host = { enable = true; enableExtensionPack = true; };
-    docker.enable = true;
+    docker = {
+      enable = true;
+      enableOnBoot = false;
+    };
   };
 
   networking = {
