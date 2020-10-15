@@ -1,5 +1,5 @@
 with import <nixpkgs> {};
-pkgs.mkShell {
+(mkShell.override { stdenv = llvmPackages_10.stdenv; }) {
   buildInputs = [
     pkgconfig
     python cmake
@@ -8,8 +8,9 @@ pkgs.mkShell {
     ncurses
     gtk3 glib
     vulkan-loader
+    llvmPackages_10.libclang
   ];
   shellHook = ''
-    export LD_LIBRARY_PATH="${vulkan-loader}/lib:${xlibs.libX11.out}/lib"
+    export LD_LIBRARY_PATH="${vulkan-loader}/lib:${xlibs.libX11.out}/lib:${llvmPackages_10.libclang}/lib"
   '';
 }
