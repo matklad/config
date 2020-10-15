@@ -26,3 +26,5 @@ abbr --add xpt ./x.py -i --keep-stage 1 test --pass check
 abbr --add xpc ./x.py check
 
 abbr --add cat bat -p
+
+abbr --add j julia --banner no
