@@ -152,6 +152,7 @@
         "PYTHONPATH",
         "Punct",
         "Smol",
+        "Uninit",
         "Walkdir",
         "aleksey",
         "bufs",
