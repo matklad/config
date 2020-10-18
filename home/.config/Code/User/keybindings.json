@@ -329,6 +329,11 @@
         "when": "editorFocus && !editorReadonly"
     },
     {
+        "key": "alt+8",
+        "command": "search.action.focusNextSearchResult",
+        "when": "editorFocus"
+    },
+    {
         "key": "f8",
         "command": "-editor.action.marker.nextInFiles",
         "when": "editorFocus && !editorReadonly"
