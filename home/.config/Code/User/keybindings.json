@@ -37,6 +37,19 @@
         "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
         "when": "inQuickOpen && inRecentFilesPicker"
     },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openLocalFile",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "file-browser.open"
+    },
     // positive keys
     {
         "key": "ctrl+shift+r",
