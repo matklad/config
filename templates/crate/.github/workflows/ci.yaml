@@ -13,23 +13,18 @@ env:
   RUSTUP_MAX_RETRIES: 10
 
 jobs:
-  rust:
+  test:
     name: Rust
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
-    - name: Install Rust toolchain
-      uses: actions-rs/toolchain@v1
+    - uses: actions/checkout@v2
+    - uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
         profile: minimal
         override: true
 
-    - run: rustc ./.github/ci.rs && ./ci
+    - run: cargo -p xtask run -- ci
       env:
         CRATES_IO_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
