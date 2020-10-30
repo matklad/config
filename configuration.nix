@@ -105,7 +105,7 @@ in
     graphviz
     htop
     jumpapp
-    julia_15
+    # julia_15
     linuxPackages.perf
     nox
     patchelf
@@ -218,7 +218,7 @@ in
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 
   fonts = {
-    enableFontDir = true;
+    fontDir.enable = true;
     enableDefaultFonts = true;
     fonts = with pkgs; [
       hack-font
