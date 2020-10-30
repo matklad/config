@@ -1,8 +1,7 @@
-# Install from master:
+# Install witout channels:
 #  nix-env -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA hello
-#
-# Install from local folder:
 #  nix-env -f /home/matklad/projects/nixpkgs -iA jetbrains.idea-community
+#  nixos-rebuild -I nixpkgs=/home/matklad/projects/nixpkgs switch
 
 { config, pkgs, ... }:
 let
@@ -43,7 +42,7 @@ in
 
   environment.systemPackages = with pkgs; [
     # GUI
-    akregator
+    # akregator
     chromium
     deadbeef-with-plugins
     filelight
@@ -61,10 +60,9 @@ in
     zoom-us
     signal-desktop
     obs-studio
-    bluejeans
 
     jetbrains.idea-community
-    vscodeStable
+    vscode
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
@@ -107,7 +105,7 @@ in
     graphviz
     htop
     jumpapp
-    julia
+    julia_15
     linuxPackages.perf
     nox
     patchelf
@@ -142,8 +140,8 @@ in
       enable = true;
       videoDrivers = [ "modesetting" ];
 
-      displayManager.sddm = {
-        enable = true;
+      displayManager = {
+        sddm.enable = true;
         autoLogin = { enable = true; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
