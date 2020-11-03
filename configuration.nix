@@ -47,6 +47,7 @@ in
     deadbeef-with-plugins
     filelight
     firefox-bin
+    vivaldi
     gimp
     gwenview
     kitty
