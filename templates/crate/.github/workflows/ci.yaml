@@ -27,6 +27,6 @@ jobs:
         profile: minimal
         override: true
 
-    - run: cargo -p xtask run -- ci
+    - run: cargo run -p xtask -- ci
       env:
         CRATES_IO_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
