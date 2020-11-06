@@ -6,4 +6,5 @@ else
     title, = ARGS
 end
 
+run(`git push --set-upstream origin`)
 run(`gh pr create --title $title --body $"bors r+\n🤖"`)
