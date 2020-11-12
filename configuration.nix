@@ -80,7 +80,7 @@ in
     lldb
     maven
     ninja
-    nodejs-10_x
+    nodejs-15_x
     ruby_2_7
     rustup
 
