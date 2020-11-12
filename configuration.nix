@@ -203,6 +203,7 @@ in
   };
 
   networking = {
+    # firewall.enable = false;
     hostName = "nixos";
     networkmanager = {
       enable = true;
