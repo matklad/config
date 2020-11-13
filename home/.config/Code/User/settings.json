@@ -143,6 +143,7 @@
     "cSpell.language": "en,ru",
     "cSpell.userWords": [
         "Cargо",
+        "Deque",
         "Deref",
         "Hasher",
         "Indel",
@@ -194,6 +195,7 @@
         "statik",
         "struct",
         "syscall",
+        "sysroot",
         "toml",
         "toolchain",
         "unexpanded",

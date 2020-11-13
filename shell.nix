@@ -3,14 +3,14 @@ with import <nixpkgs> {};
   buildInputs = [
     pkgconfig
     python cmake
-    openssl zlib libgit2 libxml2 pcre
-    xorg.libX11
+    openssl zlib libgit2 libxml2 pcre freetype
+    xorg.libX11 libGL
     ncurses
     gtk3 glib
     vulkan-loader
     llvmPackages_10.libclang
   ];
   shellHook = ''
-    export LD_LIBRARY_PATH="${vulkan-loader}/lib:${xlibs.libX11.out}/lib:${llvmPackages_10.libclang}/lib"
+    export LD_LIBRARY_PATH="${vulkan-loader}/lib:${xlibs.libX11.out}/lib:${llvmPackages_10.libclang}/lib:${libGL}/lib:${freetype}/lib"
   '';
 }
