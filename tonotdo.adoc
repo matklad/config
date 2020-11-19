@@ -1,0 +1,17 @@
+== deno jekyll
+
+Deno seems to be a forward looking scripting engine:
+
+* capabilities-based security
+* built-in dependency management
+* ok-ish typed scripting language
+* with WASM, ability to get extra from the CPU and to have better re-usability
+
+Crucially, it has the ability to `eval` code, which is neat for end-user defined plugins.
+
+It'd be prudent to migrate Jekyll+Asciidoctor setup to Deno
+
+== shell
+
+Basically, https://matklad.github.io/2019/11/16/a-better-shell.html[a better shell].
+Good opportunity to try out Smalltalk? 
