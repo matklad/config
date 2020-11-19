@@ -11,7 +11,12 @@ Crucially, it has the ability to `eval` code, which is neat for end-user defined
 
 It'd be prudent to migrate Jekyll+Asciidoctor setup to Deno
 
+== Asciidoc parser
+
+Event-based Asciidoctor parser in Rust will solve one of the major problems of Asciidoctor -- the fact that it is tied to the ruby implementation.
+This asciidoctor spec though, preferably in a way which doesn't require running arbitrary user code during parsing to deal with macros and includes.
+
 == shell
 
 Basically, https://matklad.github.io/2019/11/16/a-better-shell.html[a better shell].
-Good opportunity to try out Smalltalk? 
+Good opportunity to try out Smalltalk?
