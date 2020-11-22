@@ -211,7 +211,7 @@ in
     };
   };
 
-  time.timeZone = "Europe/Berlin";
+  time.timeZone = "Europe/Moscow";
 
   nixpkgs.config = {
     allowUnfree = true;
