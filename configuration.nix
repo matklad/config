@@ -59,6 +59,7 @@ in
     spectacle
     tdesktop
     zoom-us
+    teams
     signal-desktop
     obs-studio
 
@@ -139,7 +140,7 @@ in
   services = {
     xserver = {
       enable = true;
-      videoDrivers = [ "modesetting" ];
+      videoDrivers = [ "nvidia" ];
 
       displayManager = {
         sddm.enable = true;
@@ -191,6 +192,11 @@ in
         pkgs.libvdpau-va-gl
         pkgs.intel-media-driver
       ];
+    };
+    nvidia.prime = {
+      sync.enable = true;
+      nvidiaBusId = "PCI:1:0:0";
+      intelBusId = "PCI:0:2:0";
     };
   };
 
