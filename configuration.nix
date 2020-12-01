@@ -47,7 +47,7 @@ in
     deadbeef-with-plugins
     filelight
     firefox-bin
-    # vivaldi
+    (vivaldi.override { proprietaryCodecs = true; enableWidevine = true;})
     gimp
     gwenview
     kitty
