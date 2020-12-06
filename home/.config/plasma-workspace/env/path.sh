@@ -1,1 +1,1 @@
-export RA_PROFILE='GlobalState::handle_event>16'
+export RA_PROFILE='*>150'

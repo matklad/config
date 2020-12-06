@@ -140,7 +140,10 @@ in
   services = {
     xserver = {
       enable = true;
-      videoDrivers = [ "nvidia" ];
+      videoDrivers = [
+        "modesetting"
+        # "nvidia"
+      ];
 
       displayManager = {
         sddm.enable = true;
@@ -194,7 +197,7 @@ in
       ];
     };
     nvidia.prime = {
-      sync.enable = true;
+      sync.enable = false;
       nvidiaBusId = "PCI:1:0:0";
       intelBusId = "PCI:0:2:0";
     };
@@ -209,7 +212,7 @@ in
   };
 
   networking = {
-    # firewall.enable = false;
+    firewall.enable = true;
     hostName = "nixos";
     networkmanager = {
       enable = true;
