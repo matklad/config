@@ -45,6 +45,8 @@
         "[Pale Fire]": {
             "rules": {
                 "unresolvedReference": "#9C6363",
+                "parameter": "#DCDCCC",
+                "property": "#DFAF8F"
             }
         }
     },
