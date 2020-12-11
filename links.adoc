@@ -63,3 +63,6 @@ https://research.swtch.com/generic
 
 A Catalogue of Optimizing Transformations
 https://www.clear.rice.edu/comp512/Lectures/Papers/1971-allen-catalog.pdf
+
+Static Program Analysis::
+https://cs.au.dk/~amoeller/spa/spa.pdf
