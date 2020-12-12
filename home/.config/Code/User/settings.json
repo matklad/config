@@ -71,6 +71,7 @@
 
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 100,
+    "files.enableTrash": false,
     "files.hotExit": "off",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -185,6 +186,7 @@
         "lldb",
         "magit",
         "multithreaded",
+        "mutex",
         "nitialization",
         "nterface",
         "pplication",
