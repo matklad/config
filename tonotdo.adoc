@@ -16,7 +16,16 @@ It'd be prudent to migrate Jekyll+Asciidoctor setup to Deno
 Event-based Asciidoctor parser in Rust will solve one of the major problems of Asciidoctor -- the fact that it is tied to the ruby implementation.
 This asciidoctor spec though, preferably in a way which doesn't require running arbitrary user code during parsing to deal with macros and includes.
 
-== shell
+== A Shell
 
 Basically, https://matklad.github.io/2019/11/16/a-better-shell.html[a better shell].
 Good opportunity to try out Smalltalk?
+
+== A Database
+
+* pure relational model (no nulls and bajilion of slightly different joins)
+* complex domains (user-defined "`scalar`" types)
+* scriptable: includes a WASM interpreter to specify functions on scalars.
+  No constraints by build-in functions, and a must-have for custom scalar types.
+* non-textual wire format - sending SQL over a socket is just stupid. SQL injection should be impossible, queries should be specified as trees, not as text (like WASM).
+* nice surface language for queries -- I strongly dislike SQL's concrete syntax.
