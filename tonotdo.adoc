@@ -29,3 +29,7 @@ Good opportunity to try out Smalltalk?
   No constraints by build-in functions, and a must-have for custom scalar types.
 * non-textual wire format - sending SQL over a socket is just stupid. SQL injection should be impossible, queries should be specified as trees, not as text (like WASM).
 * nice surface language for queries -- I strongly dislike SQL's concrete syntax.
+
+== A Garbage Collected functional language
+
+Just to learn how to write complex runtimes.
