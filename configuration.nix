@@ -212,11 +212,7 @@ in
 
   networking = {
     firewall.enable = true;
-    hostName = "nixos";
-    networkmanager = {
-      enable = true;
-      enableStrongSwan = true;
-    };
+    networkmanager.enable = true;
   };
 
   time.timeZone = "Europe/Moscow";
