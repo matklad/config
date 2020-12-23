@@ -1,0 +1,14 @@
+[core]
+	autocrlf = input
+	excludesfile = /home/matklad/.gitignore_global
+[user]
+	email = aleksey.kladov@gmail.com
+	name = Aleksey Kladov
+[push]
+	default = current
+[github]
+	user = matklad
+[fetch]
+	prune = true
+[feature]
+	manyFiles = true
