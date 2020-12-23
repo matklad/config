@@ -46,7 +46,6 @@ in
     chromium
     deadbeef-with-plugins
     filelight
-    firefox-bin
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = true;})
     gimp
     gwenview
@@ -179,7 +178,7 @@ in
     };
     blacklistedKernelModules = [ "nouveau" ];
     supportedFilesystems = [ "ntfs" ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxPackages_latest;
   };
 
   hardware = {
