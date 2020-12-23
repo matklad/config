@@ -139,11 +139,6 @@ in
   services = {
     xserver = {
       enable = true;
-      videoDrivers = [
-        "modesetting"
-        # "nvidia"
-      ];
-
       displayManager = {
         sddm.enable = true;
         autoLogin = { enable = true; user = "matklad"; };
@@ -194,11 +189,6 @@ in
         pkgs.libvdpau-va-gl
         pkgs.intel-media-driver
       ];
-    };
-    nvidia.prime = {
-      sync.enable = false;
-      nvidiaBusId = "PCI:1:0:0";
-      intelBusId = "PCI:0:2:0";
     };
   };
 
