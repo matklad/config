@@ -66,7 +66,7 @@
         lsp-mode
         multiple-cursors))
 
-(package-refresh-contents)
+;; (package-refresh-contents)
 (package-initialize)
 (package-install-selected-packages)
 
