@@ -213,6 +213,13 @@ in
 
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    extraLocaleSettings = {
+      LC_TIME = "ru_RU.UTF-8";
+    };
+  };
+
   fonts = {
     fontDir.enable = true;
     enableDefaultFonts = true;
