@@ -53,20 +53,20 @@
 (require 'package)
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-			 ("melpa" . "https://melpa.org/packages/")))
-(setq package-user-dir "~/.emacs.d/var/elpa")
+       ("melpa" . "https://melpa.org/packages/")))
+(setq package-user-dir "~/.cache/emacs/elpa")
 (setq package-selected-packages
       '(zenburn-theme
-	helm
-	zoom
-	magit
-	forge
-	rust-mode
-	ace-jump-mode
-	lsp-mode
-	multiple-cursors))
+        helm
+        zoom
+        magit
+        forge
+        rust-mode
+        ace-jump-mode
+        lsp-mode
+        multiple-cursors))
 
-;; (package-refresh-contents)
+(package-refresh-contents)
 (package-initialize)
 (package-install-selected-packages)
 
