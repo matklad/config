@@ -216,7 +216,7 @@ in
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
-      LC_TIME = "ru_RU.UTF-8";
+      LC_TIME = "en_IE.UTF-8";
     };
   };
 
@@ -240,7 +240,7 @@ in
     defaultUserShell = "/run/current-system/sw/bin/fish";
     extraUsers.matklad = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "docker" ];
+      extraGroups = [ "wheel" "networkmanager" "docker" "audio" ];
       uid = 1000;
     };
     extraUsers.man.isNormalUser = false;
