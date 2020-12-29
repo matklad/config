@@ -11,7 +11,7 @@ xkb_keymap {
         };
     };
     xkb_symbols {
-        include "pc+us+ru:2+inet(evdev)+group(win_space_toggle)+ctrl(nocaps)+compose(ralt)"
+        include "pc+us(workman)+ru:2+inet(evdev)+group(win_space_toggle)+ctrl(nocaps)+compose(ralt)"
 
         key <CAPS> {
             type[Group1] = "ONE_LEVEL",
