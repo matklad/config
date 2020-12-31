@@ -52,6 +52,11 @@
     },
     // positive keys
     {
+        "key": "alt+n",
+        "command": "editor.action.addSelectionToNextFindMatch"
+
+    },
+    {
         "key": "ctrl+shift+r",
         "command": "workbench.action.tasks.build"
     },
