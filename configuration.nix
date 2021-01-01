@@ -48,7 +48,7 @@ in
     filelight
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = true;})
     gimp
-    gwenview
+    qview
     kitty
     mpv
     okular
