@@ -132,6 +132,8 @@
 
     "asciidoc.preview.useEditorStyle": false,
 
+    "center-editor-window.threeStateToggle": true,
+
     "selectline.alignment": "right",
     "selectline.displayFormat": "(%d Lines)",
     "selectline.statusbarPriority": 101,

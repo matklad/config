@@ -1,6 +1,8 @@
 [
   { "key": "alt+x",
     "command": "workbench.action.showCommands" },
+  { "key": "alt+enter",
+    "command": "editor.action.codeAction" },
 
   { "key": "ctrl+n",
     "command": "editor.action.revealDefinition",
@@ -9,8 +11,17 @@
     "command": "workbench.action.showAllSymbols" },
   { "key": "ctrl+l",
     "command": "workbench.action.quickOpen" },
-  { "key": "ctrl+o",
+  { "key": "ctrl+,",
     "command": "workbench.action.gotoSymbol" },
+  { "key": "alt+e",
+    "command": "extension.aceJump" },
+
+  { "key": "ctrl+r",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly" },
+  { "key": "ctrl+r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" },
 
   { "key": "ctrl+e e",
     "command": "workbench.action.closeWindow",
@@ -34,6 +45,10 @@
   { "key": "ctrl+e 1",
     "command": "macros.closePanelCloseEditors",
     "when": "!sidebarVisible && editorFocus" },
+  { "key": "ctrl+e 3",
+    "command": "workbench.action.splitEditorRight" },
+  { "key": "ctrl+e 2",
+    "command": "workbench.action.splitEditorDown" },
 
   { "key": "ctrl+e o",
     "command": "workbench.action.focusNextGroup" },
@@ -60,4 +75,7 @@
     "command": "workbench.action.navigateBack" },
   { "key": "alt+right",
     "command": "workbench.action.navigateForward" },
+
+  { "key": "ctrl+i",
+    "command": "center-editor-window.center" }
 ]
