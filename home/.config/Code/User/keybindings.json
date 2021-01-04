@@ -6,6 +6,8 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
   { "key": "ctrl+u",
     "command": "rust-analyzer.run" },
+  { "key": "ctrl+e g",
+    "command": "magit.status" },
 
   { "key": "ctrl+n",
     "command": "editor.action.revealDefinition",
@@ -18,6 +20,8 @@
     "command": "workbench.action.gotoSymbol" },
   { "key": "alt+e",
     "command": "extension.aceJump" },
+  { "key": "ctrl+i",
+    "command": "center-editor-window.center" },
   { "key": "ctrl+e u",
     "command": "rust-analyzer.parentModule" },
 
@@ -110,8 +114,5 @@
   { "key": "alt+left",
     "command": "workbench.action.navigateBack" },
   { "key": "alt+right",
-    "command": "workbench.action.navigateForward" },
-
-  { "key": "ctrl+i",
-    "command": "center-editor-window.center" }
+    "command": "workbench.action.navigateForward" }
 ]
