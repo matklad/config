@@ -2,7 +2,8 @@
   { "key": "alt+x",
     "command": "workbench.action.showCommands" },
   { "key": "alt+enter",
-    "command": "editor.action.codeAction" },
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
 
   { "key": "ctrl+n",
     "command": "editor.action.revealDefinition",
