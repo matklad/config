@@ -134,6 +134,8 @@
 
     "center-editor-window.threeStateToggle": true,
 
+    "magit.forge-enabled": false,
+
     "selectline.alignment": "right",
     "selectline.displayFormat": "(%d Lines)",
     "selectline.statusbarPriority": 101,
