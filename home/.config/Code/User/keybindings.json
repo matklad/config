@@ -4,6 +4,8 @@
   { "key": "alt+enter",
     "command": "editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
+  { "key": "ctrl+u",
+    "command": "rust-analyzer.run" },
 
   { "key": "ctrl+n",
     "command": "editor.action.revealDefinition",
@@ -34,6 +36,9 @@
   { "key": "ctrl+shift+d",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus" },
+
+  { "key": "ctrl+m",
+    "command": "rust-analyzer.matchingBrace" },
 
   { "key": "ctrl+alt+right",
     "command": "cursorWordPartRight",
