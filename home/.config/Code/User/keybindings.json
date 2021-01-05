@@ -8,7 +8,7 @@
     "command": "rust-analyzer.run" },
   { "key": "ctrl+e g",
     "command": "magit.status" },
-  { "key": "ctrl+'",
+  { "key": "ctrl+t",
     "command": "editor.action.formatDocument",
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
   { "key": "ctrl+alt+z",
@@ -19,10 +19,13 @@
   { "key": "ctrl+j",
     "command": "rust-analyzer.joinLines",
     "when": "editorLangId == 'rust'" },
-    
+
   { "key": "ctrl+n",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
+  { "key": "ctrl+shift+n",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
   { "key": "ctrl+o",
     "command": "workbench.action.quickOpen" },
   { "key": "ctrl+l",
