@@ -1,0 +1,7 @@
+[Default Applications]
+image/jpeg=qView.desktop;
+image/png=qView.desktop;
+inode/directory=org.kde.dolphin.desktop;
+text/html=vivaldi-stable.desktop;
+x-scheme-handler/http=vivaldi-stable.desktop;
+x-scheme-handler/https=vivaldi-stable.desktop;
