@@ -51,6 +51,13 @@
   { "key": "ctrl+up",
     "command": "workbench.action.editor.previousChange",
     "when": "editorTextFocus && !suggestWidgetVisible" },
+  { "key": "ctrl+down",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult" },
+  { "key": "ctrl+up",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult" },
+
   { "key": "alt+e",
     "command": "extension.aceJump" },
   { "key": "ctrl+i",
