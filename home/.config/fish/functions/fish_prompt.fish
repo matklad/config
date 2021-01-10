@@ -3,6 +3,7 @@ function fish_prompt --description 'Write out the prompt'
     echo
 
     set_color normal
+    echo -n "@$hostname "
     echo -n (date '+%X|')
 
     # PWD

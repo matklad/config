@@ -158,9 +158,8 @@ in
     emacs.enable = true;
     earlyoom.enable = true;
     pcscd.enable = true;
-    strongswan = {
-      enable = true;
-      secrets = [ "ipsec.d/ipsec.nm-l2tp.secrets" ];
+    openssh = {
+      enable = false;
     };
   };
 
@@ -177,6 +176,7 @@ in
   };
 
   hardware = {
+    keyboard.zsa.enable = true;
     pulseaudio = { enable = true; package = pkgs.pulseaudioFull; };
     bluetooth.enable = true;
     opengl = {
@@ -240,7 +240,7 @@ in
     defaultUserShell = "/run/current-system/sw/bin/fish";
     extraUsers.matklad = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "docker" "audio" ];
+      extraGroups = [ "wheel" "networkmanager" "docker" "audio" "plugdev"];
       uid = 1000;
     };
     extraUsers.man.isNormalUser = false;

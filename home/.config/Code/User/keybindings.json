@@ -57,6 +57,13 @@
   { "key": "ctrl+up",
     "command": "search.action.focusPreviousSearchResult",
     "when": "hasSearchResult" },
+  { "key": "down",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+  { "key": "up",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+
 
   { "key": "alt+e",
     "command": "extension.aceJump" },
