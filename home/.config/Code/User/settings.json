@@ -101,24 +101,24 @@
     "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",
 
     "macros": {
-        "closePanelCloseEditorsToggleSidebar": [
+        "closePanelCloseEditorsCloseSidebar": [
             "workbench.action.closePanel",
             "workbench.action.closeEditorsInOtherGroups",
             "workbench.action.closeOtherEditors",
-            "workbench.action.toggleSidebarVisibility",
+            "workbench.action.closeSidebar",
         ],
-        "closePanelCloseEditors": [
-            "workbench.action.closePanel",
-            "workbench.action.closeEditorsInOtherGroups",
-            "workbench.action.closeOtherEditors",
-        ],
-        "focusPanelToggleSidebar": [
-            "workbench.action.toggleSidebarVisibility",
+        "focusPanelCloseSidebar": [
+            "workbench.action.closeSidebar",
             "workbench.action.focusPanel",
         ],
-        "closePanelFocusFilesExplorer": [
+        "focusFilesExplorerClosePanel": [
             "workbench.action.closePanel",
             "workbench.files.action.focusFilesExplorer",
+        ],
+        "magit.status": [
+            "workbench.action.closeSidebar",
+            "workbench.action.closePanel",
+            "magit.status",
         ]
     },
 
