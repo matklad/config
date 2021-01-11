@@ -159,7 +159,8 @@ in
     earlyoom.enable = true;
     pcscd.enable = true;
     openssh = {
-      enable = false;
+      enable = true;
+      passwordAuthentication = false;
     };
   };
 
