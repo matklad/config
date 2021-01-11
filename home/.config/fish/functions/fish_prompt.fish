@@ -3,7 +3,6 @@ function fish_prompt --description 'Write out the prompt'
     echo
 
     set_color normal
-    echo -n "@$hostname "
     echo -n (date '+%X|')
 
     # PWD
@@ -19,6 +18,9 @@ function fish_prompt --description 'Write out the prompt'
         set_color $fish_color_error
     end
 
+    if set -q SSH_TTY
+        echo -n "$hostname "
+    end
     echo -n 'λ '
     set_color normal
 end
