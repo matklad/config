@@ -50,7 +50,7 @@ in
     gimp
     qview
     kitty
-    # mpv
+    mpv
     okular
     peek
     qbittorrent

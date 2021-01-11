@@ -28,3 +28,7 @@ abbr --add xpc ./x.py check
 abbr --add cat bat -p
 
 abbr --add j julia --banner no
+
+abbr --add ns sudo nixos-rebuild switch
+abbr --add nu sudo nixos-rebuild switch --upgrade
+abbr --add ng sudo nix-collect-garbage -d
