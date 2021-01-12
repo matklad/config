@@ -29,6 +29,6 @@ abbr --add cat bat -p
 
 abbr --add j julia --banner no
 
-abbr --add ns sudo nixos-rebuild switch
-abbr --add nu sudo nixos-rebuild switch --upgrade
-abbr --add ng sudo nix-collect-garbage -d
+abbr --add nixsw sudo nixos-rebuild switch
+abbr --add nixup sudo nixos-rebuild switch --upgrade
+abbr --add nixgc sudo nix-collect-garbage -d
