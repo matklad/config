@@ -1,18 +1,17 @@
+asciidoctor.asciidoctor-vscode
 bbenoist.Nix
-eamodio.gitlens
 emeraldwalk.RunOnSave
 geddski.macros
-gerane.Theme-Zenburn
 joaompinto.asciidoctor-vscode
 jsynowiec.vscode-insertdatestring
+julialang.language-julia
+kahole.magit
 kaiwood.center-editor-window
 lucax88x.codeacejumper
-matklad.minimal-rust
 matklad.pale-fire
 matklad.rust-analyzer
 ms-vscode.cpptools
 ritwickdey.LiveServer
-selbh.keyboard-scroll
 slevesque.vscode-multiclip
 stkb.rewrap
 streetsidesoftware.code-spell-checker
@@ -21,3 +20,4 @@ tht13.html-preview-vscode
 vadimcn.vscode-lldb
 wmaurer.change-case
 wwm.better-align
+ziyasal.vscode-open-in-github
