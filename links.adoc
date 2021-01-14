@@ -69,3 +69,6 @@ https://cs.au.dk/~amoeller/spa/spa.pdf
 
 Accurate mental model for Rust's reference types::
 https://docs.rs/dtolnay/0.0.9/dtolnay/macro._02__reference_types.html
+
+Don't write bugs::
+https://www.teamten.com/lawrence/programming/dont-write-bugs.html
