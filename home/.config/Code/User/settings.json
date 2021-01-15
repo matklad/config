@@ -240,5 +240,8 @@
     "python.languageServer": "Pylance",
     "python.showStartPage": false,
     "julia.enableTelemetry": true,
-    "julia.lint.run": false
+    "julia.lint.run": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ]
 }

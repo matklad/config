@@ -1,0 +1,9 @@
+#!/usr/bin/env julia
+n = parse(Int32, ARGS[1])
+args = ARGS[2:end]
+
+for i in 1:n
+    i > 1 && println()
+    println("Run $i")
+    run(`$args`)
+end
