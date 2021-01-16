@@ -7,7 +7,7 @@ repository = ""
 authors = ["Aleksey Kladov <aleksey.kladov@gmail.com>"]
 edition = "2018"
 
+exclude = [".github/", "bors.toml", "rustfmt.toml"]
+
 [workspace]
 members = ["xtask"]
-
-exclude = [".github/", "bors.toml", "rustfmt.toml"]
