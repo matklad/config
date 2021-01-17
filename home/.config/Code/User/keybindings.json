@@ -22,6 +22,9 @@
   { "key": "Enter",
     "command": "rust-analyzer.onEnter",
     "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust" },
+  { "key": "ctrl+e ctrl+/",
+    "command": "editor.foldAllBlockComments",
+    "when": "editorTextFocus && foldingEnabled" },
 
   { "key": "ctrl+n",
     "command": "editor.action.revealDefinition",

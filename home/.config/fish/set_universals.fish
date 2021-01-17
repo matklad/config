@@ -31,4 +31,5 @@ abbr --add j julia --banner no
 
 abbr --add nixsw sudo nixos-rebuild switch
 abbr --add nixup sudo nixos-rebuild switch --upgrade
-    
+
+abbr --add perfr perf record -F 9999 --call-graph dwarf
