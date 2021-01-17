@@ -127,6 +127,9 @@
     "rust-analyzer.completion.addCallArgumentSnippets": false,
     "rust-analyzer.callInfo.full": false,
     "rust-analyzer.checkOnSave.enable": false,
+    "rust-analyzer.server.extraEnv": {
+        "RA_PROFILE": "*>150"
+    },
 
     "lldb.library": "/nix/store/vkw0nx0c1cfqm68gn9vz0lw1r6ap41p1-lldb-7.1.0/lib/liblldb.so",
 

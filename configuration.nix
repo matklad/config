@@ -249,7 +249,6 @@ in
 
   environment.variables = {
     PATH = "$HOME/.cargo/bin:$HOME/config/bin";
-    RA_PROFILE = "*>150";
   };
 
   security.pam.loginLimits = [
