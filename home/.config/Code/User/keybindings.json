@@ -25,6 +25,8 @@
   { "key": "ctrl+e ctrl+/",
     "command": "editor.foldAllBlockComments",
     "when": "editorTextFocus && foldingEnabled" },
+  { "key": "ctrl+e c",
+    "command": "workbench.output.action.clearOutput" },
 
   { "key": "ctrl+n",
     "command": "editor.action.revealDefinition",
