@@ -104,10 +104,10 @@
 
   { "key": "alt+n",
     "command": "editor.action.addSelectionToNextFindMatch" },
-  { "key": "ctrl+d",
+  { "key": "ctrl+w",
     "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus" },
-  { "key": "ctrl+shift+d",
+  { "key": "ctrl+shift+w",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus" },
 
