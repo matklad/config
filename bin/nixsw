@@ -1,0 +1,2 @@
+#!/usr/bin/env julia
+run(`nixos-rebuild switch`)
