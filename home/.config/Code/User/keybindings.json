@@ -41,7 +41,7 @@
     "command": "workbench.action.quickOpen" },
   { "key": "ctrl+l",
     "command": "workbench.action.showAllSymbols" },
-  { "key": "ctrl+shift+l",
+  { "key": "ctrl+alt+l",
     "command": "workbench.action.gotoSymbol" },
   { "key": "ctrl+e u",
     "command": "rust-analyzer.parentModule" },

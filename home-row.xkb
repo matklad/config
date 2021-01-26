@@ -30,8 +30,8 @@ xkb_keymap {
         key <AD09> { overlay1 = <PGDN> };
         key <AC09> { overlay1 = <RGHT> };
 
-        key <AC01> { overlay1 = <HOME> };
-        key <AD03> { overlay1 = <END>  };
+        key <AB08> { overlay1 = <HOME> };
+        key <AB09> { overlay1 = <END>  };
 
         key <AB06> { overlay1 = <RTRN> };
         key <AC05> { overlay1 = <ESC>  };
