@@ -147,9 +147,11 @@ in
 
       libinput = {
         enable = true;
-        disableWhileTyping = true;
-        horizontalScrolling = false;
-        naturalScrolling = true;
+        touchpad = {
+          disableWhileTyping = true;
+          horizontalScrolling = false;
+          naturalScrolling = true;
+        };
       };
       xkbOptions = "compose:ralt";
     };
