@@ -1,2 +1,2 @@
 #!/bin/sh
-emacsclient --no-wait --create-frame --alternate-editor='' "$@"
+code --wait --new-window "$@"
