@@ -1,4 +1,4 @@
-#!/usr/bin/env julia
+#!/usr/bin/env -S julia --
 n = parse(Int32, ARGS[1])
 args = ARGS[2:end]
 
