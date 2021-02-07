@@ -7,7 +7,7 @@
 "jumpapp -m code"
   F3
 
-"jumpapp -mf -i emacs -c emacs emacsclient -c --socket-name=/tmp/emacs1000/server --alternate-editor="
+"jumpapp -m code"
   F4
 
 "code --new-window ~/work/"
@@ -21,9 +21,3 @@
 
 "jumpapp -m dolphin"
   Mod4 + e
-
-"spectacle --region"
-  Print
-
-"spectacle --region --delay 5000"
-  Shift + Print
