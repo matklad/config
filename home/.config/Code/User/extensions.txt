@@ -1,8 +1,8 @@
-asciidoctor.asciidoctor-vscode
 bbenoist.Nix
+bodil.file-browser
+eamodio.gitlens
 emeraldwalk.RunOnSave
 geddski.macros
-joaompinto.asciidoctor-vscode
 jsynowiec.vscode-insertdatestring
 julialang.language-julia
 kahole.magit
@@ -12,12 +12,11 @@ matklad.pale-fire
 matklad.rust-analyzer
 ms-vscode.cpptools
 ritwickdey.LiveServer
-slevesque.vscode-multiclip
+ryu1kn.edit-with-shell
 stkb.rewrap
 streetsidesoftware.code-spell-checker
 streetsidesoftware.code-spell-checker-russian
-tht13.html-preview-vscode
 vadimcn.vscode-lldb
 wmaurer.change-case
-wwm.better-align
+yo1dog.cursor-align
 ziyasal.vscode-open-in-github
