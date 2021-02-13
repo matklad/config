@@ -200,6 +200,7 @@
         "pplication",
         "println",
         "rebalancing",
+        "repr",
         "rlib",
         "rustc",
         "rustfmt",

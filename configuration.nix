@@ -42,41 +42,39 @@ in
 
   environment.systemPackages = with pkgs; [
     # GUI
+    (vivaldi.override { proprietaryCodecs = true; enableWidevine = true;})
     akregator
     chromium
     deadbeef-with-plugins
     filelight
-    (vivaldi.override { proprietaryCodecs = true; enableWidevine = true;})
     gimp
-    qview
+    jetbrains.idea-community
     kitty
     mpv
+    obs-studio
     okular
     peek
     qbittorrent
+    qview
     smplayer
     spectacle
     tdesktop
-    zoom-us
-    teams
-    signal-desktop
-    obs-studio
-
-    jetbrains.idea-community
     vscode
+    zoom-us
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
     ant
-    gcc9Stdenv
-    gcc9
-    lld_10
-    clang_10
+    clang_11
     clang-tools
     cmake
+    gcc10
+    gcc10Stdenv
     gdb
     gnumake
     jekyll
+    julia_15
+    lld_11
     lldb
     maven
     ninja
@@ -88,36 +86,32 @@ in
     ark
     asciidoctor
     asciinema
-    aspell
-    aspellDicts.en
-    aspellDicts.ru
     atool
     binutils
     curl
     direnv
     exfat
     file
-    flameGraph
     git
     gitAndTools.gh
-    gnupg
-    gopass
     gperftools
     graphviz
     htop
     jumpapp
-    julia_15
     linuxPackages.perf
+    micro
     nox
+    ntfs3g
     patchelf
     pkgconfig
     s-tui
-    tightvnc
     unrar
     unzip
     wget
+    xbindkeys
     xclip
-    yubioath-desktop
+    xorg.xkbcomp
+    xorg.xwininfo
     zip
     zlib
 
@@ -129,11 +123,6 @@ in
     ripgrep
     tokei
     du-dust
-
-    ntfs3g
-    xbindkeys
-    xorg.xkbcomp
-    xorg.xwininfo
   ];
 
   services = {
@@ -266,5 +255,5 @@ in
   };
 
   system.stateVersion = "18.09";
-  system.autoUpgrade.enable = true;
+  system.autoUpgrade.enable = false;
 }
