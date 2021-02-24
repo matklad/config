@@ -1,2 +1,0 @@
-#!/bin/sh
-code --wait --new-window "$@"

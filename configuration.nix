@@ -78,7 +78,7 @@ in
     lldb
     maven
     ninja
-    nodejs-12_x
+    nodejs-14_x
     ruby_2_7
     rustup
 
@@ -130,7 +130,7 @@ in
       enable = true;
       displayManager = {
         sddm.enable = true;
-        autoLogin = { enable = true; user = "matklad"; };
+        autoLogin = { enable = false; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
 
@@ -240,6 +240,8 @@ in
 
   environment.variables = {
     PATH = "$HOME/.cargo/bin:$HOME/config/bin";
+    VISUAL = "micro";
+    EDITOR = "micro";
   };
 
   security = {

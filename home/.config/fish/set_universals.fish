@@ -1,6 +1,5 @@
 set -U fish_prompt_pwd_dir_length 0
 set -U fish_greeting ""
-set -U -x VISUAL e
 
 abbr --add g   git
 abbr --add gb  git branch
@@ -10,11 +9,11 @@ abbr --add gp  git push
 abbr --add gpf git push --force-with-lease
 abbr --add gs  git status --short --branch
 abbr --add gup git pull --rebase
-abbr --add gpr gh pr checkout
 abbr --add sw  git switch
 abbr --add swm git switch master
 abbr --add swc git switch -c
 
+abbr --add e micro
 abbr --add c code
 abbr --add ca cargo
 abbr --add w code ~/work/
