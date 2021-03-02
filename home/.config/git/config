@@ -1,6 +1,6 @@
 [core]
 	autocrlf = input
-	excludesfile = /home/matklad/.gitignore_global
+	excludesfile = /home/matklad/.config/git/.gitignore
 [user]
 	email = aleksey.kladov@gmail.com
 	name = Aleksey Kladov
