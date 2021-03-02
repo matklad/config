@@ -9,7 +9,6 @@
     "window.restoreWindows": "none",
     "window.title": "${rootName}",
     "window.titleBarStyle": "native",
-    "window.zoomLevel": 0,
 
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Pale Fire High Contrast",
@@ -153,6 +152,7 @@
     "cSpell.numSuggestions": 3,
     "cSpell.language": "en,ru",
     "cSpell.userWords": [
+        "Arity",
         "Cargо",
         "Deque",
         "Deref",
@@ -172,6 +172,7 @@
         "canonicalize",
         "constructible",
         "cquisition",
+        "delim",
         "deps",
         "dlopen",
         "dropck",
@@ -208,6 +209,8 @@
         "sema",
         "statik",
         "struct",
+        "subcommand",
+        "subcommands",
         "syscall",
         "sysroot",
         "toml",

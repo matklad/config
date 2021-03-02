@@ -4,19 +4,19 @@
 "jumpapp -m vivaldi"
   F2
 
-"jumpapp -m code"
+"krunner"
   F3
 
 "jumpapp -m code"
   F4
 
-"code --new-window ~/work/"
+"jumpapp -mf telegram-desktop"
   F5
 
 "jumpapp -m deadbeef"
   F6
 
-"jumpapp -mf telegram-desktop"
+"code --new-window ~/work/"
   F7
 
 "jumpapp -m dolphin"
