@@ -194,6 +194,7 @@
         "libfoo",
         "lldb",
         "magit",
+        "malloc",
         "multithreaded",
         "mutex",
         "nitialization",
