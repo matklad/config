@@ -17,7 +17,6 @@ abbr --add r+  "gh pr comment --body 'bors r+'"
 abbr --add e micro
 abbr --add c code
 abbr --add ca cargo
-abbr --add w code ~/work/
 
 abbr --add ctrlc xclip -selection c
 abbr --add ctrlv xclip -selection c -o
