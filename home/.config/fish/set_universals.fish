@@ -3,6 +3,7 @@ set -U fish_greeting ""
 
 abbr --add g   git
 abbr --add gb  git branch
+abbr --add gbd git branch -D
 abbr --add gc  git commit
 abbr --add gl  git log
 abbr --add gp  git push

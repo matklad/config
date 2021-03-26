@@ -138,6 +138,7 @@
     "center-editor-window.threeStateToggle": true,
 
     "magit.forge-enabled": false,
+    "magit.quick-switch-enabled": true,
 
     "selectline.alignment": "right",
     "selectline.displayFormat": "(%d Lines)",
