@@ -5,6 +5,7 @@ h(f) = round(f; digits=2)
 f = tempname()
 run(`time --output $f --format '%e %U %S %M' $(ARGS)`)
 real, user, sys, rsskb = [parse(Float64, x) for x in split(read(f, String))]
+
 print("""
 real $(h(real))s
 cpu  $(h(user + sys))s ($(h(user))s user + $(h(sys))s sys)
