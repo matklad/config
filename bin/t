@@ -1,13 +1,12 @@
 #!/usr/bin/env -S julia --
-
-h(f) = round(f; digits=2)
+using Printf
 
 f = tempname()
 run(`time --output $f --format '%e %U %S %M' $(ARGS)`)
 real, user, sys, rsskb = [parse(Float64, x) for x in split(read(f, String))]
 
-print("""
-real $(h(real))s
-cpu  $(h(user + sys))s ($(h(user))s user + $(h(sys))s sys)
-rss  $(h(rsskb / 1024))mb
-""")
+@printf """
+real %.2fs
+cpu  %.2fs (%.2fs user + %.2fs sys)
+rss  %.2fmb
+""" real (user + sys) user sys (rsskb / 1024)
