@@ -41,7 +41,7 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
     "editor.semanticTokenColorCustomizations": {
-        "[Pale Fire]": {
+        "[Pale Fire High Contrast]": {
             "rules": {
                 "unresolvedReference": "#9C6363",
                 "parameter": "#DCDCCC",
@@ -99,6 +99,8 @@
 
     "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",
 
+    "errorLens.exclude": [".*Unknown word.*"],
+
     "macros": {
         "closePanelCloseEditorsCloseSidebar": [
             "workbench.action.closePanel",
@@ -127,7 +129,7 @@
     "rust-analyzer.callInfo.full": false,
     "rust-analyzer.checkOnSave.enable": false,
     "rust-analyzer.server.extraEnv": {
-        "RA_PROFILE": "*>500",
+        "RA_PROFILE": "*>200",
         // "RA_COUNT": "1"
     },
 
