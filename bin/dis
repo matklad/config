@@ -1,0 +1,3 @@
+#!/usr/bin/env -S julia --
+progn, fn = ARGS
+run(`gdb -batch -ex 'file '$progn -ex 'disassemble '$fn`)
