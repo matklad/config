@@ -72,3 +72,6 @@ https://docs.rs/dtolnay/0.0.9/dtolnay/macro._02__reference_types.html
 
 Don't write bugs::
 https://www.teamten.com/lawrence/programming/dont-write-bugs.html
+
+Don't use `_` patterns::
+https://youtu.be/-J8YyfrSwTk?t=1819
