@@ -235,7 +235,7 @@ in
       extraGroups = [ "wheel" "networkmanager" "docker" "audio" "plugdev"];
       uid = 1000;
     };
-    extraUsers.man.isNormalUser = false;
+  # extraUsers.man.isNormalUser = false;
   };
 
   environment.variables = {

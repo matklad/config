@@ -9,6 +9,8 @@ with import <nixpkgs> {};
     gtk3 glib
     libGL vulkan-loader
     llvmPackages_10.libclang
+    glib
+    nettle
   ];
   shellHook = ''
     export LD_LIBRARY_PATH="\
@@ -28,5 +30,7 @@ ${fontconfig.lib}/lib:\
 ${libgit2}/lib:\
 ${openssl.out}/lib:\
 ${zlib}/lib:\
+${glib.out}/lib:\
+${nettle.out}/lib:\
 "'';
 }
