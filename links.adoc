@@ -75,3 +75,6 @@ https://www.teamten.com/lawrence/programming/dont-write-bugs.html
 
 Don't use `_` patterns::
 https://youtu.be/-J8YyfrSwTk?t=1819
+
+What Is The Minimal Set Of Optimizations Needed For Zero-Cost Abstraction?::
+https://robert.ocallahan.org/2020/08/what-is-minimal-set-of-optimizations.html
