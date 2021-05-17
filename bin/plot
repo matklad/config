@@ -1,0 +1,8 @@
+#!/usr/bin/env -S julia --
+# using Pkg; Pkg.add("IJulia")
+using Plots
+
+data = [[parse(Float64, x) for x in split(l)] for l in readlines()]
+x, y = collect.(zip(data...))
+plot(x, y)
+png("plot.png")
