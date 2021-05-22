@@ -4,5 +4,5 @@ using Plots
 
 data = [[parse(Float64, x) for x in split(l)] for l in readlines()]
 x, y = collect.(zip(data...))
-plot(x, y)
+plot(x, y, marker=2)
 png("plot.png")
