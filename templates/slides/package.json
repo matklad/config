@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "adoc": "npx asciidoctor-web-pdf --template-require ./template.js -a linkcss slides.adoc"
+  },
+  "devDependencies": {
+    "@asciidoctor/core": "^2.2.4",
+    "asciidoctor-pdf": "^1.0.0-alpha.12"
+  }
+}

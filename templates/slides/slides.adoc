@@ -1,0 +1,62 @@
+= Title
+matklad <aleksey.kladov@gmail.com>
+:icons: font
+:table-caption!:
+:example-caption!:
+
+== Lists
+
+* I
+* 💖
+* lists
+
+== !
+This slide is untitled
+
+[.centered]
+== !
+
+[.center]
+Somewhat broken centering
+
+== Table
+
+|===
+||Col 1| Col 2
+|x|y|z
+|a|b|c
+|===
+
+== Source Code
+
+[source,rust,subs=+quotes]
+----
+fn main() {
+    let x = 42;
+    let ##highlighted## = 92;
+}
+----
+
+== Two Columnts
+
+[.two-col]
+--
+
+[source,rust]
+----
+println!("hello")
+----
+
+* another
+* list
+--
+
+[.title-slide]
+== Big Title For Subsection
+
+
+== Admonitions
+
+TIP: useful tip
+
+CAUTION: on fire!

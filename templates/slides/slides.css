@@ -1,0 +1,185 @@
+@page {
+  size: 1920px 1080px;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+html {
+  font-size: 48pt;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+.admonitionblock.question td.icon .icon-note:before {
+  content: "\f128";
+  color: #19407c;
+}
+.admonitionblock > table td.content code {
+  font-weight: bold;
+}
+
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  padding: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+/*
+
+// When enabled, this causes inexplicable artifacts in PDF generation
+@media not print {
+}
+*/
+
+.title-slide {
+  justify-content: center;
+}
+.slide-content {
+  height: 100%;
+}
+
+.title-slide h1, .title-slide h2, .title-slide h3, h3  {
+  text-align: center;
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  margin-top: 0em;
+}
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.125em;
+}
+h3 {
+  font-size: 1.6875em;
+  letter-spacing: -.01em;
+}
+
+h1 > code, h2 > code, h3 > code {
+  color: #ba3925;
+}
+.hl-kw {
+  font-weight: bold;
+  color: #000080;
+}
+.hl-lifetime {
+  color: #20999D;
+}
+.hl-macro {
+  color: #DD6718;
+}
+.hl-number {
+  color: #0000ff;
+}
+.hl-string {
+  font-weight: bold;
+  color: #008000;
+}
+.hl-prompt {
+  font-weight: bold;
+  color: #7a2518;
+}
+.hl-comment {
+  color: rgba(0, 0, 0, .6);
+}
+.hl-error {
+  text-decoration: red wavy underline;
+  text-decoration-skip-ink: none;
+}
+.hl-red {
+  color: red;
+}
+
+.no-title > h3 {
+  display: none;
+}
+.slide > footer {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-family: "Fira Mono";
+}
+.slide > footer > p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.two-col > .slide-content {
+  display: flex;
+  flex-direction: row;
+}
+.two-col > .slide-content > *:first-child {
+  margin-right: 10px;
+  flex: 50%;
+}
+.two-col > .slide-content > *:last-child {
+  margin-left: 10px;
+  flex: 50%;
+}
+.two-col > .content {
+  display: flex;
+  flex-direction: row;
+}
+.two-col > .content > *:first-child {
+  margin-right: 10px;
+  flex: 50%;
+}
+.two-col > .content > *:last-child {
+  margin-left: 10px;
+  flex: 50%;
+}
+
+.centered > .slide-content {
+  position: absolute;
+  width: 1900px;
+  height: 1060px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exampleblock > .content > .listingblock > .content > .highlight {
+  margin-top: 0;
+}
+.sidebarblock {
+  border-width: 3px;
+  background-color: white;
+}
+
+.invisible {
+  visibility: hidden
+}
+
+.fragment {
+  visibility: hidden
+}
+
+.slide-fragment .fragment {
+  visibility: visible;
+}
+
+.listingblock > .title, .ulist > .title {
+  font-size: 1.0625rem;
+  letter-spacing: -.01em;
+  color: rgba(0, 0, 0, .8);
+  font-style: normal
+}
+
+.large-font {
+  font-size: 1.5em;
+}
+
+.large-font p {
+  font-size: 1em;
+}
