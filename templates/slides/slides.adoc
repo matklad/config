@@ -6,6 +6,8 @@ matklad <aleksey.kladov@gmail.com>
 
 == Lists
 
+$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+
 * I
 * 💖
 * lists

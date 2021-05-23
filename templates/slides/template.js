@@ -19,6 +19,12 @@ module.exports = {
     ${init.toString()}
     init()
     </script>
+    <script data-type="mathjax-config">
+      window.MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\\\(', '\\\\)']] }
+      };
+    </script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>`
     },
 
