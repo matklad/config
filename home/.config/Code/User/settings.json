@@ -77,6 +77,11 @@
     "files.trimTrailingWhitespace": true,
 
     "terminal.integrated.fontSize": 12,
+    "terminal.integrated.sendKeybindingsToShell": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt",
+        "editor.action.marker.nextInFiles"
+    ],
 
     "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "none",
@@ -258,7 +263,10 @@
     "python.showStartPage": false,
     "julia.enableTelemetry": true,
     "julia.lint.run": false,
-    "terminal.integrated.commandsToSkipShell": [
-        "language-julia.interrupt"
-    ]
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }

@@ -65,7 +65,7 @@ in
     # Langs
     (python3.withPackages (py: [ py.requests ]))
     ant
-    clang_11
+    clang_12
     clang-tools
     cmake
     gcc10
@@ -73,13 +73,13 @@ in
     gdb
     gnumake
     jekyll
-    julia_15
+    julia-stable-bin
     lld_11
     lldb
     maven
     ninja
     nodejs-14_x
-    ruby_2_7
+    ruby_3_0
     rustup
 
     # Utils

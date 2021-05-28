@@ -90,14 +90,6 @@
     "command": "goToPreviousReference",
     "when": "inReferenceSearchEditor || referenceSearchVisible" },
 
-  { "key": "down",
-    "command": "-selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
-  { "key": "up",
-    "command": "-selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
-
-
   { "key": "alt+e",
     "command": "extension.aceJump" },
   { "key": "ctrl+i",
@@ -160,6 +152,23 @@
     "command": "workbench.action.closeActiveEditor",
     "when": "!sideBarFocus && !panelFocus" },
 
+  { "key": "ctrl+alt+shift+e",
+    "command": "workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups" },
+  { "key": "ctrl+alt+shift+e",
+    "command": "workbench.action.closeGroup",
+    "when": "editorFocus && activeEditorGroupEmpty && multipleEditorGroups" },
+  { "key": "ctrl+alt+shift+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus" },
+  { "key": "ctrl+alt+shift+e",
+    "command": "workbench.action.closePanel",
+    "when": "panelFocus" },
+  { "key": "ctrl+alt+shift+e",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "!sideBarFocus && !panelFocus" },
+
+
   { "key": "ctrl+e 1",
     "command": "macros.closePanelCloseEditorsCloseSidebar",
     "when": "editorFocus" },
@@ -168,7 +177,15 @@
   { "key": "ctrl+e 2",
     "command": "workbench.action.splitEditorDown" },
 
-  { "key": "ctrl+e o",
+  { "key": "ctrl+alt+shift+1",
+    "command": "macros.closePanelCloseEditorsCloseSidebar",
+    "when": "editorFocus" },
+  { "key": "ctrl+alt+shift+3",
+    "command": "workbench.action.splitEditorRight" },
+  { "key": "ctrl+alt+shift+2",
+    "command": "workbench.action.splitEditorDown" },
+
+  { "key": "ctrl+alt+shift+o",
     "command": "workbench.action.focusNextGroup" },
 
   { "key": "alt+1",
@@ -189,5 +206,17 @@
   { "key": "alt+left",
     "command": "workbench.action.navigateBack" },
   { "key": "alt+right",
-    "command": "workbench.action.navigateForward" }
+    "command": "workbench.action.navigateForward" },
+
+  // Negatives
+  { "key": "down",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+  { "key": "up",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+  { "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile" },
+  { "key": "ctrl+y",
+    "command": "-redo" }
 ]
