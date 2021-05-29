@@ -1,8 +1,15 @@
 #!/usr/bin/env -S julia --
 # using Pkg; Pkg.add("IJulia")
+ENV["GKSwstype"]="nul"
+
 using Plots
 
-data = [[parse(Float64, x) for x in split(l)] for l in readlines()]
+lines = readlines()
+if get(ARGS, 1, "") == "-P"
+    lines = [l[3:end] for l in lines if startswith(l, "P! ")]
+end
+
+data = [[parse(Float64, x) for x in split(l)] for l in lines]
 x, y = collect.(zip(data...))
-plot(x, y, marker=2)
-png("plot.png")
+f = plot(x, y, marker=2)
+png(f, "plot.png")

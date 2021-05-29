@@ -8,11 +8,11 @@ with import <nixpkgs> {};
     ncurses
     gtk3 glib
     libGL vulkan-loader
-    llvmPackages_10.libclang
     glib
     nettle
   ];
   shellHook = ''
+    export LIBCLANG_PATH="${llvmPackages_10.libclang.lib}/lib"
     export LD_LIBRARY_PATH="\
 ${vulkan-loader}/lib:\
 ${xlibs.libX11.out}/lib:\
