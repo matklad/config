@@ -78,3 +78,6 @@ https://youtu.be/-J8YyfrSwTk?t=1819
 
 What Is The Minimal Set Of Optimizations Needed For Zero-Cost Abstraction?::
 https://robert.ocallahan.org/2020/08/what-is-minimal-set-of-optimizations.html
+
+Expect Tests::
+https://blog.janestreet.com/using-ascii-waveforms-to-test-hardware-designs/

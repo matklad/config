@@ -79,7 +79,7 @@ in
     maven
     ninja
     nodejs-14_x
-    ruby_3_0
+    ruby_2_7
     rustup
 
     # Utils
