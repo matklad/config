@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e
 xbindkeys
-sleep 2
-xkbcomp ~/config/home-row.xkb $DISPLAY
+# sleep 2
+# xkbcomp ~/config/home-row.xkb $DISPLAY

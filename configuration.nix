@@ -142,7 +142,10 @@ in
           naturalScrolling = true;
         };
       };
-      xkbOptions = "compose:ralt";
+
+      layout = "us,ru";
+      xkbVariant = "workman,";
+      xkbOptions = "grp:win_space_toggle";
     };
     unclutter-xfixes.enable = true;
     printing.enable = true;
@@ -154,6 +157,7 @@ in
       passwordAuthentication = false;
     };
   };
+  console.useXkbConfig = true;
 
   boot = {
     tmpOnTmpfs = true;
