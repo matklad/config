@@ -78,7 +78,7 @@ in
     lldb
     maven
     ninja
-    nodejs-14_x
+    nodejs-16_x
     ruby_2_7
     rustup
 
@@ -240,6 +240,7 @@ in
 
   environment.variables = {
     PATH = "$HOME/.cargo/bin:$HOME/config/bin";
+    RUSTC_FORCE_INCREMENTAL = "1";
     VISUAL = "micro";
     EDITOR = "micro";
   };

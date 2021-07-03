@@ -2,7 +2,7 @@
 using Printf
 
 f = tempname()
-run(`time --output $f --format '%e %U %S %M' $(ARGS)`)
+run(ignorestatus(`time --output $f --format '%e %U %S %M' $(ARGS)`))
 real, user, sys, rsskb = [parse(Float64, x) for x in split(read(f, String))]
 
 @printf """

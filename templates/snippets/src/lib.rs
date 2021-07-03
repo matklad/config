@@ -15,3 +15,16 @@ pub fn exec(command: &str) -> std::io::Result<String> {
         .map_err(|err| std::io::Error::new(std::io::ErrorKind::InvalidData, err))?;
     Ok(stdout.trim().to_string())
 }
+
+#[must_use]
+pub fn defer<F: FnOnce()>(f: F) -> impl Drop {
+    struct D<F: FnOnce()>(Option<F>);
+    impl<F: FnOnce()> Drop for D<F> {
+        fn drop(&mut self) {
+            if let Some(f) = self.0.take() {
+                f()
+            }
+        }
+    }
+    D(Some(f))
+}
