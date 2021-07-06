@@ -266,4 +266,5 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
+    "security.workspace.trust.untrustedFiles": "open",
 }
