@@ -122,6 +122,7 @@ in
     xorg.xwininfo
     zip
     zlib
+    entr
 
     # Rust stuff
     bat

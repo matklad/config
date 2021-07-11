@@ -13,6 +13,6 @@ The workflow is:
 
 ```
 $ npm install
-$ npx run adoc
+$ npm run adoc
 $ open slides.pdf
 ```
