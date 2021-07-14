@@ -1,3 +1,5 @@
+use std::hash::Hasher;
+
 /// ```
 /// let commit_hash = exec("git rev-parse HEAD")?;
 /// ```
@@ -27,4 +29,11 @@ pub fn defer<F: FnOnce()>(f: F) -> impl Drop {
         }
     }
     D(Some(f))
+}
+
+pub fn stable_hash<T: std::hash::Hash>(value: &T) -> u64 {
+    #![allow(deprecated)]
+    let mut hasher = std::hash::SipHasher::default();
+    std::hash::Hash::hash(value, &mut hasher);
+    hasher.finish()
 }
