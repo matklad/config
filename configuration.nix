@@ -129,7 +129,7 @@ in
       enable = true;
       displayManager = {
         sddm.enable = true;
-        autoLogin = { enable = false; user = "matklad"; };
+        autoLogin = { enable = true; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
 
