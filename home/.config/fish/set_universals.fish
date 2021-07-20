@@ -13,6 +13,7 @@ abbr --add gup git pull --rebase
 abbr --add sw  git switch
 abbr --add swm git switch master
 abbr --add swc git switch -c
+abbr --add gof git spinoff
 abbr --add r+  "gh pr comment --body 'bors r+'"
 
 abbr --add e micro
