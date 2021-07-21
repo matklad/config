@@ -84,3 +84,6 @@ https://blog.janestreet.com/using-ascii-waveforms-to-test-hardware-designs/
 
 What Every C Programmer Should Know About UB::
 https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html
+
+Build a Mountain::
+https://www.youtube.com/watch?v=443UNeGrFoM&t=6949s
