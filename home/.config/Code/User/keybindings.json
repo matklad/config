@@ -32,10 +32,10 @@
     "when": "editorTextFocus" },
 
 // Folding
-  { "key": "ctrl+[",
+  { "key": "ctrl+,",
     "command": "editor.fold",
     "when": "editorTextFocus && foldingEnabled" },
-  { "key": "ctrl+]",
+  { "key": "ctrl+.",
     "command": "editor.unfold",
     "when": "editorTextFocus && foldingEnabled" },
 

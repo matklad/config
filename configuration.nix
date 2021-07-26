@@ -44,22 +44,27 @@ in
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = true;})
     chromium
-    deadbeef-with-plugins
     filelight
     gimp
     jetbrains.idea-community
-    kitty
-    mpv
-    obs-studio
-    okular
-    peek
-    qbittorrent
-    qview
-    smplayer
-    spectacle
-    tdesktop
     vscode
+    kitty
+    qbittorrent
+    spectacle
+    obs-studio
+    peek
+
+    # Comms
     zoom-us
+    tdesktop
+    slack
+
+    # Viewers
+    smplayer
+    mpv
+    qview
+    okular
+    deadbeef-with-plugins
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
