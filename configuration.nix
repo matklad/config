@@ -47,24 +47,24 @@ in
     filelight
     gimp
     jetbrains.idea-community
-    vscode
     kitty
-    qbittorrent
-    spectacle
     obs-studio
     peek
+    qbittorrent
+    spectacle
+    vscode
 
     # Comms
-    zoom-us
-    tdesktop
     slack
+    tdesktop
+    zoom-us
 
     # Viewers
-    smplayer
-    mpv
-    qview
-    okular
     deadbeef-with-plugins
+    mpv
+    okular
+    qview
+    smplayer
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
@@ -85,6 +85,7 @@ in
     nodejs-16_x
     ruby_2_7
     rustup
+    valgrind
 
     # Utils
     ark
@@ -94,6 +95,7 @@ in
     binutils
     curl
     direnv
+    entr
     exfat
     file
     git
@@ -111,6 +113,8 @@ in
     s-tui
     unrar
     unzip
+    v4l-utils
+    wally-cli
     wget
     xbindkeys
     xclip
@@ -121,12 +125,12 @@ in
 
     # Rust stuff
     bat
+    du-dust
     exa
     fd
     hyperfine
     ripgrep
     tokei
-    du-dust
   ];
 
   services = {
