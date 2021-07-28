@@ -1,5 +1,5 @@
 with import <nixpkgs> {};
-(mkShell.override { stdenv = llvmPackages_10.stdenv; }) {
+(mkShell.override { stdenv = llvmPackages_11.stdenv; }) {
   buildInputs = [
     pkgconfig
     python cmake
@@ -12,7 +12,8 @@ with import <nixpkgs> {};
     nettle
   ];
   shellHook = ''
-    export LIBCLANG_PATH="${llvmPackages_10.libclang.lib}/lib"
+    export LLVM_SYS_110_PREFIX = llvmPackages_11.bintools;
+    export LIBCLANG_PATH="${llvmPackages_11.libclang.lib}/lib"
     export LD_LIBRARY_PATH="\
 ${vulkan-loader}/lib:\
 ${xlibs.libX11.out}/lib:\
@@ -23,6 +24,7 @@ ${xlibs.libXext.out}/lib:\
 ${xlibs.libXtst.out}/lib:\
 ${xlibs.libXrender.out}/lib:\
 ${xlibs.libxcb.out}/lib:\
+${xlibs.libxkbcommon}/lib:\
 ${llvmPackages_10.libclang}/lib:\
 ${libGL}/lib:\
 ${freetype}/lib:\
