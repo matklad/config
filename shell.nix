@@ -24,7 +24,6 @@ ${xlibs.libXext.out}/lib:\
 ${xlibs.libXtst.out}/lib:\
 ${xlibs.libXrender.out}/lib:\
 ${xlibs.libxcb.out}/lib:\
-${xlibs.libxkbcommon}/lib:\
 ${llvmPackages_10.libclang}/lib:\
 ${libGL}/lib:\
 ${freetype}/lib:\
