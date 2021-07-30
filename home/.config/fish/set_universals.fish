@@ -16,9 +16,10 @@ abbr --add swc git switch -c
 abbr --add gof git spinoff
 abbr --add r+  "gh pr comment --body 'bors r+'"
 
-abbr --add e micro
-abbr --add c code
-abbr --add ca cargo
+abbr --add e   micro
+abbr --add c   code
+abbr --add cc  code
+abbr --add ca  cargo
 
 abbr --add ctrlc xclip -selection c
 abbr --add ctrlv xclip -selection c -o
