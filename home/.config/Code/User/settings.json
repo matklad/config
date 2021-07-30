@@ -267,4 +267,5 @@
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     "security.workspace.trust.untrustedFiles": "open",
+    "julia.symbolCacheDownload": true,
 }
