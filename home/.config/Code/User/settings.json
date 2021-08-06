@@ -264,8 +264,12 @@
     "julia.enableTelemetry": true,
     "julia.lint.run": false,
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter-notebook"
     },
     "security.workspace.trust.untrustedFiles": "open",
     "julia.symbolCacheDownload": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
 }
