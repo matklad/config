@@ -166,6 +166,12 @@ in
     };
   };
   console.useXkbConfig = true;
+  xdg = {
+    portal = {
+      enable = true;
+      gtkUsePortal = true;
+    };
+  };
 
   boot = {
     tmpOnTmpfs = true;
