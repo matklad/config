@@ -5,11 +5,13 @@ with import <nixpkgs> {};
     python cmake
     openssl zlib libgit2 libxml2 pcre freetype fontconfig
     xorg.libX11 xorg.libXcursor xorg.libXrandr xorg.libXrender xorg.libXi xorg.libXext xorg.libXtst xorg.libxcb
+    libxkbcommon
     ncurses
     gtk3 glib
     libGL vulkan-loader
     glib
     nettle
+    protobuf
   ];
   shellHook = ''
     export LLVM_SYS_110_PREFIX = llvmPackages_11.bintools;
@@ -24,6 +26,7 @@ ${xlibs.libXext.out}/lib:\
 ${xlibs.libXtst.out}/lib:\
 ${xlibs.libXrender.out}/lib:\
 ${xlibs.libxcb.out}/lib:\
+${libxkbcommon.out}/lib:\
 ${llvmPackages_10.libclang}/lib:\
 ${libGL}/lib:\
 ${freetype}/lib:\
