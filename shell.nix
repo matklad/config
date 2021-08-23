@@ -1,5 +1,5 @@
 with import <nixpkgs> {};
-(mkShell.override { stdenv = llvmPackages_11.stdenv; }) {
+(mkShell.override { stdenv = clang.stdenv; }) {
   buildInputs = [
     pkgconfig
     python cmake

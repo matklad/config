@@ -28,7 +28,7 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     // "editor.fontSize": 26,
 
     "editor.formatOnType": true,
@@ -177,6 +177,7 @@
         "Walkdir",
         "aleksey",
         "bufs",
+        "callees",
         "canonicalize",
         "constructible",
         "consts",
