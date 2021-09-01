@@ -52,6 +52,9 @@ https://lwn.net/Articles/336262/
 Technology from the past come to save the future from itself::
 http://venge.net/graydon/talks/
 
+Not Rocket Science Rule::
+https://graydon2.dreamwidth.org/1597.html
+
 Why {cpp} Sails When the Vasa Sank::
 https://www.youtube.com/watch?v=ltCgzYcpFUI
 
