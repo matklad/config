@@ -1,4 +1,0 @@
-#!/usr/bin/env julia
-pr, = ARGS
-run(`git fetch upstream refs/pull/$pr/head`)
-run(`git switch --detach FETCH_HEAD`)
