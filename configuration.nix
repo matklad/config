@@ -77,7 +77,6 @@ in
     gdb
     gnumake
     jekyll
-    julia-stable-bin
     lld_11
     lldb
     maven

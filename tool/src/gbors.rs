@@ -1,19 +1,5 @@
 use xshell::cmd;
 
-/*
-#!/usr/bin/env julia
-
-if isempty(ARGS)
-    title = readchomp(`git show -s --format=%s HEAD`)
-else
-    title, = ARGS
-end
-
-run(`git push --set-upstream origin`)
-run(`gh pr create --title $title --body $"bors r+\n🤖"`)
-
-*/
-
 pub(crate) fn run() -> anyhow::Result<()> {
     let commits = cmd!("git cherry master").read()?;
     let commits: Vec<&str> = commits.lines().filter_map(|it| it.strip_prefix("+ ")).collect();
