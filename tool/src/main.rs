@@ -4,12 +4,14 @@ mod commit;
 mod gbors;
 mod git_spinoff;
 mod t;
+mod use_nix;
 
 const TOOLS: &[(&str, fn() -> anyhow::Result<()>)] = &[
     ("commit", commit::run),
     ("gbors", gbors::run),
     ("git-spinoff", git_spinoff::run),
     ("t", t::run),
+    ("use-nix", use_nix::run),
 ];
 
 fn main() -> anyhow::Result<()> {
