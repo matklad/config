@@ -1,7 +1,7 @@
 use xshell::cmd;
 
 pub(crate) fn run() -> anyhow::Result<()> {
-    let commits = cmd!("git cherry master").read()?;
+    let commits = cmd!("git cherry upstream/master").read()?;
     let commits: Vec<&str> = commits.lines().filter_map(|it| it.strip_prefix("+ ")).collect();
 
     let (title, mut body) = if commits.len() == 1 {
