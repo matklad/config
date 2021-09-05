@@ -4,6 +4,8 @@ mod amend;
 mod commit;
 mod gbda;
 mod gbors;
+mod gcf;
+mod git_refresh;
 mod git_spinoff;
 mod gpr;
 mod t;
@@ -14,6 +16,8 @@ const TOOLS: &[(&str, fn() -> anyhow::Result<()>)] = &[
     ("commit", commit::run),
     ("gbda", gbda::run),
     ("gbors", gbors::run),
+    ("gcf", gcf::run),
+    ("git-refresh", git_refresh::run),
     ("git-spinoff", git_spinoff::run),
     ("gpr", gpr::run),
     ("t", t::run),
@@ -54,8 +58,8 @@ fn link_me_up() {
     for &(tool, _) in TOOLS {
         let dst = bin.join(tool);
         xshell::rm_rf(&dst).unwrap();
-        xshell::hard_link("./target/release/tool", &dst).unwrap();
         let _ = cmd!("git rm {dst} -f").echo_cmd(false).ignore_stderr().run();
+        xshell::hard_link("./target/release/tool", &dst).unwrap();
     }
 
     let ignore = TOOLS.iter().map(|&(name, _)| name).collect::<Vec<_>>().join("\n");

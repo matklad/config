@@ -1,3 +1,0 @@
-#!/usr/bin/env -S julia --
-run(`git fetch upstream`)
-run(`git rebase upstream/master`)
