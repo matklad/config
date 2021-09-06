@@ -72,8 +72,6 @@ in
     clang_12
     clang-tools
     cmake
-    gcc10
-    gcc10Stdenv
     gdb
     gnumake
     jekyll
