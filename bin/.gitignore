@@ -6,5 +6,8 @@ gcf
 git-refresh
 git-spinoff
 gpr
+nixgc
+nixsw
+nixup
 t
 use-nix
