@@ -94,6 +94,7 @@ in
     direnv
     entr
     exfat
+    ffmpeg
     file
     git
     gitAndTools.gh
@@ -119,7 +120,6 @@ in
     xorg.xwininfo
     zip
     zlib
-    entr
 
     # Rust stuff
     bat
