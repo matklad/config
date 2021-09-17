@@ -28,7 +28,7 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+    "editor.fontSize": 12,
     // "editor.fontSize": 26,
 
     "editor.formatOnType": true,
@@ -276,4 +276,7 @@
         "jupyter-notebook": "left"
     },
     "workbench.productIconTheme": "IntelliJ",
+    "files.associations": {
+        "COMMIT_EDITMSG": "git-commit"
+    },
 }

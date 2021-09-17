@@ -1,5 +1,5 @@
 with import <nixpkgs> {};
-(mkShell.override { stdenv = clang.stdenv; }) {
+(mkShell.override { stdenv = llvmPackages_13.clang.stdenv; }) {
   buildInputs = [
     pkgconfig
     python cmake
@@ -14,8 +14,8 @@ with import <nixpkgs> {};
     protobuf
   ];
   shellHook = ''
-    export LLVM_SYS_110_PREFIX = llvmPackages_11.bintools;
-    export LIBCLANG_PATH="${llvmPackages_11.libclang.lib}/lib"
+    export LLVM_SYS_130_PREFIX = llvmPackages_13.bintools;
+    export LIBCLANG_PATH="${llvmPackages_13.libclang.lib}/lib"
     export LD_LIBRARY_PATH="\
 ${vulkan-loader}/lib:\
 ${xlibs.libX11.out}/lib:\

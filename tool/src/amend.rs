@@ -3,7 +3,7 @@ use xshell::cmd;
 pub(crate) fn run() -> anyhow::Result<()> {
     cmd!("git add .").run()?;
     cmd!("git --no-pager diff --cached --color=always").run()?;
-    cmd!("git show -s --oneline --abbrev-commit --color=always HEAD").run()?;
+    cmd!("git --no-pager show -s --oneline --abbrev-commit --color=always HEAD").run()?;
 
     if yes_or_no("Continue?") {
         cmd!("git commit --amend --no-edit").run()?;
