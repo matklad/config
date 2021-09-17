@@ -16,6 +16,9 @@ fn yes_or_no(msg: &str) -> bool {
     let mut buf = String::new();
     match std::io::stdin().read_line(&mut buf) {
         Err(_) | Ok(0) => false,
-        Ok(_) => buf.trim().is_empty(),
+        Ok(_) => {
+            let resp = buf.trim();
+            matches!(resp, "" | "y" | "Y")
+        }
     }
 }
