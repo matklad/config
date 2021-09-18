@@ -277,6 +277,6 @@
     },
     "workbench.productIconTheme": "IntelliJ",
     "files.associations": {
-        "COMMIT_EDITMSG": "git-commit"
+        "*COMMIT_EDITMSG": "git-commit"
     },
 }
