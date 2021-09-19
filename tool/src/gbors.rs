@@ -1,11 +1,17 @@
 use xshell::cmd;
 
+use crate::opt_single_arg;
+
 pub(crate) fn run() -> anyhow::Result<()> {
+    let title_arg = opt_single_arg()?;
+
     cmd!("git fetch upstream").read()?;
     let commits = cmd!("git cherry upstream/master").read()?;
     let commits: Vec<&str> = commits.lines().filter_map(|it| it.strip_prefix("+ ")).collect();
 
-    let (title, mut body) = if commits.len() == 1 {
+    let (title, mut body) = if let Some(title) = title_arg {
+        (title, String::new())
+    } else if commits.len() == 1 {
         let message = get_message(commits[0])?;
         split_subject(&message)
     } else {

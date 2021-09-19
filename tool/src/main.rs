@@ -41,13 +41,25 @@ fn main() -> anyhow::Result<()> {
 }
 
 fn single_arg() -> anyhow::Result<String> {
+    match single_arg_impl() {
+        Ok(Some(arg)) => Ok(arg),
+        _ => anyhow::bail!("expected one argument"),
+    }
+}
+
+fn opt_single_arg() -> anyhow::Result<Option<String>> {
+    single_arg_impl().map_err(|()| anyhow::format_err!("expected at most one argument"))
+}
+
+fn single_arg_impl() -> Result<Option<String>, ()> {
     let mut args = std::env::args();
     let _progn = args.next();
     let arg = args.next();
     let next_arg = args.next();
     match (arg, next_arg) {
-        (Some(arg), None) => Ok(arg),
-        _ => anyhow::bail!("expected one argument"),
+        (None, None) => Ok(None),
+        (Some(arg), None) => Ok(Some(arg)),
+        _ => Err(()),
     }
 }
 

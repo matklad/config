@@ -1,7 +1,9 @@
 use xshell::cmd;
 
+use crate::opt_single_arg;
+
 pub(crate) fn run() -> anyhow::Result<()> {
-    let message = std::env::args().nth(1);
+    let message = opt_single_arg()?;
     match message {
         Some(message) => {
             cmd!("git add .").run()?;
