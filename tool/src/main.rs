@@ -8,6 +8,7 @@ mod gcf;
 mod git_refresh;
 mod git_spinoff;
 mod gpr;
+mod n;
 mod nix;
 mod t;
 mod use_nix;
@@ -21,6 +22,7 @@ const TOOLS: &[(&str, fn() -> anyhow::Result<()>)] = &[
     ("git-refresh", git_refresh::run),
     ("git-spinoff", git_spinoff::run),
     ("gpr", gpr::run),
+    ("n", n::run),
     ("nixgc", nix::gc),
     ("nixsw", nix::sw),
     ("nixup", nix::up),
