@@ -37,3 +37,15 @@ pub fn stable_hash<T: std::hash::Hash>(value: &T) -> u64 {
     std::hash::Hash::hash(value, &mut hasher);
     hasher.finish()
 }
+
+// Source:
+// <https://github.com/rust-lang/rust/blob/1.55.0/library/core/src/slice/sort.rs#L559-L573>
+pub fn random_numbers() -> impl Iterator<Item = u32> {
+    let mut random = 92u32;
+    std::iter::repeat_with(move || {
+        random ^= random << 13;
+        random ^= random >> 17;
+        random ^= random << 5;
+        random
+    })
+}
