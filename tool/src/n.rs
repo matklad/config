@@ -5,30 +5,32 @@ pub(crate) fn run() -> anyhow::Result<()> {
     let mut args = std::env::args();
     let _progn = args.next();
 
-    let n = args.next().context("expected a number")?;
-    let n = n.parse::<u32>()?;
-
     let mut ignore_status = false;
     let mut shell = false;
+    let n: u32;
 
-    let mut arg;
     loop {
-        arg = args.next().context("expected program name")?;
+        let arg = args.next().context("expected program name")?;
         match arg.as_str() {
             "-i" => ignore_status = true,
             "-s" => shell = true,
-            _ => break,
+            _ => {
+                n = arg.parse::<u32>()?;
+                break;
+            }
         }
     }
 
     let task = if shell {
+        let script = args.next().context("expected a script")?;
         if let Some(arg) = args.next() {
             anyhow::bail!("unexpected argument: {}", arg)
         }
-        Task::Shell { script: arg }
+        Task::Shell { script }
     } else {
+        let progn = args.next().context("expected program name")?;
         let args = args.collect();
-        Task::Command { progn: arg, args }
+        Task::Command { progn, args }
     };
 
     for i in 0..n {

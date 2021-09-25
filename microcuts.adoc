@@ -1,0 +1,21 @@
+= Microcuts
+
+Minor annoyances I with Rust didn't have.
+
+*Cargo directory layout.*
+We should have done directory-per-crate.
+Collocating `lib.rs` and `main.rs` causes confusion.
+On a similar note, `tests` and `benches` should be _one_ crate by default, to save compile times
+
+*Incomplete mod.rs transition.*
+De-facto, both `foo/mod.rs` and `foo.rs` are used today.
+It would probably be better if only one way was allowed.
+
+*Nested imports.*
+We now allow `use crate::{module::{item}}`, which we used not to.
+As a result, projects are split by the import style they use.
+Seems better if we sticked with simple one-level nesting only.
+
+*Complex Visibility Rules*
+`pub(crate)` is a lot to type, `pub(in ...)` doesn't pull its weight, imports creating item is confusing and not useful.
+It'd be better to have just `pub` with the meaning of `pub(crate)` and `pub*` for exporting across crate boundary. 
