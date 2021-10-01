@@ -76,7 +76,10 @@ fn link_me_up() {
     cmd!("cargo build --release").run().unwrap();
 
     for &(tool, _) in TOOLS {
-        let dst = bin.join(tool);
+        let dst = match tool {
+            "rotate_downloads" => "/home/matklad/.config/autostart-scripts/rotate_downloads".into(),
+            _ => bin.join(tool),
+        };
         xshell::rm_rf(&dst).unwrap();
         let _ = cmd!("git rm {dst} -f").echo_cmd(false).ignore_stderr().run();
         xshell::hard_link("./target/release/tool", &dst).unwrap();
@@ -87,7 +90,7 @@ fn link_me_up() {
 
     let home: PathBuf = "/home/matklad/".into();
     let config_home = home.join("config/home");
-    for abs_path in walkdir(config_home.clone()).unwrap() {
+    for abs_path in dbg!(walkdir(config_home.clone()).unwrap()) {
         let rel_path = abs_path.strip_prefix(&config_home).unwrap();
         let dest = home.join(rel_path);
         xshell::rm_rf(&dest).unwrap();
@@ -109,6 +112,6 @@ fn link_me_up() {
                 }
             }
         }
-        Ok(work)
+        Ok(res)
     }
 }

@@ -53,6 +53,7 @@ in
     qbittorrent
     spectacle
     vscode
+    kdialog
 
     # Comms
     slack
