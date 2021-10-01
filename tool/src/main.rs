@@ -1,6 +1,7 @@
 use std::path::PathBuf;
 
 mod amend;
+mod autostart;
 mod commit;
 mod gbda;
 mod gbors;
@@ -10,12 +11,12 @@ mod git_spinoff;
 mod gpr;
 mod n;
 mod nix;
-mod rotate_downloads;
 mod t;
 mod use_nix;
 
 const TOOLS: &[(&str, fn() -> anyhow::Result<()>)] = &[
     ("amend", amend::run),
+    ("autostart", autostart::run),
     ("commit", commit::run),
     ("gbda", gbda::run),
     ("gbors", gbors::run),
@@ -27,7 +28,6 @@ const TOOLS: &[(&str, fn() -> anyhow::Result<()>)] = &[
     ("nixgc", nix::gc),
     ("nixsw", nix::sw),
     ("nixup", nix::up),
-    ("rotate_downloads", rotate_downloads::run),
     ("t", t::run),
     ("use-nix", use_nix::run),
 ];
@@ -76,10 +76,7 @@ fn link_me_up() {
     cmd!("cargo build --release").run().unwrap();
 
     for &(tool, _) in TOOLS {
-        let dst = match tool {
-            "rotate_downloads" => "/home/matklad/.config/autostart-scripts/rotate_downloads".into(),
-            _ => bin.join(tool),
-        };
+        let dst = bin.join(tool);
         xshell::rm_rf(&dst).unwrap();
         let _ = cmd!("git rm {dst} -f").echo_cmd(false).ignore_stderr().run();
         xshell::hard_link("./target/release/tool", &dst).unwrap();
@@ -90,7 +87,7 @@ fn link_me_up() {
 
     let home: PathBuf = "/home/matklad/".into();
     let config_home = home.join("config/home");
-    for abs_path in dbg!(walkdir(config_home.clone()).unwrap()) {
+    for abs_path in walkdir(config_home.clone()).unwrap() {
         let rel_path = abs_path.strip_prefix(&config_home).unwrap();
         let dest = home.join(rel_path);
         xshell::rm_rf(&dest).unwrap();

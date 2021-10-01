@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/matklad/config/bin/autostart
+Icon=dialog-scripts
+Name=autostart
+Path=
+Type=Application
+X-KDE-AutostartScript=true
