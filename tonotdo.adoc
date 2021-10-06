@@ -33,3 +33,16 @@ Good opportunity to try out Smalltalk?
 == A Garbage Collected functional language
 
 Just to learn how to write complex runtimes.
+
+== Rust/Linux
+
+A Rust user-space which runs directly on top of Linux kernel, without libc trying to pretend that it is the interface.
+Potential benefits:
+
+* Hackability -- written in Rust & builds with `cargo build`, so everyone can contribute throughout the stack, from
+  pid1 to end-user applications.
+* API stability -- there's user space api `usapi` crate which is perpetually at `1.x` version.
+* ABI stability -- program build against `1.x` version of `usapi` is guaranteed to work on all future systems.
+  No glibc like symbol-versioning nonsense, where you have to build on an old
+  system for compatibility -- you can just say `usapi = "=1.1.0"` in your Cargo.toml to target that particular version.
+* Power -- the API should be sufficiently powerful to build desktop applications, it should encompass GUI, multimedia, fonts and localization. Bonus points for stdio-based API to write "terminal" applications without escape codes. 
