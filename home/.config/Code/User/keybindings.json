@@ -98,6 +98,8 @@
 
   { "key": "alt+e",
     "command": "extension.aceJump" },
+  { "key": "alt+shift+e",
+    "command": "extension.aceJump.selection" },
   { "key": "ctrl+i",
     "command": "center-editor-window.center" },
   { "key": "ctrl+y",
