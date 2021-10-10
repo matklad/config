@@ -29,6 +29,7 @@
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontLigatures": true,
     "editor.fontSize": 12,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
     // "editor.fontSize": 26,
 
     "editor.formatOnType": true,
