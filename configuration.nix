@@ -115,7 +115,6 @@ in
     v4l-utils
     wally-cli
     wget
-    xbindkeys
     xclip
     xorg.xkbcomp
     xorg.xwininfo
@@ -139,7 +138,7 @@ in
         sddm = {
           enable = true;
         };
-        autoLogin = { enable = true; user = "matklad"; };
+        autoLogin = { enable = false; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
 

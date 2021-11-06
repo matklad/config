@@ -2,10 +2,18 @@
 
 Minor annoyances I with Rust didn't have.
 
-*Cargo directory layout.*
+== Cargo
+
+*Directory layout.*
 We should have done directory-per-crate.
 Collocating `lib.rs` and `main.rs` causes confusion.
 On a similar note, `tests` and `benches` should be _one_ crate by default, to save compile times
+
+*Complex Semver Requirements*
+Cargo.toml should support only "x.y.z" and "=x.y.z" requirements.
+Things like `<` or `~` create ecosystem-wide problems.
+
+== Language
 
 *Incomplete mod.rs transition.*
 De-facto, both `foo/mod.rs` and `foo.rs` are used today.
@@ -18,4 +26,14 @@ Seems better if we sticked with simple one-level nesting only.
 
 *Complex Visibility Rules*
 `pub(crate)` is a lot to type, `pub(in ...)` doesn't pull its weight, imports creating item is confusing and not useful.
-It'd be better to have just `pub` with the meaning of `pub(crate)` and `pub*` for exporting across crate boundary. 
+It'd be better to have just `pub` with the meaning of `pub(crate)` and `pub*` for exporting across crate boundary.
+
+== Standard library
+
+*Ranges*
+
+Ranges should be `#[derive(Copy)`, with all fields public.
+
+*BinaryHeap*
+
+It should be called (and be) a `MinHeap`, with `pop_min` instead of `pop`.

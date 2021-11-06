@@ -18,19 +18,6 @@ pub fn exec(command: &str) -> std::io::Result<String> {
     Ok(stdout.trim().to_string())
 }
 
-#[must_use]
-pub fn defer<F: FnOnce()>(f: F) -> impl Drop {
-    struct D<F: FnOnce()>(Option<F>);
-    impl<F: FnOnce()> Drop for D<F> {
-        fn drop(&mut self) {
-            if let Some(f) = self.0.take() {
-                f()
-            }
-        }
-    }
-    D(Some(f))
-}
-
 pub fn stable_hash<T: std::hash::Hash>(value: &T) -> u64 {
     #![allow(deprecated)]
     let mut hasher = std::hash::SipHasher::default();
@@ -48,4 +35,26 @@ pub fn random_numbers() -> impl Iterator<Item = u32> {
         random ^= random << 5;
         random
     })
+}
+
+#[must_use]
+pub fn timeit(label: impl Into<String>) -> impl Drop {
+    let label = label.into();
+    let now = std::time::Instant::now();
+    defer(move || {
+        eprintln!("{}: {:.2?}", label, now.elapsed())
+    })
+}
+
+#[must_use]
+pub fn defer<F: FnOnce()>(f: F) -> impl Drop {
+    struct D<F: FnOnce()>(Option<F>);
+    impl<F: FnOnce()> Drop for D<F> {
+        fn drop(&mut self) {
+            if let Some(f) = self.0.take() {
+                f()
+            }
+        }
+    }
+    D(Some(f))
 }

@@ -2,7 +2,6 @@
     "[html]": {
         "editor.tabSize": 2
     },
-
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "hidden",
     "window.newWindowDimensions": "maximized",
@@ -28,9 +27,8 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 12,
+    // "editor.fontSize": 16,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-    // "editor.fontSize": 26,
 
     "editor.formatOnType": true,
     "editor.hover.enabled": false,
@@ -126,6 +124,9 @@
             "workbench.action.closeSidebar",
             "workbench.action.closePanel",
             "magit.status",
+        ],
+        "openNotes": [
+            {"command": "vscode.open", "args": {"uri": "/home/matklad/notes.adoc"}},
         ]
     },
 
@@ -136,6 +137,7 @@
     "rust-analyzer.checkOnSave.enable": false,
     "rust-analyzer.server.extraEnv": {
         "RA_PROFILE": "*>16",
+        // "RA_LOG": "rust_analyzer=info",
         // "RA_COUNT": "1"
     },
 

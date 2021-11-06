@@ -1,15 +1,10 @@
-use xshell::{cmd, cwd, mkdir_p, read_dir, rm_rf};
+use xshell::{cwd, mkdir_p, read_dir, rm_rf};
 
 pub(crate) fn run() -> anyhow::Result<()> {
     let mut res = Ok(());
 
     if let Err(err) = rotate_downloads() {
         eprintln!("failed to rotate downloads");
-        res = Err(err);
-    }
-
-    if let Err(err) = set_shortcuts() {
-        eprintln!("failed to set_shortcuts");
         res = Err(err);
     }
 
@@ -29,10 +24,5 @@ pub(crate) fn rotate_downloads() -> anyhow::Result<()> {
             std::fs::rename(cwd.join(&path), cwd.join(".old").join(&path))?
         }
     }
-    Ok(())
-}
-
-pub(crate) fn set_shortcuts() -> anyhow::Result<()> {
-    cmd!("xbindkeys").run()?;
     Ok(())
 }
