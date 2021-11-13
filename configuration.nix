@@ -3,52 +3,24 @@
 #  nix-env -f /home/matklad/projects/nixpkgs -iA jetbrains.idea-community
 #  nixos-rebuild -I nixpkgs=/home/matklad/projects/nixpkgs switch
 
-{ config, pkgs, ... }:
-let
-  # sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
-  # unstable = import <nixos-unstable> { config = config.nixpkgs.config; };
-
-  vscodeInsiders = (pkgs.vscode.override { isInsiders = true; }).overrideAttrs(oldAttrs: rec {
-    name = "vscode-insiders";
-    src = pkgs.fetchurl {
-      name = "VSCode_latest_linux-x64.tar.gz";
-      url = "https://vscode-update.azurewebsites.net/latest/linux-x64/insider";
-      hash = "sha256:0f5cy62c38yqhrhpngayvaa0qpnqlxzm7wnss3i68yv40lc8gj36";
-    };
-  });
-
-  vscodeStable = pkgs.vscode.overrideAttrs(oldAttrs: rec {
-    name = "vscode";
-    version = "1.50.0";
-    src = pkgs.fetchurl {
-      name = "VSCode_latest_linux-x64.tar.gz";
-      url = "https://vscode-update.azurewebsites.net/${version}/linux-x64/stable";
-      hash = "sha256:12nrv037an4f6h8hrbmysc0lk5wm492hywa7lp64n4d308zg5567";
-    };
-  });
-in
-{
-  nix = {
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
+{ config, pkgs, ... }: {
+  nix.extraOptions = "experimental-features = nix-command flakes";
+  nixpkgs.config = {
+    allowUnfree = true;
   };
-  
-  imports = [
-    /etc/nixos/hardware-configuration.nix
-    ./host.nix
-  ];
+
+  networking.hostName = "moby";
+
+  imports = [ ./hardware-configuration.nix ];
 
   programs = {
-    dconf.enable = true;
     fish.enable = true;
     java.enable = true;
-    # java.package = pkgs.jetbrains.jdk;
   };
 
   environment.systemPackages = with pkgs; [
     # GUI
-    (vivaldi.override { proprietaryCodecs = true; enableWidevine = true;})
+    (vivaldi.override { proprietaryCodecs = true; enableWidevine = true; })
     chromium
     filelight
     gimp
@@ -91,11 +63,16 @@ in
     rustup
     valgrind
 
-    # Utils
+    # Archives
     ark
+    unrar
+    unzip
+    atool
+    zip
+
+    # Utils
     asciidoctor
     asciinema
-    atool
     binutils
     curl
     direnv
@@ -108,7 +85,6 @@ in
     gperftools
     graphviz
     htop
-    jumpapp
     linuxPackages.perf
     micro
     nox
@@ -116,16 +92,10 @@ in
     patchelf
     pkgconfig
     s-tui
-    unrar
-    unzip
     v4l-utils
     wally-cli
     wget
     xclip
-    xorg.xkbcomp
-    xorg.xwininfo
-    zip
-    zlib
 
     # Rust stuff
     bat
@@ -140,6 +110,7 @@ in
   services = {
     xserver = {
       enable = true;
+      videoDrivers = [ "amdgpu" ];
       displayManager = {
         sddm = {
           enable = true;
@@ -163,7 +134,6 @@ in
     };
     unclutter-xfixes.enable = true;
     printing.enable = true;
-    emacs.enable = true;
     earlyoom.enable = true;
     pcscd.enable = true;
     openssh = {
@@ -223,10 +193,6 @@ in
 
   time.timeZone = "Europe/Moscow";
 
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
-
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 
   i18n = {
@@ -259,12 +225,10 @@ in
       extraGroups = [ "wheel" "networkmanager" "docker" "audio" "plugdev"];
       uid = 1000;
     };
-  # extraUsers.man.isNormalUser = false;
   };
 
   environment.variables = {
     PATH = "$HOME/.cargo/bin:$HOME/config/bin";
-    RUSTC_FORCE_INCREMENTAL = "1";
     VISUAL = "micro";
     EDITOR = "micro";
   };
