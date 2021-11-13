@@ -28,6 +28,12 @@ let
   });
 in
 {
+  nix = {
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+  
   imports = [
     /etc/nixos/hardware-configuration.nix
     ./host.nix
@@ -138,7 +144,7 @@ in
         sddm = {
           enable = true;
         };
-        autoLogin = { enable = false; user = "matklad"; };
+        autoLogin = { enable = true; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
 
