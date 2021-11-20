@@ -11,7 +11,6 @@ mod git_spinoff;
 mod gpr;
 mod n;
 mod nix;
-mod t;
 mod use_nix;
 
 const TOOLS: &[(&str, fn() -> anyhow::Result<()>)] = &[
@@ -28,7 +27,6 @@ const TOOLS: &[(&str, fn() -> anyhow::Result<()>)] = &[
     ("nixgc", nix::gc),
     ("nixsw", nix::sw),
     ("nixup", nix::up),
-    ("t", t::run),
     ("use-nix", use_nix::run),
 ];
 
