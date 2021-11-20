@@ -13,7 +13,7 @@ pub(crate) fn run() -> anyhow::Result<()> {
         let arg = args.next().context("expected program name")?;
         match arg.as_str() {
             "-i" => ignore_status = true,
-            "-s" => shell = true,
+            "-s" | "--sh" => shell = true,
             _ => {
                 n = arg.parse::<u32>()?;
                 break;

@@ -30,6 +30,7 @@ SETUVAR _fish_abbr_perfr:perf\x20record\x20\x2dF\x209999\x20\x2d\x2dcall\x2dgrap
 SETUVAR _fish_abbr_r_2B_:gh\x20pr\x20comment\x20\x2d\x2dbody\x20\x27bors\x20r\x2b\x27
 SETUVAR _fish_abbr_sw:git\x20switch
 SETUVAR _fish_abbr_swc:git\x20switch\x20\x2dc
+SETUVAR _fish_abbr_swd:git\x20switch\x20\x2dd
 SETUVAR _fish_abbr_swm:git\x20switch\x20master
 SETUVAR _fish_abbr_xp:\x2e/x\x2epy\x20\x2d\x2dstage\x201\x20\x2d\x2dkeep\x2dstage\x201
 SETUVAR _fish_abbr_xpc:\x2e/x\x2epy\x20check
