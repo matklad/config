@@ -11,7 +11,7 @@
   boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/8fa5d3c9-6201-4efb-93e6-f2c14acc8a90";
+    device = "/dev/disk/by-label/nixos";
     fsType = "ext4";
   };
 
