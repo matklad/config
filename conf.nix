@@ -4,7 +4,11 @@
 #  nixos-rebuild -I nixpkgs=/home/matklad/projects/nixpkgs switch
 
 { config, pkgs, ... }: {
-  nix.extraOptions = "experimental-features = nix-command flakes";
+  nix = {
+    extraOptions = "experimental-features = nix-command flakes";
+    registry.nixpkgs.flake = nixpkgs;
+  };
+
   nixpkgs.config = {
     allowUnfree = true;
   };
