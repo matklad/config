@@ -63,8 +63,7 @@
              lldb
              maven
              ninja
-             nodejs-16_x
-             ruby_2_7
+             nodejs-14_x
              rustup
              valgrind
 
@@ -95,7 +94,6 @@
              nox
              ntfs3g
              patchelf
-             pkgconfig
              s-tui
              v4l-utils
              wally-cli
