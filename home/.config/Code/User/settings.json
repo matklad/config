@@ -284,4 +284,7 @@
     "files.associations": {
         "*COMMIT_EDITMSG": "git-commit"
     },
+    "remote.SSH.remotePlatform": {
+        "Ishmael": "linux"
+    },
 }
