@@ -5,7 +5,7 @@ with import <nixpkgs> {};
     python cmake
     openssl zlib libgit2 libxml2 pcre freetype fontconfig
     xorg.libX11 xorg.libXcursor xorg.libXrandr xorg.libXrender xorg.libXi xorg.libXext xorg.libXtst xorg.libxcb
-    libxkbcommon
+    libxkbcommon libevdev
     ncurses
     gtk3 glib
     libGL vulkan-loader
@@ -27,6 +27,7 @@ ${xlibs.libXtst.out}/lib:\
 ${xlibs.libXrender.out}/lib:\
 ${xlibs.libxcb.out}/lib:\
 ${libxkbcommon.out}/lib:\
+${libevdev.out}/lib:\
 ${llvmPackages_10.libclang}/lib:\
 ${libGL}/lib:\
 ${freetype}/lib:\
