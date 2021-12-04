@@ -30,5 +30,5 @@
   swapDevices = [ ];
 
   hardware.video.hidpi.enable = lib.mkDefault true;
-  services.xserver.videoDrivers = [ "amdgpu" ];.
+  services.xserver.videoDrivers = [ "amdgpu" ];
 }
