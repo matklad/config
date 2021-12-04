@@ -90,6 +90,8 @@
 
     "debug.onTaskErrors": "debugAnyway",
 
+    "remote.SSH.useLocalServer": false,
+
     // plugins
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
