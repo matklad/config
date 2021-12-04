@@ -28,4 +28,5 @@
   nix.maxJobs = lib.mkDefault 8;
   powerManagement.cpuFreqGovernor = "powersave";
   services.xserver.videoDrivers = [ "modesetting" ];
+  hardware.enableRedistributableFirmware = true;
 }
