@@ -77,6 +77,8 @@
     gperftools
     graphviz
     htop
+    httpie
+    jq
     linuxPackages.perf
     micro
     nox
