@@ -14,17 +14,18 @@
   environment.systemPackages = with pkgs; [
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = true; })
+    audacious
     chromium
     filelight
     gimp
     jetbrains.idea-community
+    kdialog
     kitty
     obs-studio
     peek
     qbittorrent
     spectacle
     vscode
-    kdialog
 
     # Comms
     slack
