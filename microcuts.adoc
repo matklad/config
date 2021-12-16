@@ -37,3 +37,8 @@ Ranges should be `#[derive(Copy)`, with all fields public.
 *BinaryHeap*
 
 It should be called (and be) a `MinHeap`, with `pop_min` instead of `pop`.
+
+*Map*
+
+Maps and sets should *assert* in `insert!` that the element is new, and use
+`replace` to let the user handle the old value.
