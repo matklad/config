@@ -6,6 +6,7 @@
   ];
 
   networking.hostName = "Ishmael";
+  time.timeZone = "Europe/Portugal";
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = ["wl" "amdgpu" ];
