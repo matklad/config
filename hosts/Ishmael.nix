@@ -32,4 +32,5 @@
 
   hardware.video.hidpi.enable = lib.mkDefault true;
   services.xserver.videoDrivers = [ "amdgpu" ];
+  nix.max-jobs = lib.mkDefault 4;
 }
