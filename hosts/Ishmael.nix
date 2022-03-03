@@ -6,7 +6,7 @@
   ];
 
   networking.hostName = "Ishmael";
-  time.timeZone = "Europe/Portugal";
+  time.timeZone = "Europe/Moscow";
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = ["wl" "amdgpu" ];
@@ -32,5 +32,4 @@
 
   hardware.video.hidpi.enable = lib.mkDefault true;
   services.xserver.videoDrivers = [ "amdgpu" ];
-  nix.max-jobs = lib.mkDefault 4;
 }

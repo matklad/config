@@ -3,6 +3,7 @@
 {
 
   networking.hostName = "Moby";
+  time.timeZone = "Europe/Lisbon";
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.kernelModules = [ "kvm-intel" ];
@@ -25,7 +26,6 @@
 
   swapDevices = [ ];
 
-  nix.max-jobs = lib.mkDefault 8;
   powerManagement.cpuFreqGovernor = "powersave";
   services.xserver.videoDrivers = [ "modesetting" ];
   hardware.enableRedistributableFirmware = true;

@@ -184,8 +184,6 @@
     networkmanager.enable = true;
   };
 
-  time.timeZone = "Europe/Moscow";
-
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 
   i18n = {
