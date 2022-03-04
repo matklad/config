@@ -82,6 +82,7 @@
     jq
     linuxPackages.perf
     micro
+    neovim
     nox
     ntfs3g
     patchelf
