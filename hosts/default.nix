@@ -91,6 +91,7 @@
     wally-cli
     wget
     xclip
+    xorg.xkbcomp
 
     # Rust stuff
     bat

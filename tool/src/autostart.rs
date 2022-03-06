@@ -1,4 +1,7 @@
-use xshell::{cwd, mkdir_p, read_dir, rm_rf};
+use std::env;
+
+use anyhow::Context;
+use xshell::{cwd, mkdir_p, read_dir, rm_rf, cmd};
 
 pub(crate) fn run() -> anyhow::Result<()> {
     let mut res = Ok(());
@@ -8,10 +11,22 @@ pub(crate) fn run() -> anyhow::Result<()> {
         res = Err(err);
     }
 
+    if let Err(err) = set_keymap() {
+        eprintln!("failed to set keymap");
+        res = Err(err);
+    }
+
     res
 }
 
-pub(crate) fn rotate_downloads() -> anyhow::Result<()> {
+fn set_keymap() -> anyhow::Result<()> {
+    let display = env::var("DISPLAY")
+        .context("failed to read $DISPLAY")?;
+    cmd!("xkbcomp /home/matklad/config/home-row.xkb {display}").run()?;
+    Ok(())
+}
+
+fn rotate_downloads() -> anyhow::Result<()> {
     mkdir_p("/home/matklad/downloads")?;
     let _p = xshell::pushd("/home/matklad/downloads")?;
     rm_rf(".old")?;
