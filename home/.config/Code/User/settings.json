@@ -287,4 +287,5 @@
     "remote.SSH.remotePlatform": {
         "Ishmael": "linux"
     },
+    "window.zoomLevel": -1,
 }

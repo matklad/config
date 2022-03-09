@@ -1,4 +1,4 @@
-use std::env;
+use std::{env, time::Duration};
 
 use anyhow::Context;
 use xshell::{cwd, mkdir_p, read_dir, rm_rf, cmd};
@@ -11,6 +11,7 @@ pub(crate) fn run() -> anyhow::Result<()> {
         res = Err(err);
     }
 
+    std::thread::sleep(Duration::from_millis(1500));
     if let Err(err) = set_keymap() {
         eprintln!("failed to set keymap");
         res = Err(err);
