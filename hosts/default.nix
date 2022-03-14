@@ -42,13 +42,13 @@
     # Langs
     (python3.withPackages (py: [ py.requests ]))
     ant
-    clang_12
+    clang_14
     clang-tools
     cmake
     gdb
     gnumake
     jekyll
-    lld_11
+    lld_14
     lldb
     maven
     ninja
