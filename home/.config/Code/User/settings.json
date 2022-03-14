@@ -10,7 +10,7 @@
     "window.titleBarStyle": "native",
 
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Pale Fire High Contrast",
+    "workbench.colorTheme": "Xcode 11 Default Light",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
@@ -27,7 +27,7 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontLigatures": true,
-    // "editor.fontSize": 16,
+    "editor.fontSize": 16,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
 
     "editor.formatOnType": true,
@@ -49,6 +49,7 @@
             }
         }
     },
+    "editor.inlayHints.enabled": true,
 
     // small gutter
     // "editor.folding": false,
