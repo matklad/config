@@ -48,7 +48,6 @@
     jekyll
     llvmPackages_14.bintools
     llvmPackages_14.clang
-    llvmPackages_14.libclang
     llvmPackages_14.stdenv
     lldb_14
     maven
@@ -225,6 +224,7 @@
     PATH = "$HOME/.cargo/bin:$HOME/config/bin";
     VISUAL = "micro";
     EDITOR = "micro";
+    LIBCLANG_PATH = "${llvmPackages_14.clang.cc.lib}/lib";
   };
 
   security = {
