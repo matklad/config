@@ -48,7 +48,7 @@
     gdb
     gnumake
     jekyll
-    lld_14
+    llvmPackages_14.bintools
     lldb
     maven
     ninja
