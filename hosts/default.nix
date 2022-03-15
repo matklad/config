@@ -42,14 +42,15 @@
     # Langs
     (python3.withPackages (py: [ py.requests ]))
     ant
-    clang_14
-    clang-tools
     cmake
     gdb
     gnumake
     jekyll
     llvmPackages_14.bintools
-    lldb
+    llvmPackages_14.clang
+    llvmPackages_14.libclang
+    llvmPackages_14.stdenv
+    lldb_14
     maven
     ninja
     nodejs-14_x
