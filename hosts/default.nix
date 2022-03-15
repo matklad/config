@@ -224,7 +224,7 @@
     PATH = "$HOME/.cargo/bin:$HOME/config/bin";
     VISUAL = "micro";
     EDITOR = "micro";
-    LIBCLANG_PATH = "${llvmPackages_14.clang.cc.lib}/lib";
+    LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";
   };
 
   security = {
