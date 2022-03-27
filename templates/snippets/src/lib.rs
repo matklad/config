@@ -37,13 +37,15 @@ pub fn random_numbers() -> impl Iterator<Item = u32> {
     })
 }
 
+pub fn random_seed() -> u64 {
+    std::hash::BuildHasher::build_hasher(&std::collections::hash_map::RandomState::new()).finish()
+}
+
 #[must_use]
 pub fn timeit(label: impl Into<String>) -> impl Drop {
     let label = label.into();
     let now = std::time::Instant::now();
-    defer(move || {
-        eprintln!("{}: {:.2?}", label, now.elapsed())
-    })
+    defer(move || eprintln!("{}: {:.2?}", label, now.elapsed()))
 }
 
 #[must_use]
