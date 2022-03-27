@@ -93,3 +93,6 @@ https://www.youtube.com/watch?v=443UNeGrFoM&t=6949s
 
 Precise Profiling via rdpmc::
 https://hackmd.io/sH315lO2RuicY-SEt7ynGA?view
+
+JSONMutexDB::
+https://tailscale.com/blog/an-unlikely-database-migration/
