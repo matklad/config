@@ -136,6 +136,7 @@
     "liveServer.settings.donotShowInfoMsg": true,
 
     "rust-analyzer.completion.addCallArgumentSnippets": false,
+    "rust-analyzer.diagnostics.enableExperimental": true,
     "rust-analyzer.callInfo.full": false,
     "rust-analyzer.checkOnSave.enable": false,
     "rust-analyzer.server.extraEnv": {
@@ -288,5 +289,4 @@
     "remote.SSH.remotePlatform": {
         "Ishmael": "linux"
     },
-    "window.zoomLevel": -1,
 }
