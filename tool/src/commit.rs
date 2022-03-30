@@ -4,15 +4,11 @@ use crate::opt_single_arg;
 
 pub(crate) fn run() -> anyhow::Result<()> {
     let message = opt_single_arg()?;
-    match message {
-        Some(message) => {
-            cmd!("git add .").run()?;
-            if cmd!("git --no-pager diff --cached --color=always").run().is_err() {
-                return Ok(());
-            }
-            cmd!("git commit -m {message}").run()?;
-        },
-        None => cmd!("git commit -a").run()?,
-    }
+    let message = message.as_deref().unwrap_or(".");
+
+    cmd!("git add .").run()?;
+    cmd!("git --no-pager diff --cached --color=always").run()?;
+    cmd!("git commit -m {message}").run()?;
+
     Ok(())
 }
