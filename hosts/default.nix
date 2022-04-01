@@ -27,6 +27,7 @@
     qbittorrent
     spectacle
     vscode
+    kate
 
     # Comms
     slack
