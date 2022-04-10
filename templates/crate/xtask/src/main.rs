@@ -1,59 +1,62 @@
-use std::env;
+use std::time::Instant;
 
-use xaction::{cargo_toml, cmd, git, section, Result};
+use xshell::{cmd, Shell};
 
-fn main() {
-    if let Err(err) = try_main() {
-        eprintln!("error: {}", err);
-        std::process::exit(1)
-    }
-}
-
-fn try_main() -> Result<()> {
-    let subcommand = std::env::args().nth(1);
-    match subcommand {
-        Some(it) if it == "ci" => (),
-        _ => {
-            print_usage();
-            Err("invalid arguments")?
-        }
-    }
-
-    let cargo_toml = cargo_toml()?;
+fn main() -> xshell::Result<()> {
+    let sh = Shell::new()?;
 
     {
         let _s = section("BUILD");
-        cmd!("cargo test --workspace --no-run").run()?;
+        cmd!(sh, "cargo test --workspace --no-run").run()?;
     }
 
     {
         let _s = section("TEST");
-        cmd!("cargo test --workspace -- --nocapture").run()?;
+        cmd!(sh, "cargo test --workspace -- --nocapture").run()?;
     }
-
-    let version = cargo_toml.version()?;
-    let tag = format!("v{}", version);
-
-    let dry_run =
-        env::var("CI").is_err() || git::has_tag(&tag)? || git::current_branch()? != "master";
-    xaction::set_dry_run(dry_run);
 
     {
         let _s = section("PUBLISH");
-        cargo_toml.publish()?;
-        git::tag(&tag)?;
-        git::push_tags()?;
+
+        let version = cmd!(sh, "cargo pkgid").read()?.rsplit_once('#').unwrap().1.to_string();
+        let tag = format!("v{version}");
+
+        let current_branch = cmd!(sh, "git branch --show-current").read()?;
+        let has_tag = cmd!(sh, "git tag --list").read()?.lines().any(|it| it.trim() == tag);
+        let dry_run = sh.var("CI").is_err() || has_tag || current_branch != "master";
+        eprintln!("Publishing{}!", if dry_run { " (dry run)" } else { "" });
+
+        let dry_run_arg = if dry_run { Some("--dry-run") } else { None };
+        cmd!(sh, "cargo publish {dry_run_arg...}").run()?;
+        if dry_run {
+            eprintln!("{}", cmd!(sh, "git tag {tag}"));
+            eprintln!("{}", cmd!(sh, "git push --tags"));
+        } else {
+            cmd!(sh, "git tag {tag}").run()?;
+            cmd!(sh, "git push --tags").run()?;
+        }
     }
     Ok(())
 }
 
-fn print_usage() {
-    eprintln!(
-        "\
-Usage: cargo run -p xtask <SUBCOMMAND>
+fn section(name: &'static str) -> impl Drop {
+    println!("::group::{name}");
+    let start = Instant::now();
+    defer(move || {
+        let elapsed = start.elapsed();
+        eprintln!("{name}: {elapsed:.2?}");
+        println!("::endgroup::");
+    })
+}
 
-SUBCOMMANDS:
-    ci
-"
-    )
+fn defer<F: FnOnce()>(f: F) -> impl Drop {
+    struct D<F: FnOnce()>(Option<F>);
+    impl<F: FnOnce()> Drop for D<F> {
+        fn drop(&mut self) {
+            if let Some(f) = self.0.take() {
+                f()
+            }
+        }
+    }
+    D(Some(f))
 }

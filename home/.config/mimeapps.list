@@ -1,4 +1,8 @@
+[Added Associations]
+application/x-extension-html=vivaldi-stable.desktop;
+
 [Default Applications]
+application/x-extension-html=vivaldi-stable.desktop;
 image/jpeg=qView.desktop;
 image/png=qView.desktop;
 inode/directory=org.kde.dolphin.desktop;

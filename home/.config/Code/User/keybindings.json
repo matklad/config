@@ -100,6 +100,11 @@
     "command": "extension.aceJump" },
   { "key": "alt+shift+e",
     "command": "extension.aceJump.selection" },
+  { "key": "alt+n",
+    "command": "jump-and-select.jumpBackward" },
+  { "key": "alt+o",
+    "command": "jump-and-select.jumpForward" },
+
   { "key": "ctrl+i",
     "command": "center-editor-window.center" },
   { "key": "ctrl+y",
@@ -116,7 +121,7 @@
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" },
 
-  { "key": "alt+n",
+  { "key": "alt+w",
     "command": "editor.action.addSelectionToNextFindMatch" },
   { "key": "ctrl+w",
     "command": "editor.action.smartSelect.expand",

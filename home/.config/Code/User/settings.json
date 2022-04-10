@@ -41,6 +41,12 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
     "editor.semanticTokenColorCustomizations": {
+        "[Xcode 11 Default Light]": {
+            "rules": {
+                "unresolvedReference": "#FF0050",
+
+            },
+        },
         "[Pale Fire High Contrast]": {
             "rules": {
                 "unresolvedReference": "#9C6363",
@@ -145,6 +151,8 @@
         // "RA_COUNT": "1"
     },
 
+    "openInGitHub.defaultRemote": "upstream",
+
     "lldb.library": "/nix/store/vkw0nx0c1cfqm68gn9vz0lw1r6ap41p1-lldb-7.1.0/lib/liblldb.so",
 
     "asciidoc.preview.useEditorStyle": false,
@@ -161,7 +169,6 @@
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#00000000",
         "widget.shadow": "#00000000",
-        "editor.foldBackground": "#3F3F3F",
     },
     "cSpell.diagnosticLevel": "Hint",
     "cSpell.numSuggestions": 3,
