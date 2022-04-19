@@ -185,7 +185,10 @@
 
   networking = {
     firewall.enable = true;
-    networkmanager.enable = true;
+    networkmanager = {
+      wifi.backend = "iwd";
+      enable = true;
+    };
   };
 
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
