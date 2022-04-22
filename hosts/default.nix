@@ -48,13 +48,14 @@
     gdb
     gnumake
     jekyll
+    lldb_14
     llvmPackages_14.bintools
     llvmPackages_14.clang
     llvmPackages_14.stdenv
-    lldb_14
     maven
     ninja
     nodejs-14_x
+    protobuf
     rustup
     valgrind
 
@@ -79,6 +80,7 @@
     gitAndTools.gh
     gperftools
     graphviz
+    google-cloud-sdk
     htop
     httpie
     jq
