@@ -83,6 +83,7 @@
     google-cloud-sdk
     htop
     httpie
+    hunspell
     jq
     linuxPackages.perf
     micro
