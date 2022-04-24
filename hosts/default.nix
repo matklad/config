@@ -37,7 +37,7 @@
     # Viewers
     deadbeef-with-plugins
     mpv
-    okular
+    qpdfview
     qview
     smplayer
 
