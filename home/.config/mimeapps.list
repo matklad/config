@@ -1,9 +1,9 @@
 [Added Associations]
-application/pdf=okularApplication_pdf.desktop;
+application/pdf=qpdfview.desktop;
 application/x-extension-html=vivaldi-stable.desktop;
 
 [Default Applications]
-application/pdf=okularApplication_pdf.desktop;
+application/pdf=qpdfview.desktop;
 application/x-extension-html=vivaldi-stable.desktop;
 image/jpeg=qView.desktop;
 image/png=qView.desktop;
@@ -13,4 +13,4 @@ x-scheme-handler/http=vivaldi-stable.desktop;
 x-scheme-handler/https=vivaldi-stable.desktop;
 
 [Removed Associations]
-application/pdf=vivaldi-stable.desktop;chromium-browser.desktop;gimp.desktop;
+application/pdf=vivaldi-stable.desktop;chromium-browser.desktop;gimp.desktop;okularApplication_pdf.desktop;
