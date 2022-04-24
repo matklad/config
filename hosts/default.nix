@@ -84,6 +84,7 @@
     htop
     httpie
     hunspell
+    hunspellDicts.en_US
     jq
     linuxPackages.perf
     micro
