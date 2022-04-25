@@ -3,7 +3,9 @@ use std::path::PathBuf;
 use xshell::Shell;
 
 mod amend;
+mod autopatchelf;
 mod autostart;
+mod autowatch;
 mod commit;
 mod gbda;
 mod gbors;
@@ -17,7 +19,9 @@ mod use_nix;
 
 const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("amend", amend::run),
+    ("autopatchelf", autopatchelf::run),
     ("autostart", autostart::run),
+    ("autowatch", autowatch::run),
     ("commit", commit::run),
     ("gbda", gbda::run),
     ("gbors", gbors::run),

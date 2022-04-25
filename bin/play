@@ -1,8 +1,0 @@
-#!/usr/bin/env julia
-rm("/tmp/playground", force=true, recursive=true)
-mkdir("/tmp/playground")
-cd("/tmp/playground")
-
-run(`cargo init --bin .`)
-run(`code -n .`)
-run(`code src/main.rs`)

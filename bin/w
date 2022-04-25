@@ -1,7 +1,0 @@
-#!/usr/bin/env -S julia --
-files = [f for f = ARGS if isfile(f)]
-open(`entr -r $ARGS`; write = true) do io
-    for f = files
-        println(io, f)
-    end
-end
