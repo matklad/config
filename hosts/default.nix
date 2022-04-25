@@ -235,6 +235,7 @@
   environment = {
     homeBinInPath = true;
     variables = {
+      PATH = "$HOME/.cargo/bin";
       VISUAL = "hx";
       EDITOR = "hx";
       LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";

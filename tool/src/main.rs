@@ -69,8 +69,8 @@ fn single_arg_impl() -> Result<Option<String>, ()> {
 fn link_me_up() {
     use xshell::cmd;
 
-    let bin = std::path::Path::new("../bin");
-
+    let bin = std::path::Path::new("/home/matklad/bin");
+    xshell::mkdir_p(&bin).unwrap();
     cmd!("cargo build --release").run().unwrap();
 
     for &(tool, _) in TOOLS {
@@ -80,8 +80,6 @@ fn link_me_up() {
         xshell::hard_link("./target/release/tool", &dst).unwrap();
     }
 
-    let ignore = TOOLS.iter().map(|&(name, _)| name).collect::<Vec<_>>().join("\n");
-    xshell::write_file("../bin/.gitignore", ignore).unwrap();
 
     let home: PathBuf = "/home/matklad/".into();
     let config_home = home.join("config/home");
