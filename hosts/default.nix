@@ -235,8 +235,8 @@
   environment = {
     homeBinInPath = true;
     variables = {
-      VISUAL = "micro";
-      EDITOR = "micro";
+      VISUAL = "hx";
+      EDITOR = "hx";
       # LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";
       NIX_PATH = "nixpkgs=${pkgs.path}";
     };
