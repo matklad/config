@@ -2,7 +2,7 @@
 
   nix = {
     extraOptions = "experimental-features = nix-command flakes";
-    nixPath = [ "nixpkgs=${pkgs.path}" ];
+    nixPath = ["nixpkgs=${pkgs.path}" ];
   };
 
   nixpkgs.config = {
@@ -232,11 +232,14 @@
     };
   };
 
-  environment.variables = {
-    PATH = "$HOME/.cargo/bin:$HOME/config/bin";
-    VISUAL = "micro";
-    EDITOR = "micro";
-    LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";
+  environment = {
+    homeBinInPath = true;
+    variables = {
+      VISUAL = "micro";
+      EDITOR = "micro";
+      # LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";
+      NIX_PATH = "nixpkgs=${pkgs.path}";
+    };
   };
 
   security = {
