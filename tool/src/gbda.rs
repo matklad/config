@@ -1,7 +1,7 @@
-use xshell::cmd;
+use xshell::{cmd, Shell};
 
-pub(crate) fn run() -> anyhow::Result<()> {
-    let branches = cmd!("git branch --merged").read()?;
+pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
+    let branches = cmd!(sh, "git branch --merged").read()?;
     let branches: Vec<_> = branches
         .lines()
         .map(str::trim)
@@ -12,6 +12,6 @@ pub(crate) fn run() -> anyhow::Result<()> {
         return Ok(());
     }
 
-    cmd!("git branch -D {branches...}").run()?;
+    cmd!(sh, "git branch -D {branches...}").run()?;
     Ok(())
 }

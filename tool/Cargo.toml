@@ -5,4 +5,4 @@ edition = "2018"
 
 [dependencies]
 anyhow = "1"
-xshell = "0.1.16"
+xshell = "0.2.1"

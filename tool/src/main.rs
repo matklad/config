@@ -1,5 +1,7 @@
 use std::path::PathBuf;
 
+use xshell::Shell;
+
 mod amend;
 mod autostart;
 mod commit;
@@ -13,7 +15,7 @@ mod n;
 mod nix;
 mod use_nix;
 
-const TOOLS: &[(&str, fn() -> anyhow::Result<()>)] = &[
+const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("amend", amend::run),
     ("autostart", autostart::run),
     ("commit", commit::run),
@@ -38,8 +40,8 @@ fn main() -> anyhow::Result<()> {
         .iter()
         .find(|&&(name, _run)| name == progn)
         .ok_or_else(|| anyhow::format_err!("unknown tool: `{}`", progn))?;
-
-    run()
+    let sh = Shell::new()?;
+    run(&sh)
 }
 
 fn single_arg() -> anyhow::Result<String> {
@@ -67,27 +69,27 @@ fn single_arg_impl() -> Result<Option<String>, ()> {
 
 #[test]
 fn link_me_up() {
-    use xshell::cmd;
+    use xshell::{cmd, Shell};
 
+    let sh = Shell::new().unwrap();
     let bin = std::path::Path::new("/home/matklad/bin");
-    xshell::mkdir_p(&bin).unwrap();
-    cmd!("cargo build --release").run().unwrap();
+    sh.create_dir(&bin).unwrap();
+    cmd!(sh, "cargo build --release").run().unwrap();
 
     for &(tool, _) in TOOLS {
         let dst = bin.join(tool);
-        xshell::rm_rf(&dst).unwrap();
-        let _ = cmd!("git rm {dst} -f").echo_cmd(false).ignore_stderr().run();
-        xshell::hard_link("./target/release/tool", &dst).unwrap();
+        sh.remove_path(&dst).unwrap();
+        let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();
+        sh.hard_link("./target/release/tool", &dst).unwrap();
     }
-
 
     let home: PathBuf = "/home/matklad/".into();
     let config_home = home.join("config/home");
     for abs_path in walkdir(config_home.clone()).unwrap() {
         let rel_path = abs_path.strip_prefix(&config_home).unwrap();
         let dest = home.join(rel_path);
-        xshell::rm_rf(&dest).unwrap();
-        xshell::mkdir_p(dest.parent().unwrap()).unwrap();
+        sh.remove_path(&dest).unwrap();
+        sh.create_dir(dest.parent().unwrap()).unwrap();
         std::os::unix::fs::symlink(abs_path, dest).unwrap();
     }
 

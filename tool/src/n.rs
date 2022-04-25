@@ -1,7 +1,7 @@
 use anyhow::Context;
-use xshell::cmd;
+use xshell::{cmd, Shell};
 
-pub(crate) fn run() -> anyhow::Result<()> {
+pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
     let mut args = std::env::args();
     let _progn = args.next();
 
@@ -33,13 +33,13 @@ pub(crate) fn run() -> anyhow::Result<()> {
         Task::Command { progn, args }
     };
 
-    for i in 0..n {
-        eprintln!("Run {}", i + 1);
+    for i in 1..n + 1 {
+        eprintln!("Run {i}");
         let mut cmd = match &task {
-            Task::Command { progn, args } => cmd!("{progn} {args...}"),
-            Task::Shell { script } => cmd!("fish -c {script}"),
+            Task::Command { progn, args } => cmd!(sh, "{progn} {args...}"),
+            Task::Shell { script } => cmd!(sh, "fish -c {script}"),
         }
-        .echo_cmd(false);
+        .quiet();
         if ignore_status {
             cmd = cmd.ignore_status();
         }

@@ -1,18 +1,18 @@
-use std::{env, time::Duration};
+use std::time::Duration;
 
 use anyhow::Context;
-use xshell::{cwd, mkdir_p, read_dir, rm_rf, cmd};
+use xshell::{cmd, Shell};
 
-pub(crate) fn run() -> anyhow::Result<()> {
+pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
     let mut res = Ok(());
 
-    if let Err(err) = rotate_downloads() {
+    if let Err(err) = rotate_downloads(sh) {
         eprintln!("failed to rotate downloads");
         res = Err(err);
     }
 
     std::thread::sleep(Duration::from_millis(1500));
-    if let Err(err) = set_keymap() {
+    if let Err(err) = set_keymap(sh) {
         eprintln!("failed to set keymap");
         res = Err(err);
     }
@@ -20,22 +20,21 @@ pub(crate) fn run() -> anyhow::Result<()> {
     res
 }
 
-fn set_keymap() -> anyhow::Result<()> {
-    let display = env::var("DISPLAY")
-        .context("failed to read $DISPLAY")?;
-    cmd!("xkbcomp /home/matklad/config/home-row.xkb {display}").run()?;
+fn set_keymap(sh: &Shell) -> anyhow::Result<()> {
+    let display = sh.var("DISPLAY").context("failed to read $DISPLAY")?;
+    cmd!(sh, "xkbcomp /home/matklad/config/home-row.xkb {display}").run()?;
     Ok(())
 }
 
-fn rotate_downloads() -> anyhow::Result<()> {
-    mkdir_p("/home/matklad/downloads")?;
-    let _p = xshell::pushd("/home/matklad/downloads")?;
-    rm_rf(".old")?;
+fn rotate_downloads(sh: &Shell) -> anyhow::Result<()> {
+    sh.create_dir("/home/matklad/downloads")?;
+    let _p = sh.push_dir("/home/matklad/downloads");
+    sh.remove_path(".old")?;
 
-    let new = read_dir(".")?;
+    let new = sh.read_dir(".")?;
     if !new.is_empty() {
-        mkdir_p(".old")?;
-        let cwd = cwd()?;
+        sh.create_dir(".old")?;
+        let cwd = sh.current_dir();
         for path in new {
             std::fs::rename(cwd.join(&path), cwd.join(".old").join(&path))?
         }

@@ -1,29 +1,32 @@
-use xshell::cmd;
+use xshell::{cmd, Shell};
 
 use crate::opt_single_arg;
 
-pub(crate) fn run() -> anyhow::Result<()> {
+pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
     let title_arg = opt_single_arg()?;
 
-    cmd!("git fetch upstream").read()?;
-    let commits = cmd!("git cherry upstream/master").read()?;
+    cmd!(sh, "git fetch upstream").read()?;
+    let commits = cmd!(sh, "git cherry upstream/master").read()?;
     let commits: Vec<&str> = commits.lines().filter_map(|it| it.strip_prefix("+ ")).collect();
 
     let (title, mut body) = if let Some(title) = title_arg {
         (title, String::new())
     } else if commits.len() == 1 {
-        let message = get_message(commits[0])?;
+        let message = get_message(sh, commits[0])?;
         split_subject(&message)
     } else {
-        let all_messages =
-            commits.into_iter().map(get_message).collect::<anyhow::Result<Vec<_>>>()?.join("\n\n");
+        let all_messages = commits
+            .into_iter()
+            .map(|it| get_message(sh, it))
+            .collect::<anyhow::Result<Vec<_>>>()?
+            .join("\n\n");
 
         let edited_message = {
-            let tmpd = xshell::mktemp_d()?;
+            let tmpd = sh.create_temp_dir()?;
             let message_file = tmpd.path().join("PR_EDIT_MESSAGE");
-            xshell::write_file(&message_file, all_messages)?;
-            cmd!("micro {message_file}").run()?;
-            xshell::read_file(&message_file)?
+            sh.write_file(&message_file, all_messages)?;
+            cmd!(sh, "micro {message_file}").run()?;
+            sh.read_file(&message_file)?
         };
 
         split_subject(edited_message.trim())
@@ -34,14 +37,14 @@ pub(crate) fn run() -> anyhow::Result<()> {
     }
     body.push_str("bors r+\n🤖");
 
-    cmd!("git push --set-upstream origin").run()?;
-    cmd!("gh pr create --title {title} --body {body}").run()?;
+    cmd!(sh, "git push --set-upstream origin").run()?;
+    cmd!(sh, "gh pr create --title {title} --body {body}").run()?;
 
     Ok(())
 }
 
-fn get_message(commit_hash: &str) -> anyhow::Result<String> {
-    let res = cmd!("git show -s --format='%s\n%b' {commit_hash}").read()?;
+fn get_message(sh: &Shell, commit_hash: &str) -> anyhow::Result<String> {
+    let res = cmd!(sh, "git show -s --format='%s\n%b' {commit_hash}").read()?;
     Ok(res)
 }
 
