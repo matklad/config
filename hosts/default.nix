@@ -1,6 +1,9 @@
 { config, pkgs, ... }: {
 
-  nix.extraOptions = "experimental-features = nix-command flakes";
+  nix = {
+    extraOptions = "experimental-features = nix-command flakes";
+    nixPath = [ "nixpkgs=${pkgs.path}" ];
+  };
 
   nixpkgs.config = {
     allowUnfree = true;
