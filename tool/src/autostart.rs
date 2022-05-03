@@ -22,7 +22,7 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
 
 fn set_keymap(sh: &Shell) -> anyhow::Result<()> {
     let display = sh.var("DISPLAY").context("failed to read $DISPLAY")?;
-    cmd!(sh, "xkbcomp /home/matklad/config/home-row.xkb {display}").run()?;
+    cmd!(sh, "xkbcomp /home/matklad/config/home-row.xkb {display}").ignore_stderr().run()?;
     Ok(())
 }
 
@@ -36,7 +36,8 @@ fn rotate_downloads(sh: &Shell) -> anyhow::Result<()> {
         sh.create_dir(".old")?;
         let cwd = sh.current_dir();
         for path in new {
-            std::fs::rename(cwd.join(&path), cwd.join(".old").join(&path))?
+            let new_path = cwd.join(".old").join(path.strip_prefix(&cwd).unwrap());
+            std::fs::rename(path, new_path)?
         }
     }
     Ok(())
