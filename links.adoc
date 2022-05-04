@@ -96,3 +96,6 @@ https://hackmd.io/sH315lO2RuicY-SEt7ynGA?view
 
 JSONMutexDB::
 https://tailscale.com/blog/an-unlikely-database-migration/
+
+Swift Is Undecidable::
+https://forums.swift.org/t/swift-type-checking-is-undecidable/39024
