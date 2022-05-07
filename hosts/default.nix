@@ -193,7 +193,7 @@
   networking = {
     firewall.enable = true;
     networkmanager = {
-      wifi.backend = "iwd";
+      # wifi.backend = "iwd";
       enable = true;
     };
   };
