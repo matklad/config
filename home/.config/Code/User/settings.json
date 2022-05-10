@@ -34,7 +34,6 @@
     "editor.hover.enabled": false,
     "editor.minimap.enabled": false,
     "editor.parameterHints.enabled": false,
-    "editor.renderIndentGuides": false,
     "editor.renderWhitespace": "none",
     "editor.roundedSelection": false,
     "editor.semanticHighlighting.enabled": true,
@@ -296,4 +295,5 @@
     "remote.SSH.remotePlatform": {
         "Ishmael": "linux"
     },
+    "editor.guides.indentation": false,
 }
