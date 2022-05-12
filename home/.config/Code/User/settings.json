@@ -141,7 +141,6 @@
     "liveServer.settings.donotShowInfoMsg": true,
 
     "rust-analyzer.completion.addCallArgumentSnippets": false,
-    "rust-analyzer.diagnostics.enableExperimental": true,
     "rust-analyzer.callInfo.full": false,
     "rust-analyzer.checkOnSave.enable": false,
     "rust-analyzer.server.extraEnv": {
@@ -296,4 +295,5 @@
         "Ishmael": "linux"
     },
     "editor.guides.indentation": false,
+    "rust-analyzer.diagnostics.experimental.enable": true,
 }

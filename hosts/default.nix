@@ -17,7 +17,7 @@
 
   environment.systemPackages = with pkgs; [
     # GUI
-    (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
+    (vivaldi.override { proprietaryCodecs = true; enableWidevine = true; })
     audacious
     chromium
     filelight
