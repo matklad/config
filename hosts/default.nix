@@ -17,7 +17,7 @@
 
   environment.systemPackages = with pkgs; [
     # GUI
-    (vivaldi.override { proprietaryCodecs = true; enableWidevine = true; })
+    (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     audacious
     chromium
     filelight
@@ -101,6 +101,7 @@
     wget
     xclip
     xorg.xkbcomp
+    pciutils
 
     # Rust stuff
     bat
@@ -168,18 +169,6 @@
   hardware = {
     keyboard.zsa.enable = true;
     pulseaudio = { enable = true; package = pkgs.pulseaudioFull; };
-    bluetooth.enable = true;
-    opengl = {
-      enable = true;
-      setLdLibraryPath = true;
-      extraPackages = [
-        pkgs.libGL
-        pkgs.vaapiIntel
-        pkgs.vaapiVdpau
-        pkgs.libvdpau-va-gl
-        pkgs.intel-media-driver
-      ];
-    };
   };
 
   virtualisation = {
