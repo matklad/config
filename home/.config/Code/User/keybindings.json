@@ -30,6 +30,8 @@
   { "key": "ctrl+alt+shift+h",
     "command": "editor.action.showHover",
     "when": "editorTextFocus" },
+  {  "key": "alt+.",
+     "command": "open-notes.open" },
 
 // Folding
   { "key": "ctrl+,",
@@ -209,5 +211,6 @@
   { "key": "ctrl+y",
     "command": "-redo" },
   { "key": "ctrl+[", "command": "-editor.action.outdentLines" },
-  { "key": "ctrl+]", "command": "-editor.action.indentLines" }
+  { "key": "ctrl+]", "command": "-editor.action.indentLines" },
+  { "key": "ctrl+.", "command": "-editor.action.codeAction" },
 ]
