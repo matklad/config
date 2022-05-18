@@ -13,6 +13,7 @@
   };
 
   hardware = {
+    bluetooth.enable = true;
     enableRedistributableFirmware = true;
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };

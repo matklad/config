@@ -140,7 +140,7 @@
 
     "liveServer.settings.donotShowInfoMsg": true,
 
-    "rust-analyzer.completion.addCallArgumentSnippets": false,
+    "rust-analyzer.completion.callable.snippets": "add_parentheses",
     "rust-analyzer.callInfo.full": false,
     "rust-analyzer.checkOnSave.enable": false,
     "rust-analyzer.server.extraEnv": {
