@@ -144,7 +144,7 @@
     "rust-analyzer.callInfo.full": false,
     "rust-analyzer.checkOnSave.enable": false,
     "rust-analyzer.server.extraEnv": {
-        "RA_PROFILE": "*>16",
+        // "RA_PROFILE": "*>16",
         // "RA_LOG": "rust_analyzer=info",
         // "RA_COUNT": "1"
     },
