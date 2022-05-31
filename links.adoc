@@ -105,3 +105,6 @@ https://forums.swift.org/t/swift-type-checking-is-undecidable/39024
 
 Don Syme of F# on typeclasses::
 https://github.com/fsharp/fslang-suggestions/issues/243#issuecomment-916079347
+
+Outlined Containers::
+https://github.com/rust-lang/rust/pull/60470#issuecomment-489136965
