@@ -1,0 +1,7 @@
+{
+  "description": "https://github.com/matklad/feeds.json",
+  "entries": [
+    { "title": "matklad", "url": "https://matklad.github.io/feed.xml" },
+    { "title": "thegreenplace", "url": "https://eli.thegreenplace.net/feeds/all.atom.xml" }
+  ]
+}
