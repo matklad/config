@@ -205,9 +205,7 @@
       inconsolata
       noto-fonts
       noto-fonts-emoji
-      iosevka
       jetbrains-mono
-      # nerdfonts
     ];
   };
 

@@ -12,3 +12,6 @@
 	prune = true
 [feature]
 	manyFiles = true
+[diff]
+	colormovedws = allow-indentation-change
+	colormoved = default
