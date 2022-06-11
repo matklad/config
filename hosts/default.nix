@@ -43,6 +43,7 @@
     qpdfview
     qview
     smplayer
+    vlc
 
     # Langs
     (python3.withPackages (py: [ py.requests ]))
