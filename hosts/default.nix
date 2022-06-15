@@ -226,6 +226,7 @@
       VISUAL = "micro";
       EDITOR = "micro";
       LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";
+      RUST_BACKTRACE = "short";
     };
   };
 

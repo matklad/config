@@ -9,6 +9,8 @@ SETUVAR _fish_abbr_c:code
 SETUVAR _fish_abbr_ca:cargo
 SETUVAR _fish_abbr_cat:bat
 SETUVAR _fish_abbr_cc:code
+SETUVAR _fish_abbr_ct:cargo\x20t\x20\x2d\x2d\x20\x2dq
+SETUVAR _fish_abbr_ctn:cargo\x20t\x20\x2dq\x20\x2d\x2dno\x2drun
 SETUVAR _fish_abbr_ctrlc:xclip\x20\x2dselection\x20c
 SETUVAR _fish_abbr_ctrlv:xclip\x20\x2dselection\x20c\x20\x2do
 SETUVAR _fish_abbr_e:micro
