@@ -69,6 +69,7 @@
     unzip
     atool
     zip
+    p7zip
 
     # Utils
     asciidoctor
