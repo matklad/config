@@ -104,6 +104,7 @@
     xclip
     xorg.xkbcomp
     pciutils
+    libimobiledevice
 
     # Rust stuff
     bat
@@ -147,6 +148,7 @@
       enable = true;
       passwordAuthentication = false;
     };
+    usbmuxd.enable = true;
   };
   console.useXkbConfig = true;
   xdg = {
