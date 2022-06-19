@@ -25,7 +25,7 @@
     "editor.cursorStyle": "block",
     "editor.cursorSurroundingLines": 5,
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.fontFamily": "'JuliaMono'",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
@@ -298,4 +298,5 @@
     },
     "editor.guides.indentation": false,
     "rust-analyzer.diagnostics.experimental.enable": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
 }

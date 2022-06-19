@@ -49,6 +49,7 @@
     (python3.withPackages (py: [ py.requests ]))
     ant
     cmake
+    deno
     gdb
     gnumake
     jekyll
@@ -210,6 +211,7 @@
       noto-fonts
       noto-fonts-emoji
       jetbrains-mono
+      julia-mono
     ];
   };
 
