@@ -15,6 +15,7 @@ mod git_spinoff;
 mod gpr;
 mod n;
 mod nix;
+mod prf;
 mod use_nix;
 
 const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
@@ -33,6 +34,7 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("nixgc", nix::gc),
     ("nixsw", nix::sw),
     ("nixup", nix::up),
+    ("prf", prf::run),
     ("use-nix", use_nix::run),
 ];
 
