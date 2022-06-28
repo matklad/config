@@ -46,7 +46,7 @@
     vlc
 
     # Langs
-    (python3.withPackages (py: [ py.requests ]))
+    (python3.withPackages (py: [py.requests py.pip]))
     ant
     cmake
     deno
