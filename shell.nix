@@ -18,14 +18,14 @@ with import <nixpkgs> {};
     export LIBCLANG_PATH="${llvmPackages_13.libclang.lib}/lib"
     export LD_LIBRARY_PATH="\
 ${vulkan-loader}/lib:\
-${xlibs.libX11.out}/lib:\
-${xlibs.libXcursor.out}/lib:\
-${xlibs.libXrandr.out}/lib:\
-${xlibs.libXi.out}/lib:\
-${xlibs.libXext.out}/lib:\
-${xlibs.libXtst.out}/lib:\
-${xlibs.libXrender.out}/lib:\
-${xlibs.libxcb.out}/lib:\
+${xorg.libX11.out}/lib:\
+${xorg.libXcursor.out}/lib:\
+${xorg.libXrandr.out}/lib:\
+${xorg.libXi.out}/lib:\
+${xorg.libXext.out}/lib:\
+${xorg.libXtst.out}/lib:\
+${xorg.libXrender.out}/lib:\
+${xorg.libxcb.out}/lib:\
 ${libxkbcommon.out}/lib:\
 ${libevdev.out}/lib:\
 ${llvmPackages_10.libclang}/lib:\
@@ -37,5 +37,6 @@ ${openssl.out}/lib:\
 ${zlib}/lib:\
 ${glib.out}/lib:\
 ${nettle.out}/lib:\
+${stdenv.cc.cc.lib}/lib:\
 "'';
 }

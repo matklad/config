@@ -16,6 +16,21 @@
   };
 
   environment.systemPackages = with pkgs; [
+    (pkgs.buildFHSUserEnv {
+      name = "fhs";
+      targetPkgs = pkgs: with pkgs; [
+        alsaLib atk cairo cups dbus expat file fontconfig freetype glib
+        libnotify libxml2 libxslt
+        libGL vulkan-loader
+        netcat nspr nss openjdk8 strace udev watch wget which xorg.libX11
+        xorg.libXScrnSaver xorg.libXcomposite xorg.libXcursor xorg.libXdamage
+        xorg.libXext xorg.libXfixes xorg.libXi xorg.libXrandr xorg.libXrender
+        xorg.libXtst xorg.libxcb xorg.xcbutilkeysyms xorg.libxshmfence
+        zlib fish
+      ];
+      runScript = "fish";
+    })
+
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     audacious
