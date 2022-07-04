@@ -1,3 +1,4 @@
 shell.nix
 .nix-shell-inputs
 .envrc
+.direnv/
