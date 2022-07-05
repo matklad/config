@@ -7,7 +7,10 @@ pub(crate) fn gc(sh: &Shell) -> anyhow::Result<()> {
 }
 
 pub(crate) fn sw(sh: &Shell) -> anyhow::Result<()> {
-    cmd!(sh, "nixos-rebuild switch").run()?;
+    if !cmd!(sh, "git status --porcelain").read()?.is_empty() {
+        cmd!(sh, "git commit -a -m .").run()?;
+    }
+    cmd!(sh, "doas nixos-rebuild switch").run()?;
     Ok(())
 }
 
