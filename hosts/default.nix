@@ -139,6 +139,7 @@
         sddm = {
           enable = true;
         };
+        # defaultSession = "plasmawayland";
         autoLogin = { enable = true; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
