@@ -15,7 +15,7 @@
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
-    # nvidia.modesetting.enable = true;
+    nvidia.modesetting.enable = true;
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
   services.xserver.videoDrivers = [ "intel" "nvidia" ];
