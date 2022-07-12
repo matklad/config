@@ -139,8 +139,8 @@
         sddm = {
           enable = true;
         };
-        # defaultSession = "plasmawayland";
-        autoLogin = { enable = true; user = "matklad"; };
+        defaultSession = "plasmawayland";
+        autoLogin = { enable = false; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
 
