@@ -1,7 +1,7 @@
 use xshell::{cmd, Shell};
 
 pub(crate) fn gc(sh: &Shell) -> anyhow::Result<()> {
-    cmd!(sh, "nix-collect-garbage -d").run()?;
+    cmd!(sh, "doas nix-collect-garbage -d").run()?;
     cmd!(sh, "doas /nix/var/nix/profiles/system/bin/switch-to-configuration switch").run()?;
     Ok(())
 }
