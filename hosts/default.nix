@@ -74,7 +74,7 @@
     llvmPackages_14.stdenv
     maven
     ninja
-    nodejs-14_x
+    nodejs
     protobuf
     rustup
     valgrind
