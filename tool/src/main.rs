@@ -32,7 +32,6 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("gpr", gpr::run),
     ("n", n::run),
     ("nixgc", nix::gc),
-    ("nixsw", nix::sw),
     ("nixup", nix::up),
     ("prf", prf::run),
     ("use-nix", use_nix::run),
