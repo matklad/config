@@ -53,7 +53,7 @@
     zoom-us
 
     # Viewers
-    deadbeef-with-plugins
+    audacious
     mpv
     qpdfview
     qview
