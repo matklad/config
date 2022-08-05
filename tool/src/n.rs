@@ -6,14 +6,12 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
     let _progn = args.next();
 
     let mut ignore_status = false;
-    let mut shell = false;
     let n: u32;
 
     loop {
-        let arg = args.next().context("expected program name")?;
+        let arg = args.next().context("expected number of iterations")?;
         match arg.as_str() {
             "-i" => ignore_status = true,
-            "-s" | "--sh" => shell = true,
             _ => {
                 n = arg.parse::<u32>()?;
                 break;
@@ -21,15 +19,12 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
         }
     }
 
-    let task = if shell {
-        let script = args.next().context("expected a script")?;
-        if let Some(arg) = args.next() {
-            anyhow::bail!("unexpected argument: {}", arg)
-        }
-        Task::Shell { script }
+    let progn = args.next().context("expected command")?;
+    let args = args.collect::<Vec<_>>();
+
+    let task = if args.is_empty() && progn.contains(' ') {
+        Task::Shell { script: progn }
     } else {
-        let progn = args.next().context("expected program name")?;
-        let args = args.collect();
         Task::Command { progn, args }
     };
 
