@@ -246,6 +246,7 @@
         "toolchain",
         "unexpanded",
         "Uninit",
+        "unsign",
         "unwatch",
         "usize",
         "valgrind",
