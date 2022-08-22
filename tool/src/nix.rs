@@ -24,7 +24,7 @@ pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
         cmd!(sh, "git --no-pager diff --cached --color=always").run()?;
         cmd!(sh, "git commit -m .").run()?;
     }
-    cmd!(sh, "doas nixos-rebuild switch").run()?;
     cmd!(sh, "doas rm -rf /var/lib/sddm/.cache").run()?;
+    cmd!(sh, "doas nixos-rebuild switch").run()?;
     Ok(())
 }
