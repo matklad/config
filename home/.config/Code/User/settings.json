@@ -8,8 +8,6 @@
     "window.restoreWindows": "none",
     "window.title": "${rootName}",
     "window.titleBarStyle": "native",
-
-    "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Xcode 11 Default Light",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
@@ -300,4 +298,5 @@
     "editor.guides.indentation": false,
     "rust-analyzer.diagnostics.experimental.enable": true,
     "editor.unicodeHighlight.ambiguousCharacters": false,
+    "workbench.activityBar.visible": false,
 }

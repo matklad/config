@@ -45,12 +45,9 @@
     qbittorrent
     spectacle
     vscode
-    kate
 
     # Comms
-    slack
     tdesktop
-    zoom-us
 
     # Viewers
     audacious
@@ -101,7 +98,6 @@
     gitAndTools.gh
     gperftools
     graphviz
-    google-cloud-sdk
     htop
     httpie
     hunspell
@@ -120,7 +116,6 @@
     xclip
     xorg.xkbcomp
     pciutils
-    libimobiledevice
 
     # Rust stuff
     bat
