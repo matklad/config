@@ -15,7 +15,7 @@
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
-    nvidia.modesetting.enable = true;
+    # nvidia.modesetting.enable = true;
     nvidia.prime = {
       sync.enable = true;
       nvidiaBusId = "PCI:1:0:0";

@@ -19,7 +19,7 @@
     (pkgs.buildFHSUserEnv {
       name = "fhs";
       targetPkgs = pkgs: with pkgs; [
-        alsaLib atk cairo cups dbus expat file fontconfig freetype glib
+        alsa-lib atk cairo cups dbus expat file fontconfig freetype glib
         libnotify libxml2 libxslt
         libGL vulkan-loader
         netcat nspr nss openjdk8 strace udev watch wget which xorg.libX11
@@ -55,7 +55,6 @@
     qpdfview
     qview
     smplayer
-    vlc
 
     # Langs
     (python3.withPackages (py: [py.requests]))
