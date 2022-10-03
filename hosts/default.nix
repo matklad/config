@@ -48,6 +48,7 @@
 
     # Comms
     tdesktop
+    zoom-us
 
     # Viewers
     audacious
