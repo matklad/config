@@ -1,9 +1,8 @@
 use xshell::{cmd, Shell};
 
-use crate::single_arg;
-
 pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
-    let newbranch = single_arg()?;
+    let flags = xflags::parse_or_exit! { required branch: String };
+    let newbranch = flags.branch;
 
     let fullbranch = cmd!(sh, "git symbolic-ref -q HEAD").read()?;
     let u = "{u}";

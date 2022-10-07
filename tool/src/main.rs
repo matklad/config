@@ -59,10 +59,6 @@ fn single_arg() -> anyhow::Result<String> {
     }
 }
 
-fn opt_single_arg() -> anyhow::Result<Option<String>> {
-    single_arg_impl().map_err(|()| anyhow::format_err!("expected at most one argument"))
-}
-
 fn single_arg_impl() -> Result<Option<String>, ()> {
     let mut args = std::env::args();
     let _progn = args.next();

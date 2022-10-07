@@ -1,15 +1,16 @@
 use xshell::{cmd, Shell};
 
-use crate::opt_single_arg;
-
 pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
-    let title_arg = opt_single_arg()?;
+    let flags = xflags::parse_or_exit! {
+        /// Pull request title.
+        optional title: String
+    };
 
     cmd!(sh, "git fetch upstream").read()?;
     let commits = cmd!(sh, "git cherry upstream/master").read()?;
     let commits: Vec<&str> = commits.lines().filter_map(|it| it.strip_prefix("+ ")).collect();
 
-    let (title, mut body) = if let Some(title) = title_arg {
+    let (title, mut body) = if let Some(title) = flags.title {
         (title, String::new())
     } else if commits.len() == 1 {
         let message = get_message(sh, commits[0])?;

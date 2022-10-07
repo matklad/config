@@ -1,14 +1,15 @@
 use xshell::{cmd, Shell};
 
-use crate::opt_single_arg;
-
 pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
-    let commit = opt_single_arg()?;
+    let flags = xflags::parse_or_exit! { optional commit: String };
 
-    cmd!(sh, "git fetch upstream").run()?;
-    match commit {
-        None => cmd!(sh, "git rebase upstream/master"),
-        Some(commit) => cmd!(sh, "git rebase --onto upstream/master {commit}^"),
+    let remote =
+        if cmd!(sh, "git remote").read()?.contains("upstream") { "upstream" } else { "origin" };
+
+    cmd!(sh, "git fetch {remote}").run()?;
+    match flags.commit {
+        None => cmd!(sh, "git rebase {remote}/master"),
+        Some(commit) => cmd!(sh, "git rebase --onto {remote}/master {commit}^"),
     }
     .run()?;
     Ok(())
