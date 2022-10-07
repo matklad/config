@@ -7,6 +7,7 @@ mod autopatchelf;
 mod autostart;
 mod autowatch;
 mod commit;
+mod f;
 mod gbda;
 mod gbors;
 mod gcf;
@@ -24,6 +25,8 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("autostart", autostart::run),
     ("autowatch", autowatch::run),
     ("commit", commit::run),
+    ("ft", f::t),
+    ("fd", f::d),
     ("gbda", gbda::run),
     ("gbors", gbors::run),
     ("gcf", gcf::run),

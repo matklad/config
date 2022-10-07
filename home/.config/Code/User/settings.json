@@ -2,6 +2,7 @@
     "[html]": {
         "editor.tabSize": 2
     },
+    "workbench.panel.opensMaximized": "never",
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "hidden",
     "window.newWindowDimensions": "maximized",
