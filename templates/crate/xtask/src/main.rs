@@ -1,9 +1,16 @@
+#[cfg(test)]
+mod tidy;
+
 use std::time::Instant;
 
 use xshell::{cmd, Shell};
 
 fn main() -> xshell::Result<()> {
     let sh = Shell::new()?;
+
+    cmd!(sh, "rustup toolchain install stable --no-self-update").run()?;
+    let _e = sh.push_env("RUSTUP_TOOLCHAIN", "stable");
+    cmd!(sh, "rustc --version").run()?;
 
     {
         let _s = section("BUILD");
@@ -22,17 +29,12 @@ fn main() -> xshell::Result<()> {
         let tag = format!("v{version}");
 
         let current_branch = cmd!(sh, "git branch --show-current").read()?;
-        let has_tag = cmd!(sh, "git tag --list").read()?.lines().any(|it| it.trim() == tag);
-        let dry_run = sh.var("CI").is_err() || has_tag || current_branch != "master";
-        eprintln!("Publishing{}!", if dry_run { " (dry run)" } else { "" });
+        let tag_exists =
+            cmd!(sh, "git tag --list").read()?.split_ascii_whitespace().any(|it| it == &tag);
 
-        let dry_run_arg = if dry_run { Some("--dry-run") } else { None };
-        cmd!(sh, "cargo publish {dry_run_arg...}").run()?;
-        if dry_run {
-            eprintln!("{}", cmd!(sh, "git tag {tag}"));
-            eprintln!("{}", cmd!(sh, "git push --tags"));
-        } else {
-            cmd!(sh, "git tag {tag}").run()?;
+        if current_branch == "master" && !tag_exists {
+            cmd!(sh, "git tag v{version}").run()?;
+            cmd!(sh, "cargo publish").run()?;
             cmd!(sh, "git push --tags").run()?;
         }
     }
