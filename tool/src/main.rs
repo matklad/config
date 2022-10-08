@@ -47,28 +47,9 @@ fn main() -> anyhow::Result<()> {
     let (_name, run) = TOOLS
         .iter()
         .find(|&&(name, _run)| name == progn)
-        .ok_or_else(|| anyhow::format_err!("unknown tool: `{}`", progn))?;
+        .ok_or_else(|| anyhow::format_err!("unknown tool: `{progn}`"))?;
     let sh = Shell::new()?;
     run(&sh)
-}
-
-fn single_arg() -> anyhow::Result<String> {
-    match single_arg_impl() {
-        Ok(Some(arg)) => Ok(arg),
-        _ => anyhow::bail!("expected one argument"),
-    }
-}
-
-fn single_arg_impl() -> Result<Option<String>, ()> {
-    let mut args = std::env::args();
-    let _progn = args.next();
-    let arg = args.next();
-    let next_arg = args.next();
-    match (arg, next_arg) {
-        (None, None) => Ok(None),
-        (Some(arg), None) => Ok(Some(arg)),
-        _ => Err(()),
-    }
 }
 
 #[test]
