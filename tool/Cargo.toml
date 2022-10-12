@@ -13,4 +13,4 @@ panic = "abort"
 [dependencies]
 anyhow = "1"
 xshell = "0.2.1"
-xflags = "0.3.0-pre.1"
+xflags = "0.3.0"

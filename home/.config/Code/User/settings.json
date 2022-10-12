@@ -239,6 +239,7 @@
         "subcommand",
         "subcommands",
         "substs",
+        "symbolizer",
         "syscall",
         "sysroot",
         "toml",

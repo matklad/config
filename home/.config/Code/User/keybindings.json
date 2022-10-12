@@ -68,11 +68,7 @@
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "filesExplorerFocus" },
   { "key": "win+h",
-    "command": "macros.focusPanelCloseSidebar",
-    "when": "!panelFocus" },
-  { "key": "win+h",
-    "command": "workbench.action.togglePanel",
-    "when": "panelFocus" },
+    "command": "terminal.focus" },
   { "key": "win+s",
     "command": "workbench.view.extension.references-view" },
 
@@ -145,9 +141,9 @@
     "when": "!searchViewletVisible" },
 
   { "key": "alt+e",
-    "command": "extension.aceJump" },
-  { "key": "alt+shift+e",
-    "command": "extension.aceJump.selection" },
+    "command": "findJump.activate" },
+  // { "key": "alt+shift+e",
+  //   "command": "extension.aceJump.selection" },
 
   { "key": "ctrl+i",
     "command": "center-editor-window.center" },
