@@ -22,7 +22,7 @@
         alsa-lib atk cairo cups dbus expat file fontconfig freetype glib
         libnotify libxml2 libxslt
         libGL vulkan-loader
-        netcat nspr nss openjdk8 strace udev watch wget which xorg.libX11
+        netcat nspr nss openjdk8 strace udev watch wget which xorg.libX11 libfuse
         xorg.libXScrnSaver xorg.libXcomposite xorg.libXcursor xorg.libXdamage
         xorg.libXext xorg.libXfixes xorg.libXi xorg.libXrandr xorg.libXrender
         xorg.libXtst xorg.libxcb xorg.xcbutilkeysyms xorg.libxshmfence
