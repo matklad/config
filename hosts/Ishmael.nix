@@ -15,16 +15,16 @@
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
-    nvidia.modesetting.enable = true;
+    # nvidia.modesetting.enable = true;
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
-    nvidia.prime = {
-      sync.enable = true;
-      intelBusId  = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
-    };
+    # nvidia.prime = {
+    #   sync.enable = true;
+    #   intelBusId  = "PCI:0:2:0";
+    #   nvidiaBusId = "PCI:1:0:0";
+    # };
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
-  services.xserver.videoDrivers = [ "intel" "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
   services.xserver.config = "";
 
   fileSystems."/" =
