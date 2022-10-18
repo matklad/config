@@ -9,13 +9,14 @@
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
-    kernelPackages = pkgs.linuxPackages_5_19;
+    # kernelPackages = pkgs.linuxPackages_latest;
   };
 
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
     nvidia.modesetting.enable = true;
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
     # nvidia.prime = {
     #   sync.enable = true;
     #   nvidiaBusId = "PCI:1:0:0";
