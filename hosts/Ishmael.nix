@@ -8,7 +8,7 @@
   boot = {
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
     initrd.kernelModules = [ ];
-    kernelParams = [ "i915.force_probe=46a6" ];
+    # kernelParams = [ "i915.force_probe=46a6" ];
     kernelModules = [ "kvm-intel" ];
     # kernelPackages = pkgs.linuxPackages_latest;
   };
@@ -16,13 +16,13 @@
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
-    # nvidia.modesetting.enable = true;
-    # nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
-    # nvidia.prime = {
-    #   sync.enable = true;
-    #   intelBusId  = "PCI:0:2:0";
-    #   nvidiaBusId = "PCI:1:0:0";
-    # };
+    nvidia.modesetting.enable = true;
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
+    nvidia.prime = {
+      sync.enable = true;
+      intelBusId  = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
   services.xserver.videoDrivers = [ "intel" "nvidia" ];
