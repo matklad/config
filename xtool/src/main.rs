@@ -65,7 +65,7 @@ fn link_me_up() {
         let dst = bin.join(tool);
         sh.remove_path(&dst).unwrap();
         let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();
-        sh.hard_link("./target/release/tool", &dst).unwrap();
+        sh.hard_link("./target/release/xtool", &dst).unwrap();
     }
 
     let home: PathBuf = "/home/matklad/".into();
