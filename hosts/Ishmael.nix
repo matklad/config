@@ -8,6 +8,7 @@
   boot = {
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
     initrd.kernelModules = [ ];
+    kernelParams = [ "i915.force_probe=46a6" ];
     kernelModules = [ "kvm-intel" ];
     # kernelPackages = pkgs.linuxPackages_latest;
   };
