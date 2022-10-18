@@ -16,7 +16,7 @@
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
-    # nvidia.modesetting.enable = true;
+    nvidia.modesetting.enable = true;
     # nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
     nvidia.prime = {
       sync.enable = true;
