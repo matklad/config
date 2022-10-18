@@ -132,7 +132,7 @@
     xserver = {
       enable = true;
       displayManager = {
-        lightdm = {
+        sddm = {
           enable = true;
         };
         defaultSession = "plasma";
