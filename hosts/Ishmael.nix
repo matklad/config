@@ -26,7 +26,7 @@
   };
   services.xserver.videoDrivers = [ "nvidia" ];
   services.xserver.config = "";
-  services.xserver.displayManager.xserverArgs = ["-config" "/home/matlad/empty"];
+  services.xserver.displayManager.xserverArgs = lib.mkAfter ["-config" "/home/matlad/empty"];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/04a8bc94-33a1-4fd7-b550-67e72ae1d5bc";
