@@ -13,7 +13,7 @@
     fish.enable = true;
     java.enable = true;
     dconf.enable = true;
-    ssh.askPassword = pkgs.ksshaskpass;
+    ssh.askPassword = "ksshaskpass";
   };
 
   environment.systemPackages = with pkgs; [
