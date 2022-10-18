@@ -135,7 +135,7 @@
         sddm = {
           enable = true;
         };
-        defaultSession = "plasmax11";
+        defaultSession = "plasma";
         autoLogin = { enable = false; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
