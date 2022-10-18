@@ -132,14 +132,13 @@
     xserver = {
       enable = true;
       displayManager = {
-        gdm = {
+        sddm = {
           enable = true;
         };
-        defaultSession = "plasmawayland";
+        defaultSession = "plasmax11";
         autoLogin = { enable = false; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
-      desktopManager.gnome3.enable = true;
 
       libinput = {
         enable = true;
