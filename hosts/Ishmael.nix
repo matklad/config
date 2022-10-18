@@ -8,15 +8,15 @@
   boot = {
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
     initrd.kernelModules = [ ];
-    # kernelParams = [ "i915.force_probe=46a6" ];
+    kernelParams = [ "i915.force_probe=46a6" ];
     kernelModules = [ "kvm-intel" ];
-    # kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_6_0;
   };
 
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
-    nvidia.modesetting.enable = true;
+    # nvidia.modesetting.enable = true;
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
     nvidia.prime = {
       sync.enable = true;
