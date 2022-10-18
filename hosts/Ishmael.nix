@@ -25,7 +25,7 @@
     # };
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
-  services.xserver.videoDrivers = [ "intel" ];
+  services.xserver.videoDrivers = [ "intel" "nvidia" ];
   # services.xserver.config = "";
   # services.xserver.displayManager.xserverArgs = lib.mkAfter ["-config" "/home/matlad/empty"];
 
