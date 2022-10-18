@@ -31,6 +31,8 @@
       runScript = "fish";
     })
 
+    nvidia-offload
+
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     audacious

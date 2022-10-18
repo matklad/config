@@ -17,11 +17,11 @@
     enableRedistributableFirmware = true;
     nvidia.modesetting.enable = true;
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
-    # nvidia.prime = {
-    #   offload.enable = true;
-    #   nvidiaBusId = "PCI:1:0:0";
-    #   intelBusId  = "PCI:0:2:0";
-    # };
+    nvidia.prime = {
+      offload.enable = true;
+      intelBusId  = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
   services.xserver.videoDrivers = [ "intel" "nvidia" ];
