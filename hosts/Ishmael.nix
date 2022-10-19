@@ -1,15 +1,14 @@
 { config, lib, pkgs, ... }:
 
 {
-
   networking.hostName = "Ishmael";
   time.timeZone = "Europe/Lisbon";
 
   boot = {
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
     initrd.kernelModules = [ ];
-    # kernelParams = [ "i915.force_probe=46a6" ];
     kernelModules = [ "kvm-intel" ];
+    kernelParams = [ "i915.force_probe=46a6" ];
     # kernelPackages = pkgs.linuxPackages_6_0;
   };
 
@@ -26,8 +25,6 @@
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
   services.xserver.videoDrivers = [ "intel" "nvidia" ];
-  # services.xserver.config = "";
-  # services.xserver.displayManager.xserverArgs = lib.mkAfter ["-config" "/home/matlad/empty"];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/04a8bc94-33a1-4fd7-b550-67e72ae1d5bc";
