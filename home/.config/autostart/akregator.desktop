@@ -1,6 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Akregator
-Exec=akregator --hide-mainwindow -- %u
-Terminal=false
-Type=Application
