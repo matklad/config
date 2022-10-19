@@ -142,6 +142,8 @@
 
   { "key": "alt+e",
     "command": "findJump.activate" },
+  { "key": "shift+alt+e",
+    "command": "findJump.activateWithSelection" },
   // { "key": "alt+shift+e",
   //   "command": "extension.aceJump.selection" },
 
