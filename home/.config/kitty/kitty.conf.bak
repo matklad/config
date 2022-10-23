@@ -11,7 +11,7 @@ map esc send_text all \x03
 map ctrl+c copy_to_clipboard
 map ctrl+v paste_from_clipboard
 
-map alt+e                  kitten hints --alphabet xtnhesoai
+map alt+e                  kitten hints
 map ctrl+shift+e           send_text all \x0b
 map alt+n                  kitten kitty_grab/grab.py
 
@@ -26,6 +26,6 @@ map ctrl+shift+]     no_op
 
 
 # BEGIN_KITTY_THEME
-# Alabaster Dark
-include current-theme.conf
+# 3024 Day
+# include current-theme.conf
 # END_KITTY_THEME

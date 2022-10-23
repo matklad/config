@@ -8,8 +8,6 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
   { "key": "ctrl+u",
     "command": "rust-analyzer.run" },
-  { "key": "ctrl+alt+shift+g",
-    "command": "macros.magit.status" },
   { "key": "ctrl+h",
     "command": "editor.action.formatDocument",
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
@@ -32,8 +30,16 @@
   { "key": "ctrl+alt+shift+h",
     "command": "editor.action.showHover",
     "when": "editorTextFocus" },
-  {  "key": "alt+.",
-     "command": "open-notes.open" },
+// Extra Commands
+  { "key": "win+6",
+    "command": "macros.magit.status" },
+  { "key": "win+7",
+    "command": "open-notes.open" },
+  { "key": "win+8",
+    "command": "rust-analyzer.parentModule" },
+  { "key": "win+9",
+    "command": "rust-analyzer.openCargoToml" },
+
 // Window management
   { "key": "win+k",
     "command": "workbench.action.closeWindow",

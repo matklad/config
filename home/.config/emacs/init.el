@@ -16,7 +16,7 @@
 (set-fontset-font "fontset-default" nil
                   (font-spec :size 20 :name "Noto Emoji"))
 
-(cua-mode t)
+;; (cua-mode t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -27,15 +27,15 @@
 (auto-save-visited-mode t)
 (add-hook 'text-mode-hook '(lambda () (flyspell-mode t)))
 
-(global-set-key (kbd "C-k") ctl-x-map)
-(global-set-key (kbd "C-x") nil)
-(global-set-key (kbd "C-f") 'isearch-forward)
-(global-set-key (kbd "C-s") nil)
-(global-set-key (kbd "C-k k") 'kill-this-buffer)
-(define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
+;; (global-set-key (kbd "C-k") ctl-x-map)
+;; (global-set-key (kbd "C-x") nil)
+;; (global-set-key (kbd "C-f") 'isearch-forward)
+;; (global-set-key (kbd "C-s") nil)
+;; (global-set-key (kbd "C-k k") 'kill-this-buffer)
+;; (define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
 
-(global-set-key (kbd "C-S-k") 'kill-whole-line)
-(global-set-key (kbd "C-a") 'mark-whole-buffer)
+;; (global-set-key (kbd "C-S-k") 'kill-whole-line)
+;; (global-set-key (kbd "C-a") 'mark-whole-buffer)
 
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
@@ -91,12 +91,9 @@
 (require 'lsp)
 (setq lsp-rust-server 'rust-analyzer)
 (setq lsp-log-io 't)
-(global-set-key (kbd "C-w") 'lsp-extend-selection)
-(global-set-key (kbd "<M-return>") 'lsp-execute-code-action)
-(global-set-key (kbd "C-k r") 'lsp-rename)
-
-(require 'multiple-cursors)
-(global-set-key (kbd "C-d") 'mc/mark-next-like-this-word)
+;; (global-set-key (kbd "C-w") 'lsp-extend-selection)
+;; (global-set-key (kbd "<M-return>") 'lsp-execute-code-action)
+;; (global-set-key (kbd "C-k r") 'lsp-rename)
 
 (require 'git-commit)
 (server-mode)

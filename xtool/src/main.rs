@@ -13,8 +13,10 @@ mod gbors;
 mod gcf;
 mod git_refresh;
 mod git_spinoff;
+mod go;
 mod gpr;
 mod n;
+mod new_crate;
 mod nix;
 mod prf;
 mod use_nix;
@@ -24,6 +26,7 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("autopatchelf", autopatchelf::run),
     ("autostart", autostart::run),
     ("autowatch", autowatch::run),
+    ("new-crate", new_crate::run),
     ("commit", commit::run),
     ("ft", f::t),
     ("fd", f::d),
@@ -32,6 +35,7 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("gcf", gcf::run),
     ("git-refresh", git_refresh::run),
     ("git-spinoff", git_spinoff::run),
+    ("go", go::run),
     ("gpr", gpr::run),
     ("n", n::run),
     ("nixgc", nix::gc),
