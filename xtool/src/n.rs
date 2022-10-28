@@ -1,32 +1,43 @@
+use anyhow::Context;
 use xshell::{cmd, Shell};
 
 pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
-    let mut flags = xflags::parse_or_exit! {
-        optional -i,--ignore-status
-        /// Number of iterations.
-        required n: u32
-        repeated args: String
-    };
-    if flags.args.is_empty() {
+    let mut n: Option<u32> = None;
+    let mut ignore_status = false;
+    let mut args = Vec::new();
+    let mut iter = std::env::args().skip(1);
+    while let Some(flag) = iter.next() {
+        match flag.as_str() {
+            "-i" | "--ignore-status" => ignore_status = true,
+            value if n.is_none() => n = Some(value.parse()?),
+            _ => {
+                args.push(flag);
+                args.extend(iter);
+                break;
+            }
+        }
+    }
+    let n = n.context("number of iterations expected")?;
+    if args.is_empty() {
         anyhow::bail!("expected command");
     }
 
-    let progn = flags.args.remove(0);
+    let progn = args.remove(0);
 
-    let task = if flags.args.is_empty() && progn.contains(' ') {
+    let task = if args.is_empty() && progn.contains(' ') {
         Task::Shell { script: progn }
     } else {
-        Task::Command { progn, args: flags.args }
+        Task::Command { progn, args }
     };
 
-    for i in 1..flags.n + 1 {
+    for i in 1..n + 1 {
         eprintln!("Run {i}");
         let mut cmd = match &task {
             Task::Command { progn, args } => cmd!(sh, "{progn} {args...}"),
             Task::Shell { script } => cmd!(sh, "fish -c {script}"),
         }
         .quiet();
-        if flags.ignore_status {
+        if ignore_status {
             cmd = cmd.ignore_status();
         }
         cmd.run()?;
