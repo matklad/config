@@ -70,8 +70,6 @@
     llvmPackages_14.bintools
     llvmPackages_14.clang
     llvmPackages_14.stdenv
-    lua
-    luarocks
     maven
     ninja
     nodejs
