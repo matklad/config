@@ -301,4 +301,7 @@
     "rust-analyzer.diagnostics.experimental.enable": true,
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "workbench.activityBar.visible": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
 }
