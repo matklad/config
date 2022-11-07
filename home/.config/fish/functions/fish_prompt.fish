@@ -21,6 +21,9 @@ function fish_prompt --description 'Write out the prompt'
     if set -q SSH_TTY
         echo -n "$hostname "
     end
+    if set -q FHS
+        echo -n "(fhs) "
+    end
     echo -n 'λ '
     set_color normal
 end
