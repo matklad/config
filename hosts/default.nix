@@ -32,7 +32,7 @@
         xorg.libXtst xorg.libxcb xorg.xcbutilkeysyms xorg.libxshmfence xorg.libX11
       ];
       profile = ''
-        exprot FHS=1
+        export FHS=1
         export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:${pkgs.openssl.dev}/lib/pkgconfig"
       '';
       runScript = "fish";
