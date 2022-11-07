@@ -21,8 +21,6 @@
       name = "fhs";
       targetPkgs = pkgs: with pkgs; [
         pkg-config
-        openssl
-
         alsa-lib atk cairo cups dbus expat file fontconfig freetype glib
         libnotify libxml2 libxslt
         libGL vulkan-loader
@@ -33,6 +31,7 @@
         xorg.libXext xorg.libXfixes xorg.libXi xorg.libXrandr xorg.libXrender
         xorg.libXtst xorg.libxcb xorg.xcbutilkeysyms xorg.libxshmfence xorg.libX11
       ];
+      PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
       runScript = "fish";
     })
 
