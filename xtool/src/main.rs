@@ -19,6 +19,7 @@ mod n;
 mod new_crate;
 mod nix;
 mod prf;
+mod script;
 mod use_nix;
 
 const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
@@ -26,10 +27,9 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("autopatchelf", autopatchelf::run),
     ("autostart", autostart::run),
     ("autowatch", autowatch::run),
-    ("new-crate", new_crate::run),
     ("commit", commit::run),
-    ("ft", f::t),
     ("fd", f::d),
+    ("ft", f::t),
     ("gbda", gbda::run),
     ("gbors", gbors::run),
     ("gcf", gcf::run),
@@ -38,9 +38,11 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("go", go::run),
     ("gpr", gpr::run),
     ("n", n::run),
+    ("new-crate", new_crate::run),
     ("nixgc", nix::gc),
     ("nixup", nix::up),
     ("prf", prf::run),
+    ("script", script::run),
     ("use-nix", use_nix::run),
 ];
 

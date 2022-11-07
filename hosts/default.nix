@@ -20,6 +20,8 @@
     (pkgs.buildFHSUserEnv {
       name = "fhs";
       targetPkgs = pkgs: with pkgs; [
+        pkg-config
+
         alsa-lib atk cairo cups dbus expat file fontconfig freetype glib
         libnotify libxml2 libxslt
         libGL vulkan-loader

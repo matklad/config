@@ -17,7 +17,6 @@
     "workbench.statusBar.feedback.visible": false,
     "workbench.tree.indent": 16,
     "workbench.useExperimentalGridLayout": true,
-
     "editor.accessibilitySupport": "off",
     "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
@@ -28,7 +27,6 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-
     "editor.bracketPairColorization.enabled": false,
     "editor.formatOnType": true,
     "editor.hover.enabled": false,
@@ -43,7 +41,6 @@
         "[Xcode 11 Default Light]": {
             "rules": {
                 "unresolvedReference": "#FF0050",
-
             },
         },
         "[Pale Fire High Contrast]": {
@@ -54,24 +51,19 @@
             }
         }
     },
-
     // small gutter
     // "editor.folding": false,
     "editor.glyphMargin": false,
     "editor.lineDecorationsWidth": 0, // undocumented
     "editor.lineNumbers": "off",
     "editor.lineNumbersMinChars": 0, // undocumented
-
     "breadcrumbs.enabled": true,
     "breadcrumbs.filePath": "on",
-
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
-
     "extensions.autoUpdate": true,
     "extensions.ignoreRecommendations": true,
-
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 100,
     "files.enableTrash": false,
@@ -79,39 +71,31 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.sendKeybindingsToShell": false,
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt",
         "editor.action.marker.nextInFiles"
     ],
-
     "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "none",
     "update.showReleaseNotes": false,
-
     "git.alwaysShowStagedChangesResourceGroup": true,
-
     "debug.onTaskErrors": "debugAnyway",
-
     "remote.SSH.useLocalServer": false,
-
     // plugins
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-
     "aceJump.finder.pattern": "[ ,-.*{}_()\"'`<>\\/[:&=|;]",
     // "aceJump.placeholder.backgroundColor": "#3F3F3F",
     // "aceJump.placeholder.color": "#BFEBBF",
     "aceJump.placeholder.upperCase": true,
     "aceJump.finder.skipSelection": true,
     "aceJump.scroll.mode": "none",
-
     "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",
-
-    "errorLens.exclude": [".*Unknown word.*"],
-
+    "errorLens.exclude": [
+        ".*Unknown word.*"
+    ],
     "macros": {
         "closePanelCloseEditorsCloseSidebar": [
             "workbench.action.closePanel",
@@ -133,12 +117,15 @@
             "magit.status",
         ],
         "openNotes": [
-            {"command": "vscode.open", "args": {"uri": "/home/matklad/notes.adoc"}},
+            {
+                "command": "vscode.open",
+                "args": {
+                    "uri": "/home/matklad/notes.djot"
+                }
+            },
         ]
     },
-
     "liveServer.settings.donotShowInfoMsg": true,
-
     "rust-analyzer.completion.callable.snippets": "add_parentheses",
     "rust-analyzer.callInfo.full": false,
     "rust-analyzer.checkOnSave.enable": false,
@@ -147,24 +134,16 @@
         // "RA_LOG": "rust_analyzer=info",
         // "RA_COUNT": "1"
     },
-
     "openInGitHub.defaultRemote": "upstream",
-
-    "open-notes.notes-file": "/home/matklad/notes.adoc",
-
+    "open-notes.notes-file": "/home/matklad/notes.djot",
     "lldb.library": "/nix/store/vkw0nx0c1cfqm68gn9vz0lw1r6ap41p1-lldb-7.1.0/lib/liblldb.so",
-
     "asciidoc.preview.useEditorStyle": false,
-
     "center-editor-window.threeStateToggle": true,
-
     "magit.forge-enabled": false,
     "magit.quick-switch-enabled": true,
-
     "selectline.alignment": "right",
     "selectline.displayFormat": "(%d Lines)",
     "selectline.statusbarPriority": 101,
-
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#00000000",
         "widget.shadow": "#00000000",
@@ -304,4 +283,8 @@
     "[typescript]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
+    "[json]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "liveServer.settings.donotVerifyTags": true,
 }
