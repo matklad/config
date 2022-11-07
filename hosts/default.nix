@@ -21,15 +21,17 @@
       name = "fhs";
       targetPkgs = pkgs: with pkgs; [
         pkg-config
+        openssl
 
         alsa-lib atk cairo cups dbus expat file fontconfig freetype glib
         libnotify libxml2 libxslt
         libGL vulkan-loader
-        netcat nspr nss openjdk8 strace udev watch wget which xorg.libX11 fuse
+        netcat nspr nss openjdk8 strace udev watch wget which
+        zlib fish fuse
+
         xorg.libXScrnSaver xorg.libXcomposite xorg.libXcursor xorg.libXdamage
         xorg.libXext xorg.libXfixes xorg.libXi xorg.libXrandr xorg.libXrender
-        xorg.libXtst xorg.libxcb xorg.xcbutilkeysyms xorg.libxshmfence
-        zlib fish
+        xorg.libXtst xorg.libxcb xorg.xcbutilkeysyms xorg.libxshmfence xorg.libX11
       ];
       runScript = "fish";
     })
