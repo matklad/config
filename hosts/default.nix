@@ -31,7 +31,9 @@
         xorg.libXext xorg.libXfixes xorg.libXi xorg.libXrandr xorg.libXrender
         xorg.libXtst xorg.libxcb xorg.xcbutilkeysyms xorg.libxshmfence xorg.libX11
       ];
-      PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+      profile = ''
+        export PKG_CONFIG_PATH = "$PKG_CONFIG_PATH:${pkgs.openssl.dev}/lib/pkgconfig"
+      '';
       runScript = "fish";
     })
 
