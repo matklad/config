@@ -175,28 +175,28 @@
         devices = ["/dev/input/by-path/platform-i8042-serio-0-event-kbd"];
         config = ''
           (defsrc
-            grv  1    2    3    4    5    6    7     8    9     0    -    =    bspc
-            tab  q    w    e    r    t    y    u     i    o     p    [    ]    \
-            caps a    s    d    f    g    h    j     k    l     ;    '    ret
-            lsft z    x    c    v    b    n    m     ,    .     /    rsft
-            lctl lmet lalt           spc             ralt rmet  rctl)
+            grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
+            tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
+            caps a    s    d    f    g    h    j    k    l     ;    '    ret
+            lsft z    x    c    v    b    n    m    ,    .     /    rsft
+            lctl lmet lalt           spc            ralt rmet  rctl)
 
           (deflayer qwerty
-            grv  1    2    3    4    5    6    7     8    9     0    -    =    bspc
-            tab  q    w    e    r    t    y    u     i    o     p    [    ]    \
-            caps a    s    d    f    g    h    j     k    l     ;    '    ret
-            lsft z    x    c    v    b    n    m     ,    .     /    rsft
-            lctl lmet lalt           @sp             ralt rmet  rctl)
+            grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
+            tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
+            caps a    s    d    f    g    h    j    k    l     ;    '    ret
+            lsft z    x    c    v    b    n    m    ,    .     /    rsft
+            lctl lmet lalt           @sp            ralt rmet  rctl)
 
          (deflayer motion
-            grv  1    2    3    4    5    6    7     8    9     0    -    =    bspc
-            tab  q    w    e    r    t    y    pgup  up   pgdn  p    [    ]    \
-            caps a    s    d    f    g    bks  lft   down rght del   '    ret
-            lsft z    x    c    v    b    n    m     home end   /    rsft
-            lctl lmet lalt           @sp             ralt rmet  rctl)
+            grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
+            tab  q    w    e    r    t    y    pgup up   pgdn  p    [    ]    \
+            caps a    s    d    f    g    bks  lft  down rght del   '    ret
+            lsft z    x    c    v    b    n    m    home end   /    rsft
+            lctl lmet lalt           @sp            ralt rmet  rctl)
 
           (defalias
-            sp (tap-hold 100 100 spc (layer-toggle motion))
+            sp (tap-hold 200 200 spc (layer-toggle motion))
           )
         '';
       };
