@@ -12,10 +12,10 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
     }
 
     std::thread::sleep(Duration::from_millis(1500));
-    if let Err(err) = set_keymap(sh) {
-        eprintln!("failed to set keymap");
-        res = Err(err);
-    }
+    //if let Err(err) = set_keymap(sh) {
+    //    eprintln!("failed to set keymap");
+    //    res = Err(err);
+    //}
 
     res
 }
