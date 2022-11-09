@@ -184,14 +184,14 @@
           (deflayer qwerty
             grv  1    2    3    4    5    6    7     8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    u     i    o     p    [    ]    \
-            @cap a    s    d    f    g    h    j     k    l     ;    '    ret
+            caps a    s    d    f    g    h    j     k    l     ;    '    ret
             lsft z    x    c    v    b    n    m     ,    .     /    rsft
             lctl lmet lalt           @sp             ralt rmet  rctl)
 
          (deflayer motion
             grv  1    2    3    4    5    6    7     8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    pgup  up   pgdn  p    [    ]    \
-            @cap a    s    d    f    g    bks  left  down right del  '    ret
+            caps a    s    d    f    g    bks  left  down right del  '    ret
             lsft z    x    c    v    b    n    m     home end   /    rsft
             lctl lmet lalt           @sp             ralt rmet  rctl)
 
