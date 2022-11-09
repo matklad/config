@@ -124,7 +124,6 @@
     xclip
     xorg.xkbcomp
     pciutils
-    haskellPackages.kmonad
 
     # Rust stuff
     bat
