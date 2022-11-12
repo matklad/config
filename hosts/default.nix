@@ -76,7 +76,7 @@
     llvmPackages_14.bintools
     llvmPackages_14.clang
     llvmPackages_14.stdenv
-    lua
+    lua5_4
     maven
     ninja
     nodejs
