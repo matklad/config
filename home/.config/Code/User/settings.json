@@ -9,7 +9,7 @@
     "window.restoreWindows": "none",
     "window.title": "${rootName}",
     "window.titleBarStyle": "native",
-    "workbench.colorTheme": "Pale Fire",
+    "workbench.colorTheme": "Xcode 11 Default Light",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",

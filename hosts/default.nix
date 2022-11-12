@@ -186,7 +186,7 @@
             tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
             caps a    s    d    f    g    h    j    k    l     ;    '    ret
             lsft z    x    @lm  v    b    n    m    @rm  .     /    rsft
-            lctl lmet lalt           @sp            ralt rmet  rctl)
+            lctl lmet lalt           @sp            @alt rmet  rctl)
 
          (deflayer motion
             grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
@@ -199,6 +199,7 @@
             sp (tap-hold 200 200 spc (layer-toggle motion))
             lm (tap-hold 200 200 c lmet)
             rm (tap-hold 200 200 , rmet)
+            alt A-k
           )
         '';
       };
