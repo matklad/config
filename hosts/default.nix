@@ -192,13 +192,14 @@
             grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    pgup up   pgdn  p    [    ]    \
             caps a    s    d    f    g    bks  lft  down rght del   '    ret
-            lsft z    x    @lm  v    b    n    m    home end   /    rsft
+            lsft z    x    @lm  v    b    @n   m    home end   /    rsft
             lctl lmet lalt           @sp            ralt rmet  rctl)
 
           (defalias
             sp (tap-hold 200 200 spc (layer-toggle motion))
             lm (tap-hold 200 200 c lmet)
             rm (tap-hold 200 200 , rmet)
+            n  (tap-hold 200 200 n ret)
             alt A-k
           )
         '';

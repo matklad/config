@@ -288,6 +288,6 @@
     },
     "liveServer.settings.donotVerifyTags": true,
     "[jsonc]": {
-        "editor.defaultFormatter": "denoland.vscode-deno"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
 }
