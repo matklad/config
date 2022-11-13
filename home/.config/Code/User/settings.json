@@ -287,4 +287,7 @@
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "liveServer.settings.donotVerifyTags": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
 }
