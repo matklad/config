@@ -30,7 +30,6 @@
       ];
       profile = ''
         export FHS=1
-        export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:${pkgs.openssl.dev}/lib/pkgconfig"
       '';
       runScript = "fish";
     })
