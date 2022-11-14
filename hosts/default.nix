@@ -30,6 +30,8 @@
         xorg.libXScrnSaver xorg.libXcomposite xorg.libXcursor xorg.libXdamage
         xorg.libXext xorg.libXfixes xorg.libXi xorg.libXrandr xorg.libXrender
         xorg.libXtst xorg.libxcb xorg.xcbutilkeysyms xorg.libxshmfence xorg.libX11
+
+        gtk3
       ];
       profile = ''
         export FHS=1
