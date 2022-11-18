@@ -1,7 +1,4 @@
-use std::time::Duration;
-
-use anyhow::Context;
-use xshell::{cmd, Shell};
+use xshell::Shell;
 
 pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
     let mut res = Ok(());
@@ -11,19 +8,7 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
         res = Err(err);
     }
 
-    std::thread::sleep(Duration::from_millis(1500));
-    //if let Err(err) = set_keymap(sh) {
-    //    eprintln!("failed to set keymap");
-    //    res = Err(err);
-    //}
-
     res
-}
-
-fn set_keymap(sh: &Shell) -> anyhow::Result<()> {
-    let display = sh.var("DISPLAY").context("failed to read $DISPLAY")?;
-    cmd!(sh, "xkbcomp /home/matklad/config/home-row.xkb {display}").ignore_stderr().run()?;
-    Ok(())
 }
 
 fn rotate_downloads(sh: &Shell) -> anyhow::Result<()> {

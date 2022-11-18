@@ -7,6 +7,8 @@ pub(crate) fn gc(sh: &Shell) -> anyhow::Result<()> {
 }
 
 pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
+    cmd!(sh, "doas true").quiet().run()?;
+
     let mut upgdate = false;
     for arg in std::env::args().skip(1) {
         match arg.as_str() {
