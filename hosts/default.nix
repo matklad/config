@@ -196,7 +196,7 @@
             lc (tap-hold 200 200 z lctl)
             rc (tap-hold 200 200 / rctl)
             la (tap-hold 200 200 x lalt)
-            ra (tap-hold 200 200 . latl)
+            ra (tap-hold 200 200 . lalt)
             alt A-k
           )
         '';
