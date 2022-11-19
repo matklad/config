@@ -154,6 +154,12 @@
       xkbVariant = "workman,";
       xkbOptions = "grp:win_space_toggle";
     };
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
     unclutter-xfixes.enable = true;
     printing.enable = true;
     earlyoom.enable = true;

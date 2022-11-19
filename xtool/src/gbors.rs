@@ -6,8 +6,8 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
         optional title: String
     };
 
-    cmd!(sh, "git fetch upstream").read()?;
-    let commits = cmd!(sh, "git cherry upstream/master").read()?;
+    cmd!(sh, "git fetch origin").read()?;
+    let commits = cmd!(sh, "git cherry origin/master").read()?;
     let commits: Vec<&str> = commits.lines().filter_map(|it| it.strip_prefix("+ ")).collect();
 
     let (title, mut body) = if let Some(title) = flags.title {
