@@ -229,7 +229,6 @@
 
   hardware = {
     keyboard.zsa.enable = true;
-    pulseaudio = { enable = true; package = pkgs.pulseaudioFull; };
   };
 
   virtualisation = {
@@ -306,6 +305,7 @@
       { domain = "*"; type = "soft"; item = "memlock"; value = "524288"; }
       { domain = "*"; type = "hard"; item = "memlock"; value = "524288"; }
     ];
+    rtkit.enable = true;
   };
 
   system.stateVersion = "18.09";
