@@ -11,7 +11,7 @@
       `((".*" ,temporary-file-directory t)))
 
 (fset 'yes-or-no-p 'y-or-n-p)
-(set-frame-parameter nil 'fullscreen 'fullboth)
+;; (set-frame-parameter nil 'fullscreen 'fullboth)
 (set-face-attribute 'default nil :font "JetBrains Mono-13")
 (set-fontset-font "fontset-default" nil
                   (font-spec :size 20 :name "Noto Emoji"))
