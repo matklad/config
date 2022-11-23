@@ -34,11 +34,8 @@
 
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
-    audacious
-    chromium
     filelight
     gimp
-    jetbrains.idea-community
     kdialog
     kitty
     obs-studio
@@ -66,7 +63,6 @@
     deno
     gdb
     gnumake
-    jekyll
     lldb_14
     llvmPackages_14.bintools
     llvmPackages_14.clang
@@ -88,7 +84,6 @@
     p7zip
 
     # Utils
-    asciidoctor
     asciinema
     binutils
     curl
