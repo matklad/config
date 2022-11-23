@@ -74,6 +74,8 @@
     protobuf
     rustup
     valgrind
+    zig
+    zls
 
     # Archives
     ark

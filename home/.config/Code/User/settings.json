@@ -37,6 +37,12 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+    },
     "editor.semanticTokenColorCustomizations": {
         "[Xcode 11 Default Light]": {
             "rules": {
