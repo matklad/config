@@ -50,6 +50,7 @@
     # Comms
     tdesktop
     zoom-us
+    slack
 
     # Viewers
     audacious
