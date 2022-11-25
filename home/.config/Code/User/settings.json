@@ -9,7 +9,7 @@
     "window.restoreWindows": "none",
     "window.title": "${rootName}",
     "window.titleBarStyle": "native",
-    "workbench.colorTheme": "Pale Fire",
+    "workbench.colorTheme": "Leuven Light",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
@@ -37,12 +37,6 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 80,
-    "[markdown]": {
-        "editor.wordWrap": "wordWrapColumn",
-        "editor.wordWrapColumn": 80,
-    },
     "editor.semanticTokenColorCustomizations": {
         "[Xcode 11 Default Light]": {
             "rules": {
@@ -295,5 +289,9 @@
     "liveServer.settings.donotVerifyTags": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "zls.path": "/home/matklad/.config/Code/User/globalStorage/augusterame.zls-vscode/zls_install/zls",
+    "[zig]": {
+        "editor.defaultFormatter": "tiehuis.zig"
     },
 }
