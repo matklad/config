@@ -165,7 +165,7 @@ helix
             "update-props" = {
               "bluez5.reconnect-profiles" = [ "hfp_hf" "hsp_hs" "a2dp_sink" ];
               "bluez5.msbc-support" = true;
-              "bluez5.sbc-xq-support" = true;
+              "bluez5.sbc-xq-support" = false;
             };
           };
         }
