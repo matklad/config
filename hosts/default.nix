@@ -44,6 +44,7 @@ helix
     qbittorrent
     spectacle
     vscode
+    plasma-pa // volume applet for pipewire
 
     # Comms
     tdesktop
