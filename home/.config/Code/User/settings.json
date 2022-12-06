@@ -2,6 +2,11 @@
     "[html]": {
         "editor.tabSize": 2
     },
+    "[markdown]": {
+        // "editor.wordWrap": "wordWrapColumn",
+        // "editor.wordWrapColumn": 80,
+    },
+
     "workbench.panel.opensMaximized": "never",
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "hidden",
@@ -290,9 +295,10 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "zls.path": "/home/matklad/.config/Code/User/globalStorage/augusterame.zls-vscode/zls_install/zls",
-    "[zig]": {
-        "editor.defaultFormatter": "tiehuis.zig"
-    },
+    "zls.path": "/home/matklad/p/tb/zls/zls",
+    "zls.enable_inlay_hints": true,
     "zls.check_for_update": false,
+    "[zig]": {
+        "editor.defaultFormatter": "AugusteRame.zls-vscode"
+    },
 }
