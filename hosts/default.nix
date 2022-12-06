@@ -44,6 +44,7 @@ helix
     qbittorrent
     spectacle
     vscode
+    emacs # back to the square one?
 
     # Comms
     tdesktop
