@@ -198,14 +198,14 @@ helix
           (deflayer qwerty
             grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
-            caps a    s    d    f    g    h    j    k    l     ;    '    ret
+            esc a    s    d    f    g    h    j    k    l     ;    '    ret
             lsft @lc  @la  @lm  v    b    n    m    @rm  @ra   @rc  rsft
             lctl lmet lalt           @sp            @alt rmet  rctl)
 
          (deflayer motion
             grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    pgup up   pgdn  p    [    ]    \
-            caps a    s    d    f    g    bks  lft  down rght del   '    ret
+            esc a    s    d    f    g    bks  lft  down rght del   '    ret
             lsft @lc  @la  @lm  v    b    ret  m    home end   /    rsft
             lctl lmet lalt           @sp            ralt rmet  rctl)
 
