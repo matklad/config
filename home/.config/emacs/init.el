@@ -27,15 +27,10 @@
 (auto-save-visited-mode t)
 (add-hook 'text-mode-hook '(lambda () (flyspell-mode t)))
 
-;; (global-set-key (kbd "C-k") ctl-x-map)
-;; (global-set-key (kbd "C-x") nil)
-;; (global-set-key (kbd "C-f") 'isearch-forward)
-;; (global-set-key (kbd "C-s") nil)
-;; (global-set-key (kbd "C-k k") 'kill-this-buffer)
-;; (define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
-
-;; (global-set-key (kbd "C-S-k") 'kill-whole-line)
-;; (global-set-key (kbd "C-a") 'mark-whole-buffer)
+;; nice scrolling
+(setq scroll-margin 0
+      scroll-conservatively 100000
+      scroll-preserve-screen-position 1)
 
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
@@ -48,23 +43,34 @@
 
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
 
-(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
+(defun insert-current-date ()
+  (interactive)
+  (insert (shell-command-to-string "date --iso")))
+
+(defun visit-init ()
+  (interactive)
+  (find-file "/home/matklad/config/home/.config/emacs/init.el"))
+
+
+;; (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
 (require 'package)
 
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-       ("melpa" . "https://melpa.org/packages/")))
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+	("nongnu" . "https://elpa.nongnu.org/nongnu/")
+	("melpa" . "https://melpa.org/packages/")))
+
 (setq package-user-dir "~/.cache/emacs/elpa")
 (setq package-selected-packages
       '(zenburn-theme
-        helm
-        zoom
-        magit
-        forge
-        rust-mode
-        ace-jump-mode
-        lsp-mode
-        multiple-cursors))
+	magit zoom
+	counsel
+	rust-mode
+	zig-mode
+	ace-jump-mode
+	lsp-mode
+	whitespace-cleanup-mode))
 
 ;; (package-refresh-contents)
 (package-initialize)
@@ -75,11 +81,13 @@
  '(zoom-mode t)
  '(zoom-size '(0.618 . 0.618)))
 
-(require 'helm-config)
-(helm-mode 1)
-(global-set-key (kbd "M-x") #'helm-M-x)
-(global-set-key (kbd "C-p") #'helm-find-files)
 
+(ivy-mode)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
 (autoload
   'ace-jump-mode
@@ -97,3 +105,13 @@
 
 (require 'git-commit)
 (server-mode)
+
+(global-whitespace-cleanup-mode)
+
+(setq markdown-fontify-code-blocks-natively t)
+(setq scroll-error-top-bottom t)
+
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-S-z") 'redo)
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
