@@ -1,4 +1,5 @@
 (setq custom-file (concat user-emacs-directory "/custom.el"))
+(load custom-file 'noerror)
 (setq inhibit-x-resources 't)
 (setq inhibit-startup-screen t)
 (setq frame-resize-pixelwise 't)

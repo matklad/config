@@ -126,7 +126,7 @@ helix
     hyperfine
     ripgrep
     tokei
-    # helix
+    helix
   ];
 
   services = {
