@@ -2,6 +2,7 @@
 
 {
   networking.hostName = "nixos";
+ networking.networkmanager.wifi.powersave = false;
   time.timeZone = "Europe/Lisbon";
 
   boot = {
@@ -17,6 +18,13 @@
   };
   services.xserver.videoDrivers = [ "intel" ];
 
+   specialisation = {
+     wayland.configuration = {
+       system.nixos.tags = [ "wayland" ];
+         boot.kernelParams = [ "i915.force_probe=46a6" ];
+         boot.kernelPackages = pkgs.linuxPackages_latest;
+     };
+   };
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/d00fb9b8-a74e-4bd3-8e1e-c7496f51f69d";
       fsType = "ext4";

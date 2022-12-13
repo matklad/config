@@ -35,6 +35,7 @@
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     filelight
+helix
     gimp
     kdialog
     kitty
@@ -124,6 +125,7 @@
     hyperfine
     ripgrep
     tokei
+    # helix
   ];
 
   services = {
