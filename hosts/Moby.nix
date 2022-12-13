@@ -1,54 +1,39 @@
 { config, lib, pkgs, ... }:
 
 {
-
   networking.hostName = "Moby";
+  networking.networkmanager.wifi.powersave = false;
   time.timeZone = "Europe/Lisbon";
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "sd_mod" "rtsx_pci_sdmmc" ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
-
-  hardware.nvidia.modesetting.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.prime = {
-    sync.enable = true;
-    nvidiaBusId = "PCI:1:0:0";
-    intelBusId  = "PCI:0:2:0";
+  boot = {
+    initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
+    initrd.kernelModules = [ ];
+    kernelModules = [ "kvm-intel" ];
+    boot.kernelParams = [ "i915.force_probe=46a6" ];
+    boot.kernelPackages = pkgs.linuxPackages_latest;
   };
 
   hardware = {
     bluetooth.enable = true;
-    opengl = {
-      enable = true;
-      setLdLibraryPath = true;
-      extraPackages = [
-        pkgs.libGL
-        pkgs.vaapiIntel
-        pkgs.vaapiVdpau
-        pkgs.libvdpau-va-gl
-        pkgs.intel-media-driver
-      ];
-    };
+    enableRedistributableFirmware = true;
+    cpu.intel.updateMicrocode = true;
   };
+  services.xserver.videoDrivers = [ "intel" ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/20c4aff6-7290-4691-b380-329d04f78a74";
+    { device = "/dev/disk/by-uuid/d00fb9b8-a74e-4bd3-8e1e-c7496f51f69d";
       fsType = "ext4";
     };
+
+  boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/9cfc1da8-0dd0-48a5-ad10-a139f67a6658";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/0818-EB3C";
+    { device = "/dev/disk/by-uuid/23D6-A6D8";
       fsType = "vfat";
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/c22f65e5-623b-4af0-b2fa-51b0a36090ea";
-      fsType = "ext4";
     };
 
   swapDevices = [ ];
 
+  networking.useDHCP = lib.mkDefault true;
   powerManagement.cpuFreqGovernor = "powersave";
-  hardware.enableRedistributableFirmware = true;
 }
