@@ -1,0 +1,23 @@
+theme = "everforest_dark"
+
+[editor]
+idle-timeout = 8
+cursorline = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+"C-s" = ":write-all"
+"A-q" = ":reflow"
+
+[keys.insert]
+"C-s" = ":write-all"
+
+# [keys.normal]
+# "A-x" = "command_mode"
+# 
+# [keys.insert]
+# "A-x" = "normal_mode" # Maps Alt-X to enter normal mode
