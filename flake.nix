@@ -9,11 +9,11 @@
            ./hosts ./hosts/Ishmael.nix
          ];
       };
-      Moby = nixpkgs.lib.nixosSystem {
+      nixos = nixpkgs.lib.nixosSystem {
          system = "x86_64-linux";
          modules = [
            ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
-           ./hosts ./hosts/Moby.nix
+           ./hosts ./hosts/nixos.nix
          ];
       };
     };
