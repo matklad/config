@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-  networking.hostName = "nixos";
- networking.networkmanager.wifi.powersave = false;
+  networking.hostName = "Moby";
+  networking.networkmanager.wifi.powersave = false;
   time.timeZone = "Europe/Lisbon";
 
   boot = {
