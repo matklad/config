@@ -11,6 +11,6 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
         .collect::<String>();
 
     let args = std::env::args_os().skip(1);
-    cmd!(sh, "entr -r {args...}").stdin(&files).run()?;
+    cmd!(sh, "entr -r {args...}").stdin(&files).read_stderr()?;
     Ok(())
 }
