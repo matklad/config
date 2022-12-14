@@ -36,5 +36,5 @@
   swapDevices = [ ];
 
   networking.useDHCP = lib.mkDefault true;
-  powerManagement.cpuFreqGovernor = "powersave";
+  powerManagement.cpuFreqGovernor = "performance";
 }

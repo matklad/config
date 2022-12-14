@@ -1,0 +1,3 @@
+[[language]]
+name = "zig"
+language-server = { command = "/home/matklad/p/zls/result/bin/zls" }
