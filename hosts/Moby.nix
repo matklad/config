@@ -9,7 +9,7 @@
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
-    kernelParams = ["intel_pstate=passive"];
+    # kernelParams = ["intel_pstate=passive"];
     kernelPackages = pkgs.linuxPackages_6_1;
     # kernelPackages = pkgs.linuxPackages_latest;
   };
