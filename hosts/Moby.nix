@@ -8,10 +8,9 @@
   boot = {
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
     initrd.kernelModules = [ ];
-    # kernelModules = [ "kvm-intel" ];
-    # kernelParams = [ "i915.force_probe=46a6" ];
-    # kernelParams = ["intel_pstate=passive"];
-    # kernelPackages = pkgs.linuxPackages_6_1;
+    kernelModules = [ "kvm-intel" ];
+    kernelParams = ["intel_pstate=passive"];
+    kernelPackages = pkgs.linuxPackages_6_1;
     # kernelPackages = pkgs.linuxPackages_latest;
   };
 
@@ -21,6 +20,7 @@
     cpu.intel.updateMicrocode = true;
   };
   services.xserver.videoDrivers = [ "intel" ];
+  services.thermald.enable = true;
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/d00fb9b8-a74e-4bd3-8e1e-c7496f51f69d";
