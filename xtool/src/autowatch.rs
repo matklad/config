@@ -1,16 +1,37 @@
-use std::path::PathBuf;
+use std::path::Path;
 
 use xshell::{cmd, Shell};
 
 pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
-    let files = std::env::args_os()
-        .skip(1)
-        .map(PathBuf::from)
+    let mut args = Vec::new();
+    let mut shell_arg = None;
+    let mut args_iter = std::env::args().skip(1);
+    while let Some(arg) = args_iter.next() {
+        if arg.contains(' ') {
+            shell_arg = Some(arg);
+            if args_iter.next().is_some() || !args.is_empty() {
+                anyhow::bail!("bad shell arg");
+            }
+            break;
+        }
+        args.push(arg);
+    }
+    let files = shell_arg
+        .iter()
+        .flat_map(|it| it.split_ascii_whitespace())
+        .chain(args.iter().map(|it| it.as_str()))
+        .map(Path::new)
         .filter(|it| it.exists())
         .map(|it| format!("{}\n", it.display()))
         .collect::<String>();
+    match shell_arg {
+        Some(shell_arg) => {
+            cmd!(sh, "entr -r -c fish -c {shell_arg}").stdin(&files).run()?;
+        }
+        None => {
+            cmd!(sh, "entr -r -c {args...}").stdin(&files).run()?;
+        }
+    }
 
-    let args = std::env::args_os().skip(1);
-    cmd!(sh, "entr -r {args...}").stdin(&files).read_stderr()?;
     Ok(())
 }

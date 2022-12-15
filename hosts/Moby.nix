@@ -10,6 +10,7 @@
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
     # kernelParams = [ "i915.force_probe=46a6" ];
+    kernelParams = ["intel_pstate=passive"];
     kernelPackages = pkgs.linuxPackages_6_1;
     # kernelPackages = pkgs.linuxPackages_latest;
   };
