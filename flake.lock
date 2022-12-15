@@ -3,17 +3,13 @@
     "nixpkgs": {
       "locked": {
         "lastModified": 1670929434,
-        "narHash": "sha256-n5UBO6XBV4h3TB7FYu2yAuNQMEYOrQyKeODUwKe06ow=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "1710ed1f6f8ceb75cf7d1cf55ee0cc21760e1c7a",
-        "type": "github"
+        "narHash": "sha256-vmUA82bM7zhPmqcYrBsGBipbznOYVMQQYcGMraxMuNc=",
+        "type": "git",
+        "url": "file:///home/matklad/p/nixpkgs"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/matklad/p/nixpkgs"
       }
     },
     "root": {
