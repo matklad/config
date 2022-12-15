@@ -20,7 +20,7 @@
     cpu.intel.updateMicrocode = true;
   };
   services.xserver.videoDrivers = [ "intel" ];
-  services.throttled.enable = true;
+  services.thermald.enable = true;
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/d00fb9b8-a74e-4bd3-8e1e-c7496f51f69d";
