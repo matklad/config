@@ -1,5 +1,6 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  # inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs.nixpkgs.url = "file:/home/matklad/p/nixpkgs";
   outputs = { self, nixpkgs }: {
     nixosConfigurations = {
       Ishmael = nixpkgs.lib.nixosSystem {
