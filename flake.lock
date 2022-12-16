@@ -2,10 +2,10 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1671115361,
+        "lastModified": 1671115865,
         "narHash": "sha256-06f7QpAry1GMumyn/8wAUT4NWJVlhUUyPh33V4vTjbo=",
         "ref": "refs/heads/throttledup",
-        "rev": "1d5c8cbf72b6a50784ab5ac2275fcbde5ecf420a",
+        "rev": "77ff62438226498540dafe681e13cc8ef1551c8c",
         "revCount": 434585,
         "type": "git",
         "url": "file:///home/matklad/p/nixpkgs"
