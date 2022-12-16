@@ -137,7 +137,6 @@
           enable = true;
         };
         defaultSession = "plasma";
-        autoLogin = { enable = false; user = "matklad"; };
       };
       desktopManager.plasma5.enable = true;
 
