@@ -21,8 +21,8 @@
   };
   services.xserver.videoDrivers = [ "intel" ];
   services.xserver.displayManager.sddm = {
-    autologin.enable = true;
-    autologin.user = "matklad";
+    autoLogin.enable = true;
+    autoLogin.user = "matklad";
   };
   services.throttled.enable = true;
 
