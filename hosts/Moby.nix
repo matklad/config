@@ -20,7 +20,7 @@
     cpu.intel.updateMicrocode = true;
   };
   services.xserver.videoDrivers = [ "intel" ];
-  services.xserver.displayManager.plasma = {
+  services.xserver.displayManager.sddm = {
     autologin.enable = true;
     autologin.user = "matklad";
   };
