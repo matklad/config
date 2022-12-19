@@ -9,7 +9,6 @@
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
-    # kernelParams = [ "intel_pstate=active" ];
     kernelPackages = pkgs.linuxPackages_6_1;
   };
 
@@ -47,5 +46,5 @@
   swapDevices = [ ];
 
   networking.useDHCP = lib.mkDefault true;
-  powerManagement.cpuFreqGovernor = "powersafe";
+  powerManagement.cpuFreqGovernor = "powersave";
 }
