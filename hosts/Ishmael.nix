@@ -14,7 +14,7 @@
     wayland.configuration = {
       system.nixos.tags = [ "wayland" ];
         boot.kernelParams = [ "i915.force_probe=46a6" ];
-        boot.kernelPackages = pkgs.linuxPackages_latest;
+        boot.kernelPackages = pkgs.linuxPackages_6_1;
     };
   };
 
