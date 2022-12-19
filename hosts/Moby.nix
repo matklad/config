@@ -9,7 +9,7 @@
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
-    kernelParams = [ "i915.force_probe=46a6" ];
+    kernelParams = [ "intel_pstate=active" ];
     kernelPackages = pkgs.linuxPackages_6_1;
   };
 
