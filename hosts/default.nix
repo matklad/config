@@ -99,7 +99,7 @@
     gperftools
     graphviz
     htop
-    httpie
+    # httpie
     hunspell
     hunspellDicts.en_US
     jq
