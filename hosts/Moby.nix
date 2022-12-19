@@ -22,10 +22,8 @@
     xserver  = {
       videoDrivers = [ "intel" ];
       displayManager = {
-        sddm = {
-          autoLogin.enable = true;
-          autoLogin.user = "matklad";
-        };
+        autoLogin.enable = true;
+        autoLogin.user = "matklad";
         defaultSession = "plasmawayland";
       };
     };
