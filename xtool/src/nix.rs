@@ -21,12 +21,17 @@ pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
     if upgdate {
         cmd!(sh, "nix flake update").run()?;
     }
+    let mut push = false;
     if !cmd!(sh, "git status --porcelain").read()?.is_empty() {
         cmd!(sh, "git add .").run()?;
         cmd!(sh, "git --no-pager diff --cached --color=always").run()?;
         cmd!(sh, "git commit -m .").run()?;
+        push = true;
     }
     cmd!(sh, "doas rm -rf /var/lib/sddm/.cache").run()?;
     cmd!(sh, "doas nixos-rebuild switch").run()?;
+    if push {
+        cmd!(sh, "git push").run()?;
+    }
     Ok(())
 }
