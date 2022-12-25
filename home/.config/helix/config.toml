@@ -1,4 +1,4 @@
-theme = "everforest_dark"
+theme = "bogster_light"
 
 [editor]
 idle-timeout = 8
@@ -8,16 +8,3 @@ cursorline = true
 insert = "bar"
 normal = "block"
 select = "underline"
-
-[keys.normal]
-"C-s" = ":write-all"
-"A-q" = ":reflow"
-
-[keys.insert]
-"C-s" = ":write-all"
-
-# [keys.normal]
-# "A-x" = "command_mode"
-# 
-# [keys.insert]
-# "A-x" = "normal_mode" # Maps Alt-X to enter normal mode

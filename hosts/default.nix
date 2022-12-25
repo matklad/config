@@ -43,7 +43,6 @@
     qbittorrent
     spectacle
     vscode
-    emacs # back to the square one?
 
     # Comms
     tdesktop
@@ -104,8 +103,6 @@
     hunspellDicts.en_US
     jq
     linuxPackages.perf
-    micro
-    neovim
     nox
     ntfs3g
     patchelf
@@ -300,8 +297,8 @@
     homeBinInPath = true;
     variables = {
       PATH = "$HOME/.cargo/bin";
-      VISUAL = "micro";
-      EDITOR = "micro";
+      VISUAL = "helix";
+      EDITOR = "helix";
       LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";
       RUST_BACKTRACE = "short";
     };
