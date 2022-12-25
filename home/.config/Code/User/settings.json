@@ -295,10 +295,11 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "zls.path": "/home/matklad/p/tb/zls/zls",
+    "zls.path": "/home/matklad/p/zls/result/bin/zls",
     "zls.enable_inlay_hints": true,
     "zls.check_for_update": false,
     "[zig]": {
         "editor.defaultFormatter": "AugusteRame.zls-vscode"
     },
+    "window.zoomLevel": -3,
 }
