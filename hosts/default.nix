@@ -297,8 +297,8 @@
     homeBinInPath = true;
     variables = {
       PATH = "$HOME/.cargo/bin";
-      VISUAL = "helix";
-      EDITOR = "helix";
+      VISUAL = "hx";
+      EDITOR = "hx";
       LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";
       RUST_BACKTRACE = "short";
     };

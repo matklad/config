@@ -301,5 +301,4 @@
     "[zig]": {
         "editor.defaultFormatter": "AugusteRame.zls-vscode"
     },
-    "window.zoomLevel": -3,
 }
