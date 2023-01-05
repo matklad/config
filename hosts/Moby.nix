@@ -6,7 +6,7 @@
   time.timeZone = "Europe/Lisbon";
 
   boot = {
-    initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
+    initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" "intel_pstate" ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
     kernelParams = ["initcall_blacklist=acpi_cpufreq_init"];
