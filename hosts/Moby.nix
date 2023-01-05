@@ -6,10 +6,9 @@
   time.timeZone = "Europe/Lisbon";
 
   boot = {
-    initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" "intel_pstate" ];
+    initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
-    kernelParams = ["initcall_blacklist=acpi_cpufreq_init"];
     kernelPackages = pkgs.linuxPackages_6_1;
   };
 
@@ -45,5 +44,5 @@
   swapDevices = [ ];
 
   networking.useDHCP = lib.mkDefault true;
-  powerManagement.cpuFreqGovernor = "powersave";
+  powerManagement.cpuFreqGovernor = "performance";
 }
