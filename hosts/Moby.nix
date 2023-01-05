@@ -9,7 +9,7 @@
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
-    kernelParameters = ["initcall_blacklist=acpi_cpufreq_init"];
+    kernelParams = ["initcall_blacklist=acpi_cpufreq_init"];
     kernelPackages = pkgs.linuxPackages_6_1;
   };
 
