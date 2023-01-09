@@ -34,6 +34,9 @@
   { "key": "ctrl+alt+shift+h",
     "command": "editor.action.showHover",
     "when": "editorTextFocus" },
+  { "key": "ctrl+shift+f",
+    "command": "search.action.openNewEditorToSide",
+    "when": "editorTextFocus" },
 // Extra Commands
   { "key": "win+6",
     "command": "macros.magit.status" },
