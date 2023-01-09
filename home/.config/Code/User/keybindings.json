@@ -35,7 +35,7 @@
     "command": "editor.action.showHover",
     "when": "editorTextFocus" },
   { "key": "ctrl+shift+f",
-    "command": "search.action.openNewEditorToSide",
+    "command": "search.action.openNewEditor",
     "when": "editorTextFocus" },
 // Extra Commands
   { "key": "win+6",
