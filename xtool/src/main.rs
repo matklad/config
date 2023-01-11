@@ -19,6 +19,7 @@ mod new_crate;
 mod nix;
 mod prf;
 mod script;
+mod swm;
 mod use_nix;
 
 const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
@@ -40,6 +41,7 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("nixup", nix::up),
     ("prf", prf::run),
     ("script", script::run),
+    ("swm", swm::run),
     ("use-nix", use_nix::run),
 ];
 
