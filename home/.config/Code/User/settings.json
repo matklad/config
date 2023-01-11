@@ -6,6 +6,8 @@
         // "editor.wordWrap": "wordWrapColumn",
         // "editor.wordWrapColumn": 80,
     },
+    "projectNameInStatusBar.align": "right",
+    "projectNameInStatusBar.textStyle": "uppercase",
 
     "workbench.panel.opensMaximized": "never",
     "window.enableMenuBarMnemonics": false,

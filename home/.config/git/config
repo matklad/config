@@ -15,3 +15,8 @@
 [diff]
 	colormovedws = allow-indentation-change
 	colormoved = default
+[url "https://github.com/"]
+  insteadOf = "git@github.com:"
+[url "git@github.com:"]
+  pushInsteadOf = "https://github.com/"
+  pushInsteadOf = "git@github.com:"
