@@ -238,6 +238,7 @@
 
   hardware = {
     keyboard.zsa.enable = true;
+    ledger.enable = true;
   };
 
   virtualisation = {
