@@ -288,7 +288,8 @@
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "workbench.activityBar.visible": false,
     "[typescript]": {
-        "editor.defaultFormatter": "denoland.vscode-deno"
+        "editor.defaultFormatter": "denoland.vscode-deno",
+        "editor.acceptSuggestionOnCommitCharacter": false
     },
     "[json]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
