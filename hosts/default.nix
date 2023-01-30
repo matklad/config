@@ -74,6 +74,7 @@
     protobuf
     rustup
     valgrind
+    isabelle
     zig
 
     # Archives
