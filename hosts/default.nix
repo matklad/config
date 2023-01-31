@@ -74,7 +74,7 @@
     protobuf
     rustup
     valgrind
-    isabelle
+    elan
     zig
 
     # Archives
