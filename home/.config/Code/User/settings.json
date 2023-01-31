@@ -93,13 +93,8 @@
     // plugins
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "aceJump.finder.pattern": "[ ,-.*{}_()\"'`<>\\/[:&=|;]",
-    // "aceJump.placeholder.backgroundColor": "#3F3F3F",
-    // "aceJump.placeholder.color": "#BFEBBF",
-    "aceJump.placeholder.upperCase": true,
-    "aceJump.finder.skipSelection": true,
-    "aceJump.scroll.mode": "none",
     "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",
+    "findJump.positionAbsolute": true,
     "errorLens.exclude": [
         ".*Unknown word.*"
     ],
