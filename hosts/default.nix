@@ -26,7 +26,7 @@
         xorg.libX11 xorg.libxcb xorg.libXcomposite xorg.libXcursor
         xorg.libXdamage xorg.libXext xorg.libXfixes xorg.libXi xorg.libXrandr
         xorg.libXrender xorg.libXScrnSaver xorg.libxshmfence xorg.libXtst
-        xorg.xcbutilkeysyms zlib fontconfig
+        xorg.xcbutilkeysyms zlib fontconfig.lib
       ];
       profile = ''export FHS=1'';
       runScript = "fish";
