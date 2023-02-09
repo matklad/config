@@ -37,6 +37,7 @@ SETUVAR _fish_abbr_swd:git\x20switch\x20\x2dd
 SETUVAR _fish_abbr_xp:\x2e/x\x2epy\x20\x2d\x2dstage\x201\x20\x2d\x2dkeep\x2dstage\x201
 SETUVAR _fish_abbr_xpc:\x2e/x\x2epy\x20check
 SETUVAR _fish_abbr_xpt:\x2e/x\x2epy\x20\x2di\x20\x2d\x2dkeep\x2dstage\x201\x20test\x20\x2d\x2dpass\x20check
+SETUVAR cargo:/home/matklad/p/cargo/target/release/cargo
 SETUVAR fish_color_autosuggestion:8e908c
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:8959a8

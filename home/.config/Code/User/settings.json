@@ -16,7 +16,7 @@
     "window.restoreWindows": "none",
     "window.title": "${rootName}",
     "window.titleBarStyle": "native",
-    "workbench.colorTheme": "Pale Fire",
+    "workbench.colorTheme": "Leuven Light",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
@@ -293,7 +293,7 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "zls.path": "/home/matklad/p/zls/result/bin/zls",
+    "zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
     "zls.enable_inlay_hints": true,
     "zls.check_for_update": false,
     "[zig]": {
