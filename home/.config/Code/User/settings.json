@@ -16,7 +16,6 @@
     "window.restoreWindows": "none",
     "window.title": "${rootName}",
     "window.titleBarStyle": "native",
-    "workbench.colorTheme": "Leuven Light",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
@@ -271,7 +270,6 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "workbench.productIconTheme": "IntelliJ",
     "files.associations": {
         "*COMMIT_EDITMSG": "git-commit"
     },
@@ -299,4 +297,6 @@
     "[zig]": {
         "editor.defaultFormatter": "AugusteRame.zls-vscode"
     },
+    "workbench.colorTheme": "Leuven Light",
+    "workbench.productIconTheme": "IntelliJ",
 }
