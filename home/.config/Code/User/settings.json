@@ -90,6 +90,7 @@
     "debug.onTaskErrors": "debugAnyway",
     "remote.SSH.useLocalServer": false,
     // plugins
+    "spellright.suggestionsInHints": false,
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",

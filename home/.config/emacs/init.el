@@ -70,7 +70,7 @@
 	rust-mode
 	zig-mode
 	ace-jump-mode
-	lsp-mode
+	;; lsp-mode
 	whitespace-cleanup-mode))
 
 ;; (package-refresh-contents)
@@ -97,7 +97,11 @@
   t)
 (define-key global-map (kbd "M-k") 'ace-jump-mode)
 
+;; (require 'lsp)
+(add-to-list 'load-path "~/p/lsp-mode/")
 (require 'lsp)
+(require 'lsp-mode)
+(load "~/p/lsp-mode/clients/lsp-rust.el")
 (setq lsp-rust-server 'rust-analyzer)
 (setq lsp-log-io 't)
 ;; (global-set-key (kbd "C-w") 'lsp-extend-selection)
