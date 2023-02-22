@@ -114,7 +114,7 @@
     xclip
     xorg.xkbcomp
     pciutils
-    libmobiledevice
+    libimobiledevice
 
     # Rust stuff
     bat
