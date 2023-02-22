@@ -172,11 +172,6 @@
       ];
     };
 
-    usbmuxd = {
-      enable = true;
-      package = pkgs.usbmuxd2;
-    };
-
     unclutter-xfixes.enable = true;
     printing.enable = true;
     earlyoom.enable = true;
@@ -185,7 +180,10 @@
       enable = true;
       passwordAuthentication = false;
     };
-    usbmuxd.enable = true;
+    usbmuxd = {
+      enable = true;
+      package = pkgs.usbmuxd2;
+    };
     kanata = {
       enable = true;
       keyboards.laptop = {
