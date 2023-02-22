@@ -8,14 +8,8 @@
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
-  };
-
-  specialisation = {
-    wayland.configuration = {
-      system.nixos.tags = [ "wayland" ];
-        boot.kernelParams = [ "i915.force_probe=46a6" ];
-        boot.kernelPackages = pkgs.linuxPackages_6_1;
-    };
+    kernelParams = [ "i915.force_probe=46a6" ];
+    kernelPackages = pkgs.linuxPackages_6_1;
   };
 
   hardware = {
