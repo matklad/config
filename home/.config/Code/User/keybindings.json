@@ -48,12 +48,15 @@
     "command": "rust-analyzer.openCargoToml" },
 
 // Window management
-  { "key": "win+k",
-    "command": "workbench.action.closeWindow",
-    "when": "!editorIsOpen && !multipleEditorGroups" },
+  // { "key": "win+k",
+  //   "command": "workbench.action.closeWindow",
+  //   "when": "!editorIsOpen && !multipleEditorGroups" },
   { "key": "win+k",
     "command": "workbench.action.closeGroup",
     "when": "editorFocus && multipleEditorGroups" },
+  { "key": "win+k",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "inSearchEditor && multipleEditorGroups" },
   { "key": "win+k",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarFocus" },
