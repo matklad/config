@@ -114,6 +114,7 @@
     xclip
     xorg.xkbcomp
     pciutils
+    libmobiledevice
 
     # Rust stuff
     bat
@@ -150,6 +151,7 @@
       xkbVariant = "workman,";
       xkbOptions = "grp:win_space_toggle";
     };
+
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -168,6 +170,11 @@
         }
         { matches = [ { "node.name" = "~bluez_input.*"; } { "node.name" = "~bluez_output.*"; } ]; }
       ];
+    };
+
+    usbmuxd = {
+      enable = true;
+      package = pkgs.usbmuxd2;
     };
 
     unclutter-xfixes.enable = true;
