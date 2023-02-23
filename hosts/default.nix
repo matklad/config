@@ -178,7 +178,7 @@
     pcscd.enable = true;
     openssh = {
       enable = true;
-      passwordAuthentication = false;
+      settings.PasswordAuthentication = false;
     };
     usbmuxd = {
       enable = true;
