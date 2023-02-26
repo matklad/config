@@ -1,15 +1,10 @@
-use xshell::{cmd, Shell};
+// use xshell::{cmd, Shell};
 
 fn main() -> anyhow::Result<()> {
-    // let sh = Shell::new()?;
-    // for path in sh.read_dir(".")? {
-    //     if path.to_str().unwrap_or_default().ends_with(".adoc") {
-    //         let contents = sh.read_file(&path)?;
-    //         sh.remove_path(&path)?;
-    //         sh.write_file(path.with_extension("djot"), &contents)?
-    //     }
-    // }
-    std::process::Command::new("cargo")
-        .arg("build")
+    let arg = std::env::args().nth(1).unwrap();
+    for i in 0..10 {
+        println!("{arg}: {i}");
+        std::thread::sleep(std::time::Duration::from_secs(1))
+    }
     Ok(())
 }

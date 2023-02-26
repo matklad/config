@@ -300,6 +300,7 @@
     "[zig]": {
         "editor.defaultFormatter": "AugusteRame.zls-vscode"
     },
-    "workbench.colorTheme": "Leuven Light",
+    "workbench.colorTheme": "Pale Fire High Contrast",
     "workbench.productIconTheme": "IntelliJ",
+    "git.openRepositoryInParentFolders": "never",
 }
