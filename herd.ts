@@ -19,12 +19,6 @@ export async function run(strings: TemplateStringsArray, ...expr: string[]) {
   }
 }
 
-export async function spawn(strings: TemplateStringsArray, ...expr: string[]) {
-  const { command, display } = cmd(strings, ...expr);
-  await out(display);
-  return await command.spawn();
-}
-
 function cmd(
   strings: TemplateStringsArray,
   ...expr: string[]
