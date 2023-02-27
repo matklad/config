@@ -118,7 +118,7 @@
     "command": "rust-analyzer.parentModule" },
 
   { "key": "ctrl+m",
-    "command": "rust-analyzer.matchingBrace" },
+    "command": "editor.action.jumpToBracket" },
   { "key": "pageup",
     "command": "cursorMove",
     "args": { "by": "wrappedLine", "value": 36, "to": "up" },
