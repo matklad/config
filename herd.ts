@@ -11,7 +11,7 @@ export async function rm(path: string) {
 export async function run(strings: TemplateStringsArray, ...expr: string[]) {
   const { command, display } = cmd(strings, ...expr);
   await out(display);
-  const child = await command.spawn();
+  const child = command.spawn();
   child.ref();
   const status = await child.status;
   if (status.code != 0) {
