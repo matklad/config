@@ -48,9 +48,6 @@
     "command": "rust-analyzer.openCargoToml" },
 
 // Window management
-  // { "key": "win+k",
-  //   "command": "workbench.action.closeWindow",
-  //   "when": "!editorIsOpen && !multipleEditorGroups" },
   { "key": "win+k",
     "command": "workbench.action.closeGroup",
     "when": "editorFocus && multipleEditorGroups" },
@@ -96,6 +93,7 @@
     "command": "editor.unfold",
     "when": "editorTextFocus && foldingEnabled" },
 
+// Semantic Navigation
   { "key": "ctrl+n",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
@@ -117,6 +115,7 @@
   { "key": "ctrl+alt+shift+m",
     "command": "rust-analyzer.parentModule" },
 
+// Text Navigation
   { "key": "ctrl+m",
     "command": "editor.action.jumpToBracket" },
   { "key": "pageup",
@@ -135,7 +134,12 @@
     "command": "cursorMove",
     "args": { "by": "wrappedLine", "value": 36, "to": "down", "select": true },
     "when": "editorTextFocus" },
+  { "key": "alt+e",
+    "command": "findJump.activate" },
+  { "key": "shift+alt+e",
+    "command": "findJump.activateWithSelection" },
 
+// Next/Prev
   { "key": "ctrl+down",
     "command": "workbench.action.editor.nextChange",
     "when": "editorTextFocus && !suggestWidgetVisible" },
@@ -155,22 +159,29 @@
   { "key": "alt+up",
     "command": "references-view.prev",
     "when": "!searchViewletVisible" },
-
-  { "key": "alt+e",
-    "command": "findJump.activate" },
-  { "key": "shift+alt+e",
-    "command": "findJump.activateWithSelection" },
-  // { "key": "alt+shift+e",
-  //   "command": "extension.aceJump.selection" },
-
-  { "key": "ctrl+i",
-    "command": "center-editor-window.center" },
   { "key": "ctrl+y",
     "command": "editor.action.marker.nextInFiles",
     "when": "editorFocus && !editorReadonly" },
   { "key": "ctrl+shift+y",
     "command": "editor.action.marker.prevInFiles",
     "when": "editorFocus && !editorReadonly" },
+  { "key": "alt+left",
+    "command": "workbench.action.navigateBack" },
+  { "key": "alt+right",
+    "command": "workbench.action.navigateForward" },
+
+// Misc.
+
+  { "key": "ctrl+c",
+    "command": "workbench.action.terminal.copySelection",
+    "when": "terminalFocus" },
+
+  { "key": "ctrl+escape",
+    "command": "workbench.action.terminal.sendSequence", "args": { "text": "\u0003" },
+    "when": "terminalFocus" },
+
+  { "key": "ctrl+i",
+    "command": "center-editor-window.center" },
 
   { "key": "ctrl+r",
     "command": "editor.action.rename",
@@ -207,12 +218,7 @@
     "command": "deleteWordPartRight",
     "when": "textInputFocus && !editorReadonly" },
 
-  { "key": "alt+left",
-    "command": "workbench.action.navigateBack" },
-  { "key": "alt+right",
-    "command": "workbench.action.navigateForward" },
-
-  // Negatives
+// Negatives
   { "key": "down",
     "command": "-selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },

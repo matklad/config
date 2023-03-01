@@ -305,11 +305,11 @@
 
   environment = {
     homeBinInPath = true;
-    variables = {
+    sessionVariables = {
       PATH = "$HOME/.cargo/bin";
+      NIXOS_OZONE_WL = "1";
       VISUAL = "hx";
       EDITOR = "hx";
-      LIBCLANG_PATH = "${pkgs.llvmPackages_14.clang.cc.lib}/lib";
       RUST_BACKTRACE = "short";
     };
   };
