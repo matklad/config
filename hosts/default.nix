@@ -99,23 +99,21 @@
     gperftools
     graphviz
     htop
-    # httpie
     hunspell
     hunspellDicts.en_US
     jq
+    libimobiledevice
     linuxPackages.perf
     nox
     ntfs3g
     patchelf
+    pciutils
+    rr
     s-tui
     v4l-utils
     wally-cli
     wget
-    xclip
-    xorg.xkbcomp
-    pciutils
-    libimobiledevice
-    rr
+    wl-clipboard
 
     # Rust stuff
     bat
