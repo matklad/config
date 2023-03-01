@@ -241,6 +241,7 @@
     };
     blacklistedKernelModules = [ "nouveau" ];
     supportedFilesystems = [ "ntfs" ];
+    kernelPackages = pkgs.linuxPackages_6_2;
     kernel.sysctl."kernel.perf_event_paranoid" = 1;
   };
 

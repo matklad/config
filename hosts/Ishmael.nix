@@ -9,7 +9,6 @@
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
     kernelParams = [ "i915.force_probe=46a6" ];
-    kernelPackages = pkgs.linuxPackages_6_2;
   };
 
   hardware = {
