@@ -306,8 +306,8 @@
   environment = {
     homeBinInPath = true;
     sessionVariables = {
+      # NIXOS_OZONE_WL = "1";
       PATH = "$HOME/.cargo/bin";
-      NIXOS_OZONE_WL = "1";
       VISUAL = "hx";
       EDITOR = "hx";
       RUST_BACKTRACE = "short";
