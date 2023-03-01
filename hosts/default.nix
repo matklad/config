@@ -115,6 +115,7 @@
     xorg.xkbcomp
     pciutils
     libimobiledevice
+    rr
 
     # Rust stuff
     bat
