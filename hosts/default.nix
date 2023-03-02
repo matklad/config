@@ -21,7 +21,7 @@
       name = "fhs";
       profile = ''export FHS=1'';
       runScript = "fish";
-    })
+    }))
 
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
