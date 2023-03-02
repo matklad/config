@@ -17,19 +17,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    (pkgs.buildFHSUserEnv {
+    (pkgs.buildFHSUserEnv (pkgs.appimageTools.defaultFhsEnvArgs // {
       name = "fhs";
-      targetPkgs = pkgs: with pkgs; [
-        alsa-lib atk cairo cups curl dbus expat file fish fontconfig
-        fontconfig.lib freetype fuse glib gtk3 libGL libnotify libxml2 libxslt
-        netcat nspr nss openjdk8 openssl.dev pango pkg-config strace udev
-        vulkan-loader watch wget which
-        zlib
-      ] ++ (with pkgs.xorg; [
-        libX11 libxcb libXcomposite libXcursor libXdamage libXext libXfixes
-        libXi libXrandr libXrender libXScrnSaver libxshmfence libXtst
-        xcbutilkeysyms
-      ]);
       profile = ''export FHS=1'';
       runScript = "fish";
     })
