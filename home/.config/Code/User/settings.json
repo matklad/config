@@ -438,12 +438,18 @@
                     "key": "e",
                     "name": "explorer",
                     "type": "command",
-                    "command": "macros.focusFilesExplorerClosePanel",
+                     "command": "macros.focusFilesExplorerClosePanel",
+                },
+                {
+                    "key": "x",
+                    "name": "extensions",
+                    "type": "command",
+                    "command": "workbench.views.extensions.marketplace.focus"
                 }
             ]
         },
         {
-            "key": "l",
+            "key": "w",
             "name": "windows",
             "type": "bindings",
             "bindings": [

@@ -183,21 +183,21 @@
             grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
             caps a    s    d    f    g    h    j    k    l     ;    '    ret
-            lsft z    x    c    v    b    n    m    ,    .     /    rsft
+       lsft 102d z    x    c    v    b    n    m    ,    .     /    rsft
             lctl lmet lalt           spc            ralt rmet  rctl)
 
           (deflayer qwerty
             grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
             esc  a    s    d    f    g    h    j    k    l     ;    '    ret
-            lsft @lc  @la  @lm  v    b    n    m    @rm  @ra   @rc  rsft
-            lctl lmet lalt           @sp            @alt rmet  rctl)
+       lsft @w0  @lc  @la  @lm  v    b    n    m    @rm  @ra   @rc  rsft
+            lctl lmet lalt           @sp            ralt rmet  rctl)
 
          (deflayer motion
             grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    pgup up   pgdn  p    [    ]    \
             esc  a    s    d    f    g    bspc lft  down rght del   '    ret
-            lsft @lc  @la  @lm  v    b    ret  m    home end   /    rsft
+       lsft @lc  @la  @lm  v    b    ret  m    home end   /    rsft
             lctl lmet lalt           @sp            ralt rmet  rctl)
 
           (defalias
@@ -208,7 +208,7 @@
             rc (tap-hold 200 200 / rctl)
             la (tap-hold 200 200 x lalt)
             ra (tap-hold 200 200 . lalt)
-            alt A-k
+            w0 M-0
           )
         '';
       };

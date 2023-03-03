@@ -38,9 +38,9 @@
   //   "command": "open-notes.open" },
 
 // Window management
-  { "key": "ctrl+l",
+  { "key": "ctrl+e",
     "command": "workbench.action.focusNextGroup" },
-  { "key": "alt+l",
+  { "key": "alt+e",
     "command": "whichkey.show",
     "args": { "narrow": "l" } },
 
@@ -123,9 +123,9 @@
     "command": "cursorMove",
     "args": { "by": "wrappedLine", "value": 36, "to": "down", "select": true },
     "when": "editorTextFocus" },
-  { "key": "alt+e",
+  { "key": "win+0",
     "command": "findJump.activate" },
-  { "key": "shift+alt+e",
+  { "key": "shift+win+0",
     "command": "findJump.activateWithSelection" },
 
 // Next/Prev
