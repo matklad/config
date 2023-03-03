@@ -197,7 +197,7 @@
             grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
             tab  q    w    e    r    t    y    pgup up   pgdn  p    [    ]    \
             esc  a    s    d    f    g    bspc lft  down rght del   '    ret
-       lsft @lc  @la  @lm  v    b    ret  m    home end   /    rsft
+       lsft @w0  @lc  @la  @lm  v    b    ret  m    home end   /    rsft
             lctl lmet lalt           @sp            ralt rmet  rctl)
 
           (defalias
