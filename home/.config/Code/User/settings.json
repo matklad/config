@@ -99,9 +99,21 @@
         ".*Unknown word.*"
     ],
     "macros": {
-        "which.symbols": [
+        "whichkey.symbols": [
             "whichkey.show",
-            {"command": "type", "args": {"text": "s"}}
+            { "command": "whichkey.triggerKey", "args": "s" },
+        ],
+        "whichkey.open": [
+            "whichkey.show",
+            { "command": "whichkey.triggerKey", "args": "o" },
+        ],
+        "whichkey.nav": [
+            "whichkey.show",
+            { "command": "whichkey.triggerKey", "args": "n" },
+        ],
+        "whichkey.win": [
+            "whichkey.show",
+            { "command": "whichkey.triggerKey", "args": "w" },
         ],
         "closePanelCloseEditorsCloseSidebar": [
             "workbench.action.closePanel",
@@ -131,6 +143,184 @@
             },
         ]
     },
+    "whichkey.bindings": [
+        {
+            "key": "s",
+            "name": "symbols",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "d",
+                    "name": "definition",
+                    "type": "command",
+                    "command": "editor.action.revealDefinition"
+                },
+                {
+                    "key": "u",
+                    "name": "usage",
+                    "type": "command",
+                    "command": "references-view.findReferences"
+                },
+                {
+                    "key": "t",
+                    "name": "type",
+                    "type": "command",
+                    "command": "editor.action.goToTypeDefinition"
+                },
+                {
+                    "key": "i",
+                    "name": "implementation",
+                    "type": "command",
+                    "command": "editor.action.goToImplementation"
+                },
+                {
+                    "key": "p",
+                    "name": "parent",
+                    "type": "command",
+                    "command": "rust-analyzer.parentModule"
+                },
+                {
+                    "key": "m",
+                    "name": "manifest",
+                    "type": "command",
+                    "command": "rust-analyzer.openCargoToml"
+                },
+                {
+                    "key": "h",
+                    "name": "hover",
+                    "type": "command",
+                    "command": "editor.action.showHover"
+                },
+                {
+                    "key": "a",
+                    "name": "argument hints",
+                    "type": "command",
+                    "command": "editor.action.triggerParameterHints"
+                },
+            ]
+        },
+        {
+            "key": "n",
+            "name": "navigate",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "file",
+                    "type": "command",
+                    "command": "workbench.action.quickOpen"
+                },
+                {
+                    "key": "t",
+                    "name": "symbol tree",
+                    "type": "command",
+                    "command": "workbench.action.gotoSymbol"
+                },
+                {
+                    "key": "w",
+                    "name": "workspace symbol",
+                    "type": "command",
+                    "command": "workbench.action.showAllSymbols"
+                },
+                {
+                    "key": "l",
+                    "name": "line",
+                    "type": "command",
+                    "command": "workbench.action.gotoLine"
+                },
+                {
+                    "key": "s",
+                    "name": "start",
+                    "command": "cursorTop"
+                },
+                {
+                    "key": "e",
+                    "name": "end",
+                    "command": "cursorBottom"
+                }
+            ]
+        },
+        {
+            "key": "o",
+            "name": "open",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "file",
+                    "type": "command",
+                    "command": "workbench.action.quickOpen"
+                },
+                {
+                    "key": "g",
+                    "name": "magit",
+                    "type": "command",
+                    "command": "macros.magit.status"
+                },
+                {
+                    "key": "n",
+                    "name": "notes",
+                    "type": "command",
+                    "command": "open-notes.open"
+                },
+                {
+                    "key": "t",
+                    "name": "terminal",
+                    "type": "command",
+                    "command": "terminal.focus",
+                },
+                {
+                    "key": "e",
+                    "name": "explorer",
+                    "type": "command",
+                     "command": "macros.focusFilesExplorerClosePanel",
+                },
+                {
+                    "key": "x",
+                    "name": "extensions",
+                    "type": "command",
+                    "command": "workbench.extensions.action.installExtensions"
+                }
+            ]
+        },
+        {
+            "key": "w",
+            "name": "windows",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "n",
+                    "name": "next",
+                    "type": "command",
+                    "command": "workbench.action.focusNextGroup",
+                },
+                {
+                    "key": "v",
+                    "name": "vertical split",
+                    "type": "command",
+                    "command": "workbench.action.splitEditorRight"
+                },
+                {
+                    "key": "h",
+                    "name": "horizontal split",
+                    "type": "command",
+                    "command": "workbench.action.splitEditorDown"
+                },
+                {
+                    "key": "o",
+                    "name": "only",
+                    "type": "command",
+                    "command": "macros.closePanelCloseEditorsCloseSidebar"
+                },
+                {
+                    "key": "k",
+                    "name": "kill",
+                    "type": "command",
+                    "command": "workbench.action.closeGroup"
+                },
+            ]
+        }
+    ],
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.completion.callable.snippets": "add_parentheses",
     "rust-analyzer.callInfo.full": false,
@@ -307,183 +497,4 @@
     "workbench.colorTheme": "Leuven Light",
     "workbench.productIconTheme": "IntelliJ",
     "git.openRepositoryInParentFolders": "never",
-
-    "whichkey.bindings": [
-        {
-            "key": "s",
-            "name": "symbols",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "d",
-                    "name": "definition",
-                    "type": "command",
-                    "command": "editor.action.revealDefinition"
-                },
-                {
-                    "key": "u",
-                    "name": "usage",
-                    "type": "command",
-                    "command": "references-view.findReferences"
-                },
-                {
-                    "key": "t",
-                    "name": "type",
-                    "type": "command",
-                    "command": "editor.action.goToTypeDefinition"
-                },
-                {
-                    "key": "i",
-                    "name": "implementation",
-                    "type": "command",
-                    "command": "editor.action.goToImplementation"
-                },
-                {
-                    "key": "p",
-                    "name": "parent",
-                    "type": "command",
-                    "command": "rust-analyzer.parentModule"
-                },
-                {
-                    "key": "m",
-                    "name": "manifest",
-                    "type": "command",
-                    "command": "rust-analyzer.openCargoToml"
-                },
-                {
-                    "key": "h",
-                    "name": "hover",
-                    "type": "command",
-                    "command": "editor.action.showHover"
-                },
-                {
-                    "key": "a",
-                    "name": "argument hints",
-                    "type": "command",
-                    "command": "editor.action.triggerParameterHints"
-                },
-            ]
-        },
-        {
-            "key": "n",
-            "name": "navigate",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "f",
-                    "name": "file",
-                    "type": "command",
-                    "command": "workbench.action.quickOpen"
-                },
-                {
-                    "key": "t",
-                    "name": "symbol tree",
-                    "type": "command",
-                    "command": "workbench.action.gotoSymbol"
-                },
-                {
-                    "key": "w",
-                    "name": "workspace symbol",
-                    "type": "command",
-                    "command": "workbench.action.showAllSymbols"
-                },
-                {
-                    "key": "l",
-                    "name": "line",
-                    "type": "command",
-                    "command": "workbench.action.gotoLine"
-                },
-                {
-                    "key": "s",
-                    "name": "start",
-                    "command": "cursorTop"
-                },
-                {
-                    "key": "e",
-                    "name": "end",
-                    "command": "cursorBottom"
-                }
-            ]
-        },
-        {
-            "key": "o",
-            "name": "open",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "f",
-                    "name": "file",
-                    "type": "command",
-                    "command": "workbench.action.quickOpen"
-                },
-                {
-                    "key": "g",
-                    "name": "magit",
-                    "type": "command",
-                    "command": "macros.magit.status"
-                },
-                {
-                    "key": "n",
-                    "name": "notes",
-                    "type": "command",
-                    "command": "open-notes.open"
-                },
-                {
-                    "key": "t",
-                    "name": "terminal",
-                    "type": "command",
-                    "command": "terminal.focus",
-                },
-                {
-                    "key": "e",
-                    "name": "explorer",
-                    "type": "command",
-                     "command": "macros.focusFilesExplorerClosePanel",
-                },
-                {
-                    "key": "x",
-                    "name": "extensions",
-                    "type": "command",
-                    "command": "workbench.views.extensions.marketplace.focus"
-                }
-            ]
-        },
-        {
-            "key": "w",
-            "name": "windows",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "n",
-                    "name": "next",
-                    "type": "command",
-                    "command": "workbench.action.focusNextGroup",
-                },
-                {
-                    "key": "v",
-                    "name": "vertical split",
-                    "type": "command",
-                    "command": "workbench.action.splitEditorRight"
-                },
-                {
-                    "key": "h",
-                    "name": "horizontal split",
-                    "type": "command",
-                    "command": "workbench.action.splitEditorDown"
-                },
-                {
-                    "key": "o",
-                    "name": "only",
-                    "type": "command",
-                    "command": "macros.closePanelCloseEditorsCloseSidebar"
-                },
-                {
-                    "key": "k",
-                    "name": "kill",
-                    "type": "command",
-                    "command": "workbench.action.closeGroup"
-                },
-            ]
-        }
-    ]
 }
