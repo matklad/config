@@ -98,51 +98,6 @@
     "errorLens.exclude": [
         ".*Unknown word.*"
     ],
-    "macros": {
-        "whichkey.symbols": [
-            "whichkey.show",
-            { "command": "whichkey.triggerKey", "args": "s" },
-        ],
-        "whichkey.open": [
-            "whichkey.show",
-            { "command": "whichkey.triggerKey", "args": "o" },
-        ],
-        "whichkey.nav": [
-            "whichkey.show",
-            { "command": "whichkey.triggerKey", "args": "n" },
-        ],
-        "whichkey.win": [
-            "whichkey.show",
-            { "command": "whichkey.triggerKey", "args": "w" },
-        ],
-        "closePanelCloseEditorsCloseSidebar": [
-            "workbench.action.closePanel",
-            "workbench.action.closeEditorsInOtherGroups",
-            "workbench.action.closeOtherEditors",
-            "workbench.action.closeSidebar",
-        ],
-        "focusPanelCloseSidebar": [
-            "workbench.action.closeSidebar",
-            "workbench.action.focusPanel",
-        ],
-        "focusFilesExplorerClosePanel": [
-            "workbench.action.closePanel",
-            "workbench.files.action.focusFilesExplorer",
-        ],
-        "magit.status": [
-            "workbench.action.closeSidebar",
-            "workbench.action.closePanel",
-            "magit.status",
-        ],
-        "openNotes": [
-            {
-                "command": "vscode.open",
-                "args": {
-                    "uri": "/home/matklad/notes.djot"
-                }
-            },
-        ]
-    },
     "whichkey.bindings": [
         {
             "key": "s",
@@ -255,7 +210,8 @@
                     "key": "g",
                     "name": "magit",
                     "type": "command",
-                    "command": "macros.magit.status"
+                    "command": "extension.multiCommand.execute",
+                    "args": { "sequence": ["workbench.action.closeSidebar", "workbench.action.closePanel", "magit.status" ]}
                 },
                 {
                     "key": "n",
@@ -273,7 +229,8 @@
                     "key": "e",
                     "name": "explorer",
                     "type": "command",
-                     "command": "macros.focusFilesExplorerClosePanel",
+                    "command": "extension.multiCommand.execute",
+                    "args": { "sequence": [ "workbench.action.closePanel", "workbench.files.action.focusFilesExplorer" ] }
                 },
                 {
                     "key": "x",
@@ -310,7 +267,15 @@
                     "key": "o",
                     "name": "only",
                     "type": "command",
-                    "command": "macros.closePanelCloseEditorsCloseSidebar"
+                    "command": "extension.multiCommand.execute",
+                    "args": {
+                        "sequence": [
+                            "workbench.action.closePanel",
+                            "workbench.action.closeEditorsInOtherGroups",
+                            "workbench.action.closeOtherEditors",
+                            "workbench.action.closeSidebar"
+                        ]
+                    }
                 },
                 {
                     "key": "k",
