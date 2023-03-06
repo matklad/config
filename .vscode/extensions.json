@@ -22,8 +22,9 @@
         "streetsidesoftware.code-spell-checker",
         "usernamehw.find-jump",
         "vadimcn.vscode-lldb",
+        "VSpaceCode.whichkey",
         "wmaurer.change-case",
         "yo1dog.cursor-align",
-        "ziyasal.vscode-open-in-github"
+        "ziyasal.vscode-open-in-github",
     ]
 }
