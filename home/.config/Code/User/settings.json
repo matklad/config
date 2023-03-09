@@ -111,6 +111,12 @@
                     "command": "editor.action.revealDefinition"
                 },
                 {
+                    "key": "s",
+                    "name": "split definition",
+                    "type": "command",
+                    "command": "editor.action.revealDefinitionAside"
+                },
+                {
                     "key": "u",
                     "name": "usage",
                     "type": "command",
@@ -462,4 +468,5 @@
     "workbench.colorTheme": "Leuven Light",
     "workbench.productIconTheme": "IntelliJ",
     "git.openRepositoryInParentFolders": "never",
+    "gitlens.mode.active": "zen",
 }
