@@ -158,6 +158,17 @@
                     "type": "command",
                     "command": "editor.action.triggerParameterHints"
                 },
+                {
+                    "key": "f",
+                    "name": "first line",
+                    "command": "cursorTop"
+                },
+                {
+                    "key": "l",
+                    "name": "last line",
+                    "command": "cursorBottom"
+                }
+
             ]
         },
         {
@@ -189,16 +200,6 @@
                     "type": "command",
                     "command": "workbench.action.gotoLine"
                 },
-                {
-                    "key": "s",
-                    "name": "start",
-                    "command": "cursorTop"
-                },
-                {
-                    "key": "e",
-                    "name": "end",
-                    "command": "cursorBottom"
-                }
             ]
         },
         {
@@ -465,8 +466,11 @@
     "[zig]": {
         "editor.defaultFormatter": "AugusteRame.zls-vscode"
     },
-    "workbench.colorTheme": "Leuven Light",
     "workbench.productIconTheme": "IntelliJ",
     "git.openRepositoryInParentFolders": "never",
     "gitlens.mode.active": "zen",
+    "githubPullRequests.remotes": [
+        "upstream"
+    ],
+    "workbench.colorTheme": "Leuven Light",
 }
