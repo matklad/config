@@ -8,7 +8,7 @@ export async function rm(path: string) {
   }
 }
 
-export async function run(strings: TemplateStringsArray, ...expr: string[]) {
+export async function $(strings: TemplateStringsArray, ...expr: string[]) {
   const { command, display } = cmd(strings, ...expr);
   await out(display);
   const child = command.spawn();
