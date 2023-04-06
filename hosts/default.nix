@@ -19,7 +19,7 @@
   environment.systemPackages = with pkgs; [
     (pkgs.buildFHSUserEnv (pkgs.appimageTools.defaultFhsEnvArgs // {
       name = "fhs";
-      packages = pkgs.appimageTools.defaultFhsEnvArgs ++ ["pkg-config"];
+      targetPkgs = pkgs.appimageTools.targetPkgs ++ ["pkg-config"];
       profile = ''export FHS=1'';
       runScript = "fish";
     }))
