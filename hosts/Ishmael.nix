@@ -27,7 +27,7 @@
     displayManager = {
       defaultSession = "plasmawayland";
     };
-  }
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/04a8bc94-33a1-4fd7-b550-67e72ae1d5bc";
