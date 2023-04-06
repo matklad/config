@@ -135,6 +135,12 @@
                     "command": "editor.action.goToImplementation"
                 },
                 {
+                    "key": "c",
+                    "name": "declarationn",
+                    "type": "command",
+                    "command": "editor.action.revealDeclaration"
+                },
+                {
                     "key": "p",
                     "name": "parent",
                     "type": "command",
