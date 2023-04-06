@@ -17,12 +17,13 @@
   };
 
   environment.systemPackages = with pkgs; [
-    (pkgs.buildFHSUserEnv (pkgs.appimageTools.defaultFhsEnvArgs // {
-      name = "fhs";
-      targetPkgs = pkgs.appimageTools.targetPkgs ++ ["pkg-config"];
-      profile = ''export FHS=1'';
-      runScript = "fish";
-    }))
+    (let base = pkgs.appimageTools.defaultFhsEnvArgs; in
+     pkgs.buildFHSUserEnv (base // {
+       name = "fhs";
+       targetPkgs = pkgs: (base.targetPkgs pkgs) ++ ["pkg-config"];
+       profile = ''export FHS=1'';
+       runScript = "fish";
+     }))
 
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
