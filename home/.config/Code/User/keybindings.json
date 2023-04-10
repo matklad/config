@@ -18,8 +18,7 @@
   { "key": "Enter",                "command": "rust-analyzer.onEnter",
     "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust" },
   { "key": "ctrl+alt+shift+c",     "command": "workbench.output.action.clearOutput" },
-  { "key": "ctrl+shift+f",         "command": "search.action.openNewEditor",
-    "when": "editorTextFocus" },
+  { "key": "ctrl+shift+f",         "command": "search.action.openNewEditor" },
 
 // Window management
   { "key": "ctrl+e",               "command": "workbench.action.focusNextGroup" },

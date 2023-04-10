@@ -103,6 +103,7 @@
     pciutils
     rr
     s-tui
+    shellcheck
     v4l-utils
     wally-cli
     wget
