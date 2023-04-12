@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "/home/matklad/p/nixpkgs/flake.nix";
+  inputs.nixpkgs.url = "/home/matklad/p/nixpkgs/";
   outputs = { self, nixpkgs }: {
     nixosConfigurations = {
       Ishmael = nixpkgs.lib.nixosSystem {
