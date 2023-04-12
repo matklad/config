@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1681317984,
-        "narHash": "sha256-J5x2aj+YrPXiYJRJcRBQ+0iPQHCWFmDE2qX62iyDMhw=",
+        "lastModified": 1681318816,
+        "narHash": "sha256-LcmdoG6394T982El4RWlOYsSbwwOP0hxPKDgLmwDp7M=",
         "ref": "refs/heads/my-config",
-        "rev": "17cc8f0ef4897050cb71a308d98b2232ff822bc7",
-        "revCount": 472391,
+        "rev": "1f2c5f237dd1feb2b7cb9d83ffa51495b14e801b",
+        "revCount": 472392,
         "type": "git",
         "url": "file:///home/matklad/p/nixpkgs"
       },
