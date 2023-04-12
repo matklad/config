@@ -83,6 +83,7 @@
     p7zip
 
     # Utils
+    xorg.xclock
     asciinema
     binutils
     curl
