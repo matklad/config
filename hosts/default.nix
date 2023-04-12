@@ -83,6 +83,7 @@
     p7zip
 
     # Utils
+    ydotool
     xorg.xclock
     asciinema
     binutils
