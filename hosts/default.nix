@@ -3,6 +3,10 @@
   nix = {
     extraOptions = "experimental-features = nix-command flakes";
     nixPath = ["nixpkgs=${pkgs.path}"];
+    gc = {
+      automatic = true;
+      options = "--max-freed 1G --delete-older-than 7d";
+    };
   };
 
   nixpkgs.config = {
