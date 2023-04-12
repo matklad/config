@@ -3,10 +3,7 @@
     "nixpkgs": {
       "locked": {
         "lastModified": 1681317114,
-        "narHash": "sha256-unPOQ9vAiHC9cQ1gdyiUjaKxi8rXZSMdOg+Ku6D0AqE=",
-        "ref": "refs/heads/my-config",
-        "rev": "33e54d80b9aaf88bd1fd8d79abc2e7abcd773b86",
-        "revCount": 472389,
+        "narHash": "sha256-DcDPRs7kGba1njH974PUB1+mVRJWZr4Pb8q1Z4evfng=",
         "type": "git",
         "url": "file:///home/matklad/p/nixpkgs"
       },
