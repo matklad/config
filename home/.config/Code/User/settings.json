@@ -8,7 +8,6 @@
     },
     "projectNameInStatusBar.align": "right",
     "projectNameInStatusBar.textStyle": "uppercase",
-
     "workbench.panel.opensMaximized": "never",
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "hidden",
@@ -174,7 +173,6 @@
                     "name": "last line",
                     "command": "cursorBottom"
                 }
-
             ]
         },
         {
@@ -224,7 +222,13 @@
                     "name": "magit",
                     "type": "command",
                     "command": "extension.multiCommand.execute",
-                    "args": { "sequence": ["workbench.action.closeSidebar", "workbench.action.closePanel", "magit.status" ]}
+                    "args": {
+                        "sequence": [
+                            "workbench.action.closeSidebar",
+                            "workbench.action.closePanel",
+                            "magit.status"
+                        ]
+                    }
                 },
                 {
                     "key": "n",
@@ -243,7 +247,12 @@
                     "name": "explorer",
                     "type": "command",
                     "command": "extension.multiCommand.execute",
-                    "args": { "sequence": [ "workbench.action.closePanel", "workbench.files.action.focusFilesExplorer" ] }
+                    "args": {
+                        "sequence": [
+                            "workbench.action.closePanel",
+                            "workbench.files.action.focusFilesExplorer"
+                        ]
+                    }
                 },
                 {
                     "key": "x",
@@ -462,15 +471,22 @@
     "[json]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
-    "liveServer.settings.donotVerifyTags": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "liveServer.settings.donotVerifyTags": true,
     "zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
-    "zls.enable_inlay_hints": true,
+    "zls.enable_inlay_hints": false,
     "zls.check_for_update": false,
+    "zls.enable_autofix": false,
     "[zig]": {
-        "editor.defaultFormatter": "AugusteRame.zls-vscode"
+        "editor.defaultFormatter": "SteefH.external-formatters"
+    },
+    "externalFormatters.languages": {
+        "zig": {
+            "command": "/nix/store/z6z33jpjpn4vbi16xqkz4id4ryvbjyw1-zig-0.9.1/bin/zig",
+            "arguments": [ "fmt", "--stdin" ]
+        }
     },
     "workbench.productIconTheme": "IntelliJ",
     "git.openRepositoryInParentFolders": "never",
