@@ -229,7 +229,7 @@
   };
 
   boot = {
-    tmpOnTmpfs = true;
+    tmp.useTmpfs = true;
     loader = {
       timeout = 1;
       systemd-boot.enable = true;
