@@ -324,6 +324,6 @@
     rtkit.enable = true;
   };
 
-  system.stateVersion = "18.09";
+  # system.stateVersion = "18.09";
   system.autoUpgrade.enable = false;
 }
