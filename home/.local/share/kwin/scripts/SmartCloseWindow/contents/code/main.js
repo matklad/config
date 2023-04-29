@@ -1,6 +1,6 @@
 registerShortcut("Smart Close Window.",
     "Smart Close Window.",
-    "alt+f5",
+    "win+q",
     function () {
         var c = workspace.activeClient;
         if (c.caption.indexOf("Firefox") == -1 && c.caption.indexOf("Vivaldi") == -1) {

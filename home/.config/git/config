@@ -11,7 +11,7 @@
 [fetch]
 	prune = true
 [feature]
-	manyFiles = true
+#	manyFiles = true
 [diff]
 	colormovedws = allow-indentation-change
 	colormoved = default
