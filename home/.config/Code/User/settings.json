@@ -495,4 +495,5 @@
         "upstream"
     ],
     "workbench.colorTheme": "Leuven Light",
+    "lldb.suppressUpdateNotifications": true,
 }

@@ -69,3 +69,13 @@ macro_rules! format_to {
         { use ::std::fmt::Write as _; let _ = ::std::write!($buf, $lit $($arg)*); }
     };
 }
+
+/// World's simplest terminal coloring library.
+pub mod ansi {
+    pub const RED: &str = "\x1b[31m";
+    pub const GREEN: &str = "\x1b[32m";
+    pub const BLUE: &str = "\x1b[34m";
+    pub const BOLD: &str = "\x1b[1m";
+    pub const UNDERLINE: &str = "\x1b[4m";
+    pub const RESET: &str = "\x1b[0m";
+}
