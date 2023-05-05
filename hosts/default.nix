@@ -131,7 +131,7 @@
       package = pkgs.emacs.overrideAttrs (old: {
         pname = "emacs";
         version = "head";
-        src = fetchFromGitHub {
+        src = pkgs.fetchFromGitHub {
           owner = "emacs-mirror";
           repo = "emacs";
           rev = "0e8d8a72284f6b3aaa1bbce73d41c7d84bbc4d3c";
