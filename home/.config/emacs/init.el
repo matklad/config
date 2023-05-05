@@ -18,6 +18,7 @@
                    (font-spec :size 20 :name "Noto Emoji"))
 
 ;; (cua-mode t)
+(setq visible-bell t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -68,7 +69,6 @@
       '(zenburn-theme
 	magit
 	zoom
-	counsel
 	rust-mode
 	zig-mode
 	multiple-cursors
@@ -118,5 +118,6 @@
 ;;   - 29 for treesit
 ;;   - treesit support in upstream expand-region
 ;;   - hierarchical imenu
-;;   - eglog's workspace/symbols works (C-u, M-.)
 
+
+(put 'dired-find-alternate-file 'disabled nil)
