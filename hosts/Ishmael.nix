@@ -14,6 +14,7 @@
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
+    nvidia.open = true;
     nvidia.modesetting.enable = true;
     nvidia.prime = {
       offload.enable = true;
