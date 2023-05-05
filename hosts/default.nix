@@ -135,7 +135,7 @@
           owner = "emacs-mirror";
           repo = "emacs";
           rev = "0e8d8a72284f6b3aaa1bbce73d41c7d84bbc4d3c";
-          sha256 = "00vxb83571r39r0dbzkr9agjfmqs929lhq9rwf8akvqghc412apf";
+          hash = "sha256-O75pZ8fBVcM8lMOkN16D3s4h+GnK9Oi53FNEAdj2tT4=";
         };
       });
     };
