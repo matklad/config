@@ -9,13 +9,13 @@
 (setq vc-follow-symlinks t)
 (setq backup-directory-alist `(("." . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+       `((".*" ,temporary-file-directory t)))
 
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; (set-frame-parameter nil 'fullscreen 'fullboth)
 (set-face-attribute 'default nil :font "JetBrains Mono-13")
 (set-fontset-font "fontset-default" nil
-                  (font-spec :size 20 :name "Noto Emoji"))
+                   (font-spec :size 20 :name "Noto Emoji"))
 
 ;; (cua-mode t)
 (tool-bar-mode -1)
@@ -34,13 +34,13 @@
       scroll-preserve-screen-position 1)
 
 (defun comment-or-uncomment-region-or-line ()
-    "Comments or uncomments the region or the current line if there's no active region."
-    (interactive)
-    (let (beg end)
-        (if (region-active-p)
-            (setq beg (region-beginning) end (region-end))
-            (setq beg (line-beginning-position) end (line-end-position)))
-        (comment-or-uncomment-region beg end)))
+   "Comments or uncomments the region or the current line if there's no active region."
+   (interactive)
+   (let (beg end)
+     (if (region-active-p)
+ 	 (setq beg (region-beginning) end (region-end))
+       (setq beg (line-beginning-position) end (line-end-position)))
+     (comment-or-uncomment-region beg end)))
 
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
 
@@ -53,7 +53,8 @@
   (find-file "/home/matklad/config/home/.config/emacs/init.el"))
 
 
-;; (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
+(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
+;; (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 (require 'package)
 
@@ -65,51 +66,38 @@
 (setq package-user-dir "~/.cache/emacs/elpa")
 (setq package-selected-packages
       '(zenburn-theme
-	magit zoom
+	magit
+	zoom
 	counsel
 	rust-mode
 	zig-mode
-	ace-jump-mode
-	;; lsp-mode
+	multiple-cursors
+	expand-region
 	whitespace-cleanup-mode))
 
 ;; (package-refresh-contents)
 (package-initialize)
 (package-install-selected-packages)
 
-(load-theme 'zenburn t)
+;; (add-to-list 'load-path "~/p/expand-region.el")
+
+(load-theme 'leuven t)
 (custom-set-variables
+ '(warning-suppress-log-types '((comp)))
  '(zoom-mode t)
  '(zoom-size '(0.618 . 0.618)))
 
+(fido-vertical-mode 1)
+(add-hook 'imenu-after-jump-hook #'recenter-top-bottom)
 
-(ivy-mode)
-(setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+(define-key global-map (kbd "M-k") 'avy-goto-char-timer)
 
-(autoload
-  'ace-jump-mode
-  "ace-jump-mode"
-  "Emacs quick move minor mode"
-  t)
-(define-key global-map (kbd "M-k") 'ace-jump-mode)
+;; ;; (global-set-key (kbd "C-w") 'lsp-extend-selection)
+;; ;; (global-set-key (kbd "<M-return>") 'lsp-execute-code-action)
+;; ;; (global-set-key (kbd "C-k r") 'lsp-rename)
 
-;; (require 'lsp)
-(add-to-list 'load-path "~/p/lsp-mode/")
-(require 'lsp)
-(require 'lsp-mode)
-(load "~/p/lsp-mode/clients/lsp-rust.el")
-(setq lsp-rust-server 'rust-analyzer)
-(setq lsp-log-io 't)
-;; (global-set-key (kbd "C-w") 'lsp-extend-selection)
-;; (global-set-key (kbd "<M-return>") 'lsp-execute-code-action)
-;; (global-set-key (kbd "C-k r") 'lsp-rename)
-
-(require 'git-commit)
-(server-mode)
+;; (require 'git-commit)
+;; (server-mode)
 
 (global-whitespace-cleanup-mode)
 
@@ -118,5 +106,17 @@
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
-(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+(require 'multiple-cursors)
+(require 'expand-region)
+(global-set-key (kbd "C-e") 'mc/mark-next-like-this-word)
+(global-set-key (kbd "M-e") 'er/expand-region)
+;; (add-to-list 'load-path "~/p/combobulate/")
+;; (require 'combobulate)
+
+;; Blockers
+;;   - 29 for treesit
+;;   - treesit support in upstream expand-region
+;;   - hierarchical imenu
+;;   - eglog's workspace/symbols works (C-u, M-.)
 
