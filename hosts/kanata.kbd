@@ -21,10 +21,10 @@
 
 (defalias
     sp (tap-hold 200 200 spc (layer-toggle motion))
-    lm (tap-hold 200 200 x lmet)
-    rm (tap-hold 200 200 . rmet)
     lc (tap-hold 200 200 z lctl)
-    rc (tap-hold 200 200 / rctl)
-    la (tap-hold 200 200 m lalt)
+    lm (tap-hold 200 200 x lmet)
+    la (tap-hold 200 200 c lalt)
     ra (tap-hold 200 200 , lalt)
+    rm (tap-hold 200 200 . rmet)
+    rc (tap-hold 200 200 / rctl)
     w0 M-0)
