@@ -496,4 +496,5 @@
     ],
     "workbench.colorTheme": "Leuven Light",
     "lldb.suppressUpdateNotifications": true,
+    "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
 }

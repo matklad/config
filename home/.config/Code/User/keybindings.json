@@ -20,6 +20,11 @@
   { "key": "ctrl+alt+shift+c",     "command": "workbench.output.action.clearOutput" },
   { "key": "ctrl+shift+f",         "command": "search.action.openNewEditor" },
 
+  { "key": "ctrl+enter",            "command": "explorer.newFile",
+    "when": "filesExplorerFocus" },
+  { "key": "ctrl+shift+enter",      "command": "explorer.newFolder",
+    "when": "filesExplorerFocus" },
+
 // Window management
   { "key": "ctrl+e",               "command": "workbench.action.focusNextGroup" },
   { "key": "alt+e",                "command": "extension.multiCommand.execute",
@@ -47,13 +52,16 @@
   { "key": "win+o",                "command": "workbench.action.splitEditorDown" },
   { "key": "win+n",                "command": "workbench.action.focusNextGroup" },
 
-  { "key": "win+t",                "command": "extension.multiCommand.execute",
-  "args": { "sequence": [
-    "workbench.action.closePanel",
-    "workbench.files.action.focusFilesExplorer" ] },
-    "when": "!filesExplorerFocus" },
-  { "key": "win+t",                "command": "workbench.action.toggleSidebarVisibility",
-    "when": "filesExplorerFocus" },
+  { "key": "q",                    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus" }
+
+  // { "key": "win+t",                "command": "extension.multiCommand.execute",
+  //   "args": { "sequence": [
+  //     "workbench.action.closePanel",
+  //     "workbench.files.action.focusFilesExplorer" ] },
+  //     "when": "!filesExplorerFocus" },
+  // { "key": "win+t",                "command": "workbench.action.toggleSidebarVisibility",
+  //   "when": "filesExplorerFocus" },
 
 // Folding
   { "key": "ctrl+,",               "command": "editor.fold",
