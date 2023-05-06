@@ -188,37 +188,6 @@
       keyboards.laptop = {
         devices = ["/dev/input/by-path/platform-i8042-serio-0-event-kbd"];
         config = ''
-          (defsrc
-            grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
-            tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
-            caps a    s    d    f    g    h    j    k    l     ;    '    ret
-       lsft 102d z    x    c    v    b    n    m    ,    .     /    rsft
-            lctl lmet lalt           spc            ralt rmet  rctl)
-
-          (deflayer qwerty
-            grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
-            tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
-            esc  a    s    d    f    g    h    j    k    l     ;    '    ret
-       lsft @w0  @lc  @la  @lm  v    b    n    m    @rm  @ra   @rc  rsft
-            lctl lmet lalt           @sp            ralt rmet  rctl)
-
-         (deflayer motion
-            grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
-            tab  q    w    e    r    t    y    pgup up   pgdn  p    [    ]    \
-            esc  a    s    d    f    g    bspc lft  down rght del   '    ret
-       lsft @w0  @lc  @la  @lm  v    b    ret  m    home end   /    rsft
-            lctl lmet lalt           @sp            ralt rmet  rctl)
-
-          (defalias
-            sp (tap-hold 200 200 spc (layer-toggle motion))
-            lm (tap-hold 200 200 c lmet)
-            rm (tap-hold 200 200 , rmet)
-            lc (tap-hold 200 200 z lctl)
-            rc (tap-hold 200 200 / rctl)
-            la (tap-hold 200 200 x lalt)
-            ra (tap-hold 200 200 . lalt)
-            w0 M-0
-          )
         '';
       };
     };
