@@ -494,7 +494,7 @@
     "githubPullRequests.remotes": [
         "upstream"
     ],
-    "workbench.colorTheme": "Leuven Light",
+    "workbench.colorTheme": "Pale Fire High Contrast",
     "lldb.suppressUpdateNotifications": true,
     "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
 }
