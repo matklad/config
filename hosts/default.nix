@@ -187,7 +187,7 @@
       enable = true;
       keyboards.laptop = {
         devices = ["/dev/input/by-path/platform-i8042-serio-0-event-kbd"];
-        config = ./kanata.kbd;
+        config = builtins.readFile ./kanata.kbd;
       };
     };
   };
