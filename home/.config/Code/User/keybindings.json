@@ -53,7 +53,7 @@
   { "key": "win+n",                "command": "workbench.action.focusNextGroup" },
 
   { "key": "q",                    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "filesExplorerFocus" }
+    "when": "filesExplorerFocus" },
 
   // { "key": "win+t",                "command": "extension.multiCommand.execute",
   //   "args": { "sequence": [
@@ -70,17 +70,43 @@
     "when": "editorTextFocus && foldingEnabled" },
 
 // Semantic Navigation
-  { "key": "ctrl+n",               "command": "editor.action.revealDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
-  { "key": "alt+n",                "command": "extension.multiCommand.execute",
-    "when": "editorTextFocus",
-    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
+  // { "key": "ctrl+n",               "command": "editor.action.revealDefinition",
+  //   "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
+  // { "key": "alt+n",                "command": "extension.multiCommand.execute",
+  //   "when": "editorTextFocus",
+  //   "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
   { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
   { "key": "alt+o",                "command": "extension.multiCommand.execute",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
   { "key": "ctrl+t",               "command": "workbench.action.gotoSymbol" },
   { "key": "alt+t",                "command": "extension.multiCommand.execute",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
+
+// Devil
+{ "key": "ctrl+alt g",                   "command": "workbench.action.gotoLine",},
+
+// g -- go definition, type, line, implementation
+// s -- search string, here, all, g
+// d -- do format, Uppercase _, sort
+  { "key": ", g",                  "command": "extension.multiCommand.execute",
+    "when": "editorTextFocus",
+    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "g" }] } },
+
+  { "key": ", s",                  "command": "extension.multiCommand.execute",
+    "when": "editorTextFocus",
+    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
+
+
+  { "key": ", space",              "command": "type",
+    "when": "editorTextFocus",
+    "args": { "text": ", " } },
+  { "key": ", ,",              "command": "type",
+    "when": "editorTextFocus",
+    "args": { "text": "," } },
+  { "key": ", enter",              "command": "type",
+    "when": "editorTextFocus",
+    "args": { "text": ",\n" } },
+
 
 // Text Navigation
   { "key": "ctrl+m",               "command": "editor.action.jumpToBracket" },

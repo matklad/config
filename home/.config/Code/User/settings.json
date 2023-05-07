@@ -99,8 +99,8 @@
     ],
     "whichkey.bindings": [
         {
-            "key": "s",
-            "name": "symbols",
+            "key": "g",
+            "name": "go",
             "type": "bindings",
             "bindings": [
                 {
@@ -164,14 +164,19 @@
                     "command": "editor.action.triggerParameterHints"
                 },
                 {
-                    "key": "f",
-                    "name": "first line",
+                    "key": "b",
+                    "name": "begining of file",
                     "command": "cursorTop"
                 },
                 {
-                    "key": "l",
-                    "name": "last line",
+                    "key": "e",
+                    "name": "end of file",
                     "command": "cursorBottom"
+                },
+                {
+                    "key": "l",
+                    "name": "line",
+                    "command": "workbench.action.gotoLine"
                 }
             ]
         },
@@ -485,7 +490,10 @@
     "externalFormatters.languages": {
         "zig": {
             "command": "/nix/store/z6z33jpjpn4vbi16xqkz4id4ryvbjyw1-zig-0.9.1/bin/zig",
-            "arguments": [ "fmt", "--stdin" ]
+            "arguments": [
+                "fmt",
+                "--stdin"
+            ]
         }
     },
     "workbench.productIconTheme": "IntelliJ",
