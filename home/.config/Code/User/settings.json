@@ -164,16 +164,6 @@
                     "command": "editor.action.triggerParameterHints"
                 },
                 {
-                    "key": "b",
-                    "name": "begining of file",
-                    "command": "cursorTop"
-                },
-                {
-                    "key": "e",
-                    "name": "end of file",
-                    "command": "cursorBottom"
-                },
-                {
                     "key": "l",
                     "name": "line",
                     "command": "workbench.action.gotoLine"
@@ -181,25 +171,68 @@
             ]
         },
         {
-            "key": "n",
-            "name": "navigate",
+            "key": "c",
+            "name": "cursor",
             "type": "bindings",
             "bindings": [
                 {
                     "key": "f",
-                    "name": "file",
+                    "name": "fold",
                     "type": "command",
-                    "command": "workbench.action.quickOpen"
+                    "command": "editor.fold"
                 },
                 {
-                    "key": "t",
-                    "name": "symbol tree",
+                    "key": "F",
+                    "name": "unfold",
+                    "type": "command",
+                    "command": "editor.unfold"
+                },
+                {
+                    "key": "c",
+                    "name": "center",
+                    "type": "command",
+                    "command": "center-editor-window.center"
+                },
+                {
+                    "key": "s",
+                    "name": "start",
+                    "type": "command",
+                    "command": "cursorTop"
+                },
+                {
+                    "key": "e",
+                    "name": "end",
+                    "type": "command",
+                    "command": "cursorBottom"
+                },
+            ]
+        },
+        {
+            "key": "s",
+            "name": "search",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "s",
+                    "name": "string",
+                    "type": "command",
+                    "command": "actions.find"
+                },
+                {
+                    "key": "g",
+                    "name": "grep",
+                    "type": "command",
+                    "command": "search.action.openNewEditor"
+                },
+                {
+                    "key": "h",
+                    "name": "here",
                     "type": "command",
                     "command": "workbench.action.gotoSymbol"
                 },
                 {
-                    "key": "w",
-                    "name": "workspace symbol",
+                    "key": "a",
+                    "name": "all",
                     "type": "command",
                     "command": "workbench.action.showAllSymbols"
                 },
@@ -208,6 +241,19 @@
                     "name": "line",
                     "type": "command",
                     "command": "workbench.action.gotoLine"
+                },
+            ]
+        },
+        {
+            "key": "e",
+            "name": "do",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "format",
+                    "type": "command",
+                    "command": "editor.action.formatDocument"
                 },
             ]
         },
@@ -267,51 +313,6 @@
                 }
             ]
         },
-        {
-            "key": "w",
-            "name": "windows",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "n",
-                    "name": "next",
-                    "type": "command",
-                    "command": "workbench.action.focusNextGroup",
-                },
-                {
-                    "key": "v",
-                    "name": "vertical split",
-                    "type": "command",
-                    "command": "workbench.action.splitEditorRight"
-                },
-                {
-                    "key": "h",
-                    "name": "horizontal split",
-                    "type": "command",
-                    "command": "workbench.action.splitEditorDown"
-                },
-                {
-                    "key": "o",
-                    "name": "only",
-                    "type": "command",
-                    "command": "extension.multiCommand.execute",
-                    "args": {
-                        "sequence": [
-                            "workbench.action.closePanel",
-                            "workbench.action.closeEditorsInOtherGroups",
-                            "workbench.action.closeOtherEditors",
-                            "workbench.action.closeSidebar"
-                        ]
-                    }
-                },
-                {
-                    "key": "k",
-                    "name": "kill",
-                    "type": "command",
-                    "command": "workbench.action.closeGroup"
-                },
-            ]
-        }
     ],
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.completion.callable.snippets": "add_parentheses",

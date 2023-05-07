@@ -2,14 +2,14 @@
 
 // Commands
   { "key": "alt+x",                "command": "workbench.action.showCommands" },
-  { "key": "alt+enter",            "command": "editor.action.quickFix",
-    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
+  // { "key": "alt+enter",            "command": "editor.action.quickFix",
+  //   "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
   { "key": "ctrl+u",               "command": "rust-analyzer.run",
     "when": "editorLangId == rust" },
   { "key": "ctrl+u",               "command": "workbench.action.tasks.build",
     "when": "editorLangId != rust" },
-  { "key": "ctrl+h",               "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
+  // { "key": "ctrl+h",               "command": "editor.action.formatDocument",
+  //   "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
   { "key": "ctrl+alt+z",           "command": "git.revertSelectedRanges" },
   { "key": "ctrl+j",               "command": "editor.action.joinLines",
     "when": "editorLangId != 'rust'" },
@@ -17,8 +17,8 @@
     "when": "editorLangId == 'rust'" },
   { "key": "Enter",                "command": "rust-analyzer.onEnter",
     "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust" },
-  { "key": "ctrl+alt+shift+c",     "command": "workbench.output.action.clearOutput" },
-  { "key": "ctrl+shift+f",         "command": "search.action.openNewEditor" },
+  // { "key": "ctrl+alt+shift+c",     "command": "workbench.output.action.clearOutput" },
+  // { "key": "ctrl+shift+f",         "command": "search.action.openNewEditor" },
 
   { "key": "ctrl+enter",            "command": "explorer.newFile",
     "when": "filesExplorerFocus" },
@@ -26,10 +26,6 @@
     "when": "filesExplorerFocus" },
 
 // Window management
-  { "key": "ctrl+e",               "command": "workbench.action.focusNextGroup" },
-  { "key": "alt+e",                "command": "extension.multiCommand.execute",
-    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "w" }] } },
-
   { "key": "win+k",                "command": "workbench.action.closeGroup",
     "when": "editorFocus && multipleEditorGroups" },
   { "key": "win+k",                "command": "workbench.action.closeActiveEditor",
@@ -64,10 +60,10 @@
   //   "when": "filesExplorerFocus" },
 
 // Folding
-  { "key": "ctrl+,",               "command": "editor.fold",
-    "when": "editorTextFocus && foldingEnabled" },
-  { "key": "ctrl+.",               "command": "editor.unfold",
-    "when": "editorTextFocus && foldingEnabled" },
+  // { "key": "ctrl+,",               "command": "editor.fold",
+  //   "when": "editorTextFocus && foldingEnabled" },
+  // { "key": "ctrl+.",               "command": "editor.unfold",
+  //   "when": "editorTextFocus && foldingEnabled" },
 
 // Semantic Navigation
   // { "key": "ctrl+n",               "command": "editor.action.revealDefinition",
@@ -78,29 +74,35 @@
   { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
   { "key": "alt+o",                "command": "extension.multiCommand.execute",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
-  { "key": "ctrl+t",               "command": "workbench.action.gotoSymbol" },
-  { "key": "alt+t",                "command": "extension.multiCommand.execute",
-    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
+  // { "key": "ctrl+t",               "command": "workbench.action.gotoSymbol" },
+  // { "key": "alt+t",                "command": "extension.multiCommand.execute",
+  //   "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
 
 // Devil
-{ "key": "ctrl+alt g",                   "command": "workbench.action.gotoLine",},
-
 // g -- go definition, type, line, implementation
 // s -- search string, here, all, g
-// d -- do format, Uppercase _, sort
+// e -- edit format, Uppercase _, sort, join
+// n -- next error git change conflict
+// v -- view center top bottom fold unfold
+  { "key": ", a",                  "command": "editor.action.quickFix"},
+
   { "key": ", g",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "g" }] } },
-
   { "key": ", s",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
-
+  { "key": ", e",                  "command": "extension.multiCommand.execute",
+    "when": "editorTextFocus",
+    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "e" }] } },
+  { "key": ", c",                  "command": "extension.multiCommand.execute",
+    "when": "editorTextFocus",
+    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "c" }] } },
 
   { "key": ", space",              "command": "type",
     "when": "editorTextFocus",
     "args": { "text": ", " } },
-  { "key": ", ,",              "command": "type",
+  { "key": ", ,",                  "command": "type",
     "when": "editorTextFocus",
     "args": { "text": "," } },
   { "key": ", enter",              "command": "type",
