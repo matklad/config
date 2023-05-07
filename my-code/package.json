@@ -1,0 +1,54 @@
+{
+    "name": "my-code",
+    "displayName": "My Code",
+    "description": "My init.el",
+    "version": "0.0.0",
+    "publisher": "matklad",
+    "repository": "https://github.com/matkald/config",
+    "license": "MIT OR Apache-2.0",
+    "engines": {
+        "vscode": "^1.34.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/main.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "my-code.open-notes",
+                "title": "Opens a notes file",
+                "category": "Open Notes"
+            }
+        ],
+        "configuration": [
+            {
+                "title": "My Code",
+                "properties": {
+                    "my-code.notes-file": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "default": null,
+                        "description": "Notes file to open"
+                    }
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "install-extension": "vsce package --allow-star-activation && code --install-extension my-code-0.0.0.vsix",
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.0",
+        "@types/vscode": "^1.34.0",
+        "typescript": "^4.6.3",
+        "@vscode/vsce": "^2.7.0"
+    }
+}

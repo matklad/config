@@ -234,7 +234,7 @@
                     "key": "n",
                     "name": "notes",
                     "type": "command",
-                    "command": "open-notes.open"
+                    "command": "my-code.open-notes"
                 },
                 {
                     "key": "t",
@@ -318,7 +318,7 @@
         // "RA_COUNT": "1"
     },
     "openInGitHub.defaultRemote": "upstream",
-    "open-notes.notes-file": "/home/matklad/notes.djot",
+    "my-code.notes-file": "/home/matklad/notes.djot",
     "lldb.library": "/nix/store/vkw0nx0c1cfqm68gn9vz0lw1r6ap41p1-lldb-7.1.0/lib/liblldb.so",
     "asciidoc.preview.useEditorStyle": false,
     "center-editor-window.threeStateToggle": true,
