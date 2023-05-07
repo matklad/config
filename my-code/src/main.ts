@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand("open-notes.open", async () => {
+    vscode.commands.registerCommand("my-code.open-notes", async () => {
       const config = vscode.workspace.getConfiguration("my-code");
       const notesFile: string | undefined | null = config.get("notes-file");
       if (!notesFile) {
