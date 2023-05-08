@@ -213,6 +213,12 @@
             "type": "bindings",
             "bindings": [
                 {
+                    "key": "t",
+                    "name": "string",
+                    "type": "command",
+                    "command": "workbench.action.quickOpen"
+                },
+                {
                     "key": "s",
                     "name": "string",
                     "type": "command",
@@ -255,6 +261,24 @@
                     "type": "command",
                     "command": "editor.action.formatDocument"
                 },
+                {
+                    "key": "_",
+                    "name": "snake_case",
+                    "type": "command",
+                    "command": "extension.changeCase.snake"
+                },
+                {
+                    "key": "S",
+                    "name": "SCREAMING_CASE",
+                    "type": "command",
+                    "command": "extension.changeCase.constant"
+                },
+                {
+                    "key": "C",
+                    "name": "CamelCase",
+                    "type": "command",
+                    "command": "extension.changeCase.pascal"
+                },
             ]
         },
         {
@@ -262,12 +286,6 @@
             "name": "open",
             "type": "bindings",
             "bindings": [
-                {
-                    "key": "f",
-                    "name": "file",
-                    "type": "command",
-                    "command": "workbench.action.quickOpen"
-                },
                 {
                     "key": "g",
                     "name": "magit",

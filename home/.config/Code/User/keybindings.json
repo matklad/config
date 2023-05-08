@@ -71,9 +71,9 @@
   // { "key": "alt+n",                "command": "extension.multiCommand.execute",
   //   "when": "editorTextFocus",
   //   "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
-  { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
-  { "key": "alt+o",                "command": "extension.multiCommand.execute",
-    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
+  // { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
+  // { "key": "alt+o",                "command": "extension.multiCommand.execute",
+  //   "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
   // { "key": "ctrl+t",               "command": "workbench.action.gotoSymbol" },
   // { "key": "alt+t",                "command": "extension.multiCommand.execute",
   //   "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
@@ -84,7 +84,9 @@
 // e -- edit format, Uppercase _, sort, join
 // n -- next error git change conflict
 // v -- view center top bottom fold unfold
-  { "key": ", a",                  "command": "editor.action.quickFix"},
+  { "key": ", a",                  "command": "extension.changeCase.lowerFirst" },
+  { "key": ", a",                  "command": "editor.action.quickFix" },
+  { "key": ", d",                  "command": "editor.action.revealDefinition" },
 
   { "key": ", g",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
@@ -98,6 +100,9 @@
   { "key": ", c",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "c" }] } },
+  { "key": ", o",                  "command": "extension.multiCommand.execute",
+    "when": "editorTextFocus",
+    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
 
   { "key": ", space",              "command": "type",
     "when": "editorTextFocus",
@@ -194,4 +199,5 @@
   { "key": "ctrl+]",               "command": "-editor.action.indentLines" },
   { "key": "ctrl+.",               "command": "-editor.action.codeAction" },
   { "key": "ctrl+q",               "command": "-workbench.action.quit" },
+  { "key": "ctrl+o",               "command": "-workbench.action.files.openFile" },
 ]
