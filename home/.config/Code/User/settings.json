@@ -251,8 +251,8 @@
             ]
         },
         {
-            "key": "t",
-            "name": "transform",
+            "key": "e",
+            "name": "edit",
             "type": "bindings",
             "bindings": [
                 {
@@ -272,6 +272,12 @@
                     "name": "SCREAMING_CASE",
                     "type": "command",
                     "command": "extension.changeCase.constant"
+                },
+                {
+                    "key": "c",
+                    "name": "camelCase",
+                    "type": "command",
+                    "command": "extension.changeCase.camel"
                 },
                 {
                     "key": "C",
@@ -505,10 +511,10 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "liveServer.settings.donotVerifyTags": true,
-    "zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
-    "zls.enable_inlay_hints": false,
-    "zls.check_for_update": false,
-    "zls.enable_autofix": false,
+    "zig.zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
+    "zig.zls.enableInlayHints": false,
+    "zig.zls.checkForUpdate": false,
+    "zig.zls.enableAutofix": false,
     "[zig]": {
         "editor.defaultFormatter": "SteefH.external-formatters"
     },
@@ -527,7 +533,6 @@
     "githubPullRequests.remotes": [
         "upstream"
     ],
-    "workbench.colorTheme": "Pale Fire High Contrast",
+    "workbench.colorTheme": "Leuven Light",
     "lldb.suppressUpdateNotifications": true,
-    "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
 }

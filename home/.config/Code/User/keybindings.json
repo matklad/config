@@ -6,8 +6,15 @@
   //   "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
   { "key": "ctrl+u",               "command": "rust-analyzer.run",
     "when": "editorLangId == rust" },
-  { "key": "ctrl+u",               "command": "workbench.action.tasks.build",
+
+//   { "key": "ctrl+u",               "command": "workbench.action.tasks.build",
+// // workbench.action.tasks.terminate
+//   "when": "editorLangId != rust" },
+
+  { "key": "ctrl+u",               "command": "extension.multiCommand.execute",
+    "args": { "sequence": [ { "command": "workbench.action.tasks.terminate", "args": "terminateAll" }, "workbench.action.tasks.build" ] },
     "when": "editorLangId != rust" },
+
   // { "key": "ctrl+h",               "command": "editor.action.formatDocument",
   //   "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
   { "key": "ctrl+alt+z",           "command": "git.revertSelectedRanges" },
@@ -71,7 +78,7 @@
   // { "key": "alt+n",                "command": "extension.multiCommand.execute",
   //   "when": "editorTextFocus",
   //   "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
-  // { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
+  { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
   // { "key": "alt+o",                "command": "extension.multiCommand.execute",
   //   "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
   // { "key": "ctrl+t",               "command": "workbench.action.gotoSymbol" },
@@ -80,14 +87,16 @@
 
 // Devil
 // g -- go definition, type, line, implementation
-// s -- search string, here, all, g
+// / -- search string, here, all, g
 // t -- transform format, Uppercase _, sort, join
 // n -- next error git change conflict
 // c -- cursor center top bottom fold unfold
 // o -- open file, explorer, ...
   { "key": ", a",                  "command": "editor.action.quickFix" },
-  { "key": ", d",                  "command": "editor.action.revealDefinition" },
+  { "key": ", .",                  "command": "editor.action.revealDefinition" },
   { "key": ", shift+/",            "command": "whichkey.show" },
+  { "key": ", /",                  "command": "actions.find" },
+  { "key": ", p",                  "command": "editor.action.formatDocument" },
 
   { "key": ", g",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
@@ -95,9 +104,9 @@
   { "key": ", s",                  "command": "extension.multiCommand.execute",
     // "when": "editorTextFocus",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
-  { "key": ", t",                  "command": "extension.multiCommand.execute",
+  { "key": ", e",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
-    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "t" }] } },
+    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "e" }] } },
   { "key": ", c",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "c" }] } },
