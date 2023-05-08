@@ -107,7 +107,7 @@
                     "key": "d",
                     "name": "definition",
                     "type": "command",
-                    "command": "editor.action.revealDefinition"
+                    "command": "editor.action.revealDefinition",
                 },
                 {
                     "key": "s",
@@ -214,7 +214,7 @@
             "bindings": [
                 {
                     "key": "t",
-                    "name": "string",
+                    "name": "file",
                     "type": "command",
                     "command": "workbench.action.quickOpen"
                 },
@@ -251,8 +251,8 @@
             ]
         },
         {
-            "key": "e",
-            "name": "do",
+            "key": "t",
+            "name": "transform",
             "type": "bindings",
             "bindings": [
                 {
@@ -278,6 +278,12 @@
                     "name": "CamelCase",
                     "type": "command",
                     "command": "extension.changeCase.pascal"
+                },
+                {
+                    "key": "j",
+                    "name": "join",
+                    "type": "command",
+                    "command": "editor.action.joinLines"
                 },
             ]
         },

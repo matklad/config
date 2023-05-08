@@ -81,22 +81,23 @@
 // Devil
 // g -- go definition, type, line, implementation
 // s -- search string, here, all, g
-// e -- edit format, Uppercase _, sort, join
+// t -- transform format, Uppercase _, sort, join
 // n -- next error git change conflict
-// v -- view center top bottom fold unfold
-  { "key": ", a",                  "command": "extension.changeCase.lowerFirst" },
+// c -- cursor center top bottom fold unfold
+// o -- open file, explorer, ...
   { "key": ", a",                  "command": "editor.action.quickFix" },
   { "key": ", d",                  "command": "editor.action.revealDefinition" },
+  { "key": ", shift+/",            "command": "whichkey.show" },
 
   { "key": ", g",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "g" }] } },
   { "key": ", s",                  "command": "extension.multiCommand.execute",
-    "when": "editorTextFocus",
+    // "when": "editorTextFocus",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
-  { "key": ", e",                  "command": "extension.multiCommand.execute",
+  { "key": ", t",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
-    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "e" }] } },
+    "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "t" }] } },
   { "key": ", c",                  "command": "extension.multiCommand.execute",
     "when": "editorTextFocus",
     "args": { "sequence": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "c" }] } },
