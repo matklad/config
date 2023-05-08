@@ -7,6 +7,8 @@
 (setq kill-whole-line 't)
 (setq sentence-end-double-space nil)
 (setq vc-follow-symlinks t)
+(setq scroll-error-top-bottom t)
+(setq markdown-fontify-code-blocks-natively t)
 (setq backup-directory-alist `(("." . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
        `((".*" ,temporary-file-directory t)))
@@ -27,6 +29,8 @@
 (global-hl-line-mode t)
 (show-paren-mode 1)
 (auto-save-visited-mode t)
+(fido-vertical-mode 1)
+(add-hook 'imenu-after-jump-hook #'recenter-top-bottom)
 (add-hook 'text-mode-hook '(lambda () (flyspell-mode t)))
 
 ;; nice scrolling
@@ -57,6 +61,11 @@
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 ;; (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+(custom-set-variables
+ '(warning-suppress-log-types '((comp)))
+ '(zoom-mode t)
+ '(zoom-size '(0.618 . 0.618)))
+
 (require 'package)
 
 (setq package-archives
@@ -73,37 +82,18 @@
 	zig-mode
 	multiple-cursors
 	expand-region
+	avy
 	whitespace-cleanup-mode))
 
 ;; (package-refresh-contents)
 (package-initialize)
 (package-install-selected-packages)
 
-;; (add-to-list 'load-path "~/p/expand-region.el")
-
 (load-theme 'leuven t)
-(custom-set-variables
- '(warning-suppress-log-types '((comp)))
- '(zoom-mode t)
- '(zoom-size '(0.618 . 0.618)))
 
-(fido-vertical-mode 1)
-(add-hook 'imenu-after-jump-hook #'recenter-top-bottom)
+(global-whitespace-cleanup-mode t)
 
 (define-key global-map (kbd "M-k") 'avy-goto-char-timer)
-
-;; ;; (global-set-key (kbd "C-w") 'lsp-extend-selection)
-;; ;; (global-set-key (kbd "<M-return>") 'lsp-execute-code-action)
-;; ;; (global-set-key (kbd "C-k r") 'lsp-rename)
-
-;; (require 'git-commit)
-;; (server-mode)
-
-(global-whitespace-cleanup-mode)
-
-(setq markdown-fontify-code-blocks-natively t)
-(setq scroll-error-top-bottom t)
-
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
 
@@ -111,13 +101,10 @@
 (require 'expand-region)
 (global-set-key (kbd "C-e") 'mc/mark-next-like-this-word)
 (global-set-key (kbd "M-e") 'er/expand-region)
-;; (add-to-list 'load-path "~/p/combobulate/")
-;; (require 'combobulate)
 
 ;; Blockers
 ;;   - 29 for treesit
 ;;   - treesit support in upstream expand-region
 ;;   - hierarchical imenu
-
 
 (put 'dired-find-alternate-file 'disabled nil)
