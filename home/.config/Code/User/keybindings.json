@@ -93,6 +93,7 @@
 // c -- cursor center top bottom fold unfold
 // o -- open file, explorer, ...
   { "key": ", a",                  "command": "editor.action.quickFix" },
+  { "key": ", l",                  "command": "workbench.action.gotoSymbol" },
   { "key": ", .",                  "command": "editor.action.revealDefinition" },
   { "key": ", shift+/",            "command": "whichkey.show" },
   { "key": ", /",                  "command": "actions.find" },
