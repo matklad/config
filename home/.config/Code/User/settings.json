@@ -291,6 +291,12 @@
                     "type": "command",
                     "command": "editor.action.joinLines"
                 },
+                {
+                    "key": "r",
+                    "name": "revert",
+                    "type": "command",
+                    "command": "git.revertSelectedRanges"
+                },
             ]
         },
         {
@@ -343,6 +349,26 @@
                 }
             ]
         },
+        {
+            "key": "n",
+            "name": "next",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "c",
+                    "name": "change",
+                    "type": "command",
+                    "command": "workbench.action.editor.nextChange",
+                },
+                {
+                    "key": "e",
+                    "name": "error",
+                    "type": "command",
+                    "command": "editor.action.marker.nextInFiles"
+                },
+            ]
+        },
+
     ],
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.completion.callable.snippets": "add_parentheses",

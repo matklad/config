@@ -114,6 +114,9 @@
   { "key": ", o",                  "command": "runCommands",
     "when": "editorTextFocus",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
+  { "key": ", n",                  "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
 
   { "key": ", space",              "command": "type",
     "when": "editorTextFocus",
