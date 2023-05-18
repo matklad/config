@@ -182,7 +182,7 @@
                     "command": "editor.fold"
                 },
                 {
-                    "key": "F",
+                    "key": "u",
                     "name": "unfold",
                     "type": "command",
                     "command": "editor.unfold"
@@ -308,9 +308,9 @@
                     "key": "g",
                     "name": "magit",
                     "type": "command",
-                    "command": "extension.multiCommand.execute",
+                    "command": "runCommands",
                     "args": {
-                        "sequence": [
+                        "commands": [
                             "workbench.action.closeSidebar",
                             "workbench.action.closePanel",
                             "magit.status"
@@ -333,9 +333,9 @@
                     "key": "e",
                     "name": "explorer",
                     "type": "command",
-                    "command": "extension.multiCommand.execute",
+                    "command": "runCommands",
                     "args": {
-                        "sequence": [
+                        "commands": [
                             "workbench.action.closePanel",
                             "workbench.files.action.focusFilesExplorer"
                         ]
