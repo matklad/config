@@ -62,9 +62,9 @@
     gdb
     gnumake
     lldb_14
-    llvmPackages.bintools
-    llvmPackages.clang
-    llvmPackages.stdenv
+    llvmPackages_latest.bintools
+    llvmPackages_latest.clang
+    llvmPackages_latest.stdenv
     lua5_4
     maven
     nil
