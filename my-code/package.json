@@ -54,11 +54,11 @@
     "extensionDependencies": [
         "arzg.intellij-theme",
         "arzg.xcode-theme",
-        "bbenoist.Nix",
         "denoland.vscode-deno",
         "eamodio.gitlens",
         "emeraldwalk.RunOnSave",
         "jakearl.search-editor-apply-changes",
+        "jnoortheen.nix-ide",
         "jsynowiec.vscode-insertdatestring",
         "jymeng.leuven-vscode",
         "kahole.magit",

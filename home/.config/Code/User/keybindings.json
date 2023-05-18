@@ -12,6 +12,7 @@
 // // workbench.action.tasks.terminate
 //   "when": "editorLangId != rust" },
 
+
   { "key": "ctrl+u",               "command": "runCommands",
     "args": { "commands": [ { "command": "workbench.action.tasks.terminate", "args": "terminateAll" }, "workbench.action.tasks.build" ] },
     "when": "editorLangId != rust" },

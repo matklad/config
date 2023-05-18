@@ -92,6 +92,7 @@
     "spellright.suggestionsInHints": false,
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
+    "nix.enableLanguageServer": true,
     "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",
     "findJump.positionAbsolute": true,
     "errorLens.exclude": [
@@ -352,6 +353,18 @@
                     "name": "extensions",
                     "type": "command",
                     "command": "workbench.extensions.action.installExtensions"
+                },
+                {
+                    "key": "s",
+                    "name": "settings",
+                    "type": "command",
+                    "command": "workbench.action.openSettingsJson"
+                },
+                {
+                    "key": "k",
+                    "name": "keybindings",
+                    "type": "command",
+                    "command": "workbench.action.openGlobalKeybindingsFile"
                 }
             ]
         },
@@ -374,7 +387,6 @@
                 },
             ]
         },
-
     ],
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.completion.callable.snippets": "add_parentheses",
