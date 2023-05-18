@@ -58,20 +58,21 @@
     ant
     cmake
     deno
+    elan
     gdb
     gnumake
     lldb_14
-    llvmPackages_14.bintools
-    llvmPackages_14.clang
-    llvmPackages_14.stdenv
+    llvmPackages.bintools
+    llvmPackages.clang
+    llvmPackages.stdenv
     lua5_4
     maven
+    nil
     ninja
     nodejs
     protobuf
     rustup
     valgrind
-    elan
     zig
 
     # Archives

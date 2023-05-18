@@ -1,3 +1,4 @@
+
 [
 
 // Commands
@@ -96,7 +97,7 @@
   { "key": ", l",                  "command": "workbench.action.gotoSymbol" },
   { "key": ", .",                  "command": "editor.action.revealDefinition" },
   { "key": ", shift+/",            "command": "whichkey.show" },
-  { "key": ", /",                  "command": "actions.find" },
+  { "key": ", /",                  "command": "findJump.activate" },
   { "key": ", p",                  "command": "editor.action.formatDocument" },
 
   { "key": ", g",                  "command": "runCommands",
@@ -118,15 +119,13 @@
     "when": "editorTextFocus",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
 
-  { "key": ", space",              "command": "type",
-    "when": "editorTextFocus",
-    "args": { "text": ", " } },
-  { "key": ", ,",                  "command": "type",
-    "when": "editorTextFocus",
-    "args": { "text": "," } },
-  { "key": ", enter",              "command": "type",
-    "when": "editorTextFocus",
-    "args": { "text": ",\n" } },
+  { "key": ", space",              "command": "type", "when": "editorTextFocus", "args": { "text": ", " } },
+  { "key": ", ,",                  "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
+  { "key": ", enter",              "command": "type", "when": "editorTextFocus", "args": { "text": ",\n" } },
+  { "key": ", up",                 "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
+  { "key": ", down",               "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
+  { "key": ", left",               "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
+  { "key": ", right",              "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
 
 
 // Text Navigation
