@@ -93,6 +93,7 @@
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "nix.enableLanguageServer": true,
+    "nix.serverPath": "nil",
     "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",
     "findJump.positionAbsolute": true,
     "errorLens.exclude": [
