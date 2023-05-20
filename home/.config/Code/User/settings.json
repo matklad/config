@@ -304,6 +304,12 @@
                     "name": "sort",
                     "type": "command",
                     "command": "editor.action.sortLinesAscending"
+                },
+                {
+                    "key": "a",
+                    "name": "align",
+                    "typeee":
+                    "command": "yo1dog.cursor-align.alignCursors"
                 }
             ]
         },
@@ -580,4 +586,7 @@
     ],
     "workbench.colorTheme": "Leuven Light",
     "lldb.suppressUpdateNotifications": true,
+    "cSpell.enableFiletypes": [
+        "djot"
+    ],
 }

@@ -38,6 +38,7 @@
     kitty
     obs-studio
     peek
+    kooha
     qbittorrent
     spectacle
     vscode
