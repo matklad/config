@@ -308,7 +308,7 @@
                 {
                     "key": "a",
                     "name": "align",
-                    "typeee":
+                    "type": "command",
                     "command": "yo1dog.cursor-align.alignCursors"
                 }
             ]
@@ -584,7 +584,7 @@
     "githubPullRequests.remotes": [
         "upstream"
     ],
-    "workbench.colorTheme": "Leuven Light",
+    "workbench.colorTheme": "Pale Fire High Contrast",
     "lldb.suppressUpdateNotifications": true,
     "cSpell.enableFiletypes": [
         "djot"
