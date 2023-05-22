@@ -53,7 +53,6 @@
     qpdfview
     qview
     vlc
-    ibus-engines.table-others
 
     # Langs
     (python3.withPackages (py: [py.requests]))
@@ -238,10 +237,6 @@
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
       LC_TIME = "en_IE.UTF-8";
-    };
-    inputMethod = {
-      enabled = "ibus";
-      ibus.engines = [pkgs.ibus-engines.uniemoji pkgs.ibus-engines.table pkgs.ibus-engines.table-others];
     };
   };
 
