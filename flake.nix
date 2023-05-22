@@ -1,6 +1,6 @@
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  outputs = { self, nixpkgs, emacs-overlay }: {
+  outputs = { self, nixpkgs }: {
     nixosConfigurations = {
       Ishmael = nixpkgs.lib.nixosSystem {
          system = "x86_64-linux";

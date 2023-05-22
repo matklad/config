@@ -20,11 +20,6 @@
   services = {
     xserver  = {
       videoDrivers = [ "intel" ];
-      displayManager = {
-        autoLogin.enable = true;
-        autoLogin.user = "matklad";
-        defaultSession = "plasmawayland";
-      };
     };
   };
 

@@ -128,30 +128,23 @@
   ];
 
   services = {
-    emacs = {
-      enable = true;
-      # package = pkgs.emacs.overrideAttrs (old: {
-      #   pname = "emacs";
-      #   version = "head";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "emacs-mirror";
-      #     repo = "emacs";
-      #     rev = "0e8d8a72284f6b3aaa1bbce73d41c7d84bbc4d3c";
-      #     hash = "sha256-O75pZ8fBVcM8lMOkN16D3s4h+GnK9Oi53FNEAdj2tT4=";
-      #   };
-      #   patches = [];
-      # });
+    emacs.enable = true;
+
+    logind = {
+      extraConfig = ''
+        IdleAction=poweroff
+        IdleActionSec=90min
+      '';
     };
 
     xserver = {
       enable = true;
       displayManager = {
-        sddm = {
-          enable = true;
-        };
+        sddm.enable = true;
+        autoLogin = {enable = true; user = "matklad";};
+        defaultSession = "plasmawayland";
       };
       desktopManager.plasma5.enable = true;
-
       libinput = {
         enable = true;
         touchpad = {
