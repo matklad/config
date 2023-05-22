@@ -242,7 +242,7 @@
     };
     inputMethod = {
       enabled = "ibus";
-      ibus.engines = pkgs.ibus-engines.uniemoji;
+      ibus.engines = [pkgs.ibus-engines.uniemoji];
     };
   };
 
