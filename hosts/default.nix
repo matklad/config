@@ -53,7 +53,6 @@
     qpdfview
     qview
     vlc
-    ibus-data
     ibus-engines.table-others
 
     # Langs
