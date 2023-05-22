@@ -30,10 +30,13 @@
     };
   };
 
+
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/04a8bc94-33a1-4fd7-b550-67e72ae1d5bc";
+    { device = "/dev/disk/by-uuid/e1172ddb-975f-464c-bc94-cb84da90bf98";
       fsType = "ext4";
     };
+
+  boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/2fe2808b-7e2d-44ef-8f92-9340c040d1fc";
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/0E22-5D33";
