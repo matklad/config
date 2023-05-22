@@ -240,6 +240,10 @@
     extraLocaleSettings = {
       LC_TIME = "en_IE.UTF-8";
     };
+    inputMethod = {
+      enabled = "ibus";
+      ibus.engines = pkgs.ibus-engines.uniemoji;
+    };
   };
 
   fonts = {
