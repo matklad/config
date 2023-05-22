@@ -53,6 +53,7 @@
     qpdfview
     qview
     vlc
+    ibus-engines.table-others
 
     # Langs
     (python3.withPackages (py: [py.requests]))
