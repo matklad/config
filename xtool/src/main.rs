@@ -12,7 +12,6 @@ mod gbors;
 mod gcf;
 mod git_refresh;
 mod git_spinoff;
-mod go;
 mod gpr;
 mod n;
 mod new_crate;
@@ -33,7 +32,6 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("gcf", gcf::run),
     ("git-refresh", git_refresh::run),
     ("git-spinoff", git_spinoff::run),
-    ("go", go::run),
     ("gpr", gpr::run),
     ("n", n::run),
     ("new-crate", new_crate::run),
