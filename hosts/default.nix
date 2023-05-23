@@ -267,7 +267,7 @@
 
   environment = {
     enableDebugInfo = true;
-    homeBinInPath = true;
+    localBinInPath = true;
     sessionVariables = {
       # NIXOS_OZONE_WL = "1";
       DENO_NO_UPDATE_CHECK = "1";

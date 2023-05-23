@@ -60,7 +60,7 @@ fn link_me_up() {
     use xshell::{cmd, Shell};
 
     let sh = Shell::new().unwrap();
-    let bin = std::path::Path::new("/home/matklad/bin");
+    let bin = std::path::Path::new("/home/matklad/.local/bin");
     sh.create_dir(&bin).unwrap();
     cmd!(sh, "cargo build --release").run().unwrap();
 
