@@ -221,7 +221,6 @@
   };
 
   networking = {
-    useDHCP = true;
     firewall = {
       enable = true;
       allowedTCPPorts = [ 10100 ];
