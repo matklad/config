@@ -140,7 +140,7 @@
       enable = true;
       displayManager = {
         sddm.enable = true;
-        autoLogin = {enable = true; user = "matklad";};
+        autoLogin = { enable = true; user = "matklad"; };
         defaultSession = "plasmawayland";
       };
       desktopManager.plasma5.enable = true;
@@ -170,7 +170,7 @@
     earlyoom.enable = true;
     pcscd.enable = true;
     openssh = {
-      enable = true;
+      enable = false;
       settings.PasswordAuthentication = false;
     };
     usbmuxd = {
