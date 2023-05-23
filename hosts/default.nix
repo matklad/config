@@ -270,6 +270,7 @@
     homeBinInPath = true;
     sessionVariables = {
       # NIXOS_OZONE_WL = "1";
+      DENO_NO_UPDATE_CHECK = "1";
       PATH = "$HOME/.cargo/bin";
       VISUAL = "hx";
       EDITOR = "hx";

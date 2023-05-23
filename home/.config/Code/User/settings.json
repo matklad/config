@@ -154,21 +154,34 @@
                     "command": "rust-analyzer.openCargoToml"
                 },
                 {
-                    "key": "h",
-                    "name": "hover",
-                    "type": "command",
-                    "command": "editor.action.showHover"
-                },
-                {
-                    "key": "a",
-                    "name": "argument hints",
-                    "type": "command",
-                    "command": "editor.action.triggerParameterHints"
-                },
-                {
                     "key": "l",
                     "name": "line",
                     "command": "workbench.action.gotoLine"
+                },
+                {
+                    "key": "n",
+                    "name": "next...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "c",
+                            "name": "change",
+                            "type": "command",
+                            "command": "workbench.action.editor.nextChange",
+                        },
+                        {
+                            "key": "e",
+                            "name": "error",
+                            "type": "command",
+                            "command": "editor.action.marker.nextInFiles"
+                        },
+                        {
+                            "key": "m",
+                            "name": "merge conflict",
+                            "type": "command",
+                            "command": "merge-conflict.next",
+                        },
+                    ]
                 }
             ]
         },
@@ -215,7 +228,7 @@
             "type": "bindings",
             "bindings": [
                 {
-                    "key": "t",
+                    "key": "f",
                     "name": "file",
                     "type": "command",
                     "command": "workbench.action.quickOpen"
@@ -243,12 +256,6 @@
                     "name": "all",
                     "type": "command",
                     "command": "workbench.action.showAllSymbols"
-                },
-                {
-                    "key": "l",
-                    "name": "line",
-                    "type": "command",
-                    "command": "workbench.action.gotoLine"
                 },
             ]
         },
@@ -376,24 +383,24 @@
             ]
         },
         {
-            "key": "n",
-            "name": "next",
+            "key": "m",
+            "name": "misc",
             "type": "bindings",
             "bindings": [
                 {
-                    "key": "c",
-                    "name": "change",
+                    "key": "h",
+                    "name": "hover",
                     "type": "command",
-                    "command": "workbench.action.editor.nextChange",
+                    "command": "editor.action.showHover"
                 },
                 {
-                    "key": "e",
-                    "name": "error",
+                    "key": "a",
+                    "name": "argument hints",
                     "type": "command",
-                    "command": "editor.action.marker.nextInFiles"
+                    "command": "editor.action.triggerParameterHints"
                 },
             ]
-        },
+        }
     ],
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.completion.callable.snippets": "add_parentheses",
