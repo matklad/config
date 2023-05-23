@@ -51,7 +51,7 @@
         "typescript": "^4.6.3",
         "@vscode/vsce": "^2.7.0"
     },
-    "extensionDependencies": [
+    "extensionPack": [
         "arzg.intellij-theme",
         "arzg.xcode-theme",
         "denoland.vscode-deno",
@@ -76,6 +76,7 @@
         "VSpaceCode.whichkey",
         "wmaurer.change-case",
         "yo1dog.cursor-align",
+        "ziglang.vscode-zig",
         "ziyasal.vscode-open-in-github"
     ]
 }
