@@ -276,6 +276,15 @@
       EDITOR = "hx";
       RUST_BACKTRACE = "short";
     };
+    etc."xdg/user-dirs.defaults".text = ''
+      DOWNLOAD=downloads
+      TEMPLATES=tmp
+      PUBLICSHARE=tmp
+      DOCUMENTS=tmp
+      MUSIC=music
+      PICTURES=tmp
+      VIDEOS=videos
+    '';
   };
 
   security = {
