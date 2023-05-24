@@ -284,7 +284,7 @@
       MUSIC=music
       PICTURES=tmp
       VIDEOS=video
-      DESKTOP=.
+      DESKTOP=tmp
     '';
   };
 
