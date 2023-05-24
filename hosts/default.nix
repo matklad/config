@@ -283,7 +283,7 @@
       DOCUMENTS=tmp
       MUSIC=music
       PICTURES=tmp
-      VIDEOS=videos
+      VIDEOS=video
     '';
   };
 
