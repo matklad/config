@@ -279,12 +279,12 @@
     etc."xdg/user-dirs.defaults".text = ''
       DOWNLOAD=downloads
       TEMPLATES=tmp
-      PUBLICSHARE=tmp
+      PUBLICSHARE=/var/empty
       DOCUMENTS=tmp
       MUSIC=music
       PICTURES=tmp
       VIDEOS=video
-      DESKTOP=tmp
+      DESKTOP=/var/empty
     '';
   };
 
