@@ -19,7 +19,10 @@
     fish.enable = true;
     java.enable = true;
     dconf.enable = true;
-    ssh.askPassword = "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+    ssh = {
+      startAgent = true;
+      askPassword = "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+    };
   };
 
   environment.systemPackages = with pkgs; [
