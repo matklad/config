@@ -271,6 +271,12 @@
                     "command": "editor.action.formatDocument"
                 },
                 {
+                    "key": "w",
+                    "name": "wrap",
+                    "type": "command",
+                    "command": "rewrap.rewrapComment"
+                },
+                {
                     "key": "_",
                     "name": "snake_case",
                     "type": "command",
