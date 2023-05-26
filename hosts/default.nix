@@ -267,7 +267,11 @@
       uid = 1000;
     };
   };
-
+  environment = {
+    sessionVariables = {
+      SSH_ASKPASS_REQUIRE="prefer";
+    };
+  };
   environment = {
     enableDebugInfo = true;
     localBinInPath = true;
@@ -278,6 +282,7 @@
       VISUAL = "hx";
       EDITOR = "hx";
       RUST_BACKTRACE = "short";
+      SSH_ASKPASS_REQUIRE="prefer";
     };
     etc."xdg/user-dirs.defaults".text = ''
       DOWNLOAD=downloads
