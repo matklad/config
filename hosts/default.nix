@@ -107,7 +107,6 @@
     jq
     libimobiledevice
     linuxPackages.perf
-    nox
     ntfs3g
     patchelf
     pciutils
@@ -305,7 +304,4 @@
     ];
     rtkit.enable = true;
   };
-
-  system.stateVersion = "23.05";
-  system.autoUpgrade.enable = false;
 }
