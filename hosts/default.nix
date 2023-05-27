@@ -28,7 +28,12 @@
       config = {
         core = {
           autocrlf = "input";
-          excludesfile = "/home/matklad/.config/git/.gitignore";
+          excludesfile = pkgs.writeFile ''
+            shell.nix
+            .nix-shell-inputs
+            .envrc
+            .direnv/
+          '';
         };
         user = { name = "Alex Kladov"; email = "aleksey.kladov@gmail.com"; };
         push.default = "current";
