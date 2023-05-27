@@ -1,4 +1,4 @@
-{pkgs}: with pkgs; [
+{pkgs, ...}: with pkgs; [
   # GUI
   (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
   filelight
