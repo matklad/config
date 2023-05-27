@@ -312,6 +312,11 @@
       VIDEOS=video
       DESKTOP=/var/empty
     '';
+
+    etc.bat.config.text = ''
+      --plain
+      --theme GitHub
+    '';
   };
 
   security = {
