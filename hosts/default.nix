@@ -28,7 +28,7 @@
       config = {
         core = {
           autocrlf = "input";
-          excludesfile = pkgs.writeFile ''
+          excludesfile = pkgs.writeText "gitignore_global" ''
             shell.nix
             .nix-shell-inputs
             .envrc
