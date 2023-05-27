@@ -307,7 +307,6 @@
       VIDEOS=video
       DESKTOP=/var/empty
     '';
-    etc.gitconfig = lib
   };
 
   security = {
