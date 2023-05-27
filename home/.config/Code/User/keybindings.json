@@ -3,22 +3,13 @@
 
 // Commands
   { "key": "alt+x",                "command": "workbench.action.showCommands" },
-  // { "key": "alt+enter",            "command": "editor.action.quickFix",
-  //   "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
   { "key": "ctrl+u",               "command": "rust-analyzer.run",
     "when": "editorLangId == rust" },
-
-//   { "key": "ctrl+u",               "command": "workbench.action.tasks.build",
-// // workbench.action.tasks.terminate
-//   "when": "editorLangId != rust" },
-
 
   { "key": "ctrl+u",               "command": "runCommands",
     "args": { "commands": [ { "command": "workbench.action.tasks.terminate", "args": "terminateAll" }, "workbench.action.tasks.build" ] },
     "when": "editorLangId != rust" },
 
-  // { "key": "ctrl+h",               "command": "editor.action.formatDocument",
-  //   "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
   { "key": "ctrl+alt+z",           "command": "git.revertSelectedRanges" },
   { "key": "ctrl+j",               "command": "editor.action.joinLines",
     "when": "editorLangId != 'rust'" },
@@ -26,8 +17,6 @@
     "when": "editorLangId == 'rust'" },
   { "key": "Enter",                "command": "rust-analyzer.onEnter",
     "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust" },
-  // { "key": "ctrl+alt+shift+c",     "command": "workbench.output.action.clearOutput" },
-  // { "key": "ctrl+shift+f",         "command": "search.action.openNewEditor" },
 
   { "key": "ctrl+enter",            "command": "explorer.newFile",
     "when": "filesExplorerFocus" },
@@ -60,32 +49,7 @@
   { "key": "q",                    "command": "workbench.action.toggleSidebarVisibility",
     "when": "filesExplorerFocus" },
 
-  // { "key": "win+t",                "command": "runCommands",
-  //   "args": { "commands": [
-  //     "workbench.action.closePanel",
-  //     "workbench.files.action.focusFilesExplorer" ] },
-  //     "when": "!filesExplorerFocus" },
-  // { "key": "win+t",                "command": "workbench.action.toggleSidebarVisibility",
-  //   "when": "filesExplorerFocus" },
-
-// Folding
-  // { "key": "ctrl+,",               "command": "editor.fold",
-  //   "when": "editorTextFocus && foldingEnabled" },
-  // { "key": "ctrl+.",               "command": "editor.unfold",
-  //   "when": "editorTextFocus && foldingEnabled" },
-
-// Semantic Navigation
-  // { "key": "ctrl+n",               "command": "editor.action.revealDefinition",
-  //   "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
-  // { "key": "alt+n",                "command": "runCommands",
-  //   "when": "editorTextFocus",
-  //   "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
   { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
-  // { "key": "alt+o",                "command": "runCommands",
-  //   "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
-  // { "key": "ctrl+t",               "command": "workbench.action.gotoSymbol" },
-  // { "key": "alt+t",                "command": "runCommands",
-  //   "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
 
 // Devil
 // g -- go definition, type, line, implementation
@@ -94,6 +58,7 @@
 // n -- next error git change conflict
 // c -- cursor center top bottom fold unfold
 // o -- open file, explorer, ...
+// m -- misc, hover, argument hits ...
   { "key": ", a",                  "command": "editor.action.quickFix" },
   { "key": ", l",                  "command": "workbench.action.gotoSymbol" },
   { "key": ", .",                  "command": "editor.action.revealDefinition" },
@@ -105,7 +70,6 @@
     "when": "editorTextFocus",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "g" }] } },
   { "key": ", s",                  "command": "runCommands",
-    // "when": "editorTextFocus",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
   { "key": ", e",                  "command": "runCommands",
     "when": "editorTextFocus",
@@ -122,10 +86,14 @@
   { "key": ", space",              "command": "type", "when": "editorTextFocus", "args": { "text": ", " } },
   { "key": ", ,",                  "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
   { "key": ", enter",              "command": "type", "when": "editorTextFocus", "args": { "text": ",\n" } },
-  { "key": ", up",                 "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
-  { "key": ", down",               "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
-  { "key": ", left",               "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
-  { "key": ", right",              "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
+  { "key": ", up",                 "command": "runCommands",
+     "args": {"commands": [{"command": "type", "when": "editorTextFocus", "args": { "text": "," } }, { "command": "cursorUp"}]}},
+  { "key": ", down",               "command": "runCommands",
+     "args": {"commands": [{"command": "type", "when": "editorTextFocus", "args": { "text": "," } }, { "command": "cursorDown"}]}},
+  { "key": ", left",               "command": "runCommands",
+     "args": {"commands": [{"command": "type", "when": "editorTextFocus", "args": { "text": "," } }, { "command": "cursorLeft"}]}},
+  { "key": ", right",              "command": "runCommands",
+     "args": {"commands": [{"command": "type", "when": "editorTextFocus", "args": { "text": "," } }, { "command": "cursorRight"}]}},
 
 
 // Text Navigation
