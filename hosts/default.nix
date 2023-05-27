@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib, ... }: {
 
   nix = {
     extraOptions = "experimental-features = nix-command flakes";
@@ -22,6 +22,23 @@
     ssh = {
       startAgent = true;
       askPassword = "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+    };
+    git = {
+      enable = true;
+      config = {
+        core = {
+          autocrlf = "input";
+          excludesfile = "/home/matklad/.config/git/.gitignore";
+        };
+        user = { name = "Alex Kladov"; email = "aleksey.kladov@gmail.com"; };
+        push.default = "current";
+        github.user = "matklad";
+        fetch.prune = true;
+        diff = {
+          colormoved = "default";
+          colormovedws = "allow-indentation-change";
+        };
+      };
     };
   };
 
@@ -290,6 +307,7 @@
       VIDEOS=video
       DESKTOP=/var/empty
     '';
+    etc.gitconfig = lib
   };
 
   security = {
