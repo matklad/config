@@ -313,7 +313,7 @@
       DESKTOP=/var/empty
     '';
 
-    etc.bat.config.text = ''
+    etc."bat/config".text = ''
       --plain
       --theme GitHub
     '';
