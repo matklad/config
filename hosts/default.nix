@@ -1,5 +1,7 @@
 { config, pkgs, lib, ... }: {
 
+  time.timeZone = "Europe/Lisbon";
+
   nix = {
     extraOptions = "experimental-features = nix-command flakes";
     nixPath = ["nixpkgs=${pkgs.path}"];
@@ -9,54 +11,11 @@
     };
   };
 
-  time.timeZone = "Europe/Lisbon";
-
   nixpkgs.config = {
     allowUnfree = true;
   };
 
-  programs = {
-    fish.enable = true;
-    java.enable = true;
-    dconf.enable = true;
-    ssh = {
-      startAgent = true;
-      askPassword = "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
-    };
-    git = {
-      enable = true;
-      config = {
-        core = {
-          autocrlf = "input";
-          excludesfile = pkgs.writeText "gitignore_global" ''
-            shell.nix
-            .nix-shell-inputs
-            .envrc
-            .direnv/
-          '';
-        };
-        user = { name = "Alex Kladov"; email = "aleksey.kladov@gmail.com"; };
-        push.default = "current";
-        github.user = "matklad";
-        fetch.prune = true;
-        diff = {
-          colormoved = "default";
-          colormovedws = "allow-indentation-change";
-        };
-      };
-    };
-  };
-
   environment.systemPackages = with pkgs; [
-    (let base = pkgs.appimageTools.defaultFhsEnvArgs; in
-     pkgs.buildFHSUserEnv (base // {
-       name = "fhs";
-       targetPkgs = pkgs: (base.targetPkgs pkgs) ++ [pkgs.pkg-config];
-       profile = "export FHS=1";
-       runScript = "fish";
-       extraOutputsToInstall = ["dev"];
-     }))
-
     # GUI
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     filelight
@@ -150,7 +109,77 @@
     hyperfine
     ripgrep
     tokei
+
+    (let base = pkgs.appimageTools.defaultFhsEnvArgs; in
+     pkgs.buildFHSUserEnv (base // {
+       name = "fhs";
+       targetPkgs = pkgs: (base.targetPkgs pkgs) ++ [pkgs.pkg-config];
+       profile = "export FHS=1";
+       runScript = "fish";
+       extraOutputsToInstall = ["dev"];
+     }))
   ];
+
+  programs = {
+    java.enable = true;
+    dconf.enable = true;
+
+    ssh = {
+      startAgent = true;
+      askPassword = "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+    };
+
+    git = {
+      enable = true;
+      config = {
+        core = {
+          autocrlf = "input";
+          excludesfile = pkgs.writeText "gitignore_global" ''
+            shell.nix
+            .nix-shell-inputs
+            .envrc
+            .direnv/
+          '';
+        };
+        user = { name = "Alex Kladov"; email = "aleksey.kladov@gmail.com"; };
+        push.default = "current";
+        github.user = "matklad";
+        fetch.prune = true;
+        diff = {
+          colormoved = "default";
+          colormovedws = "allow-indentation-change";
+        };
+      };
+    };
+
+    fish = {
+      enable = true;
+      shellAbbrs = {
+        "r+" = "gh pr comment --body 'bors r+'";
+        c = "code";
+        ca = "cargo";
+        cat = "bat";
+        ct = "cargo t -- -q";
+        ctrlc = "wl-copy";
+        ctrlv = "wl-paste";
+        g = "git";
+        gb = "git branch";
+        gbd = "git branch -D";
+        gc = "git commit";
+        gl = "git log";
+        gof = "git spinoff";
+        gp = "git push";
+        gpf = "git push --force-with-lease";
+        gs = "git status --short --branch";
+        gup = "git pull";
+        ls = "exa -l";
+        perfr = "perf record -F 9999 --call-graph dwarf";
+        sw = "git switch";
+        swc = "git switch -c";
+        swd = "git switch -d";
+      };
+    };
+  };
 
   services = {
     emacs.enable = true;
