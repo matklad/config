@@ -29,7 +29,7 @@ pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
         push = true;
     }
     cmd!(sh, "git pull --rebase").run()?;
-    // cmd!(sh, "doas rm -rf /var/lib/sddm/.cache").run()?;
+    cmd!(sh, "doas rm -rf /var/lib/sddm/.cache").run()?;
     cmd!(sh, "doas nixos-rebuild switch").run()?;
     if push {
         cmd!(sh, "git push").run()?;

@@ -220,6 +220,12 @@
                     "type": "command",
                     "command": "cursorBottom"
                 },
+                {
+                    "key": "m",
+                    "name": "matching brace",
+                    "type": "command",
+                    "command": "editor.action.jumpToBracket"
+                }
             ]
         },
         {

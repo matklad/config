@@ -97,7 +97,6 @@
 
 
 // Text Navigation
-  { "key": "ctrl+m",               "command": "editor.action.jumpToBracket" },
   { "key": "pageup",               "command": "cursorMove",
     "when": "editorTextFocus",
     "args": { "by": "wrappedLine", "value": 36, "to": "up" } },
