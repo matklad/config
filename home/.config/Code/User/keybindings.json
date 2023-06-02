@@ -79,9 +79,9 @@
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "c" }] } },
   { "key": ", o",                  "command": "runCommands",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
-  { "key": ", n",                  "command": "runCommands",
+  { "key": ", m",                  "command": "runCommands",
     "when": "editorTextFocus",
-    "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
+    "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "m" }] } },
 
   { "key": ", space",              "command": "type", "when": "editorTextFocus", "args": { "text": ", " } },
   { "key": ", ,",                  "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
