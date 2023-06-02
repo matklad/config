@@ -13,7 +13,7 @@
     "window.menuBarVisibility": "hidden",
     "window.newWindowDimensions": "maximized",
     "window.restoreWindows": "none",
-    "window.title": "${rootName}",
+    "window.title": "${rootName}${separator}${activeEditorShort}",
     "window.titleBarStyle": "native",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
