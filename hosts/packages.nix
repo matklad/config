@@ -5,7 +5,7 @@
   gimp
   kdialog
   kitty
-  kooha
+  # kooha
   obs-studio
   qbittorrent
   spectacle
@@ -27,7 +27,6 @@
   ant
   cmake
   deno
-  elan
   gdb
   gnumake
   llvmPackages_latest.bintools
@@ -35,7 +34,6 @@
   llvmPackages_latest.lldb
   llvmPackages_latest.stdenv
   lua5_4
-  (sile.override { lua = lua5_4; })
   maven
   nil
   ninja
