@@ -42,7 +42,7 @@
   protobuf
   rustup
   valgrind
-  zig
+  zig_0_9
 
   # Archives
   ark
