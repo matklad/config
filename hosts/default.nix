@@ -12,7 +12,7 @@
   };
 
   nixpkgs.config = {
-    contentAddressedByDefault = true;
+    # contentAddressedByDefault = true;
     allowUnfree = true;
   };
 

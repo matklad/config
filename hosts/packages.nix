@@ -35,6 +35,7 @@
   llvmPackages_latest.lldb
   llvmPackages_latest.stdenv
   lua5_4
+  (sile.override { lua = lua5_4; })
   maven
   nil
   ninja
