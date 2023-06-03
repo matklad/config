@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/home/matklad/bin/autostart
+Exec=/home/matklad/.local/bin/autostart
 Icon=dialog-scripts
 Name=autostart
 Path=

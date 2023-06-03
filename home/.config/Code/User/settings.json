@@ -411,6 +411,24 @@
                     "type": "command",
                     "command": "editor.action.triggerParameterHints"
                 },
+                {
+                    "key": "i",
+                    "name": "accept incoming",
+                    "type": "command",
+                    "command": "merge-conflict.accept.incoming"
+                },
+                {
+                    "key": "c",
+                    "name": "accept current",
+                    "type": "command",
+                    "command": "merge-conflict.accept.current"
+                },
+                {
+                    "key": "b",
+                    "name": "accept both",
+                    "type": "command",
+                    "command": "merge-conflict.accept.both"
+                },
             ]
         }
     ],
@@ -585,18 +603,21 @@
     "zig.zls.enableInlayHints": false,
     "zig.zls.checkForUpdate": false,
     "zig.zls.enableAutofix": false,
-    "[zig]": {
-        "editor.defaultFormatter": "SteefH.external-formatters"
-    },
-    "externalFormatters.languages": {
-        "zig": {
-            "command": "/nix/store/z6z33jpjpn4vbi16xqkz4id4ryvbjyw1-zig-0.9.1/bin/zig",
-            "arguments": [
-                "fmt",
-                "--stdin"
-            ]
-        }
-    },
+    "editor.rulers": [
+        100
+    ],
+    // "[zig]": {
+    //     "editor.defaultFormatter": "SteefH.external-formatters"
+    // },
+    // "externalFormatters.languages": {
+    //     "zig": {
+    //         "command": "zig",
+    //         "arguments": [
+    //             "fmt",
+    //             "--stdin"
+    //         ]
+    //     }
+    // },
     "workbench.productIconTheme": "IntelliJ",
     "git.openRepositoryInParentFolders": "never",
     "gitlens.mode.active": "zen",
