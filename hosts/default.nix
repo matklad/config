@@ -3,6 +3,7 @@
   time.timeZone = "Europe/Lisbon";
 
   nix = {
+    contentAddressedByDefault = true;
     extraOptions = "experimental-features = nix-command flakes";
     nixPath = ["nixpkgs=${pkgs.path}"];
     gc = {
