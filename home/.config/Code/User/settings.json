@@ -627,7 +627,8 @@
     "workbench.colorTheme": "Default Light Modern",
     "lldb.suppressUpdateNotifications": true,
     "cSpell.enableFiletypes": [
-        "djot"
+        "djot",
+        "zig"
     ],
     "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
 }
