@@ -21,7 +21,17 @@
             {
                 "command": "my-code.open-notes",
                 "title": "Opens a notes file",
-                "category": "Open Notes"
+                "category": "My Code"
+            },
+            {
+                "command": "my-code.next",
+                "title": "Next",
+                "category": "My Code"
+            },
+            {
+                "command": "my-code.prev",
+                "title": "Prev",
+                "category": "My Code"
             }
         ],
         "configuration": [

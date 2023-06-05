@@ -158,31 +158,6 @@
                     "name": "line",
                     "command": "workbench.action.gotoLine"
                 },
-                {
-                    "key": "n",
-                    "name": "next...",
-                    "type": "bindings",
-                    "bindings": [
-                        {
-                            "key": "c",
-                            "name": "change",
-                            "type": "command",
-                            "command": "workbench.action.editor.nextChange",
-                        },
-                        {
-                            "key": "e",
-                            "name": "error",
-                            "type": "command",
-                            "command": "editor.action.marker.nextInFiles"
-                        },
-                        {
-                            "key": "m",
-                            "name": "merge conflict",
-                            "type": "command",
-                            "command": "merge-conflict.next",
-                        },
-                    ]
-                }
             ]
         },
         {
@@ -395,6 +370,34 @@
             ]
         },
         {
+            "key": "n",
+            "name": "next...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "e",
+                    "name": "error",
+                    "type": "command",
+                    "command": "my-code.next",
+                    "args": ["error"]
+                },
+                {
+                    "key": "c",
+                    "name": "change",
+                    "type": "command",
+                    "command": "my-code.next",
+                    "args": ["change"]
+                },
+                {
+                    "key": "m",
+                    "name": "merge conflict",
+                    "type": "command",
+                    "command": "my-code.next",
+                    "args": ["conflict"]
+                },
+            ]
+        },
+        {
             "key": "m",
             "name": "misc",
             "type": "bindings",
@@ -416,6 +419,12 @@
                     "name": "accept incoming",
                     "type": "command",
                     "command": "merge-conflict.accept.incoming"
+                },
+                {
+                    "key": "d",
+                    "name": "diff",
+                    "type": "command",
+                    "command": "editor.action.dirtydiff.next"
                 },
                 {
                     "key": "c",
@@ -599,7 +608,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "liveServer.settings.donotVerifyTags": true,
-    // "zig.zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
+    "zig.zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
     "zig.zls.enableInlayHints": false,
     "zig.zls.checkForUpdate": false,
     "zig.zls.enableAutofix": false,
@@ -630,5 +639,4 @@
         "djot",
         "zig"
     ],
-    "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
 }

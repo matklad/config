@@ -84,6 +84,12 @@
     "when": "editorTextFocus",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "m" }] } },
 
+  { "key": ", n",                  "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "n" }] } },
+  { "key": "ctrl+n", "command": "my-code.next" },
+  { "key": "ctrl+p", "command": "my-code.prev" },
+
   { "key": ", space",              "command": "type", "when": "editorTextFocus", "args": { "text": ", " } },
   { "key": ", ,",                  "command": "type", "when": "editorTextFocus", "args": { "text": "," } },
   { "key": ", enter",              "command": "type", "when": "editorTextFocus", "args": { "text": ",\n" } },
