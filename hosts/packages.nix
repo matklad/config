@@ -12,9 +12,10 @@
   vscode
 
   # Comms
+  discord
+  slack
   tdesktop
   zoom-us
-  slack
 
   # Viewers
   audacious
