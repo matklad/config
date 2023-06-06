@@ -215,6 +215,12 @@
                     "command": "workbench.action.quickOpen"
                 },
                 {
+                    "key": "r",
+                    "name": "references",
+                    "type": "command",
+                    "command": "references-view.findReferences"
+                },
+                {
                     "key": "s",
                     "name": "string",
                     "type": "command",
@@ -394,6 +400,13 @@
                     "type": "command",
                     "command": "my-code.next",
                     "args": ["conflict"]
+                },
+                {
+                    "key": "r",
+                    "name": "reference",
+                    "type": "command",
+                    "command": "my-code.next",
+                    "args": ["reference"]
                 },
             ]
         },
@@ -631,7 +644,8 @@
     "git.openRepositoryInParentFolders": "never",
     "gitlens.mode.active": "zen",
     "githubPullRequests.remotes": [
-        "upstream"
+        "upstream",
+        "origin"
     ],
     "workbench.colorTheme": "Default Light Modern",
     "lldb.suppressUpdateNotifications": true,

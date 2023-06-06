@@ -47,7 +47,7 @@
   { "key": "win+n",                "command": "workbench.action.focusNextGroup" },
 
   { "key": "q",                    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "filesExplorerFocus" },
+    "when": "sideBarFocus" },
 
   { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
 

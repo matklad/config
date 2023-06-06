@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-type GoTarget = "change" | "conflict" | "error";
+type GoTarget = "change" | "conflict" | "error" | "reference";
 var current_target: GoTarget = "error";
 async function go(direction: "next" | "prev", target?: GoTarget) {
   if (target) {
@@ -62,6 +62,10 @@ async function go(direction: "next" | "prev", target?: GoTarget) {
       "editor.action.marker.nextInFiles",
       "editor.action.marker.prevInFiles",
     ],
+    reference: [
+      "references-view.next",
+      "references-view.prev",
+    ]
   };
 
   const command = dispatch[current_target][direction == "next" ? 0 : 1];
