@@ -1,10 +1,8 @@
 {
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
     "[html]": {
         "editor.tabSize": 2
-    },
-    "[markdown]": {
-        // "editor.wordWrap": "wordWrapColumn",
-        // "editor.wordWrapColumn": 80,
     },
     "projectNameInStatusBar.align": "right",
     "projectNameInStatusBar.textStyle": "uppercase",
@@ -30,7 +28,6 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.bracketPairColorization.enabled": false,
     "editor.formatOnType": true,
@@ -76,7 +73,6 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "terminal.integrated.fontSize": 12,
     "terminal.integrated.sendKeybindingsToShell": false,
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt",
@@ -385,28 +381,36 @@
                     "name": "error",
                     "type": "command",
                     "command": "my-code.next",
-                    "args": ["error"]
+                    "args": [
+                        "error"
+                    ]
                 },
                 {
                     "key": "c",
                     "name": "change",
                     "type": "command",
                     "command": "my-code.next",
-                    "args": ["change"]
+                    "args": [
+                        "change"
+                    ]
                 },
                 {
                     "key": "m",
                     "name": "merge conflict",
                     "type": "command",
                     "command": "my-code.next",
-                    "args": ["conflict"]
+                    "args": [
+                        "conflict"
+                    ]
                 },
                 {
                     "key": "r",
                     "name": "reference",
                     "type": "command",
                     "command": "my-code.next",
-                    "args": ["reference"]
+                    "args": [
+                        "reference"
+                    ]
                 },
             ]
         },

@@ -64,6 +64,7 @@
         gb = "git branch";
         gbd = "git branch -D";
         gc = "git commit";
+        gch = "git rev-parse HEAD | wl-copy";
         gl = "git log";
         gof = "git spinoff";
         gp = "git push";
