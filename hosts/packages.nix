@@ -21,7 +21,7 @@
   audacious
   qpdfview
   qview
-  vlc
+  haruna
 
   # Langs
   (python3.withPackages (py: [py.requests]))
