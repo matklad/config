@@ -16,16 +16,16 @@
     cpu.intel.updateMicrocode = true;
   };
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia = {
-    open = true;
-    modesetting.enable = true;
-    prime = {
-      offload.enable = true;
-      intelBusId  = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
-    };
-  };
+  services.xserver.videoDrivers = [ "intel" ];
+  # hardware.nvidia = {
+  #   open = true;
+  #   modesetting.enable = true;
+  #   prime = {
+  #     offload.enable = true;
+  #     intelBusId  = "PCI:0:2:0";
+  #     nvidiaBusId = "PCI:1:0:0";
+  #   };
+  # };
 
   boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/2fe2808b-7e2d-44ef-8f92-9340c040d1fc";
   fileSystems."/" = {
