@@ -8,7 +8,7 @@
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
     kernelParams = [ "i915.force_probe=46a6" ];
-    extraModulePackages = config.boot.kernelPackages.acpi_call;
+    extraModulePackages = [config.boot.kernelPackages.acpi_call];
   };
 
   hardware = {
