@@ -6,7 +6,7 @@
   boot = {
     initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
     initrd.kernelModules = [ ];
-    kernelModules = [ "kvm-intel" ];
+    kernelModules = [ "kvm-intel" "acpi_call" ];
     kernelParams = [ "i915.force_probe=46a6" ];
     extraModulePackages = [config.boot.kernelPackages.acpi_call];
   };
