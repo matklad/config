@@ -43,6 +43,7 @@
   rustup
   valgrind
   zig_0_9
+  zls
 
   # Archives
   ark

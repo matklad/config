@@ -625,6 +625,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "liveServer.settings.donotVerifyTags": true,
+    "zig.zigPath": "zig",
     "zig.zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
     "zig.zls.enableInlayHints": false,
     "zig.zls.checkForUpdate": false,
@@ -632,18 +633,6 @@
     "editor.rulers": [
         100
     ],
-    // "[zig]": {
-    //     "editor.defaultFormatter": "SteefH.external-formatters"
-    // },
-    // "externalFormatters.languages": {
-    //     "zig": {
-    //         "command": "zig",
-    //         "arguments": [
-    //             "fmt",
-    //             "--stdin"
-    //         ]
-    //     }
-    // },
     "workbench.productIconTheme": "IntelliJ",
     "git.openRepositoryInParentFolders": "never",
     "gitlens.mode.active": "zen",
