@@ -142,7 +142,7 @@
   console.useXkbConfig = true;
   xdg = {
     portal = {
-      enable = true;
+      # enable = true;
     };
   };
 
