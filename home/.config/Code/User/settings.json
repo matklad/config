@@ -626,7 +626,7 @@
     },
     "liveServer.settings.donotVerifyTags": true,
     "zig.zigPath": "zig",
-    "zig.zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
+    "zig.zls.path": "zls",
     "zig.zls.enableInlayHints": false,
     "zig.zls.checkForUpdate": false,
     "zig.zls.enableAutofix": false,
