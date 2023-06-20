@@ -72,6 +72,7 @@
   jq
   libimobiledevice
   linuxPackages.perf
+  lnav
   ntfs3g
   patchelf
   pciutils
