@@ -34,6 +34,7 @@
     "editor.hover.enabled": false,
     "editor.minimap.enabled": false,
     "editor.parameterHints.enabled": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.renderWhitespace": "none",
     "editor.roundedSelection": false,
     "editor.semanticHighlighting.enabled": true,
@@ -102,40 +103,78 @@
             "type": "bindings",
             "bindings": [
                 {
+                    "key": "g",
+                    "name": "First line",
+                    "type": "command",
+                    "command": "cursorTop",
+                },
+                {
+                    "key": "l",
+                    "name": "line",
+                    "command": "workbench.action.gotoLine"
+                },
+                {
+                    "key": "e",
+                    "name": "Last line",
+                    "type": "command",
+                    "command": "cursorBottom",
+                },
+                {
                     "key": "d",
-                    "name": "definition",
+                    "name": "Definition",
                     "type": "command",
                     "command": "editor.action.revealDefinition",
                 },
                 {
-                    "key": "s",
-                    "name": "split definition",
+                    "key": "D",
+                    "name": "Declaration",
                     "type": "command",
-                    "command": "editor.action.revealDefinitionAside"
+                    "command": "editor.action.revealDeclaration",
                 },
                 {
-                    "key": "u",
-                    "name": "usage",
-                    "type": "command",
-                    "command": "references-view.findReferences"
-                },
-                {
-                    "key": "t",
-                    "name": "type",
+                    "key": "y",
+                    "name": "Type definition",
                     "type": "command",
                     "command": "editor.action.goToTypeDefinition"
                 },
                 {
+                    "key": "r",
+                    "name": "References",
+                    "type": "command",
+                    "command": "references-view.findReferences"
+                },
+                {
                     "key": "i",
-                    "name": "implementation",
+                    "name": "Implementations",
                     "type": "command",
                     "command": "editor.action.goToImplementation"
                 },
                 {
-                    "key": "c",
-                    "name": "declarationn",
+                    "key": "t",
+                    "name": "Top of the window",
                     "type": "command",
-                    "command": "editor.action.revealDeclaration"
+                    "command": "cursorMove",
+                    "args": { "to": "viewPortTop" }
+                },
+                {
+                    "key": "c",
+                    "name": "Center of the window",
+                    "type": "command",
+                    "command": "cursorMove",
+                    "args": { "to": "viewPortCenter" }
+                },
+                {
+                    "key": "b",
+                    "name": "Bottom of the window",
+                    "type": "command",
+                    "command": "cursorMove",
+                    "args": { "to": "viewPortBottom" }
+                },
+                {
+                    "key": ".",
+                    "name": "Last edited",
+                    "type": "command",
+                    "command": "workbench.action.navigateToLastEditLocation"
                 },
                 {
                     "key": "p",
@@ -148,11 +187,6 @@
                     "name": "manifest",
                     "type": "command",
                     "command": "rust-analyzer.openCargoToml"
-                },
-                {
-                    "key": "l",
-                    "name": "line",
-                    "command": "workbench.action.gotoLine"
                 },
             ]
         },
@@ -172,24 +206,6 @@
                     "name": "unfold",
                     "type": "command",
                     "command": "editor.unfold"
-                },
-                {
-                    "key": "c",
-                    "name": "center",
-                    "type": "command",
-                    "command": "center-editor-window.center"
-                },
-                {
-                    "key": "s",
-                    "name": "start",
-                    "type": "command",
-                    "command": "cursorTop"
-                },
-                {
-                    "key": "e",
-                    "name": "end",
-                    "type": "command",
-                    "command": "cursorBottom"
                 },
                 {
                     "key": "m",
@@ -258,6 +274,12 @@
                     "name": "wrap",
                     "type": "command",
                     "command": "rewrap.rewrapComment"
+                },
+                {
+                    "key": "l",
+                    "name": "LaTeX",
+                    "type": "command",
+                    "command": "unicode-latex.insertMathSymbol"
                 },
                 {
                     "key": "_",
