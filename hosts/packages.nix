@@ -34,6 +34,7 @@
   llvmPackages_latest.clang
   llvmPackages_latest.lldb
   llvmPackages_latest.stdenv
+  llvmPackages_latest.llvm
   lua5_4
   maven
   nil
