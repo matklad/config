@@ -96,6 +96,7 @@
     "errorLens.exclude": [
         ".*Unknown word.*"
     ],
+    "deno.enablePaths": [ "./make.ts" ],
     "whichkey.bindings": [
         {
             "key": "g",
