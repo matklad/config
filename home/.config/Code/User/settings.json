@@ -110,7 +110,7 @@
                 },
                 {
                     "key": "l",
-                    "name": "line",
+                    "name": "Line",
                     "command": "workbench.action.gotoLine"
                 },
                 {
@@ -178,13 +178,13 @@
                 },
                 {
                     "key": "p",
-                    "name": "parent",
+                    "name": "Parent",
                     "type": "command",
                     "command": "rust-analyzer.parentModule"
                 },
                 {
                     "key": "m",
-                    "name": "manifest",
+                    "name": "Manifest",
                     "type": "command",
                     "command": "rust-analyzer.openCargoToml"
                 },
@@ -195,67 +195,6 @@
             "name": "cursor",
             "type": "bindings",
             "bindings": [
-                {
-                    "key": "f",
-                    "name": "fold",
-                    "type": "command",
-                    "command": "editor.fold"
-                },
-                {
-                    "key": "u",
-                    "name": "unfold",
-                    "type": "command",
-                    "command": "editor.unfold"
-                },
-                {
-                    "key": "m",
-                    "name": "matching brace",
-                    "type": "command",
-                    "command": "editor.action.jumpToBracket"
-                }
-            ]
-        },
-        {
-            "key": "s",
-            "name": "search",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "f",
-                    "name": "file",
-                    "type": "command",
-                    "command": "workbench.action.quickOpen"
-                },
-                {
-                    "key": "r",
-                    "name": "references",
-                    "type": "command",
-                    "command": "references-view.findReferences"
-                },
-                {
-                    "key": "s",
-                    "name": "string",
-                    "type": "command",
-                    "command": "actions.find"
-                },
-                {
-                    "key": "g",
-                    "name": "grep",
-                    "type": "command",
-                    "command": "search.action.openNewEditor"
-                },
-                {
-                    "key": "h",
-                    "name": "here",
-                    "type": "command",
-                    "command": "workbench.action.gotoSymbol"
-                },
-                {
-                    "key": "a",
-                    "name": "all",
-                    "type": "command",
-                    "command": "workbench.action.showAllSymbols"
-                },
             ]
         },
         {
@@ -477,6 +416,12 @@
                     "type": "command",
                     "command": "merge-conflict.accept.both"
                 },
+                {
+                    "key": "g",
+                    "name": "grep",
+                    "type": "command",
+                    "command": "search.action.openNewEditor"
+                },
             ]
         }
     ],
@@ -648,7 +593,7 @@
     },
     "liveServer.settings.donotVerifyTags": true,
     "zig.zigPath": "zig",
-    "zig.zls.path": "zls",
+    "zig.zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
     "zig.zls.enableInlayHints": false,
     "zig.zls.checkForUpdate": false,
     "zig.zls.enableAutofix": false,

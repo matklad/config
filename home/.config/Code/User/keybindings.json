@@ -53,31 +53,29 @@
 
 // Devil
 // g -- go definition, type, line, implementation
-// / -- search string, here, all, g
-// t -- transform format, Uppercase _, sort, join
+// e -- edit format, Uppercase _, sort, join
 // n -- next error git change conflict
-// c -- cursor center top bottom fold unfold
 // o -- open file, explorer, ...
 // m -- misc, hover, argument hits ...
+
   { "key": ", a",                  "command": "editor.action.quickFix" },
   { "key": ", l",                  "command": "workbench.action.gotoSymbol" },
+  { "key": ", shift+l",            "command": "workbench.action.showAllSymbols" },
   { "key": ", .",                  "command": "editor.action.revealDefinition" },
   { "key": ", shift+/",            "command": "whichkey.show" },
   { "key": ", /",                  "command": "findJump.activate" },
   { "key": ", p",                  "command": "editor.action.formatDocument" },
   { "key": ", w",                  "command": "rewrap.rewrapComment" },
+  { "key": ", b",                  "command": "editor.action.jumpToBracket" },
+  { "key": ", f",                  "command": "editor.fold" },
+  { "key": ", shift+f",            "command": "editor.unfold" },
 
   { "key": ", g",                  "command": "runCommands",
     "when": "editorTextFocus",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "g" }] } },
-  { "key": ", s",                  "command": "runCommands",
-    "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "s" }] } },
   { "key": ", e",                  "command": "runCommands",
     "when": "editorTextFocus",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "e" }] } },
-  { "key": ", c",                  "command": "runCommands",
-    "when": "editorTextFocus",
-    "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "c" }] } },
   { "key": ", o",                  "command": "runCommands",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "o" }] } },
   { "key": ", m",                  "command": "runCommands",

@@ -37,6 +37,7 @@
             .nix-shell-inputs
             .envrc
             .direnv/
+            make.ts
           '';
         };
         user = { name = "Alex Kladov"; email = "aleksey.kladov@gmail.com"; };
