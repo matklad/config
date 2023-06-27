@@ -107,7 +107,7 @@
                     "key": "g",
                     "name": "First line",
                     "type": "command",
-                    "command": "cursorTop",
+                    "command": "cursorTop"
                 },
                 {
                     "key": "l",
@@ -118,19 +118,19 @@
                     "key": "e",
                     "name": "Last line",
                     "type": "command",
-                    "command": "cursorBottom",
+                    "command": "cursorBottom"
                 },
                 {
                     "key": "d",
                     "name": "Definition",
                     "type": "command",
-                    "command": "editor.action.revealDefinition",
+                    "command": "editor.action.revealDefinition"
                 },
                 {
                     "key": "D",
                     "name": "Declaration",
                     "type": "command",
-                    "command": "editor.action.revealDeclaration",
+                    "command": "editor.action.revealDeclaration"
                 },
                 {
                     "key": "y",
@@ -188,14 +188,7 @@
                     "name": "Manifest",
                     "type": "command",
                     "command": "rust-analyzer.openCargoToml"
-                },
-            ]
-        },
-        {
-            "key": "c",
-            "name": "cursor",
-            "type": "bindings",
-            "bindings": [
+                }
             ]
         },
         {
@@ -205,13 +198,13 @@
             "bindings": [
                 {
                     "key": "f",
-                    "name": "format",
+                    "name": "Format",
                     "type": "command",
                     "command": "editor.action.formatDocument"
                 },
                 {
                     "key": "w",
-                    "name": "wrap",
+                    "name": "Wrap",
                     "type": "command",
                     "command": "rewrap.rewrapComment"
                 },
@@ -247,25 +240,25 @@
                 },
                 {
                     "key": "j",
-                    "name": "join",
+                    "name": "Join",
                     "type": "command",
                     "command": "editor.action.joinLines"
                 },
                 {
                     "key": "r",
-                    "name": "revert",
+                    "name": "Revert",
                     "type": "command",
                     "command": "git.revertSelectedRanges"
                 },
                 {
                     "key": "s",
-                    "name": "sort",
+                    "name": "Sort",
                     "type": "command",
                     "command": "editor.action.sortLinesAscending"
                 },
                 {
                     "key": "a",
-                    "name": "align",
+                    "name": "Align",
                     "type": "command",
                     "command": "yo1dog.cursor-align.alignCursors"
                 }
@@ -278,7 +271,7 @@
             "bindings": [
                 {
                     "key": "g",
-                    "name": "magit",
+                    "name": "Magit",
                     "type": "command",
                     "command": "runCommands",
                     "args": {
@@ -291,19 +284,19 @@
                 },
                 {
                     "key": "n",
-                    "name": "notes",
+                    "name": "Notes",
                     "type": "command",
                     "command": "my-code.open-notes"
                 },
                 {
                     "key": "t",
-                    "name": "terminal",
+                    "name": "Terminal",
                     "type": "command",
                     "command": "terminal.focus",
                 },
                 {
                     "key": "e",
-                    "name": "explorer",
+                    "name": "Explorer",
                     "type": "command",
                     "command": "runCommands",
                     "args": {
@@ -315,19 +308,19 @@
                 },
                 {
                     "key": "x",
-                    "name": "extensions",
+                    "name": "Extensions",
                     "type": "command",
                     "command": "workbench.extensions.action.installExtensions"
                 },
                 {
                     "key": "s",
-                    "name": "settings",
+                    "name": "Settings",
                     "type": "command",
                     "command": "workbench.action.openSettingsJson"
                 },
                 {
                     "key": "k",
-                    "name": "keybindings",
+                    "name": "Keybindings",
                     "type": "command",
                     "command": "workbench.action.openGlobalKeybindingsFile"
                 }
@@ -340,7 +333,7 @@
             "bindings": [
                 {
                     "key": "e",
-                    "name": "error",
+                    "name": "Error",
                     "type": "command",
                     "command": "my-code.next",
                     "args": [
@@ -349,7 +342,7 @@
                 },
                 {
                     "key": "c",
-                    "name": "change",
+                    "name": "Change",
                     "type": "command",
                     "command": "my-code.next",
                     "args": [
@@ -358,7 +351,7 @@
                 },
                 {
                     "key": "m",
-                    "name": "merge conflict",
+                    "name": "Merge Conflict",
                     "type": "command",
                     "command": "my-code.next",
                     "args": [
@@ -367,62 +360,62 @@
                 },
                 {
                     "key": "r",
-                    "name": "reference",
+                    "name": "Reference",
                     "type": "command",
                     "command": "my-code.next",
                     "args": [
                         "reference"
                     ]
-                },
+                }
             ]
         },
         {
             "key": "m",
-            "name": "misc",
+            "name": "Misc",
             "type": "bindings",
             "bindings": [
                 {
                     "key": "h",
-                    "name": "hover",
+                    "name": "Hover",
                     "type": "command",
                     "command": "editor.action.showHover"
                 },
                 {
                     "key": "a",
-                    "name": "argument hints",
+                    "name": "Argument Hints",
                     "type": "command",
                     "command": "editor.action.triggerParameterHints"
                 },
                 {
-                    "key": "i",
-                    "name": "accept incoming",
-                    "type": "command",
-                    "command": "merge-conflict.accept.incoming"
-                },
-                {
                     "key": "d",
-                    "name": "diff",
+                    "name": "Diff",
                     "type": "command",
                     "command": "editor.action.dirtydiff.next"
                 },
                 {
+                    "key": "i",
+                    "name": "Accept Incoming",
+                    "type": "command",
+                    "command": "merge-conflict.accept.incoming"
+                },
+                {
                     "key": "c",
-                    "name": "accept current",
+                    "name": "Accept Current",
                     "type": "command",
                     "command": "merge-conflict.accept.current"
                 },
                 {
                     "key": "b",
-                    "name": "accept both",
+                    "name": "Accept Both",
                     "type": "command",
                     "command": "merge-conflict.accept.both"
                 },
                 {
                     "key": "g",
-                    "name": "grep",
+                    "name": "Grep",
                     "type": "command",
                     "command": "search.action.openNewEditor"
-                },
+                }
             ]
         }
     ],
