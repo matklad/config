@@ -1,27 +1,28 @@
-
 [
 
 // Commands
   { "key": "alt+x",                "command": "workbench.action.showCommands" },
+
   { "key": "ctrl+u",               "command": "rust-analyzer.run",
     "when": "editorLangId == rust" },
-
   { "key": "ctrl+u",               "command": "runCommands",
     "args": { "commands": [ { "command": "workbench.action.tasks.terminate", "args": "terminateAll" }, "workbench.action.tasks.build" ] },
     "when": "editorLangId != rust" },
 
-  { "key": "ctrl+alt+z",           "command": "git.revertSelectedRanges" },
+  { "key": "Enter",                "command": "rust-analyzer.onEnter",
+    "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust" },
+
   { "key": "ctrl+j",               "command": "editor.action.joinLines",
     "when": "editorLangId != 'rust'" },
   { "key": "ctrl+j",               "command": "rust-analyzer.joinLines",
     "when": "editorLangId == 'rust'" },
-  { "key": "Enter",                "command": "rust-analyzer.onEnter",
-    "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust" },
 
   { "key": "ctrl+enter",            "command": "explorer.newFile",
     "when": "filesExplorerFocus" },
   { "key": "ctrl+shift+enter",      "command": "explorer.newFolder",
     "when": "filesExplorerFocus" },
+
+  { "key": "ctrl+shift+F",           "command": "search.action.openNewEditor" },
 
 // Window management
   { "key": "win+k",                "command": "workbench.action.closeGroup",

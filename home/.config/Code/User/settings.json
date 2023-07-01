@@ -239,12 +239,6 @@
                     "command": "extension.changeCase.pascal"
                 },
                 {
-                    "key": "j",
-                    "name": "Join",
-                    "type": "command",
-                    "command": "editor.action.joinLines"
-                },
-                {
                     "key": "r",
                     "name": "Revert",
                     "type": "command",
@@ -410,14 +404,8 @@
                     "type": "command",
                     "command": "merge-conflict.accept.both"
                 },
-                {
-                    "key": "g",
-                    "name": "Grep",
-                    "type": "command",
-                    "command": "search.action.openNewEditor"
-                }
             ]
-        }
+        },
     ],
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.completion.callable.snippets": "add_parentheses",
@@ -601,7 +589,7 @@
         "upstream",
         "origin"
     ],
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.colorTheme": "Pale Fire High Contrast",
     "lldb.suppressUpdateNotifications": true,
     "cSpell.enableFiletypes": [
         "djot",
