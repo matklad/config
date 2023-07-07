@@ -130,7 +130,7 @@
     };
     usbmuxd = {
       enable = true;
-      package = pkgs.usbmuxd2;
+      # package = pkgs.usbmuxd2;
     };
     kanata = {
       enable = true;
