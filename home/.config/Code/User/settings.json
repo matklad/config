@@ -96,7 +96,9 @@
     "errorLens.exclude": [
         ".*Unknown word.*"
     ],
-    "deno.enablePaths": [ "./make.ts" ],
+    "deno.enablePaths": [
+        "./make.ts"
+    ],
     "whichkey.bindings": [
         {
             "key": "g",
@@ -155,21 +157,27 @@
                     "name": "Top of the window",
                     "type": "command",
                     "command": "cursorMove",
-                    "args": { "to": "viewPortTop" }
+                    "args": {
+                        "to": "viewPortTop"
+                    }
                 },
                 {
                     "key": "c",
                     "name": "Center of the window",
                     "type": "command",
                     "command": "cursorMove",
-                    "args": { "to": "viewPortCenter" }
+                    "args": {
+                        "to": "viewPortCenter"
+                    }
                 },
                 {
                     "key": "b",
                     "name": "Bottom of the window",
                     "type": "command",
                     "command": "cursorMove",
-                    "args": { "to": "viewPortBottom" }
+                    "args": {
+                        "to": "viewPortBottom"
+                    }
                 },
                 {
                     "key": ".",
@@ -409,13 +417,17 @@
     ],
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.completion.callable.snippets": "add_parentheses",
-    "rust-analyzer.callInfo.full": false,
-    "rust-analyzer.checkOnSave.enable": false,
+    "rust-analyzer.callInfo": false,
+    "rust-analyzer.checkOnSave": false,
     "rust-analyzer.server.extraEnv": {
         // "RA_PROFILE": "*>16",
         // "RA_LOG": "rust_analyzer=info",
         // "RA_COUNT": "1"
     },
+    "rust-analyzer.runnables.problemMatcher": [
+        "$rustc",
+        "$rust-panic"
+    ],
     "openInGitHub.defaultRemote": "upstream",
     "my-code.notes-file": "/home/matklad/notes.djot",
     "lldb.library": "/nix/store/vkw0nx0c1cfqm68gn9vz0lw1r6ap41p1-lldb-7.1.0/lib/liblldb.so",
