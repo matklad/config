@@ -21,12 +21,12 @@
                 "owner": "make.ts",
                 "fileLocation": ["relative", "${workspaceFolder}"],
                 "pattern": {
-                  "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                  "file": 1,
-                  "line": 2,
-                  "column": 3,
-                  "severity": 4,
-                  "message": 5
+                  "regexp": "^(ok.)?(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "file": 2,
+                  "line": 3,
+                  "column": 4,
+                  "severity": 5,
+                  "message": 6
                 }
               }
         }
