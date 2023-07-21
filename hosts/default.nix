@@ -87,7 +87,7 @@
     logind = {
       extraConfig = ''
         IdleAction=poweroff
-        IdleActionSec=90min
+        IdleActionSec=60min
       '';
     };
 
