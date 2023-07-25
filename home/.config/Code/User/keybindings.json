@@ -63,6 +63,7 @@
   { "key": ", l",                  "command": "workbench.action.gotoSymbol" },
   { "key": ", shift+l",            "command": "workbench.action.showAllSymbols" },
   { "key": ", .",                  "command": "editor.action.revealDefinition" },
+  { "key": ", shift+.",            "command": "editor.action.revealDefinitionAside" },
   { "key": ", shift+/",            "command": "whichkey.show" },
   { "key": ", /",                  "command": "findJump.activate" },
   { "key": ", p",                  "command": "editor.action.formatDocument" },
