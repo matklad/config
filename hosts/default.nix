@@ -167,9 +167,9 @@
 
   virtualisation = {
     # virtualbox.host = { enable = true; enableExtensionPack = true; };
-    docker = {
+    podman = {
       enable = true;
-      enableOnBoot = false;
+      dockerCompat = true;
     };
   };
 
