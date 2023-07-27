@@ -5,7 +5,9 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
     let branches: Vec<_> = branches
         .lines()
         .map(str::trim)
-        .filter(|&it| !(it == "master" || it.starts_with('*')))
+        .filter(|&it| {
+            !(it == "master" || it == "main" || it.starts_with('*') || it.starts_with('+'))
+        })
         .collect();
     if branches.is_empty() {
         println!("no merged branches");
