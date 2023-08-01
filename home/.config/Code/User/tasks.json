@@ -19,9 +19,12 @@
             },
             "problemMatcher": {
                 "owner": "make.ts",
-                "fileLocation": ["relative", "${workspaceFolder}"],
+                "fileLocation": [
+                    "autoDetect",
+                    "${workspaceFolder}"
+                ],
                 "pattern": {
-                  "regexp": "^(ok.)?(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "regexp": "^(ok\\.)?(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
                   "file": 2,
                   "line": 3,
                   "column": 4,
