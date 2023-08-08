@@ -197,7 +197,7 @@
   fonts = {
     fontDir.enable = true;
     enableDefaultPackages = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       hack-font
       fira-code
       ubuntu_font_family
