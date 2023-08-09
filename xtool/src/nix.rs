@@ -9,29 +9,25 @@ pub(crate) fn gc(sh: &Shell) -> anyhow::Result<()> {
 pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
     cmd!(sh, "doas true").quiet().run()?;
 
-    let mut upgdate = false;
-    for arg in std::env::args().skip(1) {
-        match arg.as_str() {
-            "--up" => upgdate = true,
-            arg => anyhow::bail!("unexpected arg: {:?}", arg),
-        };
-    }
+    let flags = xflags::parse_or_exit! { optional --offline };
 
     sh.change_dir("/home/matklad/config");
-    if upgdate {
+    if !flags.offline {
         cmd!(sh, "nix flake update").run()?;
     }
-    let mut push = false;
+    let mut committed = false;
     if !cmd!(sh, "git status --porcelain").read()?.is_empty() {
         cmd!(sh, "git add .").run()?;
         cmd!(sh, "git --no-pager diff --cached --color=always").run()?;
         cmd!(sh, "git commit -m .").run()?;
-        push = true;
+        committed = true;
     }
-    cmd!(sh, "git pull --rebase").run()?;
+    if !flags.offline {
+        cmd!(sh, "git pull --rebase").run()?;
+    }
     cmd!(sh, "doas rm -rf /var/lib/sddm/.cache").run()?;
     cmd!(sh, "doas nixos-rebuild switch").run()?;
-    if push {
+    if committed && !flags.offline {
         cmd!(sh, "git push").run()?;
     }
     Ok(())
