@@ -21,5 +21,17 @@
 			"}"
 		],
 		"description": "main"
+	},
+	"log error": {
+		"prefix": "le",
+		"body": [
+			"log.err(\"{}:$1\", .{$0});"
+		],
+	},
+	"debug print": {
+		"prefix": "pd",
+		"body": [
+			"std.debug.print(\"$1\\n\", .{$0});"
+		],
 	}
 }
