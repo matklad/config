@@ -30,11 +30,12 @@
   deno
   gdb
   gnumake
+  go
   llvmPackages_latest.bintools
   llvmPackages_latest.clang
   llvmPackages_latest.lldb
-  llvmPackages_latest.stdenv
   llvmPackages_latest.llvm
+  llvmPackages_latest.stdenv
   lua5_4
   maven
   nil
