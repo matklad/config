@@ -1,0 +1,25 @@
+{
+	"istd": {
+		"prefix": "istd",
+		"body": [
+			"const std = @import(\"std\");"
+		],
+		"description": "import std"
+	},
+	"iass": {
+		"prefix": "iass",
+		"body": [
+			"const assert = std.debug.assert;"
+		],
+		"description": "import assert"
+	},
+	"psvm": {
+		"prefix": "psvm",
+		"body": [
+			"pub fn main() !void {",
+			"    $0",
+			"}"
+		],
+		"description": "main"
+	}
+}
