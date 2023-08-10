@@ -321,6 +321,12 @@
                     "command": "workbench.action.openSettingsJson"
                 },
                 {
+                    "key": "S",
+                    "name": "Workspace Settings",
+                    "type": "command",
+                    "command": "workbench.action.openWorkspaceSettingsFile"
+                },
+                {
                     "key": "k",
                     "name": "Keybindings",
                     "type": "command",
@@ -586,7 +592,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "liveServer.settings.donotVerifyTags": true,
-    "zig.zigPath": "/home/matklad/p/tb/main/zig/zig",
+    "zig.zigPath": "zig",
     "zig.zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
     "zig.zls.enableInlayHints": true,
     "zig.zls.checkForUpdate": false,
