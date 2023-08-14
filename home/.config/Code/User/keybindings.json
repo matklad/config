@@ -22,7 +22,10 @@
   { "key": "ctrl+shift+enter",      "command": "explorer.newFolder",
     "when": "filesExplorerFocus" },
 
-  { "key": "ctrl+shift+F",           "command": "search.action.openNewEditor" },
+ { "key": "ctrl+shift+F",           "command": "search.action.openNewEditor" },
+
+ { "key": "win+-",             "command": "workbench.action.decreaseViewSize" },
+ { "key": "win+=",             "command": "workbench.action.increaseViewSize" },
 
 // Window management
   { "key": "win+k",                "command": "workbench.action.closeGroup",
