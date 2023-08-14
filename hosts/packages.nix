@@ -5,11 +5,11 @@
   gimp
   kdialog
   kitty
-  # kooha
   obs-studio
   qbittorrent
   spectacle
   vscode
+  steam-run
 
   # Comms
   discord
