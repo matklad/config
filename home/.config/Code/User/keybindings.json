@@ -1,20 +1,23 @@
 [
 
 // Commands
-  { "key": "alt+x",                "command": "workbench.action.showCommands" },
+  { "key": "alt+x",                 "command": "workbench.action.showCommands" },
 
-  { "key": "ctrl+u",               "command": "rust-analyzer.run",
+  { "key": "ctrl+u",                "command": "rust-analyzer.run",
     "when": "editorLangId == rust" },
-  { "key": "ctrl+u",               "command": "runCommands",
-    "args": { "commands": [ { "command": "workbench.action.tasks.terminate", "args": "terminateAll" }, "workbench.action.tasks.build" ] },
+  { "key": "ctrl+u",                "command": "runCommands",
+    "args": { "commands": [
+      { "command": "workbench.action.tasks.terminate", "args": "terminateAll" },
+      "workbench.action.tasks.build"
+    ] },
     "when": "editorLangId != rust" },
 
-  { "key": "Enter",                "command": "rust-analyzer.onEnter",
+  { "key": "Enter",                 "command": "rust-analyzer.onEnter",
     "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust" },
 
-  { "key": "ctrl+j",               "command": "editor.action.joinLines",
+  { "key": "ctrl+j",                "command": "editor.action.joinLines",
     "when": "editorLangId != 'rust'" },
-  { "key": "ctrl+j",               "command": "rust-analyzer.joinLines",
+  { "key": "ctrl+j",                "command": "rust-analyzer.joinLines",
     "when": "editorLangId == 'rust'" },
 
   { "key": "ctrl+enter",            "command": "explorer.newFile",
@@ -31,17 +34,17 @@
  { "key": "ctrl+shift+.",             "command": "findJump.activateWithSelection" },
 
 // Window management
-  { "key": "win+k",                "command": "workbench.action.closeGroup",
+  { "key": "win+k",                 "command": "workbench.action.closeGroup",
     "when": "editorFocus && multipleEditorGroups" },
-  { "key": "win+k",                "command": "workbench.action.closeActiveEditor",
+  { "key": "win+k",                 "command": "workbench.action.closeActiveEditor",
     "when": "inSearchEditor && multipleEditorGroups" },
-  { "key": "win+k",                "command": "workbench.action.toggleSidebarVisibility",
+  { "key": "win+k",                 "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarFocus" },
-  { "key": "win+k",                "command": "workbench.action.closePanel",
+  { "key": "win+k",                 "command": "workbench.action.closePanel",
     "when": "panelFocus" },
-  { "key": "win+k",                "command": "workbench.action.closeActiveEditor",
+  { "key": "win+k",                 "command": "workbench.action.closeActiveEditor",
     "when": "!sideBarFocus && !panelFocus && !multipleEditorGroups" },
-  { "key": "win+f",                "command": "runCommands",
+  { "key": "win+f",                 "command": "runCommands",
     "args": { "commands": [
       "workbench.action.closePanel",
       "workbench.action.closeEditorsInOtherGroups",
@@ -49,14 +52,14 @@
       "workbench.action.closeSidebar" ] },
     "when": "editorFocus" },
 
-  { "key": "win+e",                "command": "workbench.action.splitEditorRight" },
-  { "key": "win+o",                "command": "workbench.action.splitEditorDown" },
-  { "key": "win+n",                "command": "workbench.action.focusNextGroup" },
+  { "key": "win+e",                 "command": "workbench.action.splitEditorRight" },
+  { "key": "win+o",                 "command": "workbench.action.splitEditorDown" },
+  { "key": "win+n",                 "command": "workbench.action.focusNextGroup" },
 
-  { "key": "q",                    "command": "workbench.action.toggleSidebarVisibility",
+  { "key": "q",                     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarFocus" },
 
-  { "key": "ctrl+o",               "command": "workbench.action.quickOpen" },
+  { "key": "ctrl+o",                "command": "workbench.action.quickOpen" },
 
 // Devil
 // g -- go definition, type, line, implementation
