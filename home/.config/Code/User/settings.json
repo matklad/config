@@ -595,6 +595,7 @@
     "zig.zigPath": "zig",
     "zig.zls.path": "/home/matklad/p/zls/zig-out/bin/zls",
     "zig.zls.enableInlayHints": true,
+    "zig.zls.enableArgumentPlaceholders": false,
     "zig.zls.checkForUpdate": false,
     "zig.zls.enableAutofix": false,
     "editor.rulers": [

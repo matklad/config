@@ -22,6 +22,13 @@
 		],
 		"description": "main"
 	},
+	"memu": {
+		"prefix": "memu",
+		"body": [
+			"std.mem.$1(u8, $0)",
+		],
+		"description": "main"
+	},
 	"log error": {
 		"prefix": "le",
 		"body": [
@@ -31,7 +38,7 @@
 	"debug print": {
 		"prefix": "pd",
 		"body": [
-			"std.debug.print(\"$1\\n\", .{$0});"
+			"std.debug.print(\"{$1}\\n\", .{$0});"
 		],
 	}
 }
