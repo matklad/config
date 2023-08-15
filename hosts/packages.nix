@@ -45,7 +45,7 @@
   protobuf
   rustup
   valgrind
-  zig_0_10
+  zig_0_11
   zls
 
   # Archives
