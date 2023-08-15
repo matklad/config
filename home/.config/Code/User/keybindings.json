@@ -24,8 +24,11 @@
 
  { "key": "ctrl+shift+F",           "command": "search.action.openNewEditor" },
 
- { "key": "win+-",             "command": "workbench.action.decreaseViewSize" },
- { "key": "win+=",             "command": "workbench.action.increaseViewSize" },
+ { "key": "win+-",                    "command": "workbench.action.decreaseViewSize" },
+ { "key": "win+=",                    "command": "workbench.action.increaseViewSize" },
+
+ { "key": "ctrl+.",                   "command": "findJump.activate" },
+ { "key": "ctrl+shift+.",             "command": "findJump.activateWithSelection" },
 
 // Window management
   { "key": "win+k",                "command": "workbench.action.closeGroup",
@@ -68,7 +71,6 @@
   { "key": ", .",                  "command": "editor.action.revealDefinition" },
   { "key": ", shift+.",            "command": "editor.action.revealDefinitionAside" },
   { "key": ", shift+/",            "command": "whichkey.show" },
-  { "key": ", /",                  "command": "findJump.activate" },
   { "key": ", p",                  "command": "editor.action.formatDocument" },
   { "key": ", w",                  "command": "rewrap.rewrapComment" },
   { "key": ", b",                  "command": "editor.action.jumpToBracket" },
@@ -119,8 +121,6 @@
   { "key": "shift+pagedown",       "command": "cursorMove",
     "when": "editorTextFocus",
     "args": { "by": "wrappedLine", "value": 36, "to": "down", "select": true } },
-  { "key": "win+0",                "command": "findJump.activate" },
-  { "key": "shift+win+0",          "command": "findJump.activateWithSelection" },
 
 // Next/Prev
   { "key": "ctrl+down",            "command": "workbench.action.editor.nextChange",
