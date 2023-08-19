@@ -96,9 +96,6 @@
     "errorLens.exclude": [
         ".*Unknown word.*"
     ],
-    "deno.enablePaths": [
-        "./make.ts"
-    ],
     "whichkey.bindings": [
         {
             "key": "g",
@@ -614,4 +611,7 @@
         "djot",
         "zig"
     ],
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
 }
