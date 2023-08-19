@@ -13,10 +13,7 @@
                 "showReuseMessage": false,
                 "clear": true
             },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "problemMatcher": {
                 "owner": "make.ts",
                 "fileLocation": [
@@ -24,14 +21,14 @@
                     "${workspaceFolder}"
                 ],
                 "pattern": {
-                  "regexp": "^(ok\\.)?(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                  "file": 2,
-                  "line": 3,
-                  "column": 4,
-                  "severity": 5,
-                  "message": 6
+                    "regexp": "^(ok\\.)?(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 2,
+                    "line": 3,
+                    "column": 4,
+                    "severity": 5,
+                    "message": 6
                 }
-              }
+            }
         }
     ]
 }
