@@ -27,8 +27,8 @@
 
  { "key": "ctrl+shift+F",           "command": "search.action.openNewEditor" },
 
- { "key": "win+-",                    "command": "workbench.action.decreaseViewSize" },
- { "key": "win+=",                    "command": "workbench.action.increaseViewSize" },
+ { "key": "win+-",                    "command": "workbench.action.increaseViewSize" },
+ { "key": "win+=",                    "command": "workbench.action.decreaseViewSize" },
 
  { "key": "ctrl+.",                   "command": "findJump.activate" },
  { "key": "ctrl+shift+.",             "command": "findJump.activateWithSelection" },
