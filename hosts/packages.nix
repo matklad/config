@@ -45,6 +45,7 @@
   protobuf
   rustup
   valgrind
+  kcachegrind
   zig_0_11
   zls
 
