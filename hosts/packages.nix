@@ -102,7 +102,7 @@
   (let base = pkgs.appimageTools.defaultFhsEnvArgs; in
    pkgs.buildFHSUserEnv (base // {
      name = "fhs";
-     targetPkgs = pkgs: (base.targetPkgs pkgs) ++ [pkgs.pkg-config];
+     targetPkgs = pkgs: (base.targetPkgs pkgs) ++ [pkgs.pkg-config pkgs.pam];
      profile = "export FHS=1";
      runScript = "fish";
      extraOutputsToInstall = ["dev"];
