@@ -252,7 +252,7 @@
     sudo.enable = false;
     doas = {
       enable = true;
-      extraRules = [{ users = [ "matklad" ]; keepEnv = true; persist = true; }];
+      extraRules = [{ users = [ "matklad" ]; keepEnv = true; persist = true; noPass = true; }];
     };
     pam.loginLimits = [
       { domain = "*"; type = "soft"; item = "memlock"; value = "524288"; }
