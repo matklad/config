@@ -77,6 +77,7 @@
         sw = "git switch";
         swc = "git switch -c";
         swd = "git switch -d";
+        zz = "./zig/zig";
       };
     };
   };
