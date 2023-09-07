@@ -46,7 +46,7 @@
   rustup
   valgrind
   kcachegrind
-  zig_0_11
+  # zig_0_11
   zls
 
   # Archives
