@@ -91,7 +91,7 @@
   # Rust stuff
   bat
   du-dust
-  exa
+  eza
   fd
   gitui
   helix

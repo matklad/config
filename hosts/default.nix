@@ -72,7 +72,7 @@
         gpf = "git push --force-with-lease";
         gs = "git status --short --branch";
         gup = "git pull --rebase";
-        ls = "exa -l";
+        ls = "eza -l";
         perfr = "perf record -F 9999 --call-graph dwarf";
         sw = "git switch";
         swc = "git switch -c";
