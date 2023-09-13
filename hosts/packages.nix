@@ -60,6 +60,7 @@
   # Utils
   asciinema
   binutils
+  btop
   curl
   direnv
   entr
@@ -70,7 +71,6 @@
   gitAndTools.gh
   gperftools
   graphviz
-  htop
   hunspell
   hunspellDicts.en_US
   jq
