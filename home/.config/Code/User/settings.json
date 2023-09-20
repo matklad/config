@@ -614,4 +614,5 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
+    "window.zoomLevel": 1,
 }
