@@ -12,7 +12,7 @@
     "window.newWindowDimensions": "maximized",
     "window.restoreWindows": "none",
     "window.title": "${rootName}${separator}${activeEditorShort}",
-    "window.titleBarStyle": "native",
+    "window.titleBarStyle": "custom",
     "workbench.editor.showTabs": false,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
