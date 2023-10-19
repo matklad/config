@@ -32,11 +32,16 @@
   gdb
   gnumake
   go
-  llvmPackages_latest.bintools
-  llvmPackages_latest.clang
-  llvmPackages_latest.lldb
-  llvmPackages_latest.llvm
-  llvmPackages_latest.stdenv
+  llvmPackages_16.bintools
+  llvmPackages_16.clang
+  llvmPackages_16.lldb
+  llvmPackages_16.llvm
+  llvmPackages_16.stdenv
+  llvmPackages_15.bintools
+  llvmPackages_15.clang
+  llvmPackages_15.lldb
+  llvmPackages_15.llvm
+  llvmPackages_15.stdenv
   lua5_4
   maven
   nil
