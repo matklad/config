@@ -1,0 +1,9 @@
+{
+	"pr": {
+		"prefix": "pr",
+		"body": [
+			"[#$1](https://github.com/tigerbeetle/tigerbeetle/pull/$1)$0",
+		],
+		"description": "PR link"
+	},
+}
