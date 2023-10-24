@@ -168,7 +168,10 @@
 
   virtualisation = {
     # virtualbox.host = { enable = true; enableExtensionPack = true; };
-    docker.enable = true;
+    docker = {
+      package = pkgs.docker.override(args: { buildxSupport = true; });
+      enable = true;
+    };
     podman = {
       enable = false;
       dockerCompat = true;
