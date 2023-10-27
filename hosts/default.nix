@@ -188,8 +188,8 @@
       enable = true;
       wifi.backend = "iwd";
     };
-    extraHosts =  if builtins.pathExists "./hosts.txt"
-      then builtins.readFile "./hosts.txt"
+    extraHosts =  if builtins.pathExists ./hosts.txt
+      then builtins.readFile ./hosts.txt
       else "";
   };
 
