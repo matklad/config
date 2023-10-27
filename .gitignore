@@ -1,2 +1,2 @@
-host.nix
+hosts.txt
 !shell.nix

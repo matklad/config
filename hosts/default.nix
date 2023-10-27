@@ -188,6 +188,9 @@
       enable = true;
       wifi.backend = "iwd";
     };
+    extraHosts =  if builtins.pathExists "./hosts.txt"
+      then builtins.readFile "./hosts.txt"
+      else "";
   };
 
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
