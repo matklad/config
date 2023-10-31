@@ -589,7 +589,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "liveServer.settings.donotVerifyTags": true,
-    "zig.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zig_install/zig",
+    "zig.path": "/home/matklad/p/tb/main/zig/zig",
     "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
     "zig.zls.enableInlayHints": true,
     "zig.zls.enableArgumentPlaceholders": false,
