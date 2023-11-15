@@ -491,6 +491,7 @@
         "LLVM",
         "magit",
         "malloc",
+        "microkernel",
         "monomorphization",
         "monomorphizations",
         "MSRV",
