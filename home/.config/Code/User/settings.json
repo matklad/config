@@ -14,7 +14,7 @@
     "window.restoreWindows": "none",
     "window.title": "${rootName}${separator}${activeEditorShort}",
     "window.titleBarStyle": "native",
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": "single",
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none",
@@ -579,7 +579,6 @@
     "editor.guides.indentation": false,
     "rust-analyzer.diagnostics.experimental.enable": true,
     "editor.unicodeHighlight.ambiguousCharacters": false,
-    "workbench.activityBar.visible": false,
     "[typescript]": {
         "editor.defaultFormatter": "denoland.vscode-deno",
         "editor.acceptSuggestionOnCommitCharacter": false
@@ -617,4 +616,5 @@
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "zig.initialSetupDone": true,
+    "workbench.activityBar.location": "hidden",
 }
