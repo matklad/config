@@ -372,6 +372,15 @@
                     "args": [
                         "reference"
                     ]
+                },
+                {
+                    "key": "f",
+                    "name": "Find",
+                    "type": "command",
+                    "command": "my-code.next",
+                    "args": [
+                        "occurrence"
+                    ]
                 }
             ]
         },

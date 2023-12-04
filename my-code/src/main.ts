@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-type GoTarget = "change" | "conflict" | "error" | "reference";
+type GoTarget = "change" | "conflict" | "error" | "reference" | "occurrence";
 var current_target: GoTarget = "error";
 async function go(direction: "next" | "prev", target?: GoTarget) {
   if (target) {
@@ -65,6 +65,10 @@ async function go(direction: "next" | "prev", target?: GoTarget) {
     reference: [
       "references-view.next",
       "references-view.prev",
+    ],
+    occurrence: [
+      "editor.action.nextMatchFindAction",
+      "editor.action.previousMatchFindAction",
     ]
   };
 
