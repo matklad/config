@@ -25,7 +25,12 @@ pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
     if !flags.offline {
         cmd!(sh, "git pull --rebase").run()?;
     }
-    cmd!(sh, "doas rm -rf /var/lib/sddm/.cache").run()?;
+
+    {
+        cmd!(sh, "doas rm -rf /var/lib/sddm/.cache").run()?;
+        cmd!(sh, "rm -rf /home/matklad/.config/Code/GPUCache/").run()?;
+    }
+
     cmd!(sh, "doas nixos-rebuild switch --flake path:/home/matklad/config").run()?;
     if committed && !flags.offline {
         cmd!(sh, "git push").run()?;
