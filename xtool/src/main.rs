@@ -2,7 +2,6 @@ use std::path::PathBuf;
 
 use xshell::Shell;
 
-mod amend;
 mod autopatchelf;
 mod autostart;
 mod autowatch;
@@ -22,7 +21,6 @@ mod swm;
 mod use_nix;
 
 const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
-    ("amend", amend::run),
     ("autopatchelf", autopatchelf::run),
     ("autostart", autostart::run),
     ("autowatch", autowatch::run),
@@ -62,23 +60,36 @@ fn link_me_up() {
     let sh = Shell::new().unwrap();
     let bin = std::path::Path::new("/home/matklad/.local/bin");
     sh.create_dir(&bin).unwrap();
-    cmd!(sh, "cargo build --release").run().unwrap();
 
-    for &(tool, _) in TOOLS {
-        let dst = bin.join(tool);
-        sh.remove_path(&dst).unwrap();
-        let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();
-        sh.hard_link("./target/release/xtool", &dst).unwrap();
+    {
+        cmd!(sh, "cargo build --release").run().unwrap();
+        for &(tool, _) in TOOLS {
+            let dst = bin.join(tool);
+            sh.remove_path(&dst).unwrap();
+            let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();
+            sh.hard_link("./target/release/xtool", &dst).unwrap();
+        }
     }
 
-    let home: PathBuf = "/home/matklad/".into();
-    let config_home = home.join("config/home");
-    for abs_path in walkdir(config_home.clone()).unwrap() {
-        let rel_path = abs_path.strip_prefix(&config_home).unwrap();
-        let dest = home.join(rel_path);
-        sh.remove_path(&dest).unwrap();
-        sh.create_dir(dest.parent().unwrap()).unwrap();
-        std::os::unix::fs::symlink(abs_path, dest).unwrap();
+    {
+        let _d = sh.push_dir("../gg");
+        cmd!(sh, "cargo build --release").run().unwrap();
+        let dst = bin.join("gg");
+        sh.remove_path(&dst).unwrap();
+        let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();
+        sh.hard_link("./target/release/gg", &dst).unwrap();
+    }
+
+    {
+        let home: PathBuf = "/home/matklad/".into();
+        let config_home = home.join("config/home");
+        for abs_path in walkdir(config_home.clone()).unwrap() {
+            let rel_path = abs_path.strip_prefix(&config_home).unwrap();
+            let dest = home.join(rel_path);
+            sh.remove_path(&dest).unwrap();
+            sh.create_dir(dest.parent().unwrap()).unwrap();
+            std::os::unix::fs::symlink(abs_path, dest).unwrap();
+        }
     }
 
     fn walkdir(path: PathBuf) -> anyhow::Result<Vec<PathBuf>> {
