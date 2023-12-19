@@ -11,6 +11,9 @@ mod flags {
             cmd amend {
 
             }
+            cmd branch {
+                required name: String
+            }
         }
     }
 }
@@ -30,9 +33,19 @@ fn main() -> Result {
         }
     };
 
+    let remote = {
+        let remotes = cmd!(sh, "git remote").read()?;
+        if remotes.contains("upstream") {
+            "upstream"
+        } else {
+            "origin"
+        }
+    };
+
     let context = Context {
         sh: &sh,
         default_branch,
+        remote,
     };
 
     match flags.subcommand {
@@ -40,12 +53,14 @@ fn main() -> Result {
             flags::WorktreeCmd::Add(add) => context.worktree_add(&add.name),
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
+        flags::GgCmd::Branch(branch) => context.branch(&branch.name),
     }
 }
 
 struct Context<'a> {
     sh: &'a Shell,
     default_branch: &'static str,
+    remote: &'static str,
 }
 
 impl<'a> Context<'a> {
@@ -67,6 +82,18 @@ impl<'a> Context<'a> {
         if yes_or_no("Continue?") {
             cmd!(self.sh, "git commit --amend --no-edit").run()?;
         }
+        Ok(())
+    }
+
+    fn branch(&self, name: &str) -> Result {
+        let remote = self.remote;
+        let default_branch = self.default_branch;
+        cmd!(self.sh, "git fetch {remote} {default_branch}").run()?;
+        cmd!(
+            self.sh,
+            "git switch --create {name} {remote}/{default_branch}"
+        )
+        .run()?;
         Ok(())
     }
 }
