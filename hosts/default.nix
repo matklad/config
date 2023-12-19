@@ -170,10 +170,10 @@
     # virtualbox.host = { enable = true; enableExtensionPack = true; };
     docker = {
       package = pkgs.docker.override(args: { buildxSupport = true; });
-      enable = false;
+      enable = true;
     };
     podman = {
-      enable = true;
+      enable = false;
       dockerCompat = true;
     };
   };
