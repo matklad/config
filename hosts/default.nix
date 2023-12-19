@@ -221,7 +221,7 @@
     defaultUserShell = "/run/current-system/sw/bin/fish";
     extraUsers.matklad = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "docker" "audio" "plugdev" ];
+      extraGroups = [ "wheel" "networkmanager" "docker" "audio" "plugdev" "podman" ];
       uid = 1000;
     };
   };

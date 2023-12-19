@@ -14,6 +14,9 @@ mod flags {
             cmd branch {
                 required name: String
             }
+            cmd sync {
+
+            }
         }
     }
 }
@@ -54,6 +57,7 @@ fn main() -> Result {
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
         flags::GgCmd::Branch(branch) => context.branch(&branch.name),
+        flags::GgCmd::Sync(flags::Sync) => context.sync(),
     }
 }
 
@@ -94,6 +98,14 @@ impl<'a> Context<'a> {
             "git switch --create {name} {remote}/{default_branch}"
         )
         .run()?;
+        Ok(())
+    }
+
+    fn sync(&self) -> Result {
+        let remote = self.remote;
+        let branch = cmd!(self.sh, "git rev-parse --abbrev-ref HEAD").read()?;
+        cmd!(self.sh, "git fetch {remote} {branch}").run()?;
+        cmd!(self.sh, "git reset --hard {remote}/{branch}").run()?;
         Ok(())
     }
 }
