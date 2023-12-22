@@ -40,7 +40,7 @@
     "editor.roundedSelection": false,
     "editor.semanticHighlighting.enabled": true,
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     "editor.semanticTokenColorCustomizations": {
         "[Xcode 11 Default Light]": {
             "rules": {
