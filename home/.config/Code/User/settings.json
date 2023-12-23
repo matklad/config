@@ -41,6 +41,10 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": "off",
+<<<<<<< HEAD
+=======
+    "editor.autoIndent": "advanced",
+>>>>>>> 85ff43b (.)
     "editor.semanticTokenColorCustomizations": {
         "[Xcode 11 Default Light]": {
             "rules": {
