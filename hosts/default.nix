@@ -61,6 +61,7 @@
         ct = "cargo t -- -q";
         ctrlc = "wl-copy";
         ctrlv = "wl-paste";
+        gga = "gg amend";
         g = "git";
         gb = "git branch";
         gbd = "git branch -D";
