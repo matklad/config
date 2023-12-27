@@ -32,6 +32,11 @@
                 "command": "my-code.prev",
                 "title": "Prev",
                 "category": "My Code"
+            },
+            {
+                "command": "my-code.proofread",
+                "title": "Proofread",
+                "category": "My Code"
             }
         ],
         "configuration": [
@@ -58,8 +63,8 @@
     "devDependencies": {
         "@types/node": "^12.12.0",
         "@types/vscode": "^1.34.0",
-        "typescript": "^4.6.3",
-        "@vscode/vsce": "^2.7.0"
+        "@vscode/vsce": "^2.7.0",
+        "typescript": "^4.6.3"
     },
     "extensionPack": [
         "arzg.intellij-theme",
@@ -90,5 +95,8 @@
         "yo1dog.cursor-align",
         "ziglang.vscode-zig",
         "ziyasal.vscode-open-in-github"
-    ]
+    ],
+    "dependencies": {
+        "openai": "^4.24.1"
+    }
 }
