@@ -2,7 +2,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: ["master", "staging", "trying"]
+    branches: ["master"]
 
 env:
   CARGO_INCREMENTAL: 0
@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0 # fetch tags for publish
-    - uses: Swatinem/rust-cache@359a70e43a0bb8a13953b04a90f76428b4959bb6
+    - uses: Swatinem/rust-cache@3cf7f8cc28d1b4e7d01e3783be10a97d55d483c8 # v2.7.1
     - run: cargo run --package xtask
       env:
         CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
