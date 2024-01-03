@@ -27,11 +27,17 @@
 
  { "key": "ctrl+shift+F",           "command": "search.action.openNewEditor" },
 
- { "key": "win+-",                    "command": "workbench.action.increaseViewSize" },
- { "key": "win+=",                    "command": "workbench.action.decreaseViewSize" },
+ { "key": "win+-",                  "command": "workbench.action.increaseViewSize" },
+ { "key": "win+=",                  "command": "workbench.action.decreaseViewSize" },
 
- { "key": "ctrl+.",                   "command": "findJump.activate" },
- { "key": "ctrl+shift+.",             "command": "findJump.activateWithSelection" },
+ { "key": "ctrl+.",                 "command": "findJump.activate" },
+ { "key": "ctrl+shift+.",           "command": "findJump.activateWithSelection" },
+ { "key": "ctrl+alt+Enter",         "command": "magit.save-and-close-editor",
+                                    "when": "editorTextFocus && editorLangId == 'git-commit'" },
+ { "key": "ctrl+alt+Enter",         "command": "magit.save-and-close-editor",
+                                    "when": "editorTextFocus && editorLangId == 'git-rebase'" },
+
+
 
 // Window management
   { "key": "win+k",                 "command": "workbench.action.closeGroup",
@@ -195,5 +201,8 @@
   { "key": "ctrl+q",               "command": "-workbench.action.quit" },
   { "key": "ctrl+o",               "command": "-workbench.action.files.openFile" },
   { "key": "alt+q",                "command": "-rewrap.rewrapComment" },
-  { "key": "ctrl+m",               "command": "-editor.action.toggleTabFocusMode" }
+  { "key": "ctrl+m",               "command": "-editor.action.toggleTabFocusMode" },
+  { "key": "ctrl+c ctrl+c",         "command": "-magit.save-and-close-editor" },
+  { "key": "ctrl+c ctrl+k",         "command": "-magit.clear-and-abort-editor" },
+
 ]

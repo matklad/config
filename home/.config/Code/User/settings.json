@@ -523,6 +523,7 @@
         "satisfiability",
         "sema",
         "Smol",
+        "sofsticated",
         "statik",
         "stdx",
         "struct",
@@ -627,4 +628,7 @@
     },
     "zig.initialSetupDone": true,
     "workbench.activityBar.location": "hidden",
+    "[javascript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
 }
