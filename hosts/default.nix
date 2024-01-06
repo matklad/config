@@ -62,6 +62,7 @@
         ctrlc = "wl-copy";
         ctrlv = "wl-paste";
         gga = "gg amend";
+        ggc = "gg commit";
         g = "git";
         gb = "git branch";
         gbd = "git branch -D";

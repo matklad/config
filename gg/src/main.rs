@@ -14,6 +14,12 @@ mod flags {
             cmd branch {
                 required name: String
             }
+            cmd commit {
+                // Commit message.
+                optional message: String
+                // Move all changes out of the way as a commit onto a new branch.
+                optional -b,--branch branch: String
+            }
             cmd sync {
 
             }
@@ -57,6 +63,9 @@ fn main() -> Result {
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
         flags::GgCmd::Branch(branch) => context.branch(&branch.name),
+        flags::GgCmd::Commit(commit) => {
+            context.commit(commit.message.as_deref(), commit.branch.as_deref())
+        }
         flags::GgCmd::Sync(flags::Sync) => context.sync(),
     }
 }
@@ -98,6 +107,21 @@ impl<'a> Context<'a> {
             "git switch --create {name} {remote}/{default_branch}"
         )
         .run()?;
+        Ok(())
+    }
+
+    fn commit(&self, message: Option<&str>, branch: Option<&str>) -> Result {
+        let message = message.unwrap_or(".");
+        cmd!(self.sh, "git add --all").run()?;
+        cmd!(self.sh, "git --no-pager diff --cached --color=always").run()?;
+        match branch {
+            Some(branch) => {
+                cmd!(self.sh, "git switch -c {branch}").run()?;
+                cmd!(self.sh, "git commit -m {message}").run()?;
+                cmd!(self.sh, "git switch -").run()?;
+            }
+            None => cmd!(self.sh, "git commit -m {message}").run()?,
+        }
         Ok(())
     }
 

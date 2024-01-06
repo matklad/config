@@ -5,7 +5,6 @@ use xshell::Shell;
 mod autopatchelf;
 mod autostart;
 mod autowatch;
-mod commit;
 mod gbda;
 mod gbors;
 mod gcf;
@@ -24,7 +23,6 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("autopatchelf", autopatchelf::run),
     ("autostart", autostart::run),
     ("autowatch", autowatch::run),
-    ("commit", commit::run),
     ("gbda", gbda::run),
     ("gbors", gbors::run),
     ("gcf", gcf::run),
