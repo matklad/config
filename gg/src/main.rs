@@ -8,20 +8,26 @@ mod flags {
                     required name: String
                 }
             }
+            /// Adds changes to the topmost commit.
             cmd amend {
-
             }
+            /// Creates a new branch in a synced state.
             cmd branch {
                 required name: String
             }
             cmd commit {
-                // Commit message.
+                /// Commit message.
                 optional message: String
-                // Move all changes out of the way as a commit onto a new branch.
+                /// Move all changes out of the way as a commit onto a new branch.
                 optional -b,--branch branch: String
             }
+            /// Syncs the branch to the remote counterpart.
             cmd sync {
-
+            }
+            /// Rebases the branch on top of the main branch.
+            cmd refresh {
+                /// Don't rebase commits before this one (for stacked PRs).
+                optional --from commit: String
             }
         }
     }
@@ -33,7 +39,7 @@ fn main() -> Result {
     let flags = flags::Gg::from_env_or_exit();
 
     let sh = Shell::new()?;
-    let default_branch = {
+    let main_branch = {
         let branches = cmd!(sh, "git branch").read()?;
         if branches.contains(" master") {
             "master"
@@ -53,7 +59,7 @@ fn main() -> Result {
 
     let context = Context {
         sh: &sh,
-        default_branch,
+        main_branch,
         remote,
     };
 
@@ -67,18 +73,19 @@ fn main() -> Result {
             context.commit(commit.message.as_deref(), commit.branch.as_deref())
         }
         flags::GgCmd::Sync(flags::Sync) => context.sync(),
+        flags::GgCmd::Refresh(refresh) => context.refresh(refresh.from.as_deref()),
     }
 }
 
 struct Context<'a> {
     sh: &'a Shell,
-    default_branch: &'static str,
+    main_branch: &'static str,
     remote: &'static str,
 }
 
 impl<'a> Context<'a> {
     fn worktree_add(&self, name: &str) -> Result {
-        let commit = self.default_branch;
+        let commit = self.main_branch;
         cmd!(self.sh, "git worktree add ./{name} {commit} --detach").run()?;
         Ok(())
     }
@@ -100,13 +107,9 @@ impl<'a> Context<'a> {
 
     fn branch(&self, name: &str) -> Result {
         let remote = self.remote;
-        let default_branch = self.default_branch;
-        cmd!(self.sh, "git fetch {remote} {default_branch}").run()?;
-        cmd!(
-            self.sh,
-            "git switch --create {name} {remote}/{default_branch}"
-        )
-        .run()?;
+        let main_branch = self.main_branch;
+        cmd!(self.sh, "git fetch {remote} {main_branch}").run()?;
+        cmd!(self.sh, "git switch --create {name} {remote}/{main_branch}").run()?;
         Ok(())
     }
 
@@ -130,6 +133,18 @@ impl<'a> Context<'a> {
         let branch = cmd!(self.sh, "git rev-parse --abbrev-ref HEAD").read()?;
         cmd!(self.sh, "git fetch {remote} {branch}").run()?;
         cmd!(self.sh, "git reset --hard {remote}/{branch}").run()?;
+        Ok(())
+    }
+
+    fn refresh(&self, from: Option<&str>) -> Result {
+        let remote = self.remote;
+        let branch = self.main_branch;
+        cmd!(self.sh, "git fetch {remote} {branch}").run()?;
+        match from {
+            None => cmd!(self.sh, "git rebase {remote}/{branch}"),
+            Some(commit) => cmd!(self.sh, "git rebase --onto {remote}/{branch} {commit}^"),
+        }
+        .run()?;
         Ok(())
     }
 }
