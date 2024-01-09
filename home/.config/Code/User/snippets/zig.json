@@ -38,7 +38,7 @@
 	"debug print": {
 		"prefix": "pd",
 		"body": [
-			"std.debug.print(\"{$1}\\n\", .{$0});"
+			"std.debug.print(\"\\n{}\\n\", .{$0});"
 		],
 	}
 }
