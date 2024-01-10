@@ -8,7 +8,6 @@ mod autowatch;
 mod gbda;
 mod gbors;
 mod gcf;
-mod git_refresh;
 mod git_spinoff;
 mod gpr;
 mod n;
@@ -26,7 +25,6 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("gbda", gbda::run),
     ("gbors", gbors::run),
     ("gcf", gcf::run),
-    ("git-refresh", git_refresh::run),
     ("git-spinoff", git_spinoff::run),
     ("gpr", gpr::run),
     ("n", n::run),
