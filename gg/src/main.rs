@@ -28,6 +28,8 @@ mod flags {
             cmd refresh {
                 /// Don't rebase commits before this one (for stacked PRs).
                 optional --from commit: String
+                /// Use this branch instead of main.
+                optional --to branch: String
             }
         }
     }
@@ -73,7 +75,9 @@ fn main() -> Result {
             context.commit(commit.message.as_deref(), commit.branch.as_deref())
         }
         flags::GgCmd::Sync(flags::Sync) => context.sync(),
-        flags::GgCmd::Refresh(refresh) => context.refresh(refresh.from.as_deref()),
+        flags::GgCmd::Refresh(refresh) => {
+            context.refresh(refresh.from.as_deref(), refresh.to.as_deref())
+        }
     }
 }
 
@@ -136,13 +140,19 @@ impl<'a> Context<'a> {
         Ok(())
     }
 
-    fn refresh(&self, from: Option<&str>) -> Result {
-        let remote = self.remote;
-        let branch = self.main_branch;
-        cmd!(self.sh, "git fetch {remote} {branch}").run()?;
+    fn refresh(&self, from: Option<&str>, to: Option<&str>) -> Result {
+        let to = match to {
+            Some(to) => to.to_string(),
+            None => {
+                let remote = self.remote;
+                let branch = self.main_branch;
+                cmd!(self.sh, "git fetch {remote} {branch}").run()?;
+                format!("{remote}/{branch}")
+            }
+        };
         match from {
-            None => cmd!(self.sh, "git rebase {remote}/{branch}"),
-            Some(commit) => cmd!(self.sh, "git rebase --onto {remote}/{branch} {commit}^"),
+            None => cmd!(self.sh, "git rebase {to}"),
+            Some(commit) => cmd!(self.sh, "git rebase --onto {to} {commit}^"),
         }
         .run()?;
         Ok(())

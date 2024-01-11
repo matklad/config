@@ -37,6 +37,14 @@
  { "key": "ctrl+alt+Enter",         "command": "magit.save-and-close-editor",
                                     "when": "editorTextFocus && editorLangId == 'git-rebase'" },
 
+ { "key": "enter",                 "command": "runCommands",
+   "args": { "commands": [
+      "explorer.openAndPassFocus",
+      "workbench.action.closeSidebar"
+   ]},
+   "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus" },
+
+
 
 
 // Window management
