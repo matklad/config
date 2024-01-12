@@ -399,7 +399,7 @@
         },
         {
             "key": "m",
-            "name": "Misc",
+            "name": "misc",
             "type": "bindings",
             "bindings": [
                 {
