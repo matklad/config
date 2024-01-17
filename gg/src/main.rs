@@ -1,3 +1,4 @@
+use anyhow::Context as _;
 use xshell::{cmd, Shell};
 
 mod flags {
@@ -6,6 +7,9 @@ mod flags {
             cmd worktree {
                 cmd add {
                     required name: String
+                }
+                cmd clone {
+                    required remote: String
                 }
             }
             /// Adds changes to the topmost commit.
@@ -68,6 +72,7 @@ fn main() -> Result {
     match flags.subcommand {
         flags::GgCmd::Worktree(worktree) => match worktree.subcommand {
             flags::WorktreeCmd::Add(add) => context.worktree_add(&add.name),
+            flags::WorktreeCmd::Clone(clone) => context.worktree_clone(&clone.remote),
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
         flags::GgCmd::Branch(branch) => context.branch(&branch.name),
@@ -91,6 +96,19 @@ impl<'a> Context<'a> {
     fn worktree_add(&self, name: &str) -> Result {
         let commit = self.main_branch;
         cmd!(self.sh, "git worktree add ./{name} {commit} --detach").run()?;
+        Ok(())
+    }
+
+    fn worktree_clone(&self, remote: &str) -> Result {
+        let (_, dir_name) = remote
+            .rsplit_once('/')
+            .with_context(|| format!("can't determine directory name"))?;
+        let dir_name = dir_name.rsplit_once('.').map_or(dir_name, |it| it.0);
+
+        self.sh.create_dir(dir_name)?;
+        let _dir = self.sh.push_dir(dir_name);
+        cmd!(self.sh, "git clone --bare {remote} .bare").run()?;
+        self.sh.write_file(".git", "gitdir: ./.bare")?;
         Ok(())
     }
 
