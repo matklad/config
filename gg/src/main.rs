@@ -46,7 +46,9 @@ fn main() -> Result {
 
     let sh = Shell::new()?;
     let main_branch = {
-        let branches = cmd!(sh, "git branch").read()?;
+        let branches = cmd!(sh, "git branch")
+            .read()
+            .unwrap_or_else(|_| format!("master"));
         if branches.contains(" master") {
             "master"
         } else {
@@ -55,7 +57,9 @@ fn main() -> Result {
     };
 
     let remote = {
-        let remotes = cmd!(sh, "git remote").read()?;
+        let remotes = cmd!(sh, "git remote")
+            .read()
+            .unwrap_or_else(|_| format!("origin"));
         if remotes.contains("upstream") {
             "upstream"
         } else {
@@ -109,6 +113,11 @@ impl<'a> Context<'a> {
         let _dir = self.sh.push_dir(dir_name);
         cmd!(self.sh, "git clone --bare {remote} .bare").run()?;
         self.sh.write_file(".git", "gitdir: ./.bare")?;
+        cmd!(
+            self.sh,
+            "git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'"
+        )
+        .run()?;
         Ok(())
     }
 
