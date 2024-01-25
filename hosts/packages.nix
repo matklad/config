@@ -10,6 +10,7 @@
   spectacle
   vscode
   steam-run
+  spotify
 
   # Comms
   discord

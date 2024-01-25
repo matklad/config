@@ -262,6 +262,18 @@
                     "name": "Align",
                     "type": "command",
                     "command": "yo1dog.cursor-align.alignCursors"
+                },
+                {
+                    "key": "i",
+                    "name": "increment",
+                    "type": "command",
+                    "command": "editor.emmet.action.incrementNumberByOne"
+                },
+                {
+                    "key": "d",
+                    "name": "decrement",
+                    "type": "command",
+                    "command": "editor.emmet.action.decrementNumberByOne"
                 }
             ]
         },

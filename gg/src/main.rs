@@ -27,6 +27,7 @@ mod flags {
             }
             /// Syncs the branch to the remote counterpart.
             cmd sync {
+                optional --to branch: String
             }
             /// Rebases the branch on top of the main branch.
             cmd refresh {
@@ -83,7 +84,7 @@ fn main() -> Result {
         flags::GgCmd::Commit(commit) => {
             context.commit(commit.message.as_deref(), commit.branch.as_deref())
         }
-        flags::GgCmd::Sync(flags::Sync) => context.sync(),
+        flags::GgCmd::Sync(sync) => context.sync(sync.to.as_deref()),
         flags::GgCmd::Refresh(refresh) => {
             context.refresh(refresh.from.as_deref(), refresh.to.as_deref())
         }
@@ -159,9 +160,12 @@ impl<'a> Context<'a> {
         Ok(())
     }
 
-    fn sync(&self) -> Result {
+    fn sync(&self, branch: Option<&str>) -> Result {
         let remote = self.remote;
-        let branch = cmd!(self.sh, "git rev-parse --abbrev-ref HEAD").read()?;
+        let branch = match branch {
+            Some(branch) => branch.to_string(),
+            None => cmd!(self.sh, "git rev-parse --abbrev-ref HEAD").read()?,
+        };
         cmd!(self.sh, "git fetch {remote} {branch}").run()?;
         cmd!(self.sh, "git reset --hard {remote}/{branch}").run()?;
         Ok(())
