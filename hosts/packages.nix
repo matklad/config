@@ -93,6 +93,7 @@
   wally-cli
   wget
   wl-clipboard
+  quickemu
 
   # Rust stuff
   bat
