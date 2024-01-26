@@ -49,7 +49,7 @@
 
 
 // Window management
-  { "key": "win+k",                 "command": "workbench.action.closeGroup",
+  { "key": "win+k",                 "command": "workbench.action.closeEditorsAndGroup",
     "when": "editorFocus && multipleEditorGroups" },
   { "key": "win+k",                 "command": "workbench.action.closeActiveEditor",
     "when": "inSearchEditor && multipleEditorGroups" },
