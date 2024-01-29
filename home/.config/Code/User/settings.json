@@ -616,11 +616,10 @@
     },
     "liveServer.settings.donotVerifyTags": true,
     "zig.path": "/home/matklad/p/tb/main/zig/zig",
-    "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
     "zig.zls.enableInlayHints": true,
     "zig.zls.enableArgumentPlaceholders": false,
     "zig.zls.checkForUpdate": false,
-    "zig.zls.enableAutofix": false,
+    "zig.zls.enableAutofix": true,
     "editor.rulers": [
         100
     ],
@@ -645,4 +644,5 @@
     "[javascript]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
+    "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
 }
