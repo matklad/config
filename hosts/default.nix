@@ -169,7 +169,6 @@
   };
 
   virtualisation = {
-    virtualbox.host = { enable = true; enableExtensionPack = true; };
     podman = {
       enable = true;
       dockerCompat = true;
