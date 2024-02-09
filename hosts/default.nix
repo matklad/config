@@ -111,9 +111,11 @@
         };
       };
 
-      layout = "us,ru";
-      xkbVariant = "workman,";
-      xkbOptions = "grp:win_space_toggle";
+      xkb = {
+        layout = "us,ru";
+        variant = "workman,";
+        options = "grp:win_space_toggle";
+      };
     };
 
     pipewire = {
