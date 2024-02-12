@@ -5,6 +5,9 @@
     "[html]": {
         "editor.tabSize": 2
     },
+    "[git-commit]": {
+        "rewrap.wrappingColumn": 72,
+    },
     "projectNameInStatusBar.align": "right",
     "projectNameInStatusBar.textStyle": "uppercase",
     "workbench.panel.opensMaximized": "never",
