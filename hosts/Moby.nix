@@ -16,7 +16,7 @@
   };
 
   services.xserver.videoDrivers = [ "intel" ];
-  virtualisation.virtualbox.host = { enable = false; enableExtensionPack = true; };
+  virtualisation.virtualbox.host = { enable = true; enableExtensionPack = true; };
 
   boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/9cfc1da8-0dd0-48a5-ad10-a139f67a6658";
   fileSystems."/" = {
