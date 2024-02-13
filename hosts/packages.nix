@@ -64,6 +64,7 @@
   p7zip
 
   # Utils
+  nvtop
   asciinema
   binutils
   btop
