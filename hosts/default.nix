@@ -172,7 +172,10 @@
   };
 
   virtualisation = {
-    libvirtd.enable = true;
+    libvirtd = {
+      enable = true;
+      qemuSwtpm = true;
+    };
     podman = {
       enable = true;
       dockerCompat = true;
