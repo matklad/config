@@ -21,6 +21,7 @@
   programs = {
     java.enable = true;
     dconf.enable = true;
+    virt-manager.enable = true;
 
     ssh = {
       startAgent = true;
@@ -171,6 +172,7 @@
   };
 
   virtualisation = {
+    libvirtd.enable = true;
     podman = {
       enable = true;
       dockerCompat = true;
