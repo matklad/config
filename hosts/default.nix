@@ -174,7 +174,7 @@
   virtualisation = {
     libvirtd = {
       enable = true;
-      qemuSwtpm = true;
+      qemu.swtpm = true;
     };
     podman = {
       enable = true;
