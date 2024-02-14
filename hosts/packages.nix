@@ -93,7 +93,7 @@
   wally-cli
   wget
   wl-clipboard
-  quickemu
+  virtiofsd
 
   # Rust stuff
   bat
