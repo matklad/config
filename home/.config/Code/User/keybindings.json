@@ -28,8 +28,8 @@
  { "key": "ctrl+shift+F",           "command": "search.action.openNewEditor",
    "args": {"caseSensitive": true}},
 
- { "key": "win+-",                  "command": "workbench.action.increaseViewSize" },
- { "key": "win+=",                  "command": "workbench.action.decreaseViewSize" },
+ { "key": "win+=",                  "command": "workbench.action.increaseViewSize" },
+ { "key": "win+-",                  "command": "workbench.action.decreaseViewSize" },
 
  { "key": "ctrl+.",                 "command": "findJump.activate" },
  { "key": "ctrl+shift+.",           "command": "findJump.activateWithSelection" },

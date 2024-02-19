@@ -86,6 +86,10 @@ fn link_me_up() {
             sh.create_dir(dest.parent().unwrap()).unwrap();
             std::os::unix::fs::symlink(abs_path, dest).unwrap();
         }
+
+        let vm_shared = home.join("vms/shared");
+        sh.create_dir(&vm_shared).unwrap();
+        sh.copy_file(home.join("config/init.ps1"), &vm_shared).unwrap();
     }
 
     fn walkdir(path: PathBuf) -> anyhow::Result<Vec<PathBuf>> {
