@@ -64,10 +64,8 @@
   p7zip
 
   # Utils
-  nvtop
   asciinema
   binutils
-  btop
   curl
   direnv
   entr
@@ -78,6 +76,7 @@
   gitAndTools.gh
   gperftools
   graphviz
+  htop
   hunspell
   hunspellDicts.en_US
   jq
@@ -85,16 +84,17 @@
   linuxPackages.perf
   lnav
   ntfs3g
+  nvtop
   patchelf
   pciutils
   rr
   s-tui
   shellcheck
   v4l-utils
+  virtiofsd
   wally-cli
   wget
   wl-clipboard
-  virtiofsd
 
   # Rust stuff
   bat
