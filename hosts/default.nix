@@ -49,6 +49,8 @@
           colormoved = "default";
           colormovedws = "allow-indentation-change";
         };
+        branch.sort = "committerdate";
+        merge.conflictstyle = "diff3";
       };
     };
 
