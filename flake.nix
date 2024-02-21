@@ -8,7 +8,6 @@
          modules = [
            ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
            ./hosts ./hosts/Ishmael.nix
-           nixos-hardware.
            nixos-hardware.nixosModules.common-gpu-nvidia-disable
          ];
       };
