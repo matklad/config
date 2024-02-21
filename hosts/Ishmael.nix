@@ -19,7 +19,7 @@
 
   services.xserver.videoDrivers = [ "intel"  "nvidia" ];
   hardware.nvidia = {
-    open = true;
+    open = false;
     modesetting.enable = true;
     prime = {
       offload.enable = true;
