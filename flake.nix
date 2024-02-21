@@ -8,6 +8,7 @@
          modules = [
            ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
            ./hosts ./hosts/Ishmael.nix
+           nixos-hardware.nixosModules.common.gpu.nvidia.disable
          ];
       };
       Moby= nixpkgs.lib.nixosSystem {
@@ -15,7 +16,6 @@
          modules = [
            ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
            ./hosts ./hosts/Moby.nix
-           nixos-hardware.nixosModules.common.gpu.nvidia.disable
          ];
       };
     };
