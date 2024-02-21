@@ -8,22 +8,7 @@
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
     kernelParams = [ "i915.force_probe=46a6" "i915.enable_dc=0" ];
-    extraModulePackages = [config.boot.kernelPackages.acpi_call];
-
-    blacklistedKernelModules = [
-      "nouveau"
-      "nv"
-      "rivafb"
-      "nvidiafb"
-      "rivatv"
-      "nvidia"
-      "nvidia-drm"
-      "nvidia-modeset"
-      "nvidia-uvm"
-      "ipmi_msghandler"
-      "ipmi_devintf"
-    ];
-
+    extraModulePackages = [];
   };
 
   hardware = {
@@ -34,7 +19,7 @@
 
   services.xserver.videoDrivers = [ "intel"  "nvidia" ];
   hardware.nvidia = {
-    open = false;
+    open = true;
     modesetting.enable = true;
     prime = {
       offload.enable = true;
