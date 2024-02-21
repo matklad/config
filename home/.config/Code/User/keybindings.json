@@ -161,6 +161,8 @@
     "when": "editorFocus && !editorReadonly" },
   { "key": "alt+left",             "command": "workbench.action.navigateBack" },
   { "key": "alt+right",            "command": "workbench.action.navigateForward" },
+  { "key": "alt+pagedown",         "command": "workbench.action.navigateBackInEditLocations" },
+  { "key": "alt+pageup",           "command": "workbench.action.navigateForwardInEditLocations" },
 
 // Misc.
 
