@@ -84,7 +84,6 @@
   linuxPackages.perf
   lnav
   ntfs3g
-  nvtop
   patchelf
   pciutils
   rr
