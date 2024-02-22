@@ -104,7 +104,7 @@
         autoLogin = { enable = false; user = "matklad"; };
         defaultSession = "plasmawayland";
       };
-      desktopManager.plasma5.enable = true;
+      desktopManager.plasma6.enable = true;
       libinput = {
         enable = true;
         touchpad = {
