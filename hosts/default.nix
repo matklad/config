@@ -102,7 +102,7 @@
       displayManager = {
         sddm.enable = true;
         autoLogin = { enable = false; user = "matklad"; };
-        defaultSession = "plasmawayland";
+        defaultSession = "plasma";
       };
       desktopManager.plasma6.enable = true;
       libinput = {
