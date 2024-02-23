@@ -9,7 +9,7 @@
          modules = [
            ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
            ./hosts ./hosts/Ishmael.nix
-          #  kde2nix.nixosModules.plasma6
+           kde2nix.nixosModules.plasma6
            nixos-hardware.nixosModules.common-gpu-nvidia-disable
          ];
       };
@@ -18,7 +18,7 @@
          modules = [
            ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
            ./hosts ./hosts/Moby.nix
-          #  kde2nix.nixosModules.plasma6
+           kde2nix.nixosModules.plasma6
          ];
       };
     };

@@ -102,9 +102,9 @@
       displayManager = {
         sddm.enable = true;
         autoLogin = { enable = false; user = "matklad"; };
-        defaultSession = "plasma";
+        defaultSession = "plasmawayland";
       };
-      desktopManager.plasma6.enable = true;
+      desktopManager.plasma5.enable = true;
       libinput = {
         enable = true;
         touchpad = {
