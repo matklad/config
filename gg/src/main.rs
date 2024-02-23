@@ -36,6 +36,11 @@ mod flags {
                 /// Use this branch instead of main.
                 optional --to branch: String
             }
+            /// Checkout a pull request locally.
+            cmd pr {
+                required pr: String
+                optional --review
+            }
         }
     }
 }
@@ -88,6 +93,7 @@ fn main() -> Result {
         flags::GgCmd::Refresh(refresh) => {
             context.refresh(refresh.from.as_deref(), refresh.to.as_deref())
         }
+        flags::GgCmd::Pr(pr) => context.pr(&pr.pr, pr.review),
     }
 }
 
@@ -186,6 +192,18 @@ impl<'a> Context<'a> {
             Some(commit) => cmd!(self.sh, "git rebase --onto {to} {commit}^"),
         }
         .run()?;
+        Ok(())
+    }
+
+    fn pr(&self, pr: &str, review: bool) -> anyhow::Result<()> {
+        let remote = self.remote;
+        let main = self.main_branch;
+        cmd!(self.sh, "git fetch {remote} refs/pull/{pr}/head").run()?;
+        cmd!(self.sh, "git switch --detach FETCH_HEAD").run()?;
+        if review {
+            let base = cmd!(self.sh, "git merge-base HEAD {remote}/{main}").read()?;
+            cmd!(self.sh, "git reset {base}").run()?;
+        }
         Ok(())
     }
 }

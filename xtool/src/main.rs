@@ -6,10 +6,8 @@ mod autopatchelf;
 mod autostart;
 mod autowatch;
 mod gbda;
-mod gbors;
 mod gcf;
 mod git_spinoff;
-mod gpr;
 mod n;
 mod new_crate;
 mod nix;
@@ -23,10 +21,8 @@ const TOOLS: &[(&str, fn(&Shell) -> anyhow::Result<()>)] = &[
     ("autostart", autostart::run),
     ("autowatch", autowatch::run),
     ("gbda", gbda::run),
-    ("gbors", gbors::run),
     ("gcf", gcf::run),
     ("git-spinoff", git_spinoff::run),
-    ("gpr", gpr::run),
     ("n", n::run),
     ("new-crate", new_crate::run),
     ("nixgc", nix::gc),
