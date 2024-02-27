@@ -29,6 +29,35 @@
                     "message": 6
                 }
             }
+        },
+        {
+            "label": "zig build check",
+            "type": "shell",
+            "command": "${workspaceFolder}/zig/zig build check && echo 'ok.'",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "group": "build",
+            "problemMatcher": {
+                "owner": "make.ts",
+                "fileLocation": [
+                    "autoDetect",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(ok\\.)?(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 2,
+                    "line": 3,
+                    "column": 4,
+                    "severity": 5,
+                    "message": 6
+                }
+            }
         }
     ]
 }
