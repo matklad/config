@@ -202,6 +202,7 @@
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 
   i18n = {
+    inputMethod.enabled = false;
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
       LC_TIME = "en_IE.UTF-8";

@@ -8,9 +8,11 @@
   { "key": "ctrl+u",                "command": "runCommands",
     "args": { "commands": [
       { "command": "workbench.action.tasks.terminate", "args": "terminateAll" },
-      "workbench.action.tasks.build"
+      "workbench.action.tasks.reRunTask"
     ] },
     "when": "editorLangId != rust" },
+
+  { "key": "ctrl+shift+u",                "command": "workbench.action.tasks.runTask" },
 
   { "key": "Enter",                 "command": "rust-analyzer.onEnter",
     "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust" },
