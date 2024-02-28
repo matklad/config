@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "github:K900/nixpkgs/plasma-6";
+  inputs.nixpkgs.url = "github:matklad/nixpkgs/matklad/poly-vivaldi";
   inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   outputs = { self, nixpkgs, nixos-hardware }: {
     nixosConfigurations = {

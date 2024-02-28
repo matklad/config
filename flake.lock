@@ -18,16 +18,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1709124990,
-        "narHash": "sha256-13My4RIWOkDOjo4qARYnXOja+/Sr1Evz9tdC1wpXHWU=",
-        "owner": "K900",
+        "lastModified": 1709145347,
+        "narHash": "sha256-YRf9aocxQtJ8obuSS4cRSMTUjavOPauOsF/KW8EkN+Y=",
+        "owner": "matklad",
         "repo": "nixpkgs",
-        "rev": "60caeaa70589a20d944d08ad265c4bef6407843d",
+        "rev": "eb85da19b375345b11176b39d945a62ca2883b80",
         "type": "github"
       },
       "original": {
-        "owner": "K900",
-        "ref": "plasma-6",
+        "owner": "matklad",
+        "ref": "matklad/poly-vivaldi",
         "repo": "nixpkgs",
         "type": "github"
       }
