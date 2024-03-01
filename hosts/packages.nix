@@ -7,7 +7,6 @@
   kitty
   obs-studio
   qbittorrent
-  # spectacle
   vscode
   steam-run
   spotify
