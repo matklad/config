@@ -11,6 +11,7 @@ inode/directory=org.kde.dolphin.desktop;
 text/html=vivaldi-stable.desktop;
 x-scheme-handler/http=vivaldi-stable.desktop;
 x-scheme-handler/https=vivaldi-stable.desktop;
+x-scheme-handler/slack=slack.desktop
 
 [Removed Associations]
 application/pdf=vivaldi-stable.desktop;chromium-browser.desktop;gimp.desktop;okularApplication_pdf.desktop;
