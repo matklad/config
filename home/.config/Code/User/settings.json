@@ -623,6 +623,7 @@
     "zig.zls.enableArgumentPlaceholders": false,
     "zig.zls.checkForUpdate": false,
     "zig.zls.enableAutofix": true,
+    "zig.zls.enableBuildOnSave": false,
     "editor.rulers": [
         100
     ],

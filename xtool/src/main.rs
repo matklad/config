@@ -53,8 +53,11 @@ fn link_me_up() {
     let bin = std::path::Path::new("/home/matklad/.local/bin");
     sh.create_dir(&bin).unwrap();
 
+    cmd!(sh, "rustup target add x86_64-unknown-linux-musl").run().unwrap();
+    let _env = sh.push_env("RUSTFLAGS", "-C target-feature=+crt-static");
+
     {
-        cmd!(sh, "cargo build --release").run().unwrap();
+        cmd!(sh, "cargo build --release --target=x86_64-unknown-linux-musl").run().unwrap();
         for &(tool, _) in TOOLS {
             let dst = bin.join(tool);
             sh.remove_path(&dst).unwrap();
@@ -65,7 +68,7 @@ fn link_me_up() {
 
     {
         let _d = sh.push_dir("../gg");
-        cmd!(sh, "cargo build --release").run().unwrap();
+        cmd!(sh, "cargo build --release --target=x86_64-unknown-linux-musl").run().unwrap();
         let dst = bin.join("gg");
         sh.remove_path(&dst).unwrap();
         let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();

@@ -92,8 +92,7 @@
   { "key": ", p",                  "command": "editor.action.formatDocument" },
   { "key": ", w",                  "command": "rewrap.rewrapComment" },
   { "key": ", b",                  "command": "editor.action.jumpToBracket" },
-  { "key": ", f",                  "command": "editor.fold" },
-  { "key": ", shift+f",            "command": "editor.unfold" },
+  { "key": ", f",                  "command": "editor.toggleFold" },
   { "key": ", d",                  "command": "editor.action.dirtydiff.next" },
 
   { "key": ", g",                  "command": "runCommands",
