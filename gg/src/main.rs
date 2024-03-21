@@ -198,10 +198,11 @@ impl<'a> Context<'a> {
     fn pr(&self, pr: &str, review: bool) -> anyhow::Result<()> {
         let remote = self.remote;
         let main = self.main_branch;
+        cmd!(self.sh, "git fetch {remote}").run()?;
         cmd!(self.sh, "git fetch {remote} refs/pull/{pr}/head").run()?;
         cmd!(self.sh, "git switch --detach FETCH_HEAD").run()?;
         if review {
-            let base = cmd!(self.sh, "git merge-base HEAD {remote}/{main}").read()?;
+            let base = cmd!(self.sh, "git merge-base FETCH_HEAD {remote}/{main}").read()?;
             cmd!(self.sh, "git reset {base}").run()?;
         }
         Ok(())

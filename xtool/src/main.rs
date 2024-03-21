@@ -62,7 +62,7 @@ fn link_me_up() {
             let dst = bin.join(tool);
             sh.remove_path(&dst).unwrap();
             let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();
-            sh.hard_link("./target/release/xtool", &dst).unwrap();
+            sh.hard_link("./target/x86_64-unknown-linux-musl/release/xtool", &dst).unwrap();
         }
     }
 
@@ -72,7 +72,7 @@ fn link_me_up() {
         let dst = bin.join("gg");
         sh.remove_path(&dst).unwrap();
         let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();
-        sh.hard_link("./target/release/gg", &dst).unwrap();
+        sh.hard_link("./target/x86_64-unknown-linux-musl/release/gg", &dst).unwrap();
     }
 
     {
