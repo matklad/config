@@ -97,6 +97,7 @@
       '';
     };
 
+    desktopManager.plasma6.enable = true;
     xserver = {
       enable = true;
       displayManager = {
@@ -104,7 +105,6 @@
         autoLogin = { enable = false; user = "matklad"; };
         defaultSession = "plasma";
       };
-      desktopManager.plasma6.enable = true;
       libinput = {
         enable = true;
         touchpad = {
