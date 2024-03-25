@@ -73,7 +73,7 @@
         gch = "git rev-parse HEAD | wl-copy";
         gl = "git log";
         gof = "git spinoff";
-        gp = "git push";
+        gp = "git push -u";
         gpf = "git push --force-with-lease";
         gs = "git status --short --branch";
         gup = "git pull --rebase";

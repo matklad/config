@@ -12,7 +12,6 @@
   spotify
 
   # Comms
-  discord
   slack
   tdesktop
   zoom-us
