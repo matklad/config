@@ -84,6 +84,7 @@
 // m -- misc, hover, argument hits ...
 
   { "key": ", a",                  "command": "editor.action.quickFix" },
+  { "key": ", shift+a",                  "command": "merge-conflict.accept.selection" },
   { "key": ", l",                  "command": "workbench.action.gotoSymbol" },
   { "key": ", shift+l",            "command": "workbench.action.showAllSymbols" },
   { "key": ", .",                  "command": "editor.action.revealDefinition" },

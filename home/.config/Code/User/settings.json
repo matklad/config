@@ -424,24 +424,6 @@
                     "type": "command",
                     "command": "editor.action.dirtydiff.next"
                 },
-                {
-                    "key": "i",
-                    "name": "Accept Incoming",
-                    "type": "command",
-                    "command": "merge-conflict.accept.incoming"
-                },
-                {
-                    "key": "c",
-                    "name": "Accept Current",
-                    "type": "command",
-                    "command": "merge-conflict.accept.current"
-                },
-                {
-                    "key": "b",
-                    "name": "Accept Both",
-                    "type": "command",
-                    "command": "merge-conflict.accept.both"
-                },
             ]
         },
     ],

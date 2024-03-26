@@ -72,6 +72,7 @@
         gc = "git commit";
         gch = "git rev-parse HEAD | wl-copy";
         gl = "git log";
+        glm = "git log --format=%B -n 1";
         gof = "git spinoff";
         gp = "git push -u";
         gpf = "git push --force-with-lease";
