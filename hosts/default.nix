@@ -90,6 +90,8 @@
 
   services = {
     emacs.enable = true;
+    mullvad-vpn.enable = true;
+    mullvad-vpn.package = pkgs.mullvad-vpn;
 
     logind = {
       extraConfig = ''
