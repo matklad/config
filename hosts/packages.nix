@@ -1,6 +1,6 @@
 {pkgs, ...}: with pkgs; [
   # GUI
-  (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; }) # qt = qt6; 
+  (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; qt = qt6; })
   filelight
   gimp
   kdialog
