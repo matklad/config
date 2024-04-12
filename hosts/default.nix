@@ -100,14 +100,14 @@
       '';
     };
 
+    displayManager = {
+      sddm.enable = true;
+      autoLogin = { enable = false; user = "matklad"; };
+      defaultSession = "plasma";
+    };
     desktopManager.plasma6.enable = true;
     xserver = {
       enable = true;
-      displayManager = {
-        sddm.enable = true;
-        autoLogin = { enable = false; user = "matklad"; };
-        defaultSession = "plasma";
-      };
       libinput = {
         enable = true;
         touchpad = {
