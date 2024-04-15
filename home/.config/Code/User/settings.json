@@ -1,7 +1,5 @@
 {
     "editor.fontSize": 16,
-    // "editor.fontSize": 24,
-    "terminal.integrated.fontSize": 12,
     "[html]": {
         "editor.tabSize": 2
     },
@@ -631,4 +629,5 @@
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+    "terminal.integrated.fontSize": 17,
 }
