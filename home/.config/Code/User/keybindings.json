@@ -46,8 +46,6 @@
    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus" },
 
 
-
-
 // Window management
   { "key": "win+k",                 "command": "workbench.action.closeEditorsAndGroup",
     "when": "editorFocus && multipleEditorGroups" },
@@ -140,6 +138,15 @@
   { "key": "shift+pagedown",       "command": "cursorMove",
     "when": "editorTextFocus",
     "args": { "by": "wrappedLine", "value": 36, "to": "down", "select": true } },
+
+{ "key": "up",
+  "command": "-selectPrevSuggestion",
+  "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion" },
+
+{ "key": "down",
+  "command": "-selectNextSuggestion",
+  "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion" },
+
 
 // Next/Prev
   { "key": "ctrl+down",            "command": "workbench.action.editor.nextChange",

@@ -10,6 +10,7 @@
   vscode
   steam-run
   spotify
+  anki
 
   # Comms
   slack
