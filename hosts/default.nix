@@ -168,7 +168,7 @@
     blacklistedKernelModules = [ "nouveau" ];
     supportedFilesystems = [ "ntfs" ];
     kernel.sysctl."kernel.perf_event_paranoid" = 1;
-    boot.extraModprobeConfig = ''
+    extraModprobeConfig = ''
       options snd_hda_intel power_save=0
     '';
   };
