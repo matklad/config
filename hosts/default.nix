@@ -167,8 +167,10 @@
     };
     blacklistedKernelModules = [ "nouveau" ];
     supportedFilesystems = [ "ntfs" ];
-    # kernelPackages = pkgs.linuxPackages_6_2;
     kernel.sysctl."kernel.perf_event_paranoid" = 1;
+    boot.extraModprobeConfig = ''
+      options snd_hda_intel power_save=0
+    '';
   };
 
   hardware = {
