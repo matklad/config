@@ -1,16 +1,17 @@
 {pkgs, ...}: with pkgs; [
   # GUI
   (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; qt = qt6; })
+  anki
   filelight
   gimp
   kdialog
   kitty
   obs-studio
   qbittorrent
-  vscode
-  steam-run
   spotify
-  anki
+  steam-run
+  vscode
+  zed-editor
 
   # Comms
   slack
