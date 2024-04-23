@@ -3,7 +3,7 @@ Window Maximize=Meta+Up
 Window Close=Meta+Q
 Window Quick Tile Left=Meta+Left
 Window Quick Tile Right=Meta+Right
-Window Quick Tile Top=
+Window Quick Tile Top=none
 
 [org.kde.dolphin.desktop][Global Shortcuts]
-_launch=
+_launch=none
