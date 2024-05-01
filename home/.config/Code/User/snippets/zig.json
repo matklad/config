@@ -40,11 +40,18 @@
 		"body": [
 			"std.debug.print(\"{}\\n\", .{$0});"
 		],
-	}
+	},
 	"tuple": {
 		"prefix": "..",
 		"body": [
 			".{$0}"
 		],
+	},
+	"logthis": {
+		"prefix": "logthis",
+		"body": [
+			"std.testing.log_level = .debug;",
+            "defer std.testing.log_level = .err;"
+		]
 	}
 }
