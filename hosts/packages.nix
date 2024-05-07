@@ -94,8 +94,8 @@
   wally-cli
   wget
   wl-clipboard
-  libsForQt6.kconfig
-  libsForQt6.kdbusaddons
+  kdePackages.kconfig
+  kdePackages.kdbusaddons
 
   # Rust stuff
   bat
