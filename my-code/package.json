@@ -70,7 +70,6 @@
         "arzg.intellij-theme",
         "arzg.xcode-theme",
         "denoland.vscode-deno",
-        "eamodio.gitlens",
         "emeraldwalk.RunOnSave",
         "jakearl.search-editor-apply-changes",
         "jnoortheen.nix-ide",
@@ -78,9 +77,9 @@
         "jymeng.leuven-vscode",
         "kahole.magit",
         "kaiwood.center-editor-window",
+        "maattdd.gitless",
         "matklad.pale-fire",
         "oijaz.unicode-latex",
-        "ritwickdey.LiveServer",
         "rust-lang.rust-analyzer",
         "ryu1kn.edit-with-shell",
         "stkb.rewrap",
@@ -94,7 +93,6 @@
         "yhirose.filtertext",
         "yo1dog.cursor-align",
         "ziglang.vscode-zig",
-        "ziyasal.vscode-open-in-github"
     ],
     "dependencies": {
         "openai": "^4.24.1"
