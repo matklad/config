@@ -236,6 +236,11 @@
       extraGroups = [ "wheel" "networkmanager" "docker" "audio" "plugdev" "podman" "libvirtd" ];
       uid = 1000;
     };
+    extraUsers.matklad2 = {
+      isNormalUser = true;
+      extraGroups = [  ];
+      uid = 1001;
+    };
   };
 
   environment = {
