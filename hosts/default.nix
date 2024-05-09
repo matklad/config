@@ -108,19 +108,20 @@
     desktopManager.plasma6.enable = true;
     xserver = {
       enable = true;
-      libinput = {
-        enable = true;
-        touchpad = {
-          disableWhileTyping = true;
-          horizontalScrolling = false;
-          naturalScrolling = true;
-        };
-      };
 
       xkb = {
         layout = "us,ru";
         variant = "workman,";
         options = "grp:win_space_toggle";
+      };
+    };
+
+    libinput = {
+      enable = true;
+      touchpad = {
+        disableWhileTyping = true;
+        horizontalScrolling = false;
+        naturalScrolling = true;
       };
     };
 
