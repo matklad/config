@@ -7,12 +7,13 @@ pub(crate) fn gc(sh: &Shell) -> anyhow::Result<()> {
 }
 
 pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
-    cmd!(sh, "doas true").quiet().run()?;
-
-    let flags = xflags::parse_or_exit! { optional --offline };
+    let flags = xflags::parse_or_exit! {
+        optional --update
+        optional --no-pp
+    };
 
     sh.change_dir("/home/matklad/config");
-    if !flags.offline {
+    if flags.update {
         cmd!(sh, "nix flake update").run()?;
     }
     let mut committed = false;
@@ -22,7 +23,7 @@ pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
         cmd!(sh, "git commit -m .").run()?;
         committed = true;
     }
-    if !flags.offline {
+    if !flags.no_pp {
         cmd!(sh, "git pull --rebase").run()?;
     }
 
@@ -31,8 +32,16 @@ pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
         cmd!(sh, "rm -rf /home/matklad/.config/Code/GPUCache/").run()?;
     }
 
-    cmd!(sh, "doas nixos-rebuild switch --flake path:/home/matklad/config").run()?;
-    if committed && !flags.offline {
+    let host = cmd!(sh, "hostname").read()?;
+    let system = cmd!(
+        sh,
+        "
+        nix build --no-link --print-out-paths
+            path:/home/matklad/config#nixosConfigurations.{host}.config.system.build.toplevel"
+    )
+    .read()?;
+    cmd!(sh, "doas {system}/bin/switch-to-configuration").run()?;
+    if committed && !flags.no_pp {
         cmd!(sh, "git push").run()?;
     }
     Ok(())
