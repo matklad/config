@@ -1,6 +1,6 @@
 {pkgs, ...}: with pkgs; [
   # GUI
-  (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; cliArguments = "--disable-features=AllowQt"; })
+  (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; commandLineArgs = "--disable-features=AllowQt"; })
   anki
   filelight
   gimp
