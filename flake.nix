@@ -1,6 +1,6 @@
 {
-  # inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  inputs.nixpkgs.url = "github:matklad/nixpkgs/matklad/poly-vivaldi";
+  # inputs.nixpkgs.url = "github:matklad/nixpkgs/matklad/main";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   outputs = { self, nixpkgs, nixos-hardware }: {
     nixosConfigurations = {

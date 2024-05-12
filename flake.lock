@@ -18,16 +18,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1715244149,
-        "narHash": "sha256-3L+bbMxi8+nRhVkndshtiyDQGOYaj3m+VNp+GcWJwZk=",
-        "owner": "matklad",
+        "lastModified": 1715447595,
+        "narHash": "sha256-VsVAUQOj/cS1LCOmMjAGeRksXIAdPnFIjCQ0XLkCsT0=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "871020cad1898c2eec06edf94648398b3d1b3c4c",
+        "rev": "062ca2a9370a27a35c524dc82d540e6e9824b652",
         "type": "github"
       },
       "original": {
-        "owner": "matklad",
-        "ref": "matklad/poly-vivaldi",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
