@@ -23,6 +23,7 @@
     java.enable = true;
     dconf.enable = true;
     virt-manager.enable = true;
+    programs.command-not-found.enable = false;
 
     ssh = {
       startAgent = true;
