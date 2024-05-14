@@ -147,7 +147,11 @@ impl<'a> Context<'a> {
         let remote = self.remote;
         let main_branch = self.main_branch;
         cmd!(self.sh, "git fetch {remote} {main_branch}").run()?;
-        cmd!(self.sh, "git switch --create {name} {remote}/{main_branch}").run()?;
+        cmd!(
+            self.sh,
+            "git switch --create {name} --track {remote}/{name} {remote}/{main_branch}"
+        )
+        .run()?;
         Ok(())
     }
 
