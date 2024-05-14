@@ -42,7 +42,10 @@
           '';
         };
         user = { name = "Alex Kladov"; email = "aleksey.kladov@gmail.com"; };
-        push.default = "current";
+        push = {
+          default = "current";
+          autoSetupRemote = "true";
+        };
         github.user = "matklad";
         fetch.prune = true;
         diff = {
@@ -74,7 +77,7 @@
         gl = "git log";
         glm = "git log --format=%B -n 1";
         gof = "git spinoff";
-        gp = "git push -u";
+        gp = "git push";
         gpf = "git push --force-with-lease";
         gs = "git status --short --branch";
         gup = "git pull --rebase";
