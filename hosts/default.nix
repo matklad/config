@@ -9,6 +9,7 @@
       automatic = true;
       options = "--max-freed 1G --delete-older-than 7d";
     };
+    channel.enable = false;
   };
 
   nixpkgs.config = {
