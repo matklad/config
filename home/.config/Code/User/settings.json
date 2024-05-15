@@ -614,7 +614,7 @@
         "upstream",
         "origin"
     ],
-    "workbench.colorTheme": "Pale Fire High Contrast",
+    "workbench.colorTheme": "Default Light Modern",
     "lldb.suppressUpdateNotifications": true,
     "cSpell.enableFiletypes": [
         "djot",
