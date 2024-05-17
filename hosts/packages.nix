@@ -12,6 +12,7 @@
   steam-run
   vscode
   zed-editor
+  dolphin
 
   # Comms
   slack
