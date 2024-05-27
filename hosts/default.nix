@@ -106,7 +106,10 @@
     };
 
     displayManager = {
-      sddm.enable = true;
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+      };
       autoLogin = { enable = false; user = "matklad"; };
       defaultSession = "plasma";
     };
