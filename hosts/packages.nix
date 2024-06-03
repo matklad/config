@@ -52,7 +52,6 @@
   rustup
   valgrind
   kcachegrind
-  # zig_0_11
   zls
 
   # Archives
@@ -102,7 +101,6 @@
   du-dust
   eza
   fd
-  gitui
   helix
   hyperfine
   ripgrep
