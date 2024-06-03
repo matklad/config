@@ -40,6 +40,7 @@ pub(crate) fn up(sh: &Shell) -> anyhow::Result<()> {
             path:/home/matklad/config#nixosConfigurations.{host}.config.system.build.toplevel"
     )
     .read()?;
+    cmd!(sh, "doas nix-env -p /nix/var/nix/profiles/system --set {system}").run()?;
     cmd!(sh, "doas {system}/bin/switch-to-configuration switch").run()?;
     if committed && !flags.no_pp {
         cmd!(sh, "git push").run()?;
