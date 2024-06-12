@@ -56,6 +56,7 @@
         };
         branch.sort = "committerdate";
         merge.conflictstyle = "diff3";
+        advice.detachedHead = "false";
       };
     };
 
