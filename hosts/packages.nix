@@ -16,7 +16,7 @@
   # Comms
   slack
   (tdesktop.overrideAttrs (final: previous: {
-    postPatch = final.postPatch + ''
+    postPatch = previous.postPatch + ''
       substituteInPlace Telegram/SourceFiles/info/info_top_bar.cpp \
           --replace "if (content) {" "if (false) {"
     '';
