@@ -183,6 +183,11 @@
     '';
   };
 
+  system.switch = {
+    enable = false;
+    enableNg = true;
+  };
+
   hardware = {
     keyboard.zsa.enable = true;
     ledger.enable = true;

@@ -15,12 +15,7 @@
 
   # Comms
   slack
-  (tdesktop.overrideAttrs (final: previous: {
-    postPatch = previous.postPatch + ''
-      substituteInPlace Telegram/SourceFiles/info/info_top_bar.cpp \
-          --replace "if (content) {" "if (false) {"
-    '';
-  }))
+  tdesktop
   zoom-us
 
   # Viewers
