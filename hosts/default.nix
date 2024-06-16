@@ -132,6 +132,9 @@
         horizontalScrolling = false;
         naturalScrolling = true;
       };
+      mouse = {
+        disableWhileTyping = true;
+      };
     };
 
     pipewire = {
