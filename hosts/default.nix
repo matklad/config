@@ -131,6 +131,9 @@
         disableWhileTyping = true;
         horizontalScrolling = false;
         naturalScrolling = true;
+        additionalOptions = ''
+          Option "PalmDetection" "on"
+        '';
       };
       mouse = {
         disableWhileTyping = true;
