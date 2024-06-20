@@ -29,7 +29,7 @@
   ant
   cmake
   deno
-  dotnet-sdk_7
+  dotnet-sdk_8
   gdb
   gnumake
   go
