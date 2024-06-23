@@ -33,30 +33,21 @@
   gdb
   gnumake
   go
-  # llvmPackages_16.bintools
-  # llvmPackages_16.clang
-  # llvmPackages_16.lldb
-  # llvmPackages_16.llvm
-  # llvmPackages_16.stdenv
   llvmPackages_15.bintools
   llvmPackages_15.clang
   llvmPackages_15.lldb
   llvmPackages_15.llvm
   llvmPackages_15.stdenv
   lua5_4
+  kcachegrind
   maven
   nil
   ninja
   nodejs
   protobuf
+  rustup
   valgrind
-  kcachegrind
   zls
-
-  # Rust
-  rustc
-  cargo
-  rustfmt
 
   # Archives
   ark
