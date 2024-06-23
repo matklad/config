@@ -49,10 +49,14 @@
   ninja
   nodejs
   protobuf
-  rustup
   valgrind
   kcachegrind
   zls
+
+  # Rust
+  rustc
+  cargo
+  rustfmt
 
   # Archives
   ark
