@@ -33,11 +33,11 @@
   gdb
   gnumake
   go
-  llvmPackages_15.bintools
-  llvmPackages_15.clang
-  llvmPackages_15.lldb
-  llvmPackages_15.llvm
-  llvmPackages_15.stdenv
+  llvmPackages_18.bintools
+  llvmPackages_18.clang
+  llvmPackages_18.lldb
+  llvmPackages_18.llvm
+  llvmPackages_18.stdenv
   lua5_4
   kcachegrind
   maven
