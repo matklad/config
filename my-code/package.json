@@ -93,6 +93,7 @@
         "yhirose.filtertext",
         "yo1dog.cursor-align",
         "ziglang.vscode-zig",
+        "wraith13.file-path-bar"
     ],
     "dependencies": {
         "openai": "^4.24.1"
