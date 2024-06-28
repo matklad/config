@@ -149,9 +149,9 @@
 
 
 // Next/Prev
-  { "key": "ctrl+down",            "command": "workbench.action.editor.nextChange",
+  { "key": "ctrl+down",            "command": "scrollLineDown",
     "when": "editorTextFocus && !suggestWidgetVisible" },
-  { "key": "ctrl+up",              "command": "workbench.action.editor.previousChange",
+  { "key": "ctrl+up",              "command": "scrollLineUp",
     "when": "editorTextFocus && !suggestWidgetVisible" },
 
   { "key": "alt+down",             "command": "search.action.focusNextSearchResult",

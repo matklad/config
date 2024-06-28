@@ -40,6 +40,7 @@
   llvmPackages_18.stdenv
   lua5_4
   kcachegrind
+  hotspot
   maven
   nil
   ninja
@@ -76,7 +77,6 @@
   jq
   libimobiledevice
   linuxPackages.perf
-  lnav
   ntfs3g
   patchelf
   pciutils

@@ -14,6 +14,7 @@
     "window.newWindowDimensions": "maximized",
     "window.restoreWindows": "none",
     "window.title": "${rootPath}",
+    "filePathBar.statusBarAlignment": "right",
     "window.titleBarStyle": "native",
     "workbench.editor.showTabs": "none",
     "workbench.editor.labelFormat": "long",
