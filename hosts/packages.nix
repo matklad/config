@@ -16,7 +16,7 @@
   # Comms
   slack
   tdesktop
-  zoom-us
+  # zoom-us
 
   # Viewers
   audacious
