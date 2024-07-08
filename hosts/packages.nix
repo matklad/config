@@ -75,6 +75,9 @@
   hunspell
   hunspellDicts.en_US
   jq
+  kcov
+  kdePackages.kconfig
+  kdePackages.kdbusaddons
   libimobiledevice
   linuxPackages.perf
   ntfs3g
@@ -88,8 +91,6 @@
   wally-cli
   wget
   wl-clipboard
-  kdePackages.kconfig
-  kdePackages.kdbusaddons
 
   # Rust stuff
   bat
