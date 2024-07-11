@@ -67,6 +67,7 @@
   exfat
   ffmpeg
   file
+  fzf
   git
   gitAndTools.gh
   gperftools
