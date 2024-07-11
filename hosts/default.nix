@@ -3,7 +3,7 @@
   time.timeZone = "Europe/Lisbon";
 
   nix = {
-    nix.package = pkgs.lix;
+    package = pkgs.lix;
     extraOptions = "experimental-features = nix-command flakes ca-derivations";
     nixPath = ["nixpkgs=${pkgs.path}"];
     gc = {
