@@ -1,8 +1,7 @@
 { lib, fetchFromGitHub, rustPlatform }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage {
   pname = "gg";
-  version = "0.0.0";
 
   src = ./.;
 
