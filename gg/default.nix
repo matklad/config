@@ -1,8 +1,14 @@
-{ lib, fetchFromGitHub, rustPlatform }:
+{ rustPlatform }:
 
 rustPlatform.buildRustPackage {
-  pname = "gg";
+  pname = "xtool";
   version = "0.0.0";
   src = ./.;
   cargoLock.lockFile = ./Cargo.lock;
+
+  postInstall = ''
+    ln $out/bin/xtool $out/bin/nixup
+    ln $out/bin/xtool $out/bin/nixgc
+    rm $out/bin/xtool
+  '';
 }

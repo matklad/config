@@ -1,6 +1,7 @@
 {pkgs, ...}: with pkgs; [
   # Local
   (callPackage ../gg {})
+  (callPackage ../xtool {})
 
   # GUI
   (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; commandLineArgs = "--disable-features=AllowQt"; })
