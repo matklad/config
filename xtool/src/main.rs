@@ -67,15 +67,6 @@ fn link_me_up() {
     }
 
     {
-        let _d = sh.push_dir("../gg");
-        cmd!(sh, "cargo build --release --target=x86_64-unknown-linux-musl").run().unwrap();
-        let dst = bin.join("gg");
-        sh.remove_path(&dst).unwrap();
-        let _ = cmd!(sh, "git rm {dst} -f").ignore_stderr().quiet().run();
-        sh.hard_link("./target/x86_64-unknown-linux-musl/release/gg", &dst).unwrap();
-    }
-
-    {
         let home: PathBuf = "/home/matklad/".into();
         let config_home = home.join("config/home");
         for abs_path in walkdir(config_home.clone()).unwrap() {
