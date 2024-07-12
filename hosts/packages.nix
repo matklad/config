@@ -1,4 +1,7 @@
 {pkgs, ...}: with pkgs; [
+  # Local
+  (callPackage ../gg {})
+
   # GUI
   (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; commandLineArgs = "--disable-features=AllowQt"; })
   anki
