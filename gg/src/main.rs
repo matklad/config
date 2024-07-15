@@ -19,6 +19,9 @@ mod flags {
             cmd branch {
                 required name: String
             }
+            cmd prune {
+
+            }
             cmd commit {
                 /// Commit message.
                 optional message: String
@@ -149,6 +152,24 @@ impl<'a> Context<'a> {
         cmd!(self.sh, "git fetch {remote} {main_branch}").run()?;
         cmd!(self.sh, "git switch --create {name}").run()?;
         cmd!(self.sh, "git reset --hard {remote}/{main_branch}").run()?;
+        Ok(())
+    }
+
+    fn prune(&self) -> Result {
+        let branches = cmd!(self.sh, "git branch --merged").read()?;
+        let branches: Vec<_> = branches
+            .lines()
+            .map(str::trim)
+            .filter(|&it| {
+                !(it == "master" || it == "main" || it.starts_with('*') || it.starts_with('+'))
+            })
+            .collect();
+        if branches.is_empty() {
+            println!("no merged branches");
+            return Ok(());
+        }
+
+        cmd!(self.sh, "git branch -D {branches...}").run()?;
         Ok(())
     }
 
