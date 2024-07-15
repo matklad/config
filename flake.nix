@@ -7,7 +7,7 @@
     let patches = [
       {
         url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/292148.diff";
-        sha256 = "sha256-ZCDQ7SpGhH8JvAwWzdcyrc68RFEWHxxAj0M2+AvEzIg=";
+        sha256 = "sha256-gaH4UxKi2s7auoaTmbBwo0t4HuT7MwBuNvC/z2vvugE=";
       }
     ];
     originPkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
