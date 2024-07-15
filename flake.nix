@@ -18,22 +18,24 @@
     };
     nixosSystem = import (nixpkgs + "/nixos/lib/eval-config.nix");
     #nixosSystem = inputs.nixpkgs.lib.nixosSystem;
+    modulesCommon = [
+      ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
+      ./hosts
+    ];
   in
   {
     nixosConfigurations = {
       Ishmael = nixosSystem {
          system = "x86_64-linux";
-         modules = [
-           ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
-           ./hosts ./hosts/Ishmael.nix
+         modules = modulesCommon ++ [
+           ./hosts/Ishmael.nix
            nixos-hardware.nixosModules.common-gpu-nvidia-disable
          ];
       };
       Moby= nixosSystem {
          system = "x86_64-linux";
-         modules = [
-           ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
-           ./hosts ./hosts/Moby.nix
+         modules = modulesCommon ++ [
+           ./hosts/Moby.nix
          ];
       };
     };
