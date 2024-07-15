@@ -89,6 +89,7 @@ fn main() -> Result {
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
         flags::GgCmd::Branch(branch) => context.branch(&branch.name),
+        flags::GgCmd::Prune(flags::Prune) => context.prune(),
         flags::GgCmd::Commit(commit) => {
             context.commit(commit.message.as_deref(), commit.branch.as_deref())
         }
