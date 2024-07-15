@@ -63,7 +63,6 @@
   p7zip
 
   # Utils
-  vi
   asciinema
   binutils
   curl
