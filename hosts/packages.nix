@@ -4,7 +4,7 @@
   (callPackage ../xtool {})
 
   # GUI
-  (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; commandLineArgs = "--disable-features=AllowQt"; })
+  (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; qt = pkgs.qt6; })
   anki
   filelight
   gimp
