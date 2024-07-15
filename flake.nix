@@ -16,10 +16,12 @@
       src = inputs.nixpkgs;
       patches = map originPkgs.fetchpatch patches;
     };
+    nixosSystem = import (nixpkgs + "/nixos/lib/eval-config.nix");
+    #nixosSystem = inputs.nixpkgs.lib.nixosSystem;
   in
   {
     nixosConfigurations = {
-      Ishmael = nixpkgs.lib.nixosSystem {
+      Ishmael = nixosSystem {
          system = "x86_64-linux";
          modules = [
            ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
@@ -27,7 +29,7 @@
            nixos-hardware.nixosModules.common-gpu-nvidia-disable
          ];
       };
-      Moby= nixpkgs.lib.nixosSystem {
+      Moby= nixosSystem {
          system = "x86_64-linux";
          modules = [
            ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
