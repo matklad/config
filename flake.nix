@@ -3,7 +3,7 @@
   # inputs.nixpkgs.url = "github:NixOS/nixpkgs?rev=60cb88cc491e819c16fc579fd697d33defd2a8e3";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-  outputs = inputs@{ self, nixos-hardware }:
+  outputs = inputs@{ self, nixos-hardware, ... }:
     let patches = [
       {
         url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/292148.diff";
