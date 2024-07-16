@@ -18,6 +18,7 @@ mod flags {
             /// Creates a new branch in a synced state.
             cmd branch {
                 required name: String
+                optional --offline
             }
             cmd prune {
 
@@ -88,7 +89,7 @@ fn main() -> Result {
             flags::WorktreeCmd::Clone(clone) => context.worktree_clone(&clone.remote),
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
-        flags::GgCmd::Branch(branch) => context.branch(&branch.name),
+        flags::GgCmd::Branch(branch) => context.branch(&branch.name, branch.offline),
         flags::GgCmd::Prune(flags::Prune) => context.prune(),
         flags::GgCmd::Commit(commit) => {
             context.commit(commit.message.as_deref(), commit.branch.as_deref())
@@ -147,12 +148,17 @@ impl<'a> Context<'a> {
         Ok(())
     }
 
-    fn branch(&self, name: &str) -> Result {
+    fn branch(&self, name: &str, offline: bool) -> Result {
         let remote = self.remote;
         let main_branch = self.main_branch;
-        cmd!(self.sh, "git fetch {remote} {main_branch}").run()?;
-        cmd!(self.sh, "git switch --create {name}").run()?;
-        cmd!(self.sh, "git reset --hard {remote}/{main_branch}").run()?;
+        if offline {
+            cmd!(self.sh, "git switch --create {name}").run()?;
+            cmd!(self.sh, "git reset --hard {main_branch}").run()?;
+        } else {
+            cmd!(self.sh, "git fetch {remote} {main_branch}").run()?;
+            cmd!(self.sh, "git switch --create {name}").run()?;
+            cmd!(self.sh, "git reset --hard {remote}/{main_branch}").run()?;
+        }
         Ok(())
     }
 
