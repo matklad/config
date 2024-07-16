@@ -10,7 +10,7 @@
         sha256 = "sha256-gaH4UxKi2s7auoaTmbBwo0t4HuT7MwBuNvC/z2vvugE=";
       }
       {
-        udl = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/324549";
+        udl = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/324549.diff";
         sha256 = "sha256-00H4UxKi2s7auoaTmbBwo0t4HuT7MwBuNvC/z2vvugE=";
       }
     ];
