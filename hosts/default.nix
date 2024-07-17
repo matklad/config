@@ -87,7 +87,7 @@
         gup = "git pull --rebase";
         ls = "eza -l";
         perfr = "perf record -F 9999 --call-graph dwarf";
-        sw = "git switch";
+        sw = "gg switch";
         swc = "git switch -c";
         swd = "git switch -d";
         zz = "./zig/zig";
