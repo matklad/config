@@ -15,6 +15,10 @@ mod flags {
             /// Adds changes to the topmost commit.
             cmd amend {
             }
+            /// Fuzzy switch to a different branch.
+            cmd switch {
+
+            }
             /// Creates a new branch in a synced state.
             cmd branch {
                 required name: String
@@ -89,6 +93,7 @@ fn main() -> Result {
             flags::WorktreeCmd::Clone(clone) => context.worktree_clone(&clone.remote),
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
+        flags::GgCmd::Switch(flags::Switch) => context.switch(),
         flags::GgCmd::Branch(branch) => context.branch(&branch.name, branch.offline),
         flags::GgCmd::Prune(flags::Prune) => context.prune(),
         flags::GgCmd::Commit(commit) => {
@@ -145,6 +150,15 @@ impl<'a> Context<'a> {
         if yes_or_no("Continue?") {
             cmd!(self.sh, "git commit --amend --no-edit").run()?;
         }
+        Ok(())
+    }
+
+    fn switch(&self) -> Result {
+        let branches = cmd!(self.sh, "git branch").read()?;
+        let branch_selected = cmd!(self.sh, "fzf --reverse --info=inline")
+            .stdin(&branches)
+            .read()?;
+        cmd!(self.sh, "git switch {branch_selected}").run()?;
         Ok(())
     }
 
