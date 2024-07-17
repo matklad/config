@@ -157,7 +157,9 @@ impl<'a> Context<'a> {
         let branches = cmd!(self.sh, "git branch").read()?;
         let branch_selected = cmd!(self.sh, "fzf --info=inline --height=~100% --reverse --tac")
             .stdin(&branches)
-            .read()?;
+            .read()?
+            .trim()
+            .to_string();
         cmd!(self.sh, "git switch {branch_selected}").run()?;
         Ok(())
     }
