@@ -9,10 +9,10 @@
         url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/292148.diff";
         sha256 = "sha256-gaH4UxKi2s7auoaTmbBwo0t4HuT7MwBuNvC/z2vvugE=";
       }
-      {
-        url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/324549.diff";
-        sha256 = "sha256-fGQ95cJySbnd3xX2lAdWQwsDNo74R9dlbp6f3vAr0D4=";
-      }
+      # {
+      #   url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/324549.diff";
+      #   sha256 = "sha256-fGQ95cJySbnd3xX2lAdWQwsDNo74R9dlbp6f3vAr0D4=";
+      # }
     ];
     originPkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
     nixpkgs = originPkgs.applyPatches {
