@@ -33,6 +33,9 @@ mod flags {
                 /// Move all changes out of the way as a commit onto a new branch.
                 optional -b,--branch branch: String
             }
+            cmd uncommit {
+
+            }
             /// Syncs the branch to the remote counterpart.
             cmd sync {
                 optional --to branch: String
@@ -98,6 +101,9 @@ fn main() -> Result {
         flags::GgCmd::Prune(flags::Prune) => context.prune(),
         flags::GgCmd::Commit(commit) => {
             context.commit(commit.message.as_deref(), commit.branch.as_deref())
+        }
+        flags::GgCmd::Uncommit(flags::Uncommit) => {
+            context.uncommit()
         }
         flags::GgCmd::Sync(sync) => context.sync(sync.to.as_deref()),
         flags::GgCmd::Refresh(refresh) => {
@@ -208,6 +214,13 @@ impl<'a> Context<'a> {
             }
             None => cmd!(self.sh, "git commit -m {message}").run()?,
         }
+        Ok(())
+    }
+
+    fn uncommit(&self) -> Result {
+        let message =  cmd!(self.sh, "git log --format=%B -n 1 HEAD").read()?;
+        cmd!(self.sh, "git reset --mixed HEAD~").run()?;
+        cmd!(self.sh, "git commit --allow-empty -m {message}").run()?;
         Ok(())
     }
 
