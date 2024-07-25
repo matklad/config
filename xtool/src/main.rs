@@ -44,7 +44,6 @@ fn main() -> anyhow::Result<()> {
 }
 
 #[test]
-#[cfg(nope)]
 fn link_me_up() {
     use xshell::{cmd, Shell};
 
