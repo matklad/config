@@ -42,16 +42,3 @@ fn main() -> anyhow::Result<()> {
     let sh = Shell::new()?;
     run(&sh)
 }
-
-#[test]
-#[cfg(nope)]
-fn link_me_up() {
-    use xshell::{cmd, Shell};
-
-    let sh = Shell::new().unwrap();
-
-    let vm_shared = home.join("vms/shared");
-    sh.create_dir(&vm_shared).unwrap();
-    sh.copy_file(home.join("config/init.ps1"), &vm_shared).unwrap();
-
-}
