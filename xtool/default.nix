@@ -9,6 +9,7 @@ rustPlatform.buildRustPackage {
   postInstall = ''
     ln $out/bin/xtool $out/bin/nixup
     ln $out/bin/xtool $out/bin/nixgc
+    ln $out/bin/xtool $out/bin/autostart
     ln $out/bin/xtool $out/bin/n
     rm $out/bin/xtool
   '';

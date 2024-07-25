@@ -44,38 +44,14 @@ fn main() -> anyhow::Result<()> {
 }
 
 #[test]
+#[cfg(nope)]
 fn link_me_up() {
     use xshell::{cmd, Shell};
 
     let sh = Shell::new().unwrap();
-    let home: PathBuf = "/home/matklad/".into();
-    let config_home = home.join("config/home");
-    for abs_path in walkdir(config_home.clone()).unwrap() {
-        let rel_path = abs_path.strip_prefix(&config_home).unwrap();
-        let dest = home.join(rel_path);
-        sh.remove_path(&dest).unwrap();
-        sh.create_dir(dest.parent().unwrap()).unwrap();
-        std::os::unix::fs::symlink(abs_path, dest).unwrap();
-    }
 
     let vm_shared = home.join("vms/shared");
     sh.create_dir(&vm_shared).unwrap();
     sh.copy_file(home.join("config/init.ps1"), &vm_shared).unwrap();
 
-    fn walkdir(path: PathBuf) -> anyhow::Result<Vec<PathBuf>> {
-        let mut res = Vec::new();
-        let mut work = vec![path];
-        while let Some(dir) = work.pop() {
-            for entry in std::fs::read_dir(&dir)? {
-                let entry = entry?;
-                let file_type = entry.file_type()?;
-                if file_type.is_file() {
-                    res.push(entry.path())
-                } else if file_type.is_dir() {
-                    work.push(entry.path());
-                }
-            }
-        }
-        Ok(res)
-    }
 }
