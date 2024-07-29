@@ -5,11 +5,6 @@
 
   # GUI
   (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; qt = pkgs.qt6; })
-  # (pkgs.buildFHSUserEnv {
-  #   name = "zed";
-  #   targetPkgs = pkgs: [ pkgs.zed-editor ];
-  #   runScript = "zed";
-  # })
 
   anki
   filelight
@@ -22,6 +17,7 @@
   spotify
   steam-run
   vscode
+  zed
 
   # Comms
   slack
