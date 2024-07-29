@@ -17,7 +17,7 @@
   spotify
   steam-run
   vscode
-  zed
+  zed-editor
 
   # Comms
   slack
