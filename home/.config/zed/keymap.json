@@ -31,6 +31,7 @@
   {
     "context": "Editor",
     "bindings": {
+      "ctrl-i": "editor::ScrollCursorCenter",
       "ctrl-enter": "editor::NewlineBelow",
       "alt-left": "pane::GoBack",
       "alt-right": "pane::GoForward",
@@ -38,6 +39,7 @@
       "ctrl-W": "editor::SelectSmallerSyntaxNode",
       "alt-w": ["editor::SelectNext", { "replace_newest": false }],
       "alt-W": "editor::UndoSelection",
+      ", p": "editor::Format",
       ", .": "editor::GoToDefinition",
       ", >": "editor::GoToDefinitionSplit",
       ", e s": "editor::SortLinesCaseSensitive",

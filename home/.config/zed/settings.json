@@ -1,11 +1,13 @@
 {
-  "theme": "One Light",
+  "auto_update": false,
+  "theme": "Nord",
   "project_panel": {
     "dock": "right"
   },
-  "ui_font_size": 16,
+  "ui_font_size": 18,
   "buffer_font_size": 16,
   "buffer_font_family": "JetBrains Mono",
+  "ui_font_family": "JetBrains Mono",
   "autosave": { "after_delay": {"milliseconds": 50} },
   "tab_bar": {
     "show": false
