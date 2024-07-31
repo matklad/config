@@ -65,7 +65,7 @@
       enable = true;
       shellAbbrs = {
         "r+" = "gh pr comment --body 'bors r+'";
-        c = "code";
+        c = "zed";
         ca = "cargo";
         cat = "bat";
         ct = "cargo t -- -q";
