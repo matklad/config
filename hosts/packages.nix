@@ -87,6 +87,7 @@
   kdePackages.kdbusaddons
   libimobiledevice
   linuxPackages.perf
+  llm
   ntfs3g
   patchelf
   pciutils
