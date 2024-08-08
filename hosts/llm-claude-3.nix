@@ -12,7 +12,7 @@ python3.pkgs.buildPythonApplication rec {
     owner = "simonw";
     repo = "llm-claude-3";
     rev = version;
-    hash = "sha256-ddaYXvbee66Keh5loQOs4xuOrtoQ06lHlBWlLiUp2zI=";
+    hash = "sha256-5qF5BK319PNzB4XsLdYvtyq/SxBDdHJ9IoKWEnvNRp4=";
   };
 
   nativeBuildInputs = [
