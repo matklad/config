@@ -44,17 +44,6 @@ fn rotate_downloads(sh: &Shell) -> anyhow::Result<()> {
 }
 
 fn plasma_shortcuts(sh: &Shell) -> anyhow::Result<()> {
-    // cmd!(
-    //     sh,
-    //     "
-    //     kwriteconfig6 --file kglobalshortcutsrc
-    //         --group services
-    //         --group org.kde.dolphin.desktop
-    //         --key _launch
-    //         'none,none,Dolphin'
-    //     "
-    // )
-    // .run()?;
     key(sh, "plasmashell", "manage activities", "none,none,Show Activity Switcher")?;
     key(sh, "kwin", "Window Close", "'Meta+Q,none,Close Window")?;
 
