@@ -27,7 +27,6 @@ python3.pkgs.buildPythonApplication rec {
   passthru.optional-dependencies = with python3.pkgs; {
     test = [
       pytest
-      pytest-httpx
     ];
   };
 
