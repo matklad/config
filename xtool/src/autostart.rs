@@ -56,7 +56,9 @@ fn plasma_shortcuts(sh: &Shell) -> anyhow::Result<()> {
     return Ok(());
 
     fn key(sh: &Shell, group: &str, key: &str, def: &str) -> anyhow::Result<()> {
-        cmd!(sh, "kwriteconfig6 --file kglobalshortcutsrc --group {group} --key {key} {def}").run()
+        cmd!(sh, "kwriteconfig6 --file kglobalshortcutsrc --group {group} --key {key} {def}")
+            .run()?;
+        Ok(())
     }
 }
 
