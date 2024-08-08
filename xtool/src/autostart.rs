@@ -24,6 +24,9 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
 }
 
 fn rotate_downloads(sh: &Shell) -> anyhow::Result<()> {
+    sh.remove_path("/home/matklad/Downloads")?;
+    sh.remove_path("/home/matklad/Documents")?;
+
     sh.create_dir("/home/matklad/downloads")?;
     let _p = sh.push_dir("/home/matklad/downloads");
     sh.remove_path(".old")?;
@@ -52,58 +55,20 @@ fn plasma_shortcuts(sh: &Shell) -> anyhow::Result<()> {
     //     "
     // )
     // .run()?;
-    cmd!(
-        sh,
-        "
-        kwriteconfig6 --file kglobalshortcutsrc
-            --group plasmashell
-            --key 'manage activities'
-            'none,none,Show Activity Switcher'
-        "
-    )
-    .run()?;
-    cmd!(
-        sh,
-        "
-        kwriteconfig6 --file kglobalshortcutsrc
-            --group kwin
-            --key 'Window Close'
-            'Meta+Q,none,Close Window'
-        "
-    )
-    .run()?;
-    cmd!(
-        sh,
-        "
-        kwriteconfig6 --file kglobalshortcutsrc
-            --group kwin
-            --key 'Window Maximize'
-            'Meta+Up,Meta+Up,Maximize Window'
-        "
-    )
-    .run()?;
-    cmd!(
-        sh,
-        "
-        kwriteconfig6 --file kglobalshortcutsrc
-            --group kwin
-            --key 'Window Maximize'
-            'Meta+Up,Meta+Up,Maximize Window'
-        "
-    )
-    .run()?;
-    cmd!(
-        sh,
-        "
-        kwriteconfig6 --file kglobalshortcutsrc
-            --group kwin
-            --key 'Window Quick Tile Top'
-            'none,none,Quick Tile Window to the Top'
-        "
-    )
-    .run()?;
+    key(sh, "plasmashell", "manage activities", "none,none,Show Activity Switcher")?;
+    key(sh, "kwin", "Window Close", "'Meta+Q,none,Close Window")?;
 
-    Ok(())
+    key(sh, "kwin", "Window Maximize", "Meta+Up,Meta+Up,Maximize Window")?;
+    key(sh, "kwin", "Window Quick Tile Top", "none,none,Quick Tile Window to the Top")?;
+
+    key(sh, "kwin", "Window Minimize", "Meta+Down,Meta+Down,Minimize Window")?;
+    key(sh, "kwin", "Window Quick Tile Bottom", "none,none,Quick Tile Window to the Top")?;
+
+    return Ok(());
+
+    fn key(sh: &Shell, group: &str, key: &str, def: &str) -> anyhow::Result<()> {
+        cmd!(sh, "kwriteconfig6 --file kglobalshortcutsrc --group {group} --key {key} {def}").run()
+    }
 }
 
 fn symlink(sh: &Shell) -> anyhow::Result<()> {
