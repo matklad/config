@@ -45,7 +45,7 @@ fn rotate_downloads(sh: &Shell) -> anyhow::Result<()> {
 
 fn plasma_shortcuts(sh: &Shell) -> anyhow::Result<()> {
     key(sh, "plasmashell", "manage activities", "none,none,Show Activity Switcher")?;
-    key(sh, "kwin", "Window Close", "'Meta+Q,none,Close Window")?;
+    key(sh, "kwin", "Window Close", "Meta+Q,none,Close Window")?;
 
     key(sh, "kwin", "Window Maximize", "Meta+Up,Meta+Up,Maximize Window")?;
     key(sh, "kwin", "Window Quick Tile Top", "none,none,Quick Tile Window to the Top")?;
