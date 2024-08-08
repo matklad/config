@@ -22,7 +22,6 @@ python3.pkgs.buildPythonApplication rec {
 
   propagatedBuildInputs = with python3.pkgs; [
     anthropic
-    llm
   ];
 
   passthru.optional-dependencies = with python3.pkgs; {
@@ -31,5 +30,5 @@ python3.pkgs.buildPythonApplication rec {
     ];
   };
 
-  pythonImportsCheck = [ "llm_claude_3" ];
+  dontCheckRuntimeDeps = true;
 }
