@@ -87,9 +87,7 @@
   kdePackages.kdbusaddons
   libimobiledevice
   linuxPackages.perf
-  llm.withPlugins([
-    (callPackage ./llm-claude-3 {})
-  ])
+  (llm.withPlugins [(callPackage ./llm-claude-3 {})])
   ntfs3g
   patchelf
   pciutils
