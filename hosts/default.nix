@@ -116,7 +116,7 @@
       defaultSession = "plasma";
     };
     desktopManager.plasma6.enable = true;
-    desktopManager.cosmic.enable = true;
+    # desktopManager.cosmic.enable = true;
     xserver = {
       enable = true;
 

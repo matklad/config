@@ -3,12 +3,12 @@
   # inputs.nixpkgs.url = "github:NixOS/nixpkgs?rev=60cb88cc491e819c16fc579fd697d33defd2a8e3";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-  inputs.nixos-cosmic = {
-    url = "github:lilyinstarlight/nixos-cosmic";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
+  # inputs.nixos-cosmic = {
+  #   url = "github:lilyinstarlight/nixos-cosmic";
+  #   inputs.nixpkgs.follows = "nixpkgs";
+  # };
 
-  outputs = inputs@{ self, nixos-hardware, nixos-cosmic, ... }:
+  outputs = inputs@{ self, nixos-hardware, ... }:
     let patches = [
       {
         url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/292148.diff";
@@ -24,13 +24,13 @@
     nixosSystem = import (nixpkgs + "/nixos/lib/eval-config.nix");
     #nixosSystem = inputs.nixpkgs.lib.nixosSystem;
     modulesCommon = [
-      {
-        nix.settings = {
-          substituters = [ "https://cosmic.cachix.org/" ];
-          trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-        };
-      }
-      nixos-cosmic.nixosModules.default
+      # {
+      #   nix.settings = {
+      #     substituters = [ "https://cosmic.cachix.org/" ];
+      #     trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+      #   };
+      # }
+      # inputs.nixos-cosmic.nixosModules.default
       ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
       ./hosts
     ];
