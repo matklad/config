@@ -76,6 +76,7 @@
   fzf
   git
   gitAndTools.gh
+  gitu
   gperftools
   graphviz
   htop
