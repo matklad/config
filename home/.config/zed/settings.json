@@ -1,6 +1,6 @@
 {
   "auto_update": false,
-  "theme": "Nord",
+  "theme": "Ayu Mirage",
   "project_panel": {
     "dock": "right"
   },
@@ -8,6 +8,7 @@
   "buffer_font_size": 16,
   "buffer_font_family": "JetBrains Mono",
   "ui_font_family": "JetBrains Mono",
+  "cursor_blink": false,
   "autosave": { "after_delay": {"milliseconds": 50} },
   "tab_bar": {
     "show": false

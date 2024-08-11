@@ -8,7 +8,7 @@ wezterm.on('gui-startup', function(cmd)
   window:gui_window():maximize()
 end)
 
-config.color_scheme = 'Eighties (base16)'
+config.color_scheme = 'Tomorrow'
 config.enable_tab_bar = false
 
 config.keys = {
@@ -18,6 +18,16 @@ config.keys = {
     action = wezterm.action_callback(function(window, pane)
         window:perform_action(wezterm.action.SendKey{ key='c', mods='CTRL' }, pane)
     end),
+  },
+  {
+    key = 'c',
+    mods = 'CTRL',
+    action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection',
+  },
+  {
+    key = 'v',
+    mods = 'CTRL',
+    action = wezterm.action.PasteFrom 'Clipboard',
   },
   {
     key = 'e',
