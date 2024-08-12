@@ -34,8 +34,8 @@
                 "category": "My Code"
             },
             {
-                "command": "my-code.proofread",
-                "title": "Proofread",
+                "command": "my-code.peek-definition-aside",
+                "title": "Open definition to the side, no focus",
                 "category": "My Code"
             }
         ],
@@ -95,6 +95,5 @@
         "wraith13.file-path-bar"
     ],
     "dependencies": {
-        "openai": "^4.24.1"
     }
 }

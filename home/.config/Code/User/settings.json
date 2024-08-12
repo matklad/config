@@ -19,6 +19,7 @@
     "window.titleBarStyle": "native",
     "workbench.editor.showTabs": "none",
     "workbench.editor.labelFormat": "long",
+    "workbench.editor.enablePreview": true,
     "workbench.panel.defaultLocation": "right",
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none",
