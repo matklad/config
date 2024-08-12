@@ -10,7 +10,6 @@
   filelight
   gimp
   kdialog
-  kitty
   wezterm
   obs-studio
   qbittorrent
