@@ -30,6 +30,11 @@ config.keys = {
     action = wezterm.action.PasteFrom 'Clipboard',
   },
   {
+    key = '.',
+    mods = 'CTRL',
+    action = wezterm.action.QuickSelect,
+  },
+  {
     key = 'e',
     mods = 'SUPER',
     action = wezterm.action.SplitHorizontal {
