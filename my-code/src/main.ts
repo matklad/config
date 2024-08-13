@@ -42,7 +42,7 @@ export function activate(context: vscode.ExtensionContext) {
       async (editor) => {
         const document = editor.document;
         const viewColumn = editor.viewColumn;
-
+        await vscode.commands.executeCommand("editor.action.revealDefinitionAside");
         await vscode.window.showTextDocument(
           document,
           viewColumn,
