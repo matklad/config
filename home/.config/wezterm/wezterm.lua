@@ -3,10 +3,10 @@ local balance = require 'balance'
 
 local config = wezterm.config_builder()
 
-wezterm.on('gui-startup', function(cmd)
-  local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
-  window:gui_window():maximize()
-end)
+-- wezterm.on('gui-startup', function(cmd)
+--   local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+--   window:gui_window():maximize()
+-- end)
 
 config.color_scheme = 'Tomorrow'
 config.enable_tab_bar = false

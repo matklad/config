@@ -61,7 +61,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 type GoTarget = "change" | "conflict" | "error" | "reference" | "occurrence";
-var current_target: GoTarget = "error";,
+var current_target: GoTarget = "error";
 async function go(direction: "next" | "prev", target?: GoTarget) {
   if (target) {
     current_target = target;
