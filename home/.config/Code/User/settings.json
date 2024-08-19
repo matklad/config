@@ -320,10 +320,7 @@
                     "type": "command",
                     "command": "runCommands",
                     "args": {
-                        "commands": [
-                            "workbench.action.closePanel",
-                            "workbench.files.action.focusFilesExplorer"
-                        ]
+                        "commands": [ "workbench.action.closePanel", "workbench.files.action.focusFilesExplorer" ]
                     }
                 },
                 {

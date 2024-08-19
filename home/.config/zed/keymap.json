@@ -24,6 +24,7 @@
     "bindings": {
       "super-n": ["workspace::ActivatePaneInDirection", "Right"],
       "super-e": "pane::SplitRight",
+      "super-o": "pane::SplitDown",
       "super-f": "workspace::CloseInactiveTabsAndPanes",
       "super-k": "pane::CloseAllItems",
     }

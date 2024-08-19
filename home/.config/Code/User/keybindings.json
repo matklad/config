@@ -88,11 +88,35 @@
   { "key": ", .",                  "command": "editor.action.revealDefinition" },
   { "key": ", shift+.",            "command": "editor.action.revealDefinitionAside" },
   { "key": ", shift+/",            "command": "whichkey.show" },
-  { "key": ", p",                  "command": "editor.action.formatDocument" },
+  { "key": ", p",                  "command": "editor.action.formatDocument", "when": "!editorHasSelection" },
+  { "key": ", p",                  "command": "editor.action.formatSelection", "when": "editorHasSelection" },
   { "key": ", w",                  "command": "rewrap.rewrapComment" },
   { "key": ", b",                  "command": "editor.action.jumpToBracket" },
   { "key": ", f",                  "command": "editor.toggleFold" },
   { "key": ", d",                  "command": "editor.action.dirtydiff.next" },
+
+
+  { "key": ", =",                  "command": "workbench.action.focusFirstEditorGroup" },
+  { "key": "escape",                  "command": "workbench.action.focusFirstEditorGroup",
+    "when": "panelFocus || sideBarFocus" },
+
+  { "key": ", 1",                  "command": "runCommands",
+    "when": "!explorerViewletFocus",
+    "args": { "commands": [ "workbench.action.closePanel", "workbench.files.action.focusFilesExplorer" ] } },
+
+  { "key": ", 1",                  "command": "workbench.action.closeSidebar",
+    "when": "explorerViewletFocus"},
+
+  { "key": ", 2",                  "command": "runCommands",
+    "when": "!terminalFocus",
+    "args": { "commands": [ "workbench.action.closeSidebar", "terminal.focus" ] } },
+
+  { "key": ", 2",                  "command": "workbench.action.closePanel",
+    "when": "terminalFocus"},
+
+  { "key": ", 3",                  "command": "runCommands",
+    "args": { "commands": [ "workbench.action.closeSidebar", "workbench.action.closePanel", "magit.status" ] }
+  },
 
   { "key": ", g",                  "command": "runCommands",
     "when": "editorTextFocus",
