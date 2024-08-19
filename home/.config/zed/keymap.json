@@ -26,7 +26,6 @@
       "super-e": "pane::SplitRight",
       "super-f": "workspace::CloseInactiveTabsAndPanes",
       "super-k": "pane::CloseAllItems",
-
     }
   },
   {
@@ -46,7 +45,8 @@
       ", >": "editor::GoToDefinitionSplit",
       ", e s": "editor::SortLinesCaseSensitive",
       ", g d": "editor::GoToDefinition",
-      ", g i": "editor::GoToImplementation", 
+      ", g i": "editor::GoToImplementation",
+      ", g r": "editor::FindAllReferences",
       ", g e": "editor::MoveToEnd",
       ", g g": "editor::MoveToBeginning",
       ", g l": "go_to_line::Toggle",

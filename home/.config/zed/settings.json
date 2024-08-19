@@ -18,7 +18,8 @@
   },
   "lsp": {
     "rust-analyzer": {
-      "binary": { "path": "/home/matklad/.cargo/bin/rust-analyzer" }
+      "binary": { "path": "/home/matklad/.cargo/bin/rust-analyzer" }, 
+      "checkOnSave": false, 
     }
   }
 }
