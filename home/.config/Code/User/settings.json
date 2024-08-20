@@ -95,6 +95,8 @@
     "debug.onTaskErrors": "debugAnyway",
     "remote.SSH.useLocalServer": false,
     // plugins
+    "editWithShell.shell.linux": "/run/current-system/sw/bin/fish",
+    "editWithShell.shellArgs.linux": [ "-i", "-c" ],
     "spellright.suggestionsInHints": false,
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
@@ -281,6 +283,12 @@
                     "name": "decrement",
                     "type": "command",
                     "command": "editor.emmet.action.decrementNumberByOne"
+                },
+                {
+                    "key": "p",
+                    "name": "pipe to shell",
+                    "type": "command",
+                    "command": "editWithShell.runCommand"
                 }
             ]
         },
@@ -320,7 +328,10 @@
                     "type": "command",
                     "command": "runCommands",
                     "args": {
-                        "commands": [ "workbench.action.closePanel", "workbench.files.action.focusFilesExplorer" ]
+                        "commands": [
+                            "workbench.action.closePanel",
+                            "workbench.files.action.focusFilesExplorer"
+                        ]
                     }
                 },
                 {
