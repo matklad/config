@@ -1,4 +1,4 @@
-{pkgs, ...}: with pkgs; [
+{inputs, pkgs, ...}: with pkgs; [
   # Local
   (callPackage ../gg {})
   (callPackage ../xtool {})
@@ -10,7 +10,8 @@
   filelight
   gimp
   kdialog
-  wezterm
+  # wezterm
+  inputs.wezterm.packages.x86_64-linux.default
   obs-studio
   qbittorrent
   spotify

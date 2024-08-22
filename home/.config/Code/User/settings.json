@@ -6,7 +6,7 @@
     "[git-commit]": {
         "rewrap.wrappingColumn": 72,
     },
-    "accessibility.dimUnfocused.enabled": true,
+    "accessibility.dimUnfocused.enabled": false,
     "projectNameInStatusBar.align": "right",
     "projectNameInStatusBar.textStyle": "uppercase",
     "workbench.panel.opensMaximized": "never",
@@ -384,7 +384,7 @@
                     ]
                 },
                 {
-                    "key": "m",
+                    "key": "C",
                     "name": "Merge Conflict",
                     "type": "command",
                     "command": "my-code.next",

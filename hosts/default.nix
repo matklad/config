@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ inputs, config, pkgs, lib, ... }: {
 
   time.timeZone = "Europe/Lisbon";
 
@@ -18,7 +18,7 @@
     allowUnfree = true;
   };
 
-  environment.systemPackages = (import ./packages.nix) pkgs;
+  environment.systemPackages = (import ./packages.nix) inputs pkgs;
 
   programs = {
     java.enable = true;
