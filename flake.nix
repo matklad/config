@@ -34,7 +34,7 @@
     nixosConfigurations = {
       Ishmael = nixosSystem {
          system = "x86_64-linux";
-         specialArgs = { inherit inputs self; };
+         specialArgs = { inherit inputs; };
          modules = modulesCommon ++ [
            ./hosts/Ishmael.nix
            nixos-hardware.nixosModules.common-gpu-nvidia-disable
@@ -42,7 +42,7 @@
       };
       Moby= nixosSystem {
          system = "x86_64-linux";
-         specialArgs = { inherit inputs self; };
+         specialArgs = { inherit inputs; };
          modules = modulesCommon ++ [
            ./hosts/Moby.nix
          ];

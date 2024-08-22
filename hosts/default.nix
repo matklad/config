@@ -18,7 +18,7 @@
     allowUnfree = true;
   };
 
-  environment.systemPackages = (import ./packages.nix) inputs pkgs;
+  environment.systemPackages = [];
 
   programs = {
     java.enable = true;
