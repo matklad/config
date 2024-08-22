@@ -1,4 +1,4 @@
-inputs: {pkgs, ...}: with pkgs; [
+{ inputs,  pkgs}: with pkgs; [
   # Local
   (callPackage ../gg {})
   (callPackage ../xtool {})
