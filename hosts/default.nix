@@ -25,7 +25,8 @@
     dconf.enable = true;
     virt-manager.enable = true;
     command-not-found.enable = false;
-
+    darling.enable = true;
+    
     ssh = {
       startAgent = true;
       askPassword = "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
