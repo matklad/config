@@ -192,7 +192,7 @@
     extraModprobeConfig = ''
       options snd_hda_intel power_save=0
     '';
-    boot.binfmt.emulatedSystems = ["aarch64-linux"];
+    binfmt.emulatedSystems = ["aarch64-linux"];
   };
 
   system.switch = {
