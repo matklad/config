@@ -26,7 +26,7 @@
     virt-manager.enable = true;
     command-not-found.enable = false;
     darling.enable = true;
-    
+
     ssh = {
       startAgent = true;
       askPassword = "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
@@ -159,6 +159,7 @@
     pcscd.enable = true;
     openssh = {
       enable = false;
+      settings.PermitRootLogin = "no";
       settings.PasswordAuthentication = false;
     };
     usbmuxd = {
