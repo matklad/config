@@ -11,7 +11,7 @@
   gimp
   kdialog
   # wezterm
-  inputs.wezterm.packages.x86_64-linux.default
+  wezterm
   obs-studio
   qbittorrent
   spotify
