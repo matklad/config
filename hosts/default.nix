@@ -25,7 +25,7 @@
     dconf.enable = true;
     virt-manager.enable = true;
     command-not-found.enable = false;
-    darling.enable = true;
+    # darling.enable = true;
 
     ssh = {
       startAgent = true;
