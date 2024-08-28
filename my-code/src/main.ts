@@ -60,7 +60,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-type GoTarget = "change" | "conflict" | "error" | "reference" | "occurrence";
+type GoTarget = "change" | "conflict" | "error" | "reference" | "occurrence" | "edit";
 var current_target: GoTarget = "error";
 async function go(direction: "next" | "prev", target?: GoTarget) {
   if (target) {
@@ -84,6 +84,10 @@ async function go(direction: "next" | "prev", target?: GoTarget) {
     occurrence: [
       "editor.action.nextMatchFindAction",
       "editor.action.previousMatchFindAction",
+    ],
+    edit: [
+      "workbench.action.navigateBackInEditLocations",
+      "workbench.action.navigateForwardInEditLocations"
     ],
   };
 

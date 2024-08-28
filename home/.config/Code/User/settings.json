@@ -409,6 +409,15 @@
                     "args": [
                         "occurrence"
                     ]
+                },
+                {
+                    "key": ".",
+                    "name": "Edit",
+                    "type": "command",
+                    "command": "my-code.next",
+                    "args": [
+                        "edit"
+                    ]
                 }
             ]
         },
