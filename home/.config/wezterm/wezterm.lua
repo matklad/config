@@ -12,6 +12,7 @@ config.color_scheme = 'Tomorrow'
 config.enable_tab_bar = false
 config.front_end = "WebGpu"
 config.enable_wayland = false
+config.audible_bell = "Disabled"
 
 config.keys = {
   {
