@@ -16,6 +16,10 @@
         url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/338859.diff";
         sha256 = "sha256-/zDD6Ic7+FVF4A7TzNj0b3oaA9lQg0c2XUhlK7qR50A=";
       }
+      {
+        url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/338326.diff";
+        sha256 = "sha256-/zDD6Ic7+FVF4A7TzNj0b3oaA9lQg0c2XUhlK7qR50A=";
+      }
     ];
     originPkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
     nixpkgs = originPkgs.applyPatches {
