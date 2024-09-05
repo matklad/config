@@ -87,6 +87,8 @@
   { "key": ", shift+l",            "command": "workbench.action.showAllSymbols" },
   { "key": ", .",                  "command": "editor.action.revealDefinition" },
   { "key": ", shift+.",            "command": "editor.action.revealDefinitionAside" },
+  { "key": ", .",                  "command": "editor.action.revealDeclaration", "when": "editorLangId == 'zig'" },
+  { "key": ", shift+.",            "command": "editor.action.revealDefinitionAside", "when": "editorLangId == 'zig'" },
   { "key": ", shift+/",            "command": "whichkey.show" },
   { "key": ", p",                  "command": "editor.action.formatDocument", "when": "!editorHasSelection" },
   { "key": ", p",                  "command": "editor.action.formatSelection", "when": "editorHasSelection" },
