@@ -120,6 +120,8 @@
     "args": { "commands": [ "workbench.action.closeSidebar", "workbench.action.closePanel", "magit.status" ] }
   },
 
+  { "key": ", 4",                  "command": "workbench.actions.view.toggleProblems" },
+
   { "key": ", g",                  "command": "runCommands",
     "when": "editorTextFocus",
     "args": { "commands": ["whichkey.show", { "command": "whichkey.triggerKey", "args": "g" }] } },
