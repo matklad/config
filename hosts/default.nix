@@ -21,6 +21,7 @@
   environment.systemPackages = (import ./packages.nix) { inherit inputs pkgs; };
 
   programs = {
+    nix-ld.enable = true;
     java.enable = true;
     dconf.enable = true;
     virt-manager.enable = true;
