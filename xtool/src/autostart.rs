@@ -53,6 +53,10 @@ fn plasma_shortcuts(sh: &Shell) -> anyhow::Result<()> {
     key(sh, "kwin", "Window Minimize", "Meta+Down,Meta+Down,Minimize Window")?;
     key(sh, "kwin", "Window Quick Tile Bottom", "none,none,Quick Tile Window to the Top")?;
 
+    key(sh, "kwin", "view_actual_size", "none,Meta+0,Zoom to Actual Size")?;
+    key(sh, "kwin", "view_zoom_in", "none,Meta++\tMeta+=,Zoom In")?;
+    key(sh, "kwin", "view_zoom_out", "none,Meta+-,Zoom Out")?;
+
     return Ok(());
 
     fn key(sh: &Shell, group: &str, key: &str, def: &str) -> anyhow::Result<()> {
