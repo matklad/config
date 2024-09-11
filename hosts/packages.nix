@@ -10,13 +10,13 @@
       ["for f in libGLESv2.so libqt6_shim.so ; do"]
       oldAttrs.buildPhase
     ;
-  })).override {
+  }).override {
     qt5 = pkgs.qt6;
     commandLineArgs = [ "--ozone-platform=wayland" ];
     # The following two are just my preference, feel free to leave them out
     proprietaryCodecs = true;
     enableWidevine = true;
-  }
+  })
 
   anki
   filelight
