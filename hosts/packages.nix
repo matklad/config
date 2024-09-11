@@ -32,7 +32,7 @@
   # Langs
   (python3.withPackages (py: [
     py.requests
-    ps.llm
+    py.llm
     (callPackage ./llm-claude-3.nix {})
   ]))
   ant
