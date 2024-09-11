@@ -25,7 +25,7 @@
 
   # Viewers
   audacious
-  qpdfview
+  # qpdfview
   qview
   haruna
 
