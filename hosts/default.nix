@@ -246,7 +246,7 @@
 
   fonts = {
     fontDir.enable = true;
-    enableDefaultPackages = true;
+    enableDefaultPackages = false;
     packages = with pkgs; [
       hack-font
       fira-code
