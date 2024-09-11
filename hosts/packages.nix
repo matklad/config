@@ -30,7 +30,11 @@
   haruna
 
   # Langs
-  (python3.withPackages (py: [py.requests]))
+  (python3.withPackages (py: [
+    py.requests
+    ps.llm
+    (callPackage ./llm-claude-3.nix {})
+  ]))
   ant
   cmake
   deno
@@ -87,7 +91,6 @@
   kdePackages.kdbusaddons
   libimobiledevice
   linuxPackages.perf
-  (llm.withPlugins [(callPackage ./llm-claude-3.nix {})])
   ntfs3g
   patchelf
   pciutils
