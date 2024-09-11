@@ -6,21 +6,8 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = inputs@{ self, nixos-hardware, ... }:
-    let patches = [
-      {
-        url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/292148.diff";
-        sha256 = "sha256-gaH4UxKi2s7auoaTmbBwo0t4HuT7MwBuNvC/z2vvugE=";
-      }
-    ];
-    originPkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
-    nixpkgs = originPkgs.applyPatches {
-      name = "nixpkgs-patched";
-      src = inputs.nixpkgs;
-      patches = map originPkgs.fetchpatch patches;
-    };
-    nixosSystem = import (nixpkgs + "/nixos/lib/eval-config.nix");
-    #nixosSystem = inputs.nixpkgs.lib.nixosSystem;
+  outputs = inputs@{ self, nixpkgs, nixos-hardware, ... }:
+    let nixosSystem = nixpkgs.lib.nixosSystem;
     modulesCommon = [
       ({config, pkgs, ...}: { nix.registry.nixpkgs.flake = nixpkgs; })
       ./hosts
