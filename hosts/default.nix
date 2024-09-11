@@ -248,10 +248,6 @@
     fontDir.enable = true;
     enableDefaultPackages = false;
     packages = with pkgs; [
-      hack-font
-      fira-code
-      ubuntu_font_family
-      inconsolata
       noto-fonts
       noto-fonts-emoji
       jetbrains-mono
