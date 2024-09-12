@@ -56,6 +56,12 @@ fn plasma_shortcuts(sh: &Shell) -> anyhow::Result<()> {
     key(sh, "kwin", "view_actual_size", "none,Meta+0,Zoom to Actual Size")?;
     key(sh, "kwin", "view_zoom_in", "none,Meta++\tMeta+=,Zoom In")?;
     key(sh, "kwin", "view_zoom_out", "none,Meta+-,Zoom Out")?;
+    key(
+        sh,
+        "org_kde_powerdevil",
+        "powerProfile",
+        "powerProfile=none,Battery\tMeta+B,Switch Power Profile",
+    )?;
 
     return Ok(());
 
