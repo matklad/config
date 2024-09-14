@@ -27,7 +27,7 @@
   spotify
   steam-run
   vscode
-  (pkgs.writeShellScriptBin "code-open" ''
+  (pkgs.writeShellScriptBin "code-goto" ''
     ${vscode}/bin/code --reuse-window --goto "$@"
   '')
   zed-editor
