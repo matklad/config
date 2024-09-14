@@ -652,4 +652,5 @@
     },
     "zig.zls.path": "/home/matklad/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
     "terminal.integrated.fontSize": 17,
+    "files.autoSave": "afterDelay",
 }
