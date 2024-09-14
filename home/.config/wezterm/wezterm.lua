@@ -38,6 +38,23 @@ config.keys = {
     action = wezterm.action.QuickSelect,
   },
   {
+    key = 'o',
+    mods = 'CTRL',
+    action = wezterm.action.QuickSelectArgs {
+      label = 'open url',
+      patterns = {
+        "\\b\\S+:\\d+:\\d+\\b",
+      },
+      action = wezterm.action_callback(function(window, pane)
+        local path = pane:get_current_working_dir().path .. '/' ..
+          window:get_selection_text_for_pane(pane)
+        wezterm.log_info('opening: ' .. path)
+        wezterm.open_with(path, 'code')
+      end),
+    },
+  },
+
+  {
     key = 'e',
     mods = 'SUPER',
     action = wezterm.action.SplitHorizontal {
