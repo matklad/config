@@ -183,7 +183,6 @@
   };
 
   boot = {
-    crashDump.enable = true;
     tmp.useTmpfs = true;
     loader = {
       timeout = 1;
