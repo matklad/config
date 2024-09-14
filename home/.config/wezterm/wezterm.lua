@@ -49,7 +49,7 @@ config.keys = {
         local path = pane:get_current_working_dir().path .. '/' ..
           window:get_selection_text_for_pane(pane)
         wezterm.log_info('opening: ' .. path)
-        wezterm.open_with(path, 'code')
+        wezterm.open_with(path, 'code-goto')
       end),
     },
   },
