@@ -155,7 +155,6 @@
     pcscd.enable = true;
     openssh = {
       enable = true;
-      ports = [10100];
       settings.PermitRootLogin = "no";
       settings.PasswordAuthentication = false;
     };
@@ -218,8 +217,7 @@
   networking = {
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 10100 ];
-      allowedUDPPorts = [ 10100 ];
+      allowedTCPPorts = [ 22 ];
     };
     networkmanager = {
       enable = true;
