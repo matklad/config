@@ -255,6 +255,9 @@
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" "docker" "audio" "plugdev" "podman" "libvirtd" ];
       uid = 1000;
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHQSOWMtVbK4euVg8Dx/uWkLIpOZsDZzv4fg8zxAVEEW aleksey.kladov@gmail.com"
+      ];
     };
   };
 
