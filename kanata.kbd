@@ -1,0 +1,63 @@
+(defcfg
+  macos-dev-names-include (
+    "Apple Internal Keyboard"
+  )
+)
+
+(defsrc
+        f1    f2   f3   f4   f5  f6    f7   f8   f9   f10   f11   f12
+        grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
+        caps a    s    d    f    g    h    j    k    l     ;    '    ret
+        lsft z    x    c    v    b    n    m    ,    .     /    rsft
+     fn lctl lalt lmet           spc            rmet ralt)
+
+(deflayer qwerty
+        f1    f2   f3   f4   f5  f6    f7   f8   f9   f10   f11   f12
+        grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
+        esc  a    s    d    f    g    h    j    k    l     ;    '    ret
+        lsft @lc  @la  @lm  v    b    n    m    @rm  @ra   @rc  rsft
+   @fnl lctl lalt lmet           @sp            rmet ralt)
+
+(deflayer motion
+        f1   f2   @lq  lrld f5  f6    f7   f8   f9   f10   f11   f12
+        grv  @1   @2   @3   @4   @5    6    7    8    9     0    -    =    bspc
+        tab  q    w    e    r    t    y    pgup up   pgdn  p    [    ]    \
+        esc  a    s    d    f    g    bspc lft  down rght del   '    ret
+        lsft @lc @la   @lm  v    b    ret  m M-lft M-rght /    rsft
+     fn lctl lalt lmet           @sp            rmet ralt)
+
+(deflayer base
+        f1   f2   @lq  lrld f5  f6    f7   f8   f9   f10   f11   f12
+        grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
+        caps a    s    d    f    g    h    j    k    l     ;    '    ret
+        lsft z    x    c    v    b    n    m    ,    .     /    rsft
+     fn lctl lalt lmet           spc            rmet ralt)
+
+(deflayer fn
+        brdn brup _    _    _    _   prev  pp  next  mute  vold volu
+        grv  1    2    3    4    5    6    7    8    9     0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i    o     p    [    ]    \
+        caps a    s    d    f    g    h    j    k    l     ;    '    ret
+        lsft z    x    c    v    b    n    m    ,    .     /    rsft
+     fn lctl lalt lmet           spc            rmet ralt)
+
+
+(defalias
+    1  M-f1
+    2  M-f2
+    3  M-f3
+    4  M-f4
+    5  M-f5
+    lb (layer-switch base)
+    lq (layer-switch qwerty)
+    sp (tap-hold-release-keys 200 200 spc (layer-toggle motion) (a    s    d    f    g))
+    lc (tap-hold 200 200 z lctl)
+    la (tap-hold 200 200 x lalt)
+    lm (tap-hold 200 200 c lmet)
+    rm (tap-hold 200 200 , rmet)
+    ra (tap-hold 200 200 . lalt)
+    rc (tap-hold 200 200 / rctl)
+    fnl (tap-hold 200 200 fn (layer-toggle fn)))

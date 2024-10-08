@@ -1,0 +1,34 @@
+# Macos for KDE Users
+
+## Log
+
+- Click through install, apple id, etc
+- Enable what I think is FDE
+- Install homebrew through https://brew.sh
+- Install workman layout from https://workmanlayout.org
+- `brew install --cask visual-studio-code`
+- start this log
+- start brewfile using https://matthiasportzel.com/brewfile/
+- brewfile is ruby!!
+- update to sonoma
+- oh wow, macos is case-insensitive file system!
+- that update took a long time
+- add fish to brewfile
+- setup fish as default shell (needs GUI, chsh complains about non-standard shell)
+- setup rust via brew rustup-init
+- start `config` rust tool
+- add `config brew` to run brewfile
+- add `config link` to setup symlinks
+- kanata isn't in brew, let's use karabiner
+- karabiner space-fn mode it is. urgh, carabiner config is super unfriendly
+- https://github.com/pqrs-org/Karabiner-Elements/issues/3929 -- karabiner breaks tiling
+- safary uses cmd+left/right arrow, my terminal uses home end
+- date --iso not working (date -I)
+- no standard split shortcut
+- no standard rename shortcut
+- back to kanata:
+    - carabiner driver is good
+    - karabiner JSON is bad: verbose, and can't actually configure useful behavior
+    - kanata uses driver to implement what's needed.
+- slack dosen't despect DefaultKeyBindings (home, end)
+- can't bind globe key

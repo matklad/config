@@ -1,0 +1,10 @@
+{
+	"display": {
+		"prefix": ".display",
+		"body": "[$0]{.display}"
+	},
+	"kbd": {
+		"prefix": ".kbd",
+		"body": "[$0]{.kbd}"
+	}
+}

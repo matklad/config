@@ -1,7 +1,0 @@
-[Desktop Entry]
-Exec=autostart
-Icon=dialog-scripts
-Name=autostart
-Path=
-Type=Application
-X-KDE-AutostartScript=true

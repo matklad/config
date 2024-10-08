@@ -1,0 +1,7 @@
+{
+
+    "\UF729"   = "moveToBeginningOfLine:";                       /* Home         */
+    "$\UF729"  = "moveToBeginningOfLineAndModifySelection:";     /* Shift + Home */
+    "\UF72B"   = "moveToEndOfLine:";                             /* End          */
+    "$\UF72B"  = "moveToEndOfLineAndModifySelection:";           /* Shift + End  */
+}
