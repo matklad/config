@@ -154,7 +154,8 @@
     earlyoom.enable = true;
     pcscd.enable = true;
     openssh = {
-      enable = false;
+      enable = true;
+      ports = [10100];
       settings.PermitRootLogin = "no";
       settings.PasswordAuthentication = false;
     };
