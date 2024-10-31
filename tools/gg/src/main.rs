@@ -1,15 +1,17 @@
 use anyhow::Context as _;
-use flags::Branch;
 use xshell::{cmd, Shell};
 
 mod flags {
     xflags::xflags! {
         cmd gg {
+            cmd clone {
+                required userrepo: String
+            }
             cmd worktree {
                 cmd add {
                     required name: String
                 }
-                cmd clone {
+                cmd init {
                     required remote: String
                 }
             }
@@ -92,9 +94,10 @@ fn main() -> Result {
     };
 
     match flags.subcommand {
+        flags::GgCmd::Clone(clone) => context.clone(&clone.userrepo),
         flags::GgCmd::Worktree(worktree) => match worktree.subcommand {
             flags::WorktreeCmd::Add(add) => context.worktree_add(&add.name),
-            flags::WorktreeCmd::Clone(clone) => context.worktree_clone(&clone.remote),
+            flags::WorktreeCmd::Init(clone) => context.worktree_clone(&clone.remote),
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
         flags::GgCmd::Switch(switch) => context.switch(switch.branch.as_deref()),
@@ -119,6 +122,32 @@ struct Context<'a> {
 }
 
 impl<'a> Context<'a> {
+    fn clone(&self, user_repo: &str) -> Result {
+        let Some((user, repo)) = user_repo.split_once('/') else {
+            anyhow::bail!("invalid user/repo: `{user_repo}`")
+        };
+        cmd!(self.sh, "git clone git@github.com:matklad/{repo}").run()?;
+        if user == "matklad" {
+            return Ok(());
+        }
+
+        let _p = self.sh.push_dir(repo);
+
+        cmd!(
+            self.sh,
+            "git remote add upstream git@github.com:{user}/{repo}.git"
+        )
+        .run()?;
+
+        cmd!(self.sh, "git fetch upstream").run()?;
+        let branch = cmd!(self.sh, "git rev-parse --abbrev-ref HEAD").read()?;
+        cmd!(self.sh, "git switch {branch}").run()?;
+        cmd!(self.sh, "git reset --hard upstream/{branch}").run()?;
+        cmd!(self.sh, "git branch --set-upstream-to=upstream/{branch}").run()?;
+
+        Ok(())
+    }
+
     fn worktree_add(&self, name: &str) -> Result {
         let commit = self.main_branch;
         cmd!(self.sh, "git worktree add ./{name} {commit} --detach").run()?;
