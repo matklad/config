@@ -27,7 +27,6 @@ cask "visual-studio-code"
 cask "wezterm"
 cask "zed"
 cask "keymapp"
-cask "bitwarden"
 
 # cask "qbittorrent"
 # cask "vlc"
