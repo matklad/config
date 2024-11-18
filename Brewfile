@@ -1,3 +1,5 @@
+
+
 brew "deno"
 brew "fish"
 brew "fzf"
@@ -22,13 +24,22 @@ cask "obs"
 cask "slack"
 cask "spotify"
 cask "telegram"
-cask "utm"
 cask "visual-studio-code"
 cask "wezterm"
 cask "zed"
 cask "keymapp"
 
-# cask "qbittorrent"
-# cask "vlc"
-# cask "whisky"
-# cask "steam"
+require 'socket'
+hostname = Socket.gethostname
+puts hostname
+
+if hostname == "TigerMac.local"
+  cask "slack"
+end
+
+if hostname == "ahab"
+  cask "qbittorrent"
+  cask "vlc"
+  cask "whisky"
+  cask "steam"
+end

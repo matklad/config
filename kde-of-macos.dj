@@ -15,7 +15,6 @@
 - that update took a long time
 - add fish to brewfile
 - setup fish as default shell (needs GUI, chsh complains about non-standard shell)
-
   * can't set `/opt/homebrew/bin/fish`, it resolves symlink?
 - setup rust via brew rustup-init
 - start `config` rust tool
@@ -39,3 +38,5 @@
 - - -
 
 - set keyboard repeat to shorter
+- changing hostname: GUI, "local hostname"
+- Safary: cmd+shift+/ show status bar

@@ -14,3 +14,5 @@ abbr "ls" "lsd -l"
 abbr "sw" "gg switch"
 abbr "swd" "git switch --detach"
 abbr "zz" "./zig/zig"
+
+fish_config theme choose termcolors

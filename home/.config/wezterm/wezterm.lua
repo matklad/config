@@ -2,8 +2,9 @@ local wezterm = require 'wezterm'
 local balance = require 'balance'
 
 local config = wezterm.config_builder()
+-- config.color_scheme = 'CLRS'
 
-  config.tls_clients = {
+config.tls_clients = {
   {
     name = 'Moby',
     remote_address = '192.168.2.2:8080',
