@@ -32,3 +32,4 @@
     - kanata uses driver to implement what's needed.
 - slack dosen't despect DefaultKeyBindings (home, end)
 - can't bind globe key
+- cmd+shift+? = M-x = cmd+shift+p

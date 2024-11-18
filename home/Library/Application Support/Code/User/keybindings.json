@@ -7,6 +7,10 @@
   },
 
   {
+    "key": "cmd+shift+/",
+    "command": "workbench.action.showCommands"
+  },
+  {
     "key": "cmd+shift+;",
     "command": "workbench.action.showCommands",
   },
