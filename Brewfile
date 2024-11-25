@@ -28,6 +28,7 @@ cask "visual-studio-code"
 cask "wezterm"
 cask "zed"
 cask "keymapp"
+cask "alfred"
 
 require 'socket'
 hostname = Socket.gethostname
@@ -37,7 +38,7 @@ if hostname == "TigerMac.local"
   cask "slack"
 end
 
-if hostname == "ahab"
+if hostname == "ahab.local"
   cask "qbittorrent"
   cask "vlc"
   cask "whisky"
