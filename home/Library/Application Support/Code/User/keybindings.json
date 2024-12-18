@@ -489,6 +489,7 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   { "key": "ctrl+n", "command": "-workbench.action.files.newUntitledFile" },
+  { "key": "ctrl+f", "command": "-cursorRight"},
   { "key": "ctrl+y", "command": "-redo" },
   { "key": "ctrl+[", "command": "-editor.action.outdentLines" },
   { "key": "ctrl+]", "command": "-editor.action.indentLines" },

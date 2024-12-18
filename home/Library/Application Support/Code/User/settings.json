@@ -81,7 +81,7 @@
     "extensions.ignoreRecommendations": true,
     "extensions.verifySignature": false,
     "files.autoSaveDelay": 100,
-    "files.enableTrash": false,
+    "files.enableTrash": true,
     "files.hotExit": "off",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
