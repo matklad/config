@@ -8,4 +8,4 @@ edition = "2021"
 [dependencies]
 anyhow = "1.0.75"
 xflags = "0.4.0-pre.1"
-xshell = "0.2.5"
+xshell = "0.3.0-pre.2"

@@ -131,19 +131,19 @@ impl<'a> Context<'a> {
             return Ok(());
         }
 
-        let _p = self.sh.push_dir(repo);
+        let sh = self.sh.with_current_dir(repo);
 
         cmd!(
-            self.sh,
+            sh,
             "git remote add upstream git@github.com:{user}/{repo}.git"
         )
         .run()?;
 
-        cmd!(self.sh, "git fetch upstream").run()?;
-        let branch = cmd!(self.sh, "git rev-parse --abbrev-ref HEAD").read()?;
-        cmd!(self.sh, "git switch {branch}").run()?;
-        cmd!(self.sh, "git reset --hard upstream/{branch}").run()?;
-        cmd!(self.sh, "git branch --set-upstream-to=upstream/{branch}").run()?;
+        cmd!(sh, "git fetch upstream").run()?;
+        let branch = cmd!(sh, "git rev-parse --abbrev-ref HEAD").read()?;
+        cmd!(sh, "git switch {branch}").run()?;
+        cmd!(sh, "git reset --hard upstream/{branch}").run()?;
+        cmd!(sh, "git branch --set-upstream-to=upstream/{branch}").run()?;
 
         Ok(())
     }
@@ -161,11 +161,11 @@ impl<'a> Context<'a> {
         let dir_name = dir_name.rsplit_once('.').map_or(dir_name, |it| it.0);
 
         self.sh.create_dir(dir_name)?;
-        let _dir = self.sh.push_dir(dir_name);
-        cmd!(self.sh, "git clone --bare {remote} .bare").run()?;
-        self.sh.write_file(".git", "gitdir: ./.bare")?;
+        let sh = self.sh.with_current_dir(dir_name);
+        cmd!(sh, "git clone --bare {remote} .bare").run()?;
+        sh.write_file(".git", "gitdir: ./.bare")?;
         cmd!(
-            self.sh,
+            sh,
             "git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'"
         )
         .run()?;

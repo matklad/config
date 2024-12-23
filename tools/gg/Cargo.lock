@@ -34,15 +34,15 @@ checksum = "94d18ac1a136311770ed587356f8a828c9b86261f68761f34e6cdc6d5b4c435c"
 
 [[package]]
 name = "xshell"
-version = "0.2.5"
+version = "0.3.0-pre.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ce2107fe03e558353b4c71ad7626d58ed82efaf56c54134228608893c77023ad"
+checksum = "3e6192cff94a7552e329df8c2c6f00371f107eb6e8c970f9948879216d7c46fe"
 dependencies = [
  "xshell-macros",
 ]
 
 [[package]]
 name = "xshell-macros"
-version = "0.2.5"
+version = "0.3.0-pre.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7e2c411759b501fb9501aac2b1b2d287a6e93e5bdcf13c25306b23e1b716dd0e"
+checksum = "3259fc1522c6f4915b1cc3b52dff32a88069ba979b2513fe8ee6a058670dd5dc"

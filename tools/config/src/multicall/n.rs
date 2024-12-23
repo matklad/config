@@ -35,12 +35,11 @@ pub(crate) fn run(sh: &Shell) -> anyhow::Result<()> {
         let mut cmd = match &task {
             Task::Command { progn, args } => cmd!(sh, "{progn} {args...}"),
             Task::Shell { script } => cmd!(sh, "fish -c {script}"),
-        }
-        .quiet();
+        };
         if ignore_status {
             cmd = cmd.ignore_status();
         }
-        cmd.run()?;
+        cmd.run_echo()?;
     }
 
     Ok(())
