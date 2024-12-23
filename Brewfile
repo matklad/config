@@ -41,6 +41,4 @@ end
 if hostname == "ahab.local"
   cask "qbittorrent"
   cask "vlc"
-  cask "whisky"
-  cask "steam"
 end
