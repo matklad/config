@@ -18,3 +18,5 @@
 [bash]
 	showDirtyState = true
 
+[core]
+	excludesFile = ~/.config/git/exclude
