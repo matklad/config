@@ -15,4 +15,8 @@ abbr "sw" "gg switch"
 abbr "swd" "git switch --detach"
 abbr "zz" "./zig/zig"
 
+alias "rr" "~/config/tools/remote-run.sh  matklad 192.168.2.4"
+alias "rs" "~/config/tools/remote-sync.sh matklad 192.168.2.4"
+alias "rsh" "ssh matklad@192.168.2.4"
+
 fish_config theme choose termcolors
