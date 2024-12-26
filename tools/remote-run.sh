@@ -11,4 +11,4 @@ shift 2
 LOCAL_DIR=`pwd`
 REMOTE_DIR=`echo $LOCAL_DIR | sed -e "s/Users/home/"`
 
-ssh $USER@$HOST "cd $REMOTE_DIR && $*"
+ssh -t $USER@$HOST "cd $REMOTE_DIR && $*"

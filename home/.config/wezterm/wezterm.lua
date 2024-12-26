@@ -2,6 +2,7 @@ local wezterm = require 'wezterm'
 local balance = require 'balance'
 
 local config = wezterm.config_builder()
+config.font_size = 20
 -- config.color_scheme = 'CLRS'
 
 config.tls_clients = {

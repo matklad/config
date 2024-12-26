@@ -30,6 +30,9 @@ mod flags {
             cmd prune {
 
             }
+            cmd absorb {
+
+            }
             cmd commit {
                 /// Commit message.
                 optional message: String

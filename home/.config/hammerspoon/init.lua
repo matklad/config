@@ -1,6 +1,6 @@
 local apps =
 {
-    F1 = "WezTerm",
+    F1 = "Ghostty",
     F2 = "Visual Studio Code",
     F3 = "Safari",
     F4 = "Slack",
