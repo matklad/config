@@ -327,30 +327,30 @@
   },
 
   // Text Navigation
-  {
-    "key": "pageup",
-    "command": "cursorMove",
-    "when": "editorTextFocus",
-    "args": { "by": "wrappedLine", "value": 36, "to": "up" }
-  },
-  {
-    "key": "shift+pageup",
-    "command": "cursorMove",
-    "when": "editorTextFocus",
-    "args": { "by": "wrappedLine", "value": 36, "to": "up", "select": true }
-  },
-  {
-    "key": "pagedown",
-    "command": "cursorMove",
-    "when": "editorTextFocus",
-    "args": { "by": "wrappedLine", "value": 36, "to": "down" }
-  },
-  {
-    "key": "shift+pagedown",
-    "command": "cursorMove",
-    "when": "editorTextFocus",
-    "args": { "by": "wrappedLine", "value": 36, "to": "down", "select": true }
-  },
+  // {
+  //   "key": "pageup",
+  //   "command": "cursorMove",
+  //   "when": "editorTextFocus",
+  //   "args": { "by": "wrappedLine", "value": 36, "to": "up" }
+  // },
+  // {
+  //   "key": "shift+pageup",
+  //   "command": "cursorMove",
+  //   "when": "editorTextFocus",
+  //   "args": { "by": "wrappedLine", "value": 36, "to": "up", "select": true }
+  // },
+  // {
+  //   "key": "pagedown",
+  //   "command": "cursorMove",
+  //   "when": "editorTextFocus",
+  //   "args": { "by": "wrappedLine", "value": 36, "to": "down" }
+  // },
+  // {
+  //   "key": "shift+pagedown",
+  //   "command": "cursorMove",
+  //   "when": "editorTextFocus",
+  //   "args": { "by": "wrappedLine", "value": 36, "to": "down", "select": true }
+  // },
 
   {
     "key": "up",
