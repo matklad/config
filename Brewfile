@@ -29,6 +29,7 @@ cask "ghostty"
 cask "zed"
 cask "keymapp"
 cask "alfred"
+cask "signal"
 
 require 'socket'
 hostname = Socket.gethostname
