@@ -70,6 +70,7 @@
         "arzg.intellij-theme",
         "arzg.xcode-theme",
         "denoland.vscode-deno",
+        "earshinov.sort-lines-by-selection",
         "jakearl.search-editor-apply-changes",
         "jsynowiec.vscode-insertdatestring",
         "jymeng.leuven-vscode",
@@ -83,15 +84,16 @@
         "stkb.rewrap",
         "streetsidesoftware.code-spell-checker-russian",
         "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
         "usernamehw.find-jump",
         "vadimcn.vscode-lldb",
         "VSpaceCode.whichkey",
         "wisim3000.djot-marker",
         "wmaurer.change-case",
+        "wraith13.file-path-bar",
         "yhirose.filtertext",
         "yo1dog.cursor-align",
-        "ziglang.vscode-zig",
-        "wraith13.file-path-bar"
+        "ziglang.vscode-zig"
     ],
     "dependencies": {
     }
