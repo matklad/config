@@ -6,5 +6,13 @@
 	"kbd": {
 		"prefix": ".kbd",
 		"body": "[$0]{.kbd}"
+	},
+	"notes": {
+		"prefix": ":notes",
+		"body": [
+			"::: notes",
+			"$0",
+			":::"
+		]
 	}
 }
