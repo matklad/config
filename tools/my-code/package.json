@@ -93,7 +93,8 @@
         "wraith13.file-path-bar",
         "yhirose.filtertext",
         "yo1dog.cursor-align",
-        "ziglang.vscode-zig"
+        "ziglang.vscode-zig",
+        "ms-vscode.remote-server"
     ],
     "dependencies": {
     }

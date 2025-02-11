@@ -661,6 +661,7 @@
     },
     "zig.path": "/Users/matklad/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zig_install/zig",
     "zig.zls.path": "/Users/matklad/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
-    "zig.initialSetupDone": true,
     "files.autoSave": "afterDelay",
+    "zig.zls.enabled": "on",
+    "zig.initialSetupDone": true,
 }

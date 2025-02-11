@@ -31,6 +31,8 @@ cask "spotify"
 cask "telegram"
 cask "visual-studio-code"
 cask "zed"
+cask "utm"
+cask "crystalfetch"
 
 require 'socket'
 hostname = Socket.gethostname
