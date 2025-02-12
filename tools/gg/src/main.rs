@@ -30,9 +30,6 @@ mod flags {
             cmd prune {
 
             }
-            cmd absorb {
-
-            }
             cmd commit {
                 /// Commit message.
                 optional message: String
@@ -176,16 +173,16 @@ impl<'a> Context<'a> {
     }
 
     fn amend(&self) -> Result {
-        cmd!(self.sh, "git add .").run()?;
-        cmd!(self.sh, "git --no-pager diff --cached --color=always").run()?;
+        cmd!(self.sh, "git add .").run_echo()?;
+        cmd!(self.sh, "git --no-pager diff --cached --color=always").run_echo()?;
         cmd!(
             self.sh,
             "git --no-pager show -s --oneline --abbrev-commit --color=always HEAD"
         )
-        .run()?;
+        .run_echo()?;
 
         if yes_or_no("Continue?") {
-            cmd!(self.sh, "git commit --amend --no-edit").run()?;
+            cmd!(self.sh, "git commit --amend --no-edit").run_echo()?;
         }
         Ok(())
     }
