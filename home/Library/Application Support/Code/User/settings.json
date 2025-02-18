@@ -102,6 +102,7 @@
     "editWithShell.shell.linux": "/run/current-system/sw/bin/fish",
     "editWithShell.shellArgs.linux": [ "-i", "-c" ],
     "spellright.suggestionsInHints": false,
+    "spellright.addToSystemDictionary": true,
     "typescript.suggest.completeFunctionCalls": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "nix.enableLanguageServer": true,

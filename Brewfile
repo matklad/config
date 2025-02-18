@@ -15,6 +15,8 @@ brew "ripgrep"
 brew "rustup"
 brew "unar"
 brew "ffmpeg"
+brew "llm"
+brew "llm-anthropic"
 
 cask "adguard"
 cask "alfred"
