@@ -69,6 +69,7 @@
     "extensionPack": [
         "arzg.intellij-theme",
         "arzg.xcode-theme",
+        "ban.spellright",
         "denoland.vscode-deno",
         "earshinov.sort-lines-by-selection",
         "jakearl.search-editor-apply-changes",
@@ -78,12 +79,11 @@
         "kaiwood.center-editor-window",
         "maattdd.gitless",
         "matklad.pale-fire",
+        "ms-vscode.remote-server",
         "oijaz.unicode-latex",
         "rust-lang.rust-analyzer",
         "ryu1kn.edit-with-shell",
         "stkb.rewrap",
-        "streetsidesoftware.code-spell-checker-russian",
-        "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
         "usernamehw.find-jump",
         "vadimcn.vscode-lldb",
@@ -93,8 +93,7 @@
         "wraith13.file-path-bar",
         "yhirose.filtertext",
         "yo1dog.cursor-align",
-        "ziglang.vscode-zig",
-        "ms-vscode.remote-server"
+        "ziglang.vscode-zig"
     ],
     "dependencies": {
     }
