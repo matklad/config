@@ -16,7 +16,6 @@ brew "rustup"
 brew "unar"
 brew "ffmpeg"
 brew "llm"
-brew "llm-anthropic"
 
 cask "adguard"
 cask "alfred"
@@ -35,6 +34,7 @@ cask "visual-studio-code"
 cask "zed"
 cask "utm"
 cask "crystalfetch"
+cask "chromium"
 
 require 'socket'
 hostname = Socket.gethostname

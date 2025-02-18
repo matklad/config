@@ -1,0 +1,10 @@
+font-size=16
+cursor-style = block
+cursor-style-blink = false
+theme = BlulocoLight
+keybind = cmd+t=new_split:right
+keybind = cmd+shift+t=new_split:down
+keybind = cmd+opt+t=new_tab
+shell-integration-features = no-cursor
+window-padding-y=2,8
+maximize = true
