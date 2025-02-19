@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>kanata</string>
+    <string>org.custom.kanata</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/opt/homebrew/bin/kanata</string>
-        <string>-c</string>
-        <string>/Users/matklad/config/kanata.kbd</string>
+        <string>/opt/homebrew/Cellar/kanata/1.8.0/bin/kanata</string>
+        <string>--cfg</string>
+        <string>/Users/matklad/config/kanata/kanata.kbd</string>
     </array>
     <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
     <true/>
 </dict>
 </plist>
