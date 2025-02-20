@@ -20,6 +20,7 @@ mod flags {
             }
             /// Fuzzy switch to a different branch.
             cmd switch {
+                optional -r,--remote
                 optional branch: String
             }
             /// Creates a new branch in a synced state.
@@ -100,7 +101,7 @@ fn main() -> Result {
             flags::WorktreeCmd::Init(clone) => context.worktree_clone(&clone.remote),
         },
         flags::GgCmd::Amend(flags::Amend) => context.amend(),
-        flags::GgCmd::Switch(switch) => context.switch(switch.branch.as_deref()),
+        flags::GgCmd::Switch(switch) => context.switch(switch.branch.as_deref(), switch.remote),
         flags::GgCmd::Branch(branch) => context.branch(&branch.name, branch.offline),
         flags::GgCmd::Prune(flags::Prune) => context.prune(),
         flags::GgCmd::Commit(commit) => {
@@ -187,17 +188,25 @@ impl<'a> Context<'a> {
         Ok(())
     }
 
-    fn switch(&self, branch: Option<&str>) -> Result {
+    fn switch(&self, branch: Option<&str>, remote: bool) -> Result {
         if let Some(branch) = branch {
             cmd!(self.sh, "git switch {branch}").run()?;
             return Ok(());
         }
-        let branches = cmd!(self.sh, "git branch").read()?;
+        let branches = if remote {
+            cmd!(self.sh, "git fetch").run()?;
+            cmd!(self.sh, "git branch -r").read()?
+        } else {
+            cmd!(self.sh, "git branch").read()?
+        };
         let branch_selected = cmd!(self.sh, "fzf --info=inline --height=~100% --reverse --tac")
             .stdin(&branches)
             .read()?
             .trim()
             .to_string();
+        let branch_selected = branch_selected
+            .strip_prefix(&format!("{}/", self.remote))
+            .unwrap_or(&branch_selected);
         cmd!(self.sh, "git switch {branch_selected}").run()?;
         Ok(())
     }

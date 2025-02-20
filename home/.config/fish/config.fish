@@ -12,6 +12,7 @@ abbr "gs" "git status"
 abbr "gup" "git pull --rebase"
 abbr "ls" "eza -l"
 abbr "sw" "gg switch"
+abbr "swr" "gg switch --remote"
 abbr "swd" "git switch --detach"
 abbr "zz" "./zig/zig"
 
