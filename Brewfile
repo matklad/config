@@ -17,7 +17,6 @@ brew "unar"
 brew "ffmpeg"
 brew "llm"
 
-cask "adguard"
 cask "alfred"
 cask "font-jetbrains-mono"
 cask "ghostty"
