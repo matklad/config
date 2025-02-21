@@ -16,6 +16,7 @@ brew "rustup"
 brew "unar"
 brew "ffmpeg"
 brew "llm"
+brew "tokei"
 
 cask "alfred"
 cask "font-jetbrains-mono"
