@@ -33,8 +33,6 @@ cask "spotify"
 cask "telegram"
 cask "visual-studio-code"
 cask "zed"
-cask "utm"
-cask "crystalfetch"
 cask "chromium"
 
 require 'socket'
