@@ -489,6 +489,7 @@
     "command": "-selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
+  { "key": "ctrl+right", "command": "-quickInput.acceptInBackground" },
   { "key": "ctrl+n", "command": "-workbench.action.files.newUntitledFile" },
   { "key": "ctrl+f", "command": "-cursorRight"},
   { "key": "ctrl+y", "command": "-redo" },
