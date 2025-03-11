@@ -7,6 +7,10 @@
 		"prefix": ".kbd",
 		"body": "[$0]{.kbd}"
 	},
+	"dfn": {
+		"prefix": ".dfn",
+		"body": "[$0]{.dfn}"
+	},
 	"notes": {
 		"prefix": ":notes",
 		"body": [

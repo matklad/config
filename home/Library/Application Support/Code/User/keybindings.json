@@ -79,6 +79,7 @@
   { "key": ", shift+l", "command": "workbench.action.showAllSymbols" },
   { "key": ", .", "command": "editor.action.revealDefinition" },
   { "key": ", shift+.", "command": "editor.action.revealDefinitionAside" },
+  { "key": ", t", "command": "unicode-latex.insertMathSymbol" }, 
 
   {
     "key": ", r",
