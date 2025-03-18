@@ -8,6 +8,8 @@ if [[ $USER == "" || $HOST == "" ]] ; then
 fi
 shift 2
 
+$(dirname "$0")/remote-sync.sh $USER $HOST
+
 LOCAL_DIR=`pwd`
 REMOTE_DIR=`echo $LOCAL_DIR | sed -e "s/Users/home/"`
 

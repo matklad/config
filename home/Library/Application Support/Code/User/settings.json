@@ -81,6 +81,7 @@
     "extensions.ignoreRecommendations": true,
     "extensions.verifySignature": false,
     "files.autoSaveDelay": 100,
+    "files.autoSave": "afterDelay",
     "files.enableTrash": true,
     "files.hotExit": "off",
     "files.insertFinalNewline": true,
@@ -96,6 +97,7 @@
     "update.showReleaseNotes": false,
     "git.alwaysShowStagedChangesResourceGroup": true,
     "git.autoRepositoryDetection": "openEditors",
+    "git.openRepositoryInParentFolders": "always",
     "debug.onTaskErrors": "debugAnyway",
     "remote.SSH.useLocalServer": false,
     // plugins
@@ -362,6 +364,13 @@
                     "name": "Keybindings",
                     "type": "command",
                     "command": "workbench.action.openGlobalKeybindingsFile"
+                },
+                {
+                    "key": "m",
+                    "name": "make.ts",
+                    "type": "command",
+                    "command": "workbench.action.quickOpen",
+                    "args": "make.ts"
                 }
             ]
         },
@@ -641,7 +650,6 @@
         100
     ],
     "workbench.productIconTheme": "IntelliJ",
-    "git.openRepositoryInParentFolders": "never",
     "gitlens.mode.active": "zen",
     "githubPullRequests.remotes": [
         "upstream",
@@ -660,6 +668,5 @@
     "[javascript]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
-    "files.autoSave": "afterDelay",
     "zig.zls.enabled": "on",
 }
