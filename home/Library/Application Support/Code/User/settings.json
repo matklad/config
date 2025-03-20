@@ -220,6 +220,25 @@
             "type": "bindings",
             "bindings": [
                 {
+                    "key": "n",
+                    "name": "new",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "f",
+                            "name": "File",
+                            "type": "command",
+                            "command": "explorer.newFile"
+                        },
+                        {
+                            "key": "d",
+                            "name": "Directory",
+                            "type": "command",
+                            "command": "explorer.newFolder"
+                        },
+                    ]
+                },
+                {
                     "key": "f",
                     "name": "Format",
                     "type": "command",
@@ -669,4 +688,7 @@
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "zig.zls.enabled": "on",
+    "zig.path": "/Users/matklad/p/tb/work/zig/zig",
+    "zig.zls.path": "/Users/matklad/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+    "zig.initialSetupDone": true,
 }

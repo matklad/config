@@ -290,7 +290,7 @@ impl<'a> Context<'a> {
             None => cmd!(self.sh, "git rebase {to}"),
             Some(commit) => cmd!(self.sh, "git rebase --onto {to} {commit}^"),
         }
-        .run()?;
+        .run_echo()?;
         Ok(())
     }
 

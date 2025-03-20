@@ -12,7 +12,7 @@
   },
   {
     "key": "cmd+shift+;",
-    "command": "workbench.action.showCommands",
+    "command": "workbenchaction.showCommands",
   },
 
   { "key": "cmd+.", "command": "findJump.activate" },
@@ -79,7 +79,7 @@
   { "key": ", shift+l", "command": "workbench.action.showAllSymbols" },
   { "key": ", .", "command": "editor.action.revealDefinition" },
   { "key": ", shift+.", "command": "editor.action.revealDefinitionAside" },
-  { "key": ", t", "command": "unicode-latex.insertMathSymbol" }, 
+  { "key": ", t", "command": "unicode-latex.insertMathSymbol" },
 
   {
     "key": ", r",
