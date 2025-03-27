@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 14,
+    "editor.fontSize": 32,
     "terminal.integrated.fontSize": 10,
     "[html]": {
         "editor.tabSize": 2
@@ -674,7 +674,7 @@
         "upstream",
         "origin"
     ],
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Pale Fire High Contrast",
     "lldb.suppressUpdateNotifications": true,
     "cSpell.enableFiletypes": [
         "djot",
