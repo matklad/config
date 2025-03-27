@@ -245,8 +245,8 @@ impl<'a> Context<'a> {
 
     fn commit(&self, message: Option<&str>, branch: Option<&str>) -> Result {
         let message = message.unwrap_or(".");
-        cmd!(self.sh, "git add --all").run()?;
-        cmd!(self.sh, "git --no-pager diff --cached --color=always").run()?;
+        cmd!(self.sh, "git add --all").run_echo()?;
+        cmd!(self.sh, "git --no-pager diff --cached --color=always").run_echo()?;
         match branch {
             Some(branch) => {
                 cmd!(self.sh, "git switch -c {branch}").run()?;
