@@ -17,6 +17,9 @@
 
   { "key": "cmd+.", "command": "findJump.activate" },
   { "key": "cmd+shift+.", "command": "findJump.activateWithSelection" },
+  { "key": "cmd+,",        "command": "-workbench.action.openSettings" },
+  { "key": "cmd+,",        "command": "workbench.action.openSettingsJson" },
+
 
   // Window management
   {
