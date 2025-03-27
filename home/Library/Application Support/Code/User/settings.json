@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 32,
+    "editor.fontSize": 16,
     "terminal.integrated.fontSize": 10,
     "[html]": {
         "editor.tabSize": 2
