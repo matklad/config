@@ -2,7 +2,8 @@
     "editor.fontSize": 16,
     "terminal.integrated.fontSize": 10,
     "[html]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "[git-commit]": {
         "rewrap.wrappingColumn": 72,
