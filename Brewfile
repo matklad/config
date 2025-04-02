@@ -1,12 +1,13 @@
 
 
-brew "git-absorb"
+brew "asciinema"
 brew "deno"
 brew "eza"
 brew "ffmpeg"
 brew "fish"
 brew "fzf"
 brew "gh"
+brew "git-absorb"
 brew "git"
 brew "go"
 brew "htop"

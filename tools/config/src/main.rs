@@ -5,6 +5,7 @@ use xshell::{cmd, Shell};
 mod flags {
     xflags::xflags! {
         cmd config {
+            cmd make {}
             cmd brew {
 
             }
@@ -25,6 +26,7 @@ fn main() -> anyhow::Result<()> {
     let flags = flags::Config::from_env_or_exit();
     let sh = xshell::Shell::new()?;
     match flags.subcommand {
+        flags::ConfigCmd::Make(flags::Make) => make(&sh)?,
         flags::ConfigCmd::Edit(flags::Edit) => {
             Err(std::process::Command::new("code")
                 .arg("/Users/matklad/config")
@@ -33,12 +35,18 @@ fn main() -> anyhow::Result<()> {
         flags::ConfigCmd::Brew(flags::Brew) => {
             cmd!(
                 sh,
-                "brew bundle install --cleanup --file=~/config/Brewfile --no-lock"
+                "brew bundle install --cleanup --file=~/config/Brewfile"
             )
-            .run()?;
+            .run_echo()?;
         }
         flags::ConfigCmd::Link(flags::Link) => symlink(&sh)?,
     }
+    Ok(())
+}
+
+fn make(sh: &Shell) -> anyhow::Result<()> {
+    cmd!(sh, "cargo install --path /Users/matklad/config/tools/gg").run_echo()?;
+    cmd!(sh, "cargo install --path /Users/matklad/config/tools/config").run_echo()?;
     Ok(())
 }
 

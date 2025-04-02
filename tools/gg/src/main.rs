@@ -189,12 +189,20 @@ impl<'a> Context<'a> {
     }
 
     fn switch(&self, branch: Option<&str>, remote: bool) -> Result {
+        if branch == Some("tip") {
+            let remote = self.remote;
+            let main = self.main_branch;
+            cmd!(self.sh, "git fetch {remote} {main}").run_echo()?;
+            cmd!(self.sh, "git switch -d {remote}/{main}").run_echo()?;
+            return Ok(());
+        }
+
         if let Some(branch) = branch {
             cmd!(self.sh, "git switch {branch}").run()?;
             return Ok(());
         }
         let branches = if remote {
-            cmd!(self.sh, "git fetch").run()?;
+            cmd!(self.sh, "git fetch").run_echo()?;
             cmd!(self.sh, "git branch -r").read()?
         } else {
             cmd!(self.sh, "git branch").read()?
