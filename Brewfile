@@ -1,6 +1,7 @@
 
 
 brew "asciinema"
+brew "bat"
 brew "deno"
 brew "eza"
 brew "ffmpeg"

@@ -4,6 +4,7 @@ local apps =
     F2 = "Visual Studio Code",
     F3 = "Safari",
     F4 = "Slack",
+    F5 = "Spotify",
 }
 
 for key, app in pairs(apps) do
