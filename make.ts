@@ -2,5 +2,10 @@
 import $ from "jsr:@david/dax";
 
 switch (Deno.args[0]) {
-    case "gg": await $`cargo install --path tools/gg`
+    case "gg":
+        await $`cargo install --path tools/gg`;
+        break;
+    case "config":
+        await $`cargo install --path tools/config`;
+        break;
 }

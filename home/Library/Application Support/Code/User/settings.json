@@ -1,6 +1,4 @@
 {
-    "editor.fontSize": 16,
-    "terminal.integrated.fontSize": 10,
     "[html]": {
         "editor.tabSize": 2,
         "editor.defaultFormatter": "denoland.vscode-deno"
@@ -8,6 +6,21 @@
     "[git-commit]": {
         "rewrap.wrappingColumn": 72,
     },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "djot": false,
+    },
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 10,
 
     "accessibility.dimUnfocused.enabled": false,
     "projectNameInStatusBar.align": "right",
@@ -682,15 +695,6 @@
         "djot",
         "zig"
     ],
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "denoland.vscode-deno"
-    },
     "workbench.activityBar.location": "hidden",
-    "[javascript]": {
-        "editor.defaultFormatter": "denoland.vscode-deno"
-    },
     "zig.zls.enabled": "on",
-    "zig.path": "/Users/matklad/p/tb/work/zig/zig",
-    "zig.zls.path": "/Users/matklad/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
-    "zig.initialSetupDone": true,
 }

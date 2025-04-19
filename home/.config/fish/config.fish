@@ -1,6 +1,7 @@
 set fish_greeting ""
 set -U fish_prompt_pwd_dir_length 0
 
+bind alt-delete kill-word
 abbr "c" "code"
 abbr "g" "git"
 abbr "gga" "gg amend"
