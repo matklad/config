@@ -94,6 +94,7 @@
     "extensions.autoUpdate": true,
     "extensions.ignoreRecommendations": true,
     "extensions.verifySignature": false,
+    "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 100,
     "files.enableTrash": true,
     "files.hotExit": "off",

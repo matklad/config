@@ -226,7 +226,7 @@ impl<'a> Context<'a> {
             cmd!(self.sh, "git switch --create {name}").run()?;
             cmd!(self.sh, "git reset --hard {main_branch}").run()?;
         } else {
-            cmd!(self.sh, "git fetch {remote} {main_branch}").run()?;
+            cmd!(self.sh, "git fetch {remote} {main_branch}").run_echo()?;
             cmd!(self.sh, "git switch --create {name}").run()?;
             cmd!(self.sh, "git reset --hard {remote}/{main_branch}").run()?;
         }
