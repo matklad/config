@@ -90,12 +90,11 @@
     "breadcrumbs.filePath": "on",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "explorer.openEditors.visible": 0,
+    "explorer.openEditors.visible": 1,
     "extensions.autoUpdate": true,
     "extensions.ignoreRecommendations": true,
     "extensions.verifySignature": false,
     "files.autoSaveDelay": 100,
-    "files.autoSave": "afterDelay",
     "files.enableTrash": true,
     "files.hotExit": "off",
     "files.insertFinalNewline": true,
@@ -674,11 +673,9 @@
         "editor.defaultFormatter": "denoland.vscode-deno",
     },
     "liveServer.settings.donotVerifyTags": true,
-    "zig.zls.enableInlayHints": true,
     "zig.zls.enableArgumentPlaceholders": false,
-    "zig.zls.checkForUpdate": false,
-    "zig.zls.enableAutofix": true,
     "zig.zls.enableBuildOnSave": false,
+    "zig.zls.enabled": "on",
     "editor.rulers": [
         100
     ],
@@ -688,13 +685,14 @@
         "upstream",
         "origin"
     ],
-    // "workbench.colorTheme": "Default Light Modern",
-    "workbench.colorTheme": "Pale Fire High Contrast",
+    // "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Pale Fire High Contrast",
+    "workbench.preferredLightColorTheme": "Default Light Modern",
     "lldb.suppressUpdateNotifications": true,
     "cSpell.enableFiletypes": [
         "djot",
         "zig"
     ],
     "workbench.activityBar.location": "hidden",
-    "zig.zls.enabled": "on",
+    "workbench.colorTheme": "Default Light Modern",
 }
