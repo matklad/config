@@ -89,9 +89,9 @@
             }
         },
         {
-            "label": "zig build test -- tidy",
+            "label": "zig build ci",
             "type": "shell",
-            "command": "${workspaceFolder}/zig/zig build test -- tidy  && echo 'ok.'",
+            "command": "${workspaceFolder}/zig/zig build ci && echo 'ok.'",
             "presentation": {
                 "echo": true,
                 "reveal": "always",
