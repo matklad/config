@@ -279,8 +279,8 @@ impl<'a> Context<'a> {
             Some(branch) => branch.to_string(),
             None => cmd!(self.sh, "git rev-parse --abbrev-ref HEAD").read()?,
         };
-        cmd!(self.sh, "git fetch {remote} {branch}").run()?;
-        cmd!(self.sh, "git reset --hard {remote}/{branch}").run()?;
+        cmd!(self.sh, "git fetch {remote} {branch}").run_echo()?;
+        cmd!(self.sh, "git reset --hard {remote}/{branch}").run_echo()?;
         Ok(())
     }
 
