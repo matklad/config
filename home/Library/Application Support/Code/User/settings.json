@@ -645,7 +645,8 @@
     "julia.enableTelemetry": true,
     "julia.lint.run": false,
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+        "*.ipynb": "jupyter-notebook",
+        "git-rebase-todo": "default"
     },
     "security.workspace.trust.untrustedFiles": "open",
     "julia.symbolCacheDownload": true,
@@ -695,5 +696,5 @@
         "zig"
     ],
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.colorTheme": "Pale Fire High Contrast",
 }

@@ -136,6 +136,7 @@
   { "key": ", w", "command": "rewrap.rewrapComment" },
   { "key": ", b", "command": "editor.action.jumpToBracket" },
   { "key": ", f", "command": "editor.toggleFold" },
+  { "key": ", shift+f", "command": "seito-openfile.openFileFromText" },
   { "key": ", d", "command": "editor.action.dirtydiff.next" },
 
   { "key": ", =", "command": "workbench.action.focusFirstEditorGroup" },
@@ -503,6 +504,4 @@
   { "key": "ctrl+o", "command": "-workbench.action.files.openFile" },
   { "key": "alt+q", "command": "-rewrap.rewrapComment" },
   { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
-  { "key": "ctrl+c ctrl+c", "command": "magit.save-and-close-editor" },
-  { "key": "ctrl+c ctrl+k", "command": "-magit.clear-and-abort-editor" }
 ]
