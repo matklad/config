@@ -1,4 +1,12 @@
 {
+	"?m": {
+		"prefix": "?m",
+		"body": "//? matklad: $0"
+	},
+	"?r": {
+		"prefix": "?r",
+		"body": "//? resolved."
+	},
 	"istd": {
 		"prefix": "istd",
 		"body": [
@@ -51,7 +59,7 @@
 		"prefix": "logthis",
 		"body": [
 			"std.testing.log_level = .debug;",
-            "defer std.testing.log_level = .err;"
+			"defer std.testing.log_level = .err;"
 		]
 	}
 }

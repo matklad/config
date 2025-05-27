@@ -85,7 +85,7 @@
     "editor.lineDecorationsWidth": 0, // undocumented
     "editor.lineNumbers": "off",
     "editor.lineNumbersMinChars": 0, // undocumented
-    "keyboard.dispatch": "keyCode",
+    // "keyboard.dispatch": "keyCode",
     "breadcrumbs.enabled": true,
     "breadcrumbs.filePath": "on",
     "explorer.confirmDelete": false,

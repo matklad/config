@@ -11,7 +11,7 @@
                 "focus": false,
                 "panel": "shared",
                 "showReuseMessage": false,
-                "clear": true
+                "clear": true,
             },
             "group": "build",
             "problemMatcher": {

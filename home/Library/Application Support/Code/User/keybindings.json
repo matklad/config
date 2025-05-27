@@ -5,17 +5,8 @@
     "command": "search.action.openNewEditor",
     "args": { "caseSensitive": true }
   },
-
-  {
-    "key": "cmd+shift+/",
-    "command": "workbench.action.showCommands"
-  },
-  {
-    "key": "cmd+shift+;",
-    "command": "workbenchaction.showCommands",
-  },
-
-  { "key": "cmd+.", "command": "findJump.activate" },
+  { "key": "shift+cmd+/", "command": "workbench.action.showCommands" },
+  { "key": "cmd+.",       "command": "findJump.activate" },
   { "key": "cmd+shift+.", "command": "findJump.activateWithSelection" },
   { "key": "cmd+,",        "command": "-workbench.action.openSettings" },
   { "key": "cmd+,",        "command": "workbench.action.openSettingsJson" },
