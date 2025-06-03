@@ -8,5 +8,45 @@
   },
   "project_panel": {
     "dock": "right"
+  },
+  "auto_install_extensions": {
+    "deno": true
+  },
+  "lsp": {
+    "deno": {
+      "settings": {
+        "deno": {
+          "enable": true
+        }
+      }
+    }
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "tab_bar": { "show": false },
+  "terminal": {
+    "dock": "right"
+  },
+  "autosave": {
+    "after_delay": { "milliseconds": 60 }
+  },
+  "languages": {
+    "TypeScript": {
+      "language_servers": [
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint"
+      ],
+      "formatter": "language_server"
+    },
+    "TSX": {
+      "language_servers": [
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint"
+      ],
+      "formatter": "language_server"
+    }
   }
 }

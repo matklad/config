@@ -2,12 +2,21 @@
   {
     "context": "Workspace",
     "bindings": {
-      ", 1": "project_panel::ToggleFocus"
+      ", 1": "project_panel::ToggleFocus",
+      ", o k": "zed::OpenKeymap",
+      ", o x": "zed::Extensions",
+            
+      ", r": ["task::Spawn", { "reveal_target": "dock" }],
+      ", p": "editor::Format",
+      ", .": "editor::GoToDefinition",
+      ", >": "editor::GoToDefinitionSplit"
     }
   },
   {
     "context": "Editor",
     "bindings": {
+      "cmd-[": "pane::GoBack",
+      "cmd-]": "pane::GoForward"
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }
   }
