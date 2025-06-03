@@ -678,6 +678,7 @@
     "zig.zls.enableArgumentPlaceholders": false,
     "zig.zls.enableBuildOnSave": false,
     "zig.zls.enabled": "on",
+    "zig.version": "0.13.0",
     "editor.rulers": [
         100
     ],

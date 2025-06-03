@@ -131,6 +131,7 @@
   { "key": ", d", "command": "editor.action.dirtydiff.next" },
 
   { "key": ", =", "command": "workbench.action.focusFirstEditorGroup" },
+  { "key": ", z", "command": "workbench.action.toggleEditorWidths" },
   {
     "key": "escape",
     "command": "workbench.action.focusFirstEditorGroup",
