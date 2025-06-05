@@ -8,15 +8,28 @@
             
       ", r": ["task::Spawn", { "reveal_target": "dock" }],
       ", p": "editor::Format",
+      ", a": "editor::ToggleCodeActions",
       ", .": "editor::GoToDefinition",
-      ", >": "editor::GoToDefinitionSplit"
+      ", >": "editor::GoToDefinitionSplit", 
+      ", l": "outline::Toggle",
+      ", L": "project_symbols::Toggle",
+      
+      "ctrl-r": "editor::Rename",
+      
+      "cmd-t": "pane::SplitVertical", 
+      "ctrl-tab": "workspace::ActivateNextPane",
+      
+      
+      "cmd-alt-w": [
+        "workspace::SendKeystrokes", "alt-cmd-y alt-ctrl-cmd-w"
+      ]
     }
   },
   {
     "context": "Editor",
     "bindings": {
       "cmd-[": "pane::GoBack",
-      "cmd-]": "pane::GoForward"
+      "cmd-]": "pane::GoForward", 
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }
   }
