@@ -3,6 +3,7 @@
     "context": "Workspace",
     "bindings": {
       ", 1": "project_panel::ToggleFocus",
+      ", 3": "git_panel::ToggleFocus",
       ", o k": "zed::OpenKeymap",
       ", o x": "zed::Extensions",
             
@@ -13,10 +14,12 @@
       ", >": "editor::GoToDefinitionSplit", 
       ", l": "outline::Toggle",
       ", L": "project_symbols::Toggle",
+      ", f": "editor::ToggleFold",
+      
       
       "ctrl-r": "editor::Rename",
       
-      "cmd-t": "pane::SplitVertical", 
+      "cmd-t": "pane::SplitRight", 
       "ctrl-tab": "workspace::ActivateNextPane",
       
       
@@ -32,5 +35,11 @@
       "cmd-]": "pane::GoForward", 
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }
-  }
+  }, 
+  {
+    "context": "GitPanel",
+    "bindings": {
+      ", 3": "git_panel::Close"
+    }
+  },
 ]
