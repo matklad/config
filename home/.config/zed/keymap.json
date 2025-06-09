@@ -6,23 +6,23 @@
       ", 3": "git_panel::ToggleFocus",
       ", o k": "zed::OpenKeymap",
       ", o x": "zed::Extensions",
-            
+
       ", r": ["task::Spawn", { "reveal_target": "dock" }],
       ", p": "editor::Format",
       ", a": "editor::ToggleCodeActions",
       ", .": "editor::GoToDefinition",
-      ", >": "editor::GoToDefinitionSplit", 
+      ", >": "editor::GoToDefinitionSplit",
       ", l": "outline::Toggle",
       ", L": "project_symbols::Toggle",
       ", f": "editor::ToggleFold",
-      
-      
+
+
       "ctrl-r": "editor::Rename",
-      
-      "cmd-t": "pane::SplitRight", 
+
+      "cmd-t": "pane::SplitRight",
       "ctrl-tab": "workspace::ActivateNextPane",
-      
-      
+
+
       "cmd-alt-w": [
         "workspace::SendKeystrokes", "alt-cmd-y alt-ctrl-cmd-w"
       ]
@@ -32,10 +32,14 @@
     "context": "Editor",
     "bindings": {
       "cmd-[": "pane::GoBack",
-      "cmd-]": "pane::GoForward", 
+      "cmd-]": "pane::GoForward",
+      "alt-d": "editor::SelectLargerSyntaxNode",
+      "alt-shift-d": "editor::SelectSmallerSyntaxNode",
+      ", g e": "editor::MoveToEnd", 
+      ", g g": "editor::MoveToBeginning", 
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }
-  }, 
+  },
   {
     "context": "GitPanel",
     "bindings": {
