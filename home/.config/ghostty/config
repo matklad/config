@@ -1,5 +1,5 @@
 command = /opt/homebrew/bin/fish --login --interactive
-font-size=16
+font-size=18
 cursor-style = block
 cursor-style-blink = false
 # theme = BlulocoLight
