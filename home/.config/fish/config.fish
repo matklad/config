@@ -17,11 +17,11 @@ abbr "sw" "gg switch"
 abbr "swr" "gg switch --remote"
 abbr "swd" "git switch --detach"
 abbr "zz" "./zig/zig"
+abbr "zb" "./zig/zig build"
+abbr "zbc" "./zig/zig build ci"
 
 alias "rr" "~/config/tools/remote-run.sh  matklad 192.168.2.4"
 alias "rs" "~/config/tools/remote-sync.sh matklad 192.168.2.4"
 alias "rsh" "ssh matklad@192.168.2.4"
 alias q "llm -s \"Answer in as few words as possible. Use a brief style with short replies.\" -m claude-3.7-sonnet";
-export MVK_CONFIG_LOG_LEVEL=0 
-export WINEDEBUG='-all'
 fish_config theme choose termcolors

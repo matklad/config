@@ -19,7 +19,7 @@
         "scminput": false,
         "djot": false,
     },
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "terminal.integrated.fontSize": 10,
 
     "accessibility.dimUnfocused.enabled": false,
@@ -678,7 +678,7 @@
     "zig.zls.enableArgumentPlaceholders": false,
     "zig.zls.enableBuildOnSave": false,
     "zig.zls.enabled": "on",
-    "zig.version": "0.13.0",
+    "zig.version": "0.14.0",
     "editor.rulers": [
         100
     ],
@@ -697,6 +697,6 @@
         "zig"
     ],
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Pale Fire High Contrast",
+    "workbench.colorTheme": "Default Light Modern",
     "chat.commandCenter.enabled": false,
 }
