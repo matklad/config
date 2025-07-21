@@ -18,6 +18,7 @@
         "markdown": false,
         "scminput": false,
         "djot": false,
+        "Djot": false,
     },
     "editor.fontSize": 14,
     "terminal.integrated.fontSize": 10,
@@ -60,6 +61,13 @@
     "editor.roundedSelection": false,
     "editor.semanticHighlighting.enabled": true,
     "editor.tabCompletion": "onlySnippets",
+    "editor.inlineSuggest.enabled": false,
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+    },
     "editor.wordBasedSuggestions": "off",
     "[zig]": {
         "editor.wordBasedSuggestions": "allDocuments",
@@ -678,12 +686,11 @@
     "zig.zls.enableArgumentPlaceholders": false,
     "zig.zls.enableBuildOnSave": false,
     "zig.zls.enabled": "on",
-    "zig.version": "0.14.0",
+    "zig.version": "0.14.1",
     "editor.rulers": [
         100
     ],
     "workbench.productIconTheme": "IntelliJ",
-    "gitlens.mode.active": "zen",
     "githubPullRequests.remotes": [
         "upstream",
         "origin"
@@ -697,6 +704,7 @@
         "zig"
     ],
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Default Light Modern",
-    "chat.commandCenter.enabled": false,
+    "workbench.colorTheme": "Pale Fire High Contrast",
+    "inlineChat.lineNaturalLanguageHint": false,
+    "git.blame.editorDecoration.enabled": false,
 }

@@ -11,7 +11,7 @@
                 "focus": false,
                 "panel": "shared",
                 "showReuseMessage": false,
-                "clear": true,
+                "clear": true
             },
             "group": "build",
             "problemMatcher": {
@@ -116,6 +116,13 @@
                     "message": 6
                 }
             }
+        },
+        {
+            "label": "run test at cursor",
+            "command": "${command:testing.runAtCursor}",
+            "problemMatcher": [
+                "$deno"
+            ]
         }
     ],
     "inputs": [
