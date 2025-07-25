@@ -337,6 +337,12 @@
                     "name": "pipe to shell",
                     "type": "command",
                     "command": "editWithShell.runCommand"
+                },
+                {
+                    "key": "o",
+                    "name": "overtype",
+                    "type": "command",
+                    "command": "editor.action.toggleOvertypeInsertMode"
                 }
             ]
         },
