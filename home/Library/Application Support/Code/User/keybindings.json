@@ -159,9 +159,7 @@
 
   {
     "key": ", 2",
-    "command": "runCommands",
-    "when": "!view.terminal.visible",
-    "args": { "commands": ["workbench.action.closeSidebar", "terminal.focus"] }
+    "command": "terminal-editor.reveal",
   },
 
   {
