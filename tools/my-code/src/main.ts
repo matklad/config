@@ -38,15 +38,46 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerTextEditorCommand(
-      "my-code.peek-definition-aside",
+      "my-code.revealDefinitionAside",
       async (editor) => {
         const document = editor.document;
-        const viewColumn = editor.viewColumn;
-        await vscode.commands.executeCommand("editor.action.revealDefinitionAside");
-        await vscode.window.showTextDocument(
-          document,
-          viewColumn,
+        const position = editor.selection.active;
+
+        // Prepare definition locations
+        const locations = await vscode.commands.executeCommand<
+          vscode.Location[]
+        >(
+          "vscode.executeDefinitionProvider",
+          document.uri,
+          position,
         );
+
+        if (!locations || locations.length === 0) {
+          vscode.window.showInformationMessage("No definition found.");
+          return;
+        }
+
+        const targetLocation = locations[0]; // just use the first location
+
+        const activeGroup = vscode.window.tabGroups.activeTabGroup;
+        const allGroups = vscode.window.tabGroups.all;
+        const isSecondGroupActive = activeGroup === allGroups[1];
+
+        const doc = await vscode.workspace.openTextDocument(targetLocation.uri);
+
+        if (isSecondGroupActive && allGroups.length >= 2) {
+          // Open in the first group (column 1) if second is active
+          await vscode.window.showTextDocument(doc, {
+            viewColumn: vscode.ViewColumn.One,
+            selection: targetLocation.range,
+            preserveFocus: false,
+          });
+        } else {
+          // Otherwise, open to the side (default "Reveal Definition Aside" behavior)
+          await vscode.commands.executeCommand(
+            "editor.action.revealDefinitionAside",
+          );
+        }
       },
     ),
   );
@@ -60,7 +91,13 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-type GoTarget = "change" | "conflict" | "error" | "reference" | "occurrence" | "edit";
+type GoTarget =
+  | "change"
+  | "conflict"
+  | "error"
+  | "reference"
+  | "occurrence"
+  | "edit";
 var current_target: GoTarget = "error";
 async function go(direction: "next" | "prev", target?: GoTarget) {
   if (target) {
@@ -87,7 +124,7 @@ async function go(direction: "next" | "prev", target?: GoTarget) {
     ],
     edit: [
       "workbench.action.navigateBackInEditLocations",
-      "workbench.action.navigateForwardInEditLocations"
+      "workbench.action.navigateForwardInEditLocations",
     ],
   };
 

@@ -34,8 +34,8 @@
                 "category": "My Code"
             },
             {
-                "command": "my-code.peek-definition-aside",
-                "title": "Open definition to the side, no focus",
+                "command": "my-code.revealDefinitionAside",
+                "title": "Open definition to the side",
                 "category": "My Code"
             }
         ],
