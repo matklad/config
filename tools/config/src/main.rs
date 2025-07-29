@@ -33,11 +33,8 @@ fn main() -> anyhow::Result<()> {
                 .exec())?;
         }
         flags::ConfigCmd::Brew(flags::Brew) => {
-            cmd!(
-                sh,
-                "brew bundle install --cleanup --file=~/config/Brewfile"
-            )
-            .run_echo()?;
+            cmd!(sh, "brew bundle install --cleanup --file=~/config/Brewfile").run_echo()?;
+            cmd!(sh, "brew upgrade").run_echo()?;
         }
         flags::ConfigCmd::Link(flags::Link) => symlink(&sh)?,
     }
@@ -46,7 +43,11 @@ fn main() -> anyhow::Result<()> {
 
 fn make(sh: &Shell) -> anyhow::Result<()> {
     cmd!(sh, "cargo install --path /Users/matklad/config/tools/gg").run_echo()?;
-    cmd!(sh, "cargo install --path /Users/matklad/config/tools/config").run_echo()?;
+    cmd!(
+        sh,
+        "cargo install --path /Users/matklad/config/tools/config"
+    )
+    .run_echo()?;
     Ok(())
 }
 
@@ -86,11 +87,11 @@ fn symlink(sh: &Shell) -> anyhow::Result<()> {
     }
 }
 
-fn main_multicall(arg0: &str) -> anyhow::Result<()>{
+fn main_multicall(arg0: &str) -> anyhow::Result<()> {
     let sh = xshell::Shell::new()?;
     match arg0 {
         "n" => multicall::n::run(&sh),
-        _ => anyhow::bail!("unknown command: `{arg0}`")
+        _ => anyhow::bail!("unknown command: `{arg0}`"),
     }
 }
 
