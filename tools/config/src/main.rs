@@ -34,7 +34,7 @@ fn main() -> anyhow::Result<()> {
         }
         flags::ConfigCmd::Brew(flags::Brew) => {
             cmd!(sh, "brew bundle install --cleanup --file=~/config/Brewfile").run_echo()?;
-            cmd!(sh, "brew upgrade").run_echo()?;
+            cmd!(sh, "brew upgrade --cask").run_echo()?;
         }
         flags::ConfigCmd::Link(flags::Link) => symlink(&sh)?,
     }
