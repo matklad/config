@@ -159,7 +159,7 @@
 
   {
     "key": ", 2",
-    "command": "terminal-editor.reveal",
+    "command": "terminal-editor.dwim",
   },
 
   {
