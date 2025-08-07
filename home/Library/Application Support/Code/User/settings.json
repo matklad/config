@@ -42,6 +42,8 @@
     "workbench.statusBar.feedback.visible": false,
     "workbench.tree.indent": 16,
     "workbench.useExperimentalGridLayout": true,
+    "outline.showVariables": false,
+    "breadcrumbs.showVariables": false,
     "editor.accessibilitySupport": "off",
     "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
@@ -710,7 +712,7 @@
         "zig"
     ],
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Pale Fire High Contrast",
+    "workbench.colorTheme": "Default Light Modern",
     "inlineChat.lineNaturalLanguageHint": false,
     "git.blame.editorDecoration.enabled": false,
 }

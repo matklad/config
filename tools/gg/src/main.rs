@@ -4,6 +4,8 @@ use xshell::{cmd, Shell};
 mod flags {
     xflags::xflags! {
         cmd gg {
+            cmd main {
+            }
             cmd clone {
                 required userrepo: String
             }
@@ -95,6 +97,7 @@ fn main() -> Result {
     };
 
     match flags.subcommand {
+        flags::GgCmd::Main(_) => context.main(),
         flags::GgCmd::Clone(clone) => context.clone(&clone.userrepo),
         flags::GgCmd::Worktree(worktree) => match worktree.subcommand {
             flags::WorktreeCmd::Add(add) => context.worktree_add(&add.name),
@@ -123,6 +126,14 @@ struct Context<'a> {
 }
 
 impl<'a> Context<'a> {
+    fn main(&self) -> Result {
+        let remote = self.remote;
+        let main_branch = self.main_branch;
+        cmd!(self.sh, "git fetch {remote}").run_echo()?;
+        cmd!(self.sh, "git switch -d {remote}/{main_branch}").run_echo()?;
+        Ok(())
+    }
+
     fn clone(&self, user_repo: &str) -> Result {
         let Some((user, repo)) = user_repo.split_once('/') else {
             anyhow::bail!("invalid user/repo: `{user_repo}`")
