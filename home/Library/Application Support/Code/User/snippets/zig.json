@@ -21,6 +21,10 @@
 		],
 		"description": "import assert"
 	},
+	"todo": {
+		"prefix": "todo",
+		"body": "@panic(\"todo\")",
+	},
 	"psvm": {
 		"prefix": "psvm",
 		"body": [
