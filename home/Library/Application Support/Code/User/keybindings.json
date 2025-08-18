@@ -183,6 +183,17 @@
   { "key": ", 4", "command": "workbench.actions.view.toggleProblems" },
 
   {
+    "key": ", shift+b",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        "whichkey.show",
+        { "command": "whichkey.triggerKey", "args": "B" }
+      ]
+    }
+  },
+  {
     "key": ", g",
     "command": "runCommands",
     "when": "editorTextFocus",

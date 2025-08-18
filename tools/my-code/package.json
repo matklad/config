@@ -37,6 +37,21 @@
                 "command": "my-code.revealDefinitionAside",
                 "title": "Open definition to the side",
                 "category": "My Code"
+            },
+            {
+                "command": "inplace-blame.line",
+                "title": "Blame line",
+                "category": "My Code"
+            },
+            {
+                "command": "inplace-blame.parent",
+                "title": "Blame parent",
+                "category": "My Code"
+            },
+            {
+                "command": "inplace-blame.undo",
+                "title": "Blame undo",
+                "category": "My Code"
             }
         ],
         "configuration": [

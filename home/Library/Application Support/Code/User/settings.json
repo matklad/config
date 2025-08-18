@@ -4,7 +4,7 @@
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "[git-commit]": {
-        "rewrap.wrappingColumn": 72,
+        "rewrap.wrappingColumn": 72
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
@@ -18,7 +18,7 @@
         "markdown": false,
         "scminput": false,
         "djot": false,
-        "Djot": false,
+        "Djot": false
     },
     "editor.fontSize": 14,
     "terminal.integrated.fontSize": 10,
@@ -72,14 +72,14 @@
     },
     "editor.wordBasedSuggestions": "off",
     "[zig]": {
-        "editor.wordBasedSuggestions": "allDocuments",
+        "editor.wordBasedSuggestions": "allDocuments"
     },
     "editor.autoIndent": "advanced",
     "editor.semanticTokenColorCustomizations": {
         "[Xcode 11 Default Light]": {
             "rules": {
-                "unresolvedReference": "#FF0050",
-            },
+                "unresolvedReference": "#FF0050"
+            }
         },
         "[Pale Fire High Contrast]": {
             "rules": {
@@ -126,7 +126,7 @@
     "remote.SSH.useLocalServer": false,
     // plugins
     "editWithShell.shell.linux": "/run/current-system/sw/bin/fish",
-    "editWithShell.shellArgs.linux": [ "-i", "-c" ],
+    "editWithShell.shellArgs.linux": ["-i", "-c"],
     "spellright.suggestionsInHints": false,
     "spellright.addToSystemDictionary": true,
     "typescript.suggest.completeFunctionCalls": true,
@@ -135,10 +135,35 @@
     "nix.serverPath": "nil",
     "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",
     "findJump.positionAbsolute": true,
-    "errorLens.exclude": [
+    "errorLens.excludeByMessage": [
         ".*Unknown word.*"
     ],
     "whichkey.bindings": [
+        {
+            "key": "B",
+            "name": "blame",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "B",
+                    "name": "line",
+                    "type": "command",
+                    "command": "inplace-blame.line"
+                },
+                {
+                    "key": "p",
+                    "name": "parent",
+                    "type": "command",
+                    "command": "inplace-blame.parent"
+                },
+                {
+                    "key": "u",
+                    "name": "undo",
+                    "type": "command",
+                    "command": "inplace-blame.undo"
+                }
+            ]
+        },
         {
             "key": "g",
             "name": "go",
@@ -259,7 +284,7 @@
                             "name": "Directory",
                             "type": "command",
                             "command": "explorer.newFolder"
-                        },
+                        }
                     ]
                 },
                 {
@@ -376,7 +401,7 @@
                     "key": "t",
                     "name": "Terminal",
                     "type": "command",
-                    "command": "terminal.focus",
+                    "command": "terminal.focus"
                 },
                 {
                     "key": "e",
@@ -506,9 +531,9 @@
                     "name": "Diff",
                     "type": "command",
                     "command": "editor.action.dirtydiff.next"
-                },
+                }
             ]
-        },
+        }
     ],
     "liveServer.settings.donotShowInfoMsg": true,
     "rust-analyzer.completion.callable.snippets": "add_parentheses",
@@ -539,7 +564,7 @@
     "selectline.statusbarPriority": 101,
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#00000000",
-        "widget.shadow": "#00000000",
+        "widget.shadow": "#00000000"
     },
     "cSpell.diagnosticLevel": "Hint",
     "cSpell.numSuggestions": 3,
@@ -685,10 +710,10 @@
         "editor.acceptSuggestionOnCommitCharacter": false
     },
     "[json]": {
-        "editor.defaultFormatter": "denoland.vscode-deno",
+        "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "[jsonc]": {
-        "editor.defaultFormatter": "denoland.vscode-deno",
+        "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "liveServer.settings.donotVerifyTags": true,
     "zig.zls.enableArgumentPlaceholders": false,
@@ -714,5 +739,5 @@
     "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Pale Fire High Contrast",
     "inlineChat.lineNaturalLanguageHint": false,
-    "git.blame.editorDecoration.enabled": false,
+    "git.blame.editorDecoration.enabled": false
 }
