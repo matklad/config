@@ -17,6 +17,6 @@ if [[ $LOCAL_DIR != $SAFE_DIR/* ]] ; then
 	exit 1
 fi
 
-rsync --verbose --recursive --times \
+rsync --recursive \
 	--exclude=".git" --filter=':- .gitignore' \
 		$LOCAL_DIR/ $USER@$HOST:$REMOTE_DIR
