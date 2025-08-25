@@ -69,9 +69,13 @@
       lldb
       htop
       curl
+      gdb
+      atool
+      xz
       (pkgs.writeShellScriptBin "nixos-pull" ''
          set -ex
-         curl https://raw.githubusercontent.com/matklad/config/refs/heads/master/configuration.nix \
+         curl -H 'Cache-Control: no-cache' \
+            https://raw.githubusercontent.com/matklad/config/refs/heads/master/configuration.nix \
             | sudo tee /etc/nixos/configuration.nix > /dev/null
          sudo nixos-rebuild switch
       '')

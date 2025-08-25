@@ -41,12 +41,13 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerTextEditorCommand(
       "my-code.revealDefinitionAside",
       async (editor) => {
+        console.log("reveal aside");
         const document = editor.document;
         const position = editor.selection.active;
 
         // Prepare definition locations
         const locations = await vscode.commands.executeCommand<
-          vscode.Location[]
+          (vscode.Location | vscode.LocationLink)[]
         >(
           "vscode.executeDefinitionProvider",
           document.uri,
@@ -58,19 +59,28 @@ export function activate(context: vscode.ExtensionContext) {
           return;
         }
 
-        const targetLocation = locations[0]; // just use the first location
+        console.log({ locations });
+
+        const targetLocation: vscode.Location | vscode.LocationLink =
+          locations[0]; // just use the first location
 
         const activeGroup = vscode.window.tabGroups.activeTabGroup;
         const allGroups = vscode.window.tabGroups.all;
         const isSecondGroupActive = activeGroup === allGroups[1];
+        const uri = "uri" in targetLocation
+          ? targetLocation.uri
+          : targetLocation.targetUri;
+        const range = "range" in targetLocation
+          ? targetLocation.range
+          : targetLocation.targetRange;
 
-        const doc = await vscode.workspace.openTextDocument(targetLocation.uri);
+        const doc = await vscode.workspace.openTextDocument(uri);
 
         if (isSecondGroupActive && allGroups.length >= 2) {
           // Open in the first group (column 1) if second is active
           await vscode.window.showTextDocument(doc, {
             viewColumn: vscode.ViewColumn.One,
-            selection: targetLocation.range,
+            selection: range,
             preserveFocus: false,
           });
         } else {
