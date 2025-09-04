@@ -6,6 +6,27 @@
     "command": "search.action.openNewEditor",
     "args": { "caseSensitive": true }
   },
+  {
+    "key": "cmd+alt+f",
+    "command": "search.action.openNewEditorToSide",
+    "args": {
+      "query": "",
+      "filesToInclude": "${file}",
+      "caseSensitive": true,
+      "onlyOpenEditors": true
+    },
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "cmd+f",
+    "command": "search.action.focusQueryEditorWidget",
+    "when": "inSearchEditor && !searchInputBoxFocus"
+  },
+  {
+    "key": "cmd+f",
+    "command": "search.action.focusNextSearchResult",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
   { "key": "shift+cmd+/", "command": "workbench.action.showCommands" },
   { "key": "cmd+.", "command": "findJump.activate" },
   { "key": "cmd+shift+.", "command": "findJump.activateWithSelection" },
@@ -128,7 +149,8 @@
   { "key": ", w", "command": "rewrap.rewrapComment" },
   { "key": ", b", "command": "editor.action.jumpToBracket" },
   { "key": ", f", "command": "editor.toggleFold" },
-  { "key": ", shift+f", "command": "seito-openfile.openFileFromText" },
+  { "key": ", shift+f", "command": "editor.foldAll" },
+  { "key": ", shift+u", "command": "editor.unfoldAll" },
   { "key": ", d", "command": "editor.action.dirtydiff.next" },
 
   { "key": ", =", "command": "workbench.action.focusFirstEditorGroup" },
@@ -159,7 +181,7 @@
 
   {
     "key": ", 2",
-    "command": "terminal-editor.dwim",
+    "command": "terminal-editor.dwim"
   },
 
   {
