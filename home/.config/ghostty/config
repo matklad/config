@@ -2,8 +2,11 @@ command = /opt/homebrew/bin/fish --login --interactive
 font-size=18
 cursor-style = block
 cursor-style-blink = false
+macos-option-as-alt = true
 # link = true
 # theme = BlulocoLight
+theme = Alabaster
+theme = dark:Ghostty Default Style Dark,light:Alabaster
 keybind = ctrl+tab=goto_split:next
 keybind = cmd+t=new_split:right
 keybind = cmd+shift+t=new_split:down

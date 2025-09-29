@@ -478,7 +478,7 @@
                     ]
                 },
                 {
-                    "key": "C",
+                    "key": "m",
                     "name": "Merge Conflict",
                     "type": "command",
                     "command": "my-code.next",
