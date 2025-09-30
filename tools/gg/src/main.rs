@@ -42,6 +42,9 @@ mod flags {
             cmd uncommit {
 
             }
+            cmd reset {
+
+            }
             /// Syncs the branch to the remote counterpart.
             cmd sync {
                 optional --to branch: String
@@ -111,6 +114,7 @@ fn main() -> Result {
             context.commit(commit.message.as_deref(), commit.branch.as_deref())
         }
         flags::GgCmd::Uncommit(flags::Uncommit) => context.uncommit(),
+        flags::GgCmd::Reset(flags::Reset) => context.reset(),
         flags::GgCmd::Sync(sync) => context.sync(sync.to.as_deref()),
         flags::GgCmd::Refresh(refresh) => {
             context.refresh(refresh.from.as_deref(), refresh.to.as_deref())
@@ -281,6 +285,15 @@ impl<'a> Context<'a> {
         let message = cmd!(self.sh, "git log --format=%B -n 1 HEAD").read()?;
         cmd!(self.sh, "git reset --mixed HEAD~").run()?;
         cmd!(self.sh, "git commit --allow-empty -m {message}").run()?;
+        Ok(())
+    }
+
+    fn reset(&self) -> Result {
+        cmd!(self.sh, "git status --porcelain").run_echo()?;
+        if yes_or_no("Continue?") {
+            cmd!(self.sh, "git reset --hard").run_echo()?;
+            cmd!(self.sh, "git clean -fd").run_echo()?;
+        }
         Ok(())
     }
 
