@@ -65,9 +65,11 @@
       vscode
       curl
       rustup
-      llvmPackages_21.libcxxClang
-      llvmPackages_21.libcxxStdenv
-      lldb
+      llvmPackages_21.bintools
+      llvmPackages_21.clang
+      llvmPackages_21.lldb
+      llvmPackages_21.llvm
+      llvmPackages_21.stdenv
       htop
       curl
       gdb
