@@ -77,11 +77,13 @@
       ninja
       python3
       (pkgs.writeShellScriptBin "nixos-pull" ''
-         set -ex
-         curl -H 'Cache-Control: no-cache' \
-            https://raw.githubusercontent.com/matklad/config/refs/heads/master/configuration.nix \
-            | sudo tee /etc/nixos/configuration.nix > /dev/null
-         sudo nixos-rebuild switch -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz
+         nixos-rebuild switch \
+             -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz \
+             -I nixos-config=https://raw.githubusercontent.com/matklad/config/master/configuration.nix
+         # curl -H 'Cache-Control: no-cache' \
+         #    https://raw.githubusercontent.com/matklad/config/refs/heads/master/configuration.nix \
+         #    | sudo tee /etc/nixos/configuration.nix > /dev/null
+         # sudo nixos-rebuild switch -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz
       '')
   ];
 
