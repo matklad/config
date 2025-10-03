@@ -73,6 +73,7 @@
       atool
       xz
       cmake
+      ninja
       (pkgs.writeShellScriptBin "nixos-pull" ''
          set -ex
          curl -H 'Cache-Control: no-cache' \
