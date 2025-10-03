@@ -65,7 +65,7 @@
       vscode
       curl
       rustup
-      llvmPackages_21.libcxxStdenv
+      llvmPackages_21.libcxxClang
       lldb
       htop
       curl
