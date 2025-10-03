@@ -65,7 +65,7 @@
       vscode
       curl
       rustup
-      clang
+      llvm.libstdcxxClang
       lldb
       htop
       curl
