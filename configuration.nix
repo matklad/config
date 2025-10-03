@@ -74,6 +74,7 @@
       xz
       cmake
       ninja
+      python3
       (pkgs.writeShellScriptBin "nixos-pull" ''
          set -ex
          curl -H 'Cache-Control: no-cache' \
