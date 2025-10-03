@@ -81,7 +81,7 @@
           REV=$(git ls-remote https://github.com/matklad/config HEAD | awk '{print $1}')
           CONFIG=$(nix-instantiate --eval -E "(builtins.fetchGit { url = \"https://github.com/matklad/config.git\"; rev=\"$REV\"; }).outPath" | tr -d \")
           NIXPKGS=$(nix-instantiate --eval -E 'builtins.fetchTarball { url = "https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz"; }' | tr -d \")
-          sudo nixos-rebuild switch -I nixpkgs=$NIXPKGS -I nixos-config=$CCONFIG
+          sudo nixos-rebuild switch -I nixpkgs=$NIXPKGS -I nixos-config=$CONFIG
       '')
   ];
 
