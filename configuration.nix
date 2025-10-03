@@ -66,6 +66,7 @@
       curl
       rustup
       llvmPackages_21.libcxxClang
+      llvmPackages_21.libcxxStdenv
       lldb
       htop
       curl
