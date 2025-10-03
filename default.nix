@@ -79,7 +79,7 @@
       (pkgs.writeShellScriptBin "nixos-pull" ''
          nixos-rebuild switch \
              -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz \
-             -I nixos-config=https://raw.githubusercontent.com/matklad/config/master/configuration.nix
+             -I nixos-config=https://github.com/matklad/config/archive/refs/heads/master.tar.gz
          # curl -H 'Cache-Control: no-cache' \
          #    https://raw.githubusercontent.com/matklad/config/refs/heads/master/configuration.nix \
          #    | sudo tee /etc/nixos/configuration.nix > /dev/null
