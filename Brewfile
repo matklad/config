@@ -1,5 +1,6 @@
 
 
+brew "anyzig"
 brew "asciinema"
 brew "bat"
 brew "cmake"
