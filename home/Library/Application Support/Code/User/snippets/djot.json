@@ -1,6 +1,6 @@
 {
 	"display": {
-		"prefix": ".display",
+		"prefix": ".dis",
 		"body": "[$0]{.display}"
 	},
 	"kbd": {

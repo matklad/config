@@ -336,6 +336,12 @@
                     "command": "extension.changeCase.pascal"
                 },
                 {
+                    "key": "T",
+                    "name": "Title Case",
+                    "type": "command",
+                    "command": "extension.changeCase.title"
+                },
+                {
                     "key": "r",
                     "name": "Revert",
                     "type": "command",
