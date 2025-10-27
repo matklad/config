@@ -527,5 +527,6 @@
   { "key": "ctrl+q", "command": "-workbench.action.quit" },
   { "key": "ctrl+o", "command": "-workbench.action.files.openFile" },
   { "key": "alt+q", "command": "-rewrap.rewrapComment" },
-  { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" }
+  { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
+  { "key": "ctrl+alt+cmd+n", "command": "-welcome.showNewFileEntries" },
 ]

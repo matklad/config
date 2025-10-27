@@ -749,7 +749,7 @@
         "zig"
     ],
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Pale Fire High Contrast",
+    "workbench.colorTheme": "Default Light Modern",
     "inlineChat.lineNaturalLanguageHint": false,
     "git.blame.editorDecoration.enabled": false
 }
