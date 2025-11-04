@@ -52,6 +52,11 @@
                 "command": "inplace-blame.undo",
                 "title": "Blame undo",
                 "category": "My Code"
+            },
+            {
+                "command": "my-code.reveal-in-magit",
+                "title": "Reveal in Magit",
+                "category": "My Code"
             }
         ],
         "configuration": [

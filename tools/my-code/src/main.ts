@@ -196,6 +196,98 @@ export function activate(context: vscode.ExtensionContext) {
       }
     }),
   );
+
+  context.subscriptions.push(vscode.commands.registerCommand(
+    "my-code.reveal-in-magit",
+    async () => {
+      const editor = vscode.window.activeTextEditor;
+      if (!editor) {
+        vscode.window.showErrorMessage("No active editor.");
+        return;
+      }
+
+      const currentFile = editor.document.uri.fsPath;
+      const currentLine = editor.selection.active.line + 1; // 1-based
+
+      // Find the Magit diff/status editor (right pane)
+      const magitEditor = vscode.window.visibleTextEditors.find((e) =>
+        e.document.uri.path.includes("status.magit") ||
+        e.document.fileName.endsWith("status.magit")
+      );
+
+      if (!magitEditor) {
+        vscode.window.showErrorMessage("No Magit diff/status buffer found.");
+        return;
+      }
+
+      const diffLines = magitEditor.document.getText().split("\n");
+      const fileName = currentFile.split("/").pop()!;
+
+      let inCurrentFile = false;
+      let hunkStart = -1;
+      let hunkEnd = -1;
+
+      for (let i = 0; i < diffLines.length; i++) {
+        const line = diffLines[i];
+
+        // Detect start of a file diff section
+        const modifiedMatch = line.match(
+          /^(modified|deleted|new file)\s+(.+)$/,
+        );
+        if (modifiedMatch) {
+          const path = modifiedMatch[2].trim();
+          inCurrentFile = path.endsWith(fileName);
+          continue;
+        }
+
+        // Detect hunk headers for the current file
+        if (inCurrentFile && line.startsWith("@@")) {
+          const match = line.match(/@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@/);
+          if (match) {
+            const startNew = parseInt(match[1]);
+            const lenNew = match[2] ? parseInt(match[2]) : 1;
+            const endNew = startNew + lenNew - 1;
+
+            if (currentLine >= startNew && currentLine <= endNew) {
+              hunkStart = i;
+
+              // find hunk end (next @@, next file header, or EOF)
+              for (let j = i + 1; j < diffLines.length; j++) {
+                const l = diffLines[j];
+                if (
+                  l.startsWith("@@") ||
+                  l.match(/^(modified|deleted|new file)\s+/)
+                ) {
+                  hunkEnd = j - 1;
+                  break;
+                }
+              }
+              if (hunkEnd === -1) hunkEnd = diffLines.length - 1;
+              break;
+            }
+          }
+        }
+      }
+
+      if (hunkStart === -1) {
+        vscode.window.showWarningMessage(
+          "Could not find matching diff hunk in Magit buffer.",
+        );
+        return;
+      }
+
+      const startPos = new vscode.Position(hunkStart, 0);
+      const endPos = new vscode.Position(
+        hunkEnd,
+        diffLines[hunkEnd]?.length || 0,
+      );
+      const hunkRange = new vscode.Range(startPos, endPos);
+
+      // Reveal and select the whole hunk
+      magitEditor.revealRange(hunkRange, vscode.TextEditorRevealType.InCenter);
+      magitEditor.selection = new vscode.Selection(startPos, endPos);
+    },
+  ));
 }
 
 function runGit(cwd: string, args: string[]): Promise<string> {
