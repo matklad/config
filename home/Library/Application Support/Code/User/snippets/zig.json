@@ -21,6 +21,13 @@
 		],
 		"description": "import assert"
 	},
+	"ipath": {
+		"prefix": "ipath",
+		"body": [
+			"const $1 = @import(\"$0./$1.zig\");"
+		],
+		"description": "import path"
+	},
 	"todo": {
 		"prefix": "todo",
 		"body": "@panic(\"todo\")",

@@ -1,5 +1,5 @@
 [
-  { "key": "alt+/", "command": "hippie-completion.next" },
+  { "key": "alt+space", "command": "hippie-completion.next" },
   // Commands
   {
     "key": "cmd+shift+F",

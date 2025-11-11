@@ -216,8 +216,7 @@ export function activate(context: vscode.ExtensionContext) {
       );
 
       if (!magitEditor) {
-        vscode.window.showErrorMessage("No Magit diff/status buffer found.");
-        return;
+        return; // No Magit diff/status buffer found.
       }
 
       const diffLines = magitEditor.document.getText().split("\n");
@@ -270,10 +269,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       if (hunkStart === -1) {
-        vscode.window.showWarningMessage(
-          "Could not find matching diff hunk in Magit buffer.",
-        );
-        return;
+        return; // "Could not find matching diff hunk in Magit buffer.
       }
 
       const startPos = new vscode.Position(hunkStart, 0);
@@ -337,8 +333,8 @@ async function go(direction: "next" | "prev", target?: GoTarget) {
 
   const dispatch = {
     change: [
-      "workbench.action.editor.nextChange",
-      "workbench.action.editor.previousChange",
+      ["workbench.action.editor.nextChange", "my-code.reveal-in-magit"],
+      ["workbench.action.editor.previousChange", "my-code.reveal-in-magit"],
     ],
     conflict: ["merge-conflict.next", "merge-conflict.previous"],
     error: [
@@ -360,5 +356,11 @@ async function go(direction: "next" | "prev", target?: GoTarget) {
   };
 
   const command = dispatch[current_target][direction == "next" ? 0 : 1];
-  await vscode.commands.executeCommand(command);
+  if (typeof command === "string") {
+    await vscode.commands.executeCommand(command);
+  } else {
+    for (const subcommand of command) {
+      await vscode.commands.executeCommand(subcommand);
+    }
+  }
 }
