@@ -3,6 +3,7 @@
 brew "anyzig"
 brew "asciinema"
 brew "bat"
+brew "claude"
 brew "cmake"
 brew "deno"
 brew "emacs"

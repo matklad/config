@@ -1,5 +1,12 @@
 [
-  { "key": "alt+space", "command": "hippie-completion.next" },
+  {
+    "key": "alt+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && !suggestWidgetVisible",
+    "args": {
+      "only": ["wordBasedSuggestions"]
+    }
+  },
   // Commands
   {
     "key": "cmd+shift+F",
@@ -528,5 +535,5 @@
   { "key": "ctrl+o", "command": "-workbench.action.files.openFile" },
   { "key": "alt+q", "command": "-rewrap.rewrapComment" },
   { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
-  { "key": "ctrl+alt+cmd+n", "command": "-welcome.showNewFileEntries" },
+  { "key": "ctrl+alt+cmd+n", "command": "-welcome.showNewFileEntries" }
 ]
