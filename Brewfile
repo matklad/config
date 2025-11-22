@@ -3,7 +3,6 @@
 brew "anyzig"
 brew "asciinema"
 brew "bat"
-brew "claude"
 brew "cmake"
 brew "deno"
 brew "emacs"
@@ -29,6 +28,8 @@ brew "tokei"
 brew "unar"
 
 cask "alfred"
+cask "chromium"
+cask "claude-code"
 cask "font-jetbrains-mono"
 cask "ghostty"
 cask "hammerspoon"
@@ -42,7 +43,6 @@ cask "spotify"
 cask "telegram"
 cask "visual-studio-code"
 cask "zed"
-cask "chromium"
 
 require 'socket'
 hostname = Socket.gethostname
