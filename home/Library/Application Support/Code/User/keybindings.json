@@ -1,12 +1,4 @@
 [
-  {
-    "key": "alt+space",
-    "command": "editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && !suggestWidgetVisible",
-    "args": {
-      "only": ["wordBasedSuggestions"]
-    }
-  },
   // Commands
   {
     "key": "cmd+shift+F",
