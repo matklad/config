@@ -26,6 +26,7 @@ brew "ripgrep"
 brew "rustup"
 brew "tokei"
 brew "unar"
+brew "entr"
 
 cask "alfred"
 cask "chromium"

@@ -70,10 +70,7 @@
         "comments": "off",
         "strings": "off"
     },
-    "editor.wordBasedSuggestions": "off",
-    "[zig]": {
-        "editor.wordBasedSuggestions": "allDocuments"
-    },
+    "editor.wordBasedSuggestions": "allDocuments",
     "editor.autoIndent": "advanced",
     "editor.semanticTokenColorCustomizations": {
         "[Xcode 11 Default Light]": {
@@ -306,12 +303,6 @@
                     "command": "rewrap.rewrapComment"
                 },
                 {
-                    "key": "l",
-                    "name": "LaTeX",
-                    "type": "command",
-                    "command": "unicode-latex.insertMathSymbol"
-                },
-                {
                     "key": "_",
                     "name": "snake_case",
                     "type": "command",
@@ -527,12 +518,6 @@
             "type": "bindings",
             "bindings": [
                 {
-                    "key": "h",
-                    "name": "Hover",
-                    "type": "command",
-                    "command": "editor.action.showHover"
-                },
-                {
                     "key": "a",
                     "name": "Argument Hints",
                     "type": "command",
@@ -729,7 +714,6 @@
     },
     "liveServer.settings.donotVerifyTags": true,
     "zig.zls.enableArgumentPlaceholders": false,
-    "zig.zls.enableBuildOnSave": false,
     "zig.zls.enabled": "on",
     "zig.version": "0.14.1",
     "editor.rulers": [
@@ -751,5 +735,6 @@
     "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Default Light Modern",
     "inlineChat.lineNaturalLanguageHint": false,
-    "git.blame.editorDecoration.enabled": false
+    "git.blame.editorDecoration.enabled": false,
+    "zig.buildOnSaveProvider": "off"
 }

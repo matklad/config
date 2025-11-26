@@ -95,6 +95,7 @@
   { "key": ", .", "command": "editor.action.revealDefinition" },
   { "key": ", shift+.", "command": "my-code.revealDefinitionAside" },
   { "key": ", t", "command": "unicode-latex.insertMathSymbol" },
+  { "key": ", h", "command": "editor.action.showHover" },
 
   {
     "key": ", r",
