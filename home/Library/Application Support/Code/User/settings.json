@@ -21,6 +21,7 @@
         "Djot": false
     },
     "editor.fontSize": 14,
+    "editor.lineHeight": 1.3,
     "terminal.integrated.fontSize": 10,
 
     "accessibility.dimUnfocused.enabled": false,
