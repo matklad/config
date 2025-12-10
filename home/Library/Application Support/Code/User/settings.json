@@ -734,8 +734,8 @@
         "zig"
     ],
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Leuven Light",
     "inlineChat.lineNaturalLanguageHint": false,
     "git.blame.editorDecoration.enabled": false,
-    "zig.buildOnSaveProvider": "off"
+    "zig.buildOnSaveProvider": "off",
+    "workbench.colorTheme": "Default Light Modern"
 }
