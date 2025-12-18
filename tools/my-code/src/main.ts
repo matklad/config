@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import { activate_blame } from "./blame";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
@@ -99,6 +100,8 @@ export function activate(context: vscode.ExtensionContext) {
       }
     }),
   );
+
+  activate_blame(context);
 
   context.subscriptions.push(vscode.commands.registerCommand(
     "my-code.reveal-in-magit",

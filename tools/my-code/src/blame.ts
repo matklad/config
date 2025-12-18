@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { spawn } from "child_process";
 
-export function blame_register(context: vscode.ExtensionContext) {
+export function activate_blame(context: vscode.ExtensionContext) {
     context.subscriptions.push(
         vscode.commands.registerCommand("inplace-blame.line", async () => {
             const editor = vscode.window.activeTextEditor;
@@ -110,9 +110,42 @@ export function blame_register(context: vscode.ExtensionContext) {
 let lastCommit: string | null = null;
 
 async function switchCommit(cwd: string, commit: string) {
+    const editor = vscode.window.activeTextEditor;
     const currentCommit = await runGit(cwd, ["rev-parse", "HEAD"]);
+
+    // Capture file and line content before switching
+    const originalUri = editor?.document.uri;
+    const originalLineText = editor?.document.lineAt(editor.selection.active.line).text.trim();
+
     await runGit(cwd, ["switch", "-d", commit]);
     lastCommit = currentCommit;
+
+    if (originalUri && originalLineText !== undefined) {
+        await new Promise(resolve => setTimeout(resolve, 200));
+
+        const doc = await vscode.workspace.openTextDocument(originalUri);
+        const newEditor = await vscode.window.showTextDocument(doc, {
+            preview: false,
+            preserveFocus: false,
+        });
+
+        // Find the line with the same content
+        let targetLine = 0;
+        for (let i = 0; i < doc.lineCount; i++) {
+            const text = doc.lineAt(i).text.trim();
+            if (text === originalLineText) {
+                targetLine = i;
+                break;
+            }
+        }
+
+        const pos = new vscode.Position(targetLine, 0);
+        newEditor.selection = new vscode.Selection(pos, pos);
+        newEditor.revealRange(
+            new vscode.Range(pos, pos),
+            vscode.TextEditorRevealType.InCenter,
+        );
+    }
 }
 
 function runGit(cwd: string, args: string[]): Promise<string> {
