@@ -78,7 +78,6 @@
       cmake
       ninja
       python3
-      anyzig
       (pkgs.writeShellScriptBin "nixos-pull" ''
           set -ex
 
