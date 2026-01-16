@@ -25,3 +25,6 @@ alias "rs" "~/config/tools/remote-sync.sh matklad 192.168.2.4"
 alias "rsh" "ssh matklad@192.168.2.4"
 alias q "llm -s \"Answer in as few words as possible. Use a brief style with short replies.\" -m claude-3.7-sonnet";
 fish_config theme choose termcolors
+
+set -gx FZF_CTRL_T_COMMAND 'fd --type f'
+fzf --fish | source
