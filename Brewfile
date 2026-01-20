@@ -1,5 +1,5 @@
 
-
+brew "awscli"
 brew "anyzig"
 brew "asciinema"
 brew "bat"
