@@ -138,28 +138,14 @@
     ],
     "whichkey.bindings": [
         {
-            "key": "B",
+            "key": "b",
             "name": "blame",
             "type": "bindings",
             "bindings": [
-                {
-                    "key": "l",
-                    "name": "line",
-                    "type": "command",
-                    "command": "inplace-blame.line"
-                },
-                {
-                    "key": "p",
-                    "name": "parent",
-                    "type": "command",
-                    "command": "inplace-blame.parent"
-                },
-                {
-                    "key": "u",
-                    "name": "undo",
-                    "type": "command",
-                    "command": "inplace-blame.undo"
-                }
+                { "key": "l", "name": "line", "type": "command", "command": "inplace-blame.line" },
+                { "key": "p", "name": "parent", "type": "command", "command": "inplace-blame.parent" },
+                { "key": "u", "name": "undo", "type": "command", "command": "inplace-blame.undo" },
+                { "key": "w", "name": "link", "type": "command", "command": "gitlens.copyRemoteFileUrlToClipboard" }
             ]
         },
         {
@@ -167,103 +153,21 @@
             "name": "go",
             "type": "bindings",
             "bindings": [
-                {
-                    "key": "g",
-                    "name": "First line",
-                    "type": "command",
-                    "command": "cursorTop"
-                },
-                {
-                    "key": "l",
-                    "name": "Line",
-                    "command": "workbench.action.gotoLine"
-                },
-                {
-                    "key": "e",
-                    "name": "Last line",
-                    "type": "command",
-                    "command": "cursorBottom"
-                },
-                {
-                    "key": "d",
-                    "name": "Definition",
-                    "type": "command",
-                    "command": "editor.action.revealDefinition"
-                },
-                {
-                    "key": "D",
-                    "name": "Declaration",
-                    "type": "command",
-                    "command": "editor.action.revealDeclaration"
-                },
-                {
-                    "key": "y",
-                    "name": "Type definition",
-                    "type": "command",
-                    "command": "editor.action.goToTypeDefinition"
-                },
-                {
-                    "key": "f",
-                    "name": "file",
-                    "type": "command",
-                    "command": "seito-openfile.openFileFromText"
-                },
-                {
-                    "key": "r",
-                    "name": "References",
-                    "type": "command",
-                    "command": "references-view.findReferences"
-                },
-                {
-                    "key": "i",
-                    "name": "Implementations",
-                    "type": "command",
-                    "command": "editor.action.goToImplementation"
-                },
-                {
-                    "key": "t",
-                    "name": "Top of the window",
-                    "type": "command",
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "viewPortTop"
-                    }
-                },
-                {
-                    "key": "c",
-                    "name": "Center of the window",
-                    "type": "command",
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "viewPortCenter"
-                    }
-                },
-                {
-                    "key": "b",
-                    "name": "Bottom of the window",
-                    "type": "command",
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "viewPortBottom"
-                    }
-                },
-                {
-                    "key": ".",
-                    "name": "Last edited",
-                    "type": "command",
-                    "command": "workbench.action.navigateToLastEditLocation"
-                },
-                {
-                    "key": "p",
-                    "name": "Parent",
-                    "type": "command",
-                    "command": "rust-analyzer.parentModule"
-                },
-                {
-                    "key": "m",
-                    "name": "Manifest",
-                    "type": "command",
-                    "command": "rust-analyzer.openCargoToml"
+                { "key": "g", "name": "First line", "type": "command", "command": "cursorTop" },
+                { "key": "l", "name": "Line", "command": "workbench.action.gotoLine" },
+                { "key": "e", "name": "Last line", "type": "command", "command": "cursorBottom" },
+                { "key": "d", "name": "Definition", "type": "command", "command": "editor.action.revealDefinition" },
+                { "key": "D", "name": "Declaration", "type": "command", "command": "editor.action.revealDeclaration" },
+                { "key": "y", "name": "Type definition", "type": "command", "command": "editor.action.goToTypeDefinition" },
+                { "key": "f", "name": "file", "type": "command", "command": "seito-openfile.openFileFromText" },
+                { "key": "r", "name": "References", "type": "command", "command": "references-view.findReferences" },
+                { "key": "i", "name": "Implementations", "type": "command", "command": "editor.action.goToImplementation" },
+                { "key": "t", "name": "Top of the window", "type": "command", "command": "cursorMove", "args": { "to": "viewPortTop" } },
+                { "key": "c", "name": "Center of the window", "type": "command", "command": "cursorMove", "args": { "to": "viewPortCenter" } },
+                { "key": "b", "name": "Bottom of the window", "type": "command", "command": "cursorMove", "args": { "to": "viewPortBottom" } },
+                { "key": ".", "name": "Last edited", "type": "command", "command": "workbench.action.navigateToLastEditLocation" },
+                { "key": "p", "name": "Parent", "type": "command", "command": "rust-analyzer.parentModule" },
+                { "key": "m", "name": "Manifest", "type": "command", "command": "rust-analyzer.openCargoToml"
                 }
             ]
         },
@@ -277,104 +181,24 @@
                     "name": "new",
                     "type": "bindings",
                     "bindings": [
-                        {
-                            "key": "f",
-                            "name": "File",
-                            "type": "command",
-                            "command": "explorer.newFile"
-                        },
-                        {
-                            "key": "d",
-                            "name": "Directory",
-                            "type": "command",
-                            "command": "explorer.newFolder"
-                        }
+                        { "key": "f", "name": "File", "type": "command", "command": "explorer.newFile" },
+                        { "key": "d", "name": "Directory", "type": "command", "command": "explorer.newFolder" }
                     ]
                 },
-                {
-                    "key": "f",
-                    "name": "Format",
-                    "type": "command",
-                    "command": "editor.action.formatDocument"
-                },
-                {
-                    "key": "w",
-                    "name": "Wrap",
-                    "type": "command",
-                    "command": "rewrap.rewrapComment"
-                },
-                {
-                    "key": "_",
-                    "name": "snake_case",
-                    "type": "command",
-                    "command": "extension.changeCase.snake"
-                },
-                {
-                    "key": "S",
-                    "name": "SCREAMING_CASE",
-                    "type": "command",
-                    "command": "extension.changeCase.constant"
-                },
-                {
-                    "key": "c",
-                    "name": "camelCase",
-                    "type": "command",
-                    "command": "extension.changeCase.camel"
-                },
-                {
-                    "key": "C",
-                    "name": "CamelCase",
-                    "type": "command",
-                    "command": "extension.changeCase.pascal"
-                },
-                {
-                    "key": "T",
-                    "name": "Title Case",
-                    "type": "command",
-                    "command": "extension.changeCase.title"
-                },
-                {
-                    "key": "r",
-                    "name": "Revert",
-                    "type": "command",
-                    "command": "git.revertSelectedRanges"
-                },
-                {
-                    "key": "s",
-                    "name": "Sort",
-                    "type": "command",
-                    "command": "editor.action.sortLinesAscending"
-                },
-                {
-                    "key": "a",
-                    "name": "Align",
-                    "type": "command",
-                    "command": "yo1dog.cursor-align.alignCursors"
-                },
-                {
-                    "key": "i",
-                    "name": "increment",
-                    "type": "command",
-                    "command": "editor.emmet.action.incrementNumberByOne"
-                },
-                {
-                    "key": "d",
-                    "name": "decrement",
-                    "type": "command",
-                    "command": "editor.emmet.action.decrementNumberByOne"
-                },
-                {
-                    "key": "p",
-                    "name": "pipe to shell",
-                    "type": "command",
-                    "command": "editWithShell.runCommand"
-                },
-                {
-                    "key": "o",
-                    "name": "overtype",
-                    "type": "command",
-                    "command": "editor.action.toggleOvertypeInsertMode"
-                }
+                { "key": "f", "name": "Format", "type": "command", "command": "editor.action.formatDocument" },
+                { "key": "w", "name": "Wrap", "type": "command", "command": "rewrap.rewrapComment" },
+                { "key": "_", "name": "snake_case", "type": "command", "command": "extension.changeCase.snake" },
+                { "key": "S", "name": "SCREAMING_CASE", "type": "command", "command": "extension.changeCase.constant" },
+                { "key": "c", "name": "camelCase", "type": "command", "command": "extension.changeCase.camel" },
+                { "key": "C", "name": "CamelCase", "type": "command", "command": "extension.changeCase.pascal" },
+                { "key": "T", "name": "Title Case", "type": "command", "command": "extension.changeCase.title" },
+                { "key": "r", "name": "Revert", "type": "command", "command": "git.revertSelectedRanges" },
+                { "key": "s", "name": "Sort", "type": "command", "command": "editor.action.sortLinesAscending" },
+                { "key": "a", "name": "Align", "type": "command", "command": "yo1dog.cursor-align.alignCursors" },
+                { "key": "i", "name": "increment", "type": "command", "command": "editor.emmet.action.incrementNumberByOne" },
+                { "key": "d", "name": "decrement", "type": "command", "command": "editor.emmet.action.decrementNumberByOne" },
+                { "key": "p", "name": "pipe to shell", "type": "command", "command": "editWithShell.runCommand" },
+                { "key": "o", "name": "overtype", "type": "command", "command": "editor.action.toggleOvertypeInsertMode" }
             ]
         },
         {
@@ -395,61 +219,14 @@
                         ]
                     }
                 },
-                {
-                    "key": "n",
-                    "name": "Notes",
-                    "type": "command",
-                    "command": "my-code.open-notes"
-                },
-                {
-                    "key": "t",
-                    "name": "Terminal",
-                    "type": "command",
-                    "command": "terminal.focus"
-                },
-                {
-                    "key": "e",
-                    "name": "Explorer",
-                    "type": "command",
-                    "command": "runCommands",
-                    "args": {
-                        "commands": [
-                            "workbench.action.closePanel",
-                            "workbench.files.action.focusFilesExplorer"
-                        ]
-                    }
-                },
-                {
-                    "key": "x",
-                    "name": "Extensions",
-                    "type": "command",
-                    "command": "workbench.extensions.action.installExtensions"
-                },
-                {
-                    "key": "s",
-                    "name": "Settings",
-                    "type": "command",
-                    "command": "workbench.action.openSettingsJson"
-                },
-                {
-                    "key": "S",
-                    "name": "Workspace Settings",
-                    "type": "command",
-                    "command": "workbench.action.openWorkspaceSettingsFile"
-                },
-                {
-                    "key": "k",
-                    "name": "Keybindings",
-                    "type": "command",
-                    "command": "workbench.action.openGlobalKeybindingsFile"
-                },
-                {
-                    "key": "m",
-                    "name": "make.ts",
-                    "type": "command",
-                    "command": "workbench.action.quickOpen",
-                    "args": "make.ts"
-                }
+                { "key": "n", "name": "Notes", "type": "command", "command": "my-code.open-notes" },
+                { "key": "t", "name": "Terminal", "type": "command", "command": "terminal.focus" },
+                { "key": "e", "name": "Explorer", "type": "command", "command": "runCommands", "args": { "commands": [ "workbench.action.closePanel", "workbench.files.action.focusFilesExplorer" ] } },
+                { "key": "x", "name": "Extensions", "type": "command", "command": "workbench.extensions.action.installExtensions" },
+                { "key": "s", "name": "Settings", "type": "command", "command": "workbench.action.openSettingsJson" },
+                { "key": "S", "name": "Workspace Settings", "type": "command", "command": "workbench.action.openWorkspaceSettingsFile" },
+                { "key": "k", "name": "Keybindings", "type": "command", "command": "workbench.action.openGlobalKeybindingsFile" },
+                { "key": "m", "name": "make.ts", "type": "command", "command": "workbench.action.quickOpen", "args": "make.ts" }
             ]
         },
         {
@@ -457,60 +234,12 @@
             "name": "next...",
             "type": "bindings",
             "bindings": [
-                {
-                    "key": "e",
-                    "name": "Error",
-                    "type": "command",
-                    "command": "my-code.next",
-                    "args": [
-                        "error"
-                    ]
-                },
-                {
-                    "key": "c",
-                    "name": "Change",
-                    "type": "command",
-                    "command": "my-code.next",
-                    "args": [
-                        "change"
-                    ]
-                },
-                {
-                    "key": "m",
-                    "name": "Merge Conflict",
-                    "type": "command",
-                    "command": "my-code.next",
-                    "args": [
-                        "conflict"
-                    ]
-                },
-                {
-                    "key": "r",
-                    "name": "Reference",
-                    "type": "command",
-                    "command": "my-code.next",
-                    "args": [
-                        "reference"
-                    ]
-                },
-                {
-                    "key": "f",
-                    "name": "Find",
-                    "type": "command",
-                    "command": "my-code.next",
-                    "args": [
-                        "occurrence"
-                    ]
-                },
-                {
-                    "key": ".",
-                    "name": "Edit",
-                    "type": "command",
-                    "command": "my-code.next",
-                    "args": [
-                        "edit"
-                    ]
-                }
+                { "key": "e", "name": "Error", "type": "command", "command": "my-code.next", "args": [ "error" ] },
+                { "key": "c", "name": "Change", "type": "command", "command": "my-code.next", "args": [ "change" ] },
+                { "key": "m", "name": "Merge Conflict", "type": "command", "command": "my-code.next", "args": [ "conflict" ] },
+                { "key": "r", "name": "Reference", "type": "command", "command": "my-code.next", "args": [ "reference" ] },
+                { "key": "f", "name": "Find", "type": "command", "command": "my-code.next", "args": [ "occurrence" ] },
+                { "key": ".", "name": "Edit", "type": "command", "command": "my-code.next", "args": [ "edit" ] }
             ]
         },
         {
@@ -518,18 +247,8 @@
             "name": "misc",
             "type": "bindings",
             "bindings": [
-                {
-                    "key": "a",
-                    "name": "Argument Hints",
-                    "type": "command",
-                    "command": "editor.action.triggerParameterHints"
-                },
-                {
-                    "key": "d",
-                    "name": "Diff",
-                    "type": "command",
-                    "command": "editor.action.dirtydiff.next"
-                }
+                { "key": "a", "name": "Argument Hints", "type": "command", "command": "editor.action.triggerParameterHints" },
+                { "key": "d", "name": "Diff", "type": "command", "command": "editor.action.dirtydiff.next" }
             ]
         }
     ],
@@ -737,5 +456,5 @@
     "inlineChat.lineNaturalLanguageHint": false,
     "git.blame.editorDecoration.enabled": false,
     "zig.buildOnSaveProvider": "off",
-    "workbench.colorTheme": "Default Light Modern"
+    "workbench.colorTheme": "Pale Fire High Contrast"
 }

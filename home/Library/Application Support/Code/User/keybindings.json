@@ -147,7 +147,7 @@
     "when": "editorHasSelection"
   },
   { "key": ", w", "command": "rewrap.rewrapComment" },
-  { "key": ", b", "command": "editor.action.jumpToBracket" },
+  // { "key": ", b", "command": "editor.action.jumpToBracket" },
   { "key": ", f", "command": "editor.toggleFold" },
   { "key": ", shift+f", "command": "editor.foldAll" },
   { "key": ", shift+u", "command": "editor.unfoldAll" },
@@ -205,13 +205,13 @@
   { "key": ", 4", "command": "workbench.actions.view.toggleProblems" },
 
   {
-    "key": ", shift+b",
+    "key": ", b",
     "command": "runCommands",
     "when": "editorTextFocus",
     "args": {
       "commands": [
         "whichkey.show",
-        { "command": "whichkey.triggerKey", "args": "B" }
+        { "command": "whichkey.triggerKey", "args": "b" }
       ]
     }
   },
