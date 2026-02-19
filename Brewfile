@@ -53,9 +53,9 @@ puts hostname
 
 if hostname == "TigerMac.local"
   cask "slack"
+  cask "1password"
 end
 
 if hostname == "ahab.local"
   cask "qbittorrent"
-  cask "vlc"
 end

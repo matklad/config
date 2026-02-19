@@ -456,5 +456,5 @@
     "inlineChat.lineNaturalLanguageHint": false,
     "git.blame.editorDecoration.enabled": false,
     "zig.buildOnSaveProvider": "off",
-    "workbench.colorTheme": "Pale Fire High Contrast"
+    "workbench.colorTheme": "Default Light Modern"
 }
