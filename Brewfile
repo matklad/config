@@ -32,7 +32,6 @@ brew "unar"
 
 cask "alfred"
 cask "chromium"
-cask "claude-code"
 cask "font-jetbrains-mono"
 cask "ghostty"
 cask "hammerspoon"
