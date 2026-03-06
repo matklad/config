@@ -56,7 +56,7 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.bracketPairColorization.enabled": false,
     "editor.formatOnType": true,
-    "editor.hover.enabled": false,
+    "editor.hover.enabled": "off",
     "editor.minimap.enabled": false,
     "editor.parameterHints.enabled": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
@@ -456,5 +456,5 @@
     "inlineChat.lineNaturalLanguageHint": false,
     "git.blame.editorDecoration.enabled": false,
     "zig.buildOnSaveProvider": "off",
-    "workbench.colorTheme": "Default Light Modern"
+    "workbench.colorTheme": "Pale Fire High Contrast"
 }
