@@ -102,6 +102,7 @@
         "matklad.pale-fire",
         "ms-vscode.remote-server",
         "oijaz.unicode-latex",
+        "ralfstx.vscode-toggle-theme",
         "rust-lang.rust-analyzer",
         "ryanabx.djot-vscode",
         "ryu1kn.edit-with-shell",
