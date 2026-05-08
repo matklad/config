@@ -1,15 +1,22 @@
 {
-	"makets": {
-		"prefix": "makets",
-		"body": [
-                  "#!/usr/bin/env -S deno run --allow-all",
-                  "import $ from \"https://deno.land/x/dax@0.35.0/mod.ts\";",
-                  "$.setPrintCommand(true)",
-                  "",
-                  "await $`true`",
-                  "",
-                  "$.log(\"ok.\")",
-		],
-		"description": "make.ts"
-	},
+    "makets": {
+        "prefix": "dax",
+        "body": [
+            "#!/usr/bin/env -S deno run --allow-all",
+            "import { $ } from \"jsr:@david/dax\";",
+            "",
+            "async function main() {",
+            "}",
+            "",
+            "if (import.meta.main) {",
+            "    console.log(\"go: \");",
+            "    $.setPrintCommand(true);",
+            "    const start = performance.now();",
+            "    await main();",
+            "    const end = performance.now();",
+            "    console.log(`ok! ${(end - start).toFixed(0)} ms`);",
+            "}",
+        ],
+        "description": "dax"
+    },
 }

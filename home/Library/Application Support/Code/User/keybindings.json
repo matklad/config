@@ -1,5 +1,6 @@
 [
   // Commands
+  { "key": "cmd+0", "command": "workbench.action.zoomReset" },
   {
     "key": "cmd+shift+F",
     "command": "search.action.openNewEditor",
@@ -63,7 +64,8 @@
         "workbench.action.closePanel",
         "workbench.action.closeEditorsInOtherGroups",
         "workbench.action.closeOtherEditors",
-        "workbench.action.closeSidebar"
+        "workbench.action.closeSidebar",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "editorFocus"
@@ -528,5 +530,6 @@
   { "key": "ctrl+o", "command": "-workbench.action.files.openFile" },
   { "key": "alt+q", "command": "-rewrap.rewrapComment" },
   { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
-  { "key": "ctrl+alt+cmd+n", "command": "-welcome.showNewFileEntries" }
+  { "key": "ctrl+alt+cmd+n", "command": "-welcome.showNewFileEntries" },
+  { "key": "cmd+0", "command": "-workbench.action.focusSideBar" }
 ]

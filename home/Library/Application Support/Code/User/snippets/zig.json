@@ -49,10 +49,16 @@
 		"description": "main"
 	},
 	"log error": {
-		"prefix": "le",
+		"prefix": "lerr",
 		"body": [
 			"log.err(\"{}:$1\", .{$0});"
 		],
+	},
+	"log info": {
+		"prefix": "linfo",
+		"body": [
+			"log.info(\"$1\", .{$0});"
+		]
 	},
 	"debug print": {
 		"prefix": "pd",
