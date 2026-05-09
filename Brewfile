@@ -29,6 +29,7 @@ brew "ruby-lsp"
 brew "rustup"
 brew "tokei"
 brew "unar"
+brew "wasmtime"
 
 cask "alfred"
 cask "chromium"
@@ -57,4 +58,5 @@ end
 
 if hostname == "ahab.local"
   cask "qbittorrent"
+  cask "iina"
 end

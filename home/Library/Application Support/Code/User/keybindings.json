@@ -29,6 +29,8 @@
   },
   { "key": "shift+cmd+/", "command": "workbench.action.showCommands" },
   { "key": "cmd+.", "command": "findJump.activate" },
+  // { "key": "cmd+.",                 "command": "editor.action.quickFix"},
+
   { "key": "cmd+shift+.", "command": "findJump.activateWithSelection" },
   { "key": "cmd+,", "command": "-workbench.action.openSettings" },
   { "key": "cmd+,", "command": "workbench.action.openSettingsJson" },
@@ -91,6 +93,7 @@
   // m -- misc, hover, argument hits ...
 
   { "key": ", a", "command": "editor.action.quickFix" },
+  { "key": ", a", "command": "prlsp.quickFix", "when": "resourceScheme == prlsp && editorTextFocus" },
   { "key": ", shift+a", "command": "merge-conflict.accept.selection" },
   { "key": ", l", "command": "workbench.action.gotoSymbol" },
   { "key": ", shift+l", "command": "workbench.action.showAllSymbols" },

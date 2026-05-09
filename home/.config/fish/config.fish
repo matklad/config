@@ -19,6 +19,8 @@ abbr "swd" "git switch --detach"
 abbr "zz" "./zig/zig"
 abbr "zb" "./zig/zig build"
 abbr "zbc" "./zig/zig build ci"
+abbr "kaon" "sudo launchctl load /Library/LaunchDaemons/org.custom.kanata.plist"
+abbr "kaoff" "sudo launchctl unload /Library/LaunchDaemons/org.custom.kanata.plist"
 
 alias "rr" "~/config/tools/remote-run.sh  matklad 192.168.2.4"
 alias "rs" "~/config/tools/remote-sync.sh matklad 192.168.2.4"
