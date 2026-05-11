@@ -1,5 +1,6 @@
 set fish_greeting ""
 set -U fish_prompt_pwd_dir_length 0
+set -x SSH_SK_PROVIDER /usr/lib/ssh-keychain.dylib
 
 bind alt-delete kill-word
 abbr "c" "code"
