@@ -7,7 +7,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -54,24 +54,18 @@
   programs = {
       fish.enable = true;
       firefox.enable = true;
+      git.enable = true;
   };
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
       kdePackages.kate
       vim
-      git
       gh
       vscode
       curl
       rustup
-      llvmPackages_21.bintools
-      llvmPackages_21.clang
-      llvmPackages_21.lldb
-      llvmPackages_21.llvm
-      llvmPackages_21.stdenv
       htop
-      curl
       gdb
       atool
       xz
@@ -80,15 +74,20 @@
       python3
       (pkgs.writeShellScriptBin "nixos-pull" ''
           set -ex
+          NIXPKGS_REV=$(git ls-remote https://github.com/NixOS/nixpkgs/ nixos-25.11 | awk '{print $1}')
+          NIXPKGS=$(nix-instantiate --eval -E "builtins.fetchTarball { url = \"https://github.com/NixOS/nixpkgs/archive/$NIXPKGS_REV.tar.gz\"; }" | tr -d \")
 
-          NIXPKGS=$(nix-instantiate --eval -E 'builtins.fetchTarball { url = "https://github.com/NixOS/nixpkgs/archive/nixos-25.11.tar.gz"; }' | tr -d \")
-
-          REV=$(git ls-remote https://github.com/matklad/config HEAD | awk '{print $1}')
-          CONFIG=$(nix-instantiate --eval -E "(builtins.fetchGit { url = \"https://github.com/matklad/config.git\"; rev=\"$REV\"; }).outPath" | tr -d \")
+          CONFIG_REV=$(git ls-remote https://github.com/matklad/config HEAD | awk '{print $1}')
+          CONFIG=$(nix-instantiate --eval -E "(builtins.fetchGit { url = \"https://github.com/matklad/config.git\"; rev=\"$CONFIG_REV\"; }).outPath" | tr -d \")
 
           sudo nixos-rebuild switch -I nixpkgs=$NIXPKGS -I nixos-config=$CONFIG
       '')
-  ];
+  ] ++ (with pkgs.llvmPackages_21; [
+      bintools
+      clang
+      lldb
+      llvm
+  ]);
 
   services = {
       openssh = {
