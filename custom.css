@@ -1,0 +1,3 @@
+.my-likes { visibility: hidden !important; }
+a.upvoter { visibility: hidden !important; }
+.score { display: none !important; }

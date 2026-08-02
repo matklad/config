@@ -99,7 +99,7 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 1,
-    "extensions.autoUpdate": true,
+    "extensions.autoUpdate": "on",
     "extensions.ignoreRecommendations": true,
     "extensions.verifySignature": false,
     "files.autoSave": "afterDelay",
@@ -715,7 +715,7 @@
     ],
     // "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "Pale Fire High Contrast",
-    "workbench.preferredLightColorTheme": "Default Light Modern",
+    "workbench.preferredLightColorTheme": "Light Modern",
     "lldb.suppressUpdateNotifications": true,
     "cSpell.enableFiletypes": [
         "djot",
@@ -725,5 +725,5 @@
     "inlineChat.lineNaturalLanguageHint": false,
     "git.blame.editorDecoration.enabled": false,
     "zig.buildOnSaveProvider": "off",
-    "workbench.colorTheme": "Pale Fire High Contrast"
+    "workbench.colorTheme": "Light Modern"
 }
