@@ -45,7 +45,6 @@ cask "slack"
 cask "spotify"
 cask "telegram"
 cask "visual-studio-code"
-cask "zed"
 
 require 'socket'
 hostname = Socket.gethostname
