@@ -1,4 +1,6 @@
 .my-likes { visibility: hidden !important; }
 a.upvoter { visibility: hidden !important; }
+.upvoter { color: #0000 !important; }
 .score { display: none !important; }
 yt-lockup-view-model { visibility: hidden; }
+#dismissible { visibility: hidden; }
