@@ -725,5 +725,6 @@
     "inlineChat.lineNaturalLanguageHint": false,
     "git.blame.editorDecoration.enabled": false,
     "zig.buildOnSaveProvider": "off",
-    "workbench.colorTheme": "Light Modern"
+    "workbench.colorTheme": "Light Modern",
+    "chat.disableAIFeatures": true
 }
