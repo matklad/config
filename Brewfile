@@ -29,6 +29,8 @@ brew "rustup"
 brew "tokei"
 brew "unar"
 brew "wasmtime"
+brew "pkgconfig"
+brew "enchant"
 
 cask "alfred"
 cask "chromium"
@@ -44,6 +46,8 @@ cask "slack"
 cask "spotify"
 cask "telegram"
 cask "visual-studio-code"
+tap "d12frosted/emacs-plus"
+cask "emacs-plus-app"
 
 require 'socket'
 hostname = Socket.gethostname
