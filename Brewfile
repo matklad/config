@@ -1,4 +1,3 @@
-
 brew "awscli"
 brew "anyzig"
 brew "asciinema"
@@ -45,7 +44,6 @@ cask "signal"
 cask "slack"
 cask "spotify"
 cask "telegram"
-cask "visual-studio-code"
 tap "d12frosted/emacs-plus"
 cask "emacs-plus-app"
 
