@@ -30,6 +30,7 @@ brew "unar"
 brew "wasmtime"
 brew "pkgconfig"
 brew "enchant"
+brew "age"
 
 cask "alfred"
 cask "chromium"
