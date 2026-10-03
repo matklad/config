@@ -1,4 +1,4 @@
-.my-likes { visibility: hidden !important; }
+.discourse-reactions-actions, .my-likes { visibility: hidden !important; }
 a.upvoter { visibility: hidden !important; }
 .upvoter { color: #0000 !important; }
 .score { display: none !important; }
