@@ -4,3 +4,4 @@ a.upvoter { visibility: hidden !important; }
 .score { display: none !important; }
 yt-lockup-view-model { visibility: hidden; }
 #dismissible { visibility: hidden; }
+.comments_label { visibility: hidden; } 
